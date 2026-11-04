@@ -1,7 +1,17 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 Set-Location (Split-Path $PSScriptRoot -Parent)
 $bundle = Join-Path $env:USERPROFILE '.cache\codex-runtimes\codex-primary-runtime\dependencies'
+$localPythonRoot = Join-Path $env:LOCALAPPDATA 'Programs\Python'
+if (Test-Path -LiteralPath $localPythonRoot) {
+    foreach ($installation in (Get-ChildItem -LiteralPath $localPythonRoot -Directory | Sort-Object Name -Descending)) {
+        $candidate = Join-Path $installation.FullName 'python.exe'
+        if (-not (Test-Path -LiteralPath $candidate)) { continue }
+        & $candidate -c 'import sys; sys.exit(0 if sys.version_info >= (3, 12) else 1)' 2>$null
+        if ($LASTEXITCODE -eq 0) { $env:PATH = "$($installation.FullName);$env:PATH"; break }
+    }
+}
 $pythonCommand = Get-Command python -ErrorAction SilentlyContinue
+if ($pythonCommand -and $pythonCommand.Source -match '\\Microsoft\\WindowsApps\\') { $pythonCommand = $null }
 if ($pythonCommand) { $pythonExe = $pythonCommand.Source } elseif (Test-Path "$bundle\python\python.exe") { $pythonExe = "$bundle\python\python.exe" } else { throw 'Installera Python 3.12 eller senare och lägg till Python i PATH.' }
 if (-not (Get-Command node -ErrorAction SilentlyContinue)) {
     if (Test-Path "$bundle\node\bin\node.exe") { $env:PATH = "$bundle\node\bin;$env:PATH" } else { throw 'Installera Node.js 22.12 eller senare.' }
