@@ -1,0 +1,761 @@
+﻿season,date,home,away,selected,book,outcome,quoted_odds,paper_odds,edge_bp,won,profit_ore,balance_ore,reason
+2024/2025,2024-08-16,Man United,Fulham,False,,,,,,,0,100000,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-08-17,Arsenal,Wolves,True,book_wh,away,190000,188100,719,False,-1000,99000,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2024/2025,2024-08-17,Everton,Brighton,False,,,,,,,0,99000,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-08-17,Ipswich,Liverpool,False,,,,,,,0,99000,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-08-17,Newcastle,Southampton,False,,,,,,,0,99000,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-08-17,Nott'm Forest,Bournemouth,False,,,,,,,0,99000,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-08-17,West Ham,Aston Villa,False,,,,,,,0,99000,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-08-18,Brentford,Crystal Palace,False,,,,,,,0,99000,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-08-18,Chelsea,Man City,False,,,,,,,0,99000,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-08-19,Leicester,Tottenham,False,,,,,,,0,99000,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-08-24,Aston Villa,Arsenal,False,,,,,,,0,99000,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-08-24,Brighton,Man United,False,,,,,,,0,99000,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-08-24,Crystal Palace,West Ham,False,,,,,,,0,99000,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-08-24,Fulham,Leicester,False,,,,,,,0,99000,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-08-24,Man City,Ipswich,True,book_wh,away,290000,287100,1246,False,-1000,98000,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2024/2025,2024-08-24,Southampton,Nott'm Forest,False,,,,,,,0,98000,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-08-24,Tottenham,Everton,False,,,,,,,0,98000,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-08-25,Bournemouth,Newcastle,False,,,,,,,0,98000,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-08-25,Liverpool,Brentford,False,,,,,,,0,98000,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-08-25,Wolves,Chelsea,False,,,,,,,0,98000,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-08-31,Arsenal,Brighton,False,,,,,,,0,98000,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-08-31,Brentford,Southampton,False,,,,,,,0,98000,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-08-31,Everton,Bournemouth,False,,,,,,,0,98000,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-08-31,Ipswich,Fulham,False,,,,,,,0,98000,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-08-31,Leicester,Aston Villa,False,,,,,,,0,98000,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-08-31,Nott'm Forest,Wolves,False,,,,,,,0,98000,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-08-31,West Ham,Man City,False,,,,,,,0,98000,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-09-01,Chelsea,Crystal Palace,False,,,,,,,0,98000,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-09-01,Man United,Liverpool,False,,,,,,,0,98000,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-09-01,Newcastle,Tottenham,False,,,,,,,0,98000,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-09-14,Aston Villa,Everton,False,,,,,,,0,98000,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-09-14,Bournemouth,Chelsea,False,,,,,,,0,98000,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-09-14,Brighton,Ipswich,False,,,,,,,0,98000,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-09-14,Crystal Palace,Leicester,False,,,,,,,0,98000,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-09-14,Fulham,West Ham,False,,,,,,,0,98000,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-09-14,Liverpool,Nott'm Forest,True,book_wh,away,130000,128700,907,True,11870,109870,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2024/2025,2024-09-14,Man City,Brentford,False,,,,,,,0,109870,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-09-14,Southampton,Man United,True,book_bf,home,45000,44550,612,False,-1000,108870,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2024/2025,2024-09-15,Tottenham,Arsenal,False,,,,,,,0,108870,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-09-15,Wolves,Newcastle,True,book_1xb,home,40300,39897,717,False,-1000,107870,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2024/2025,2024-09-21,Aston Villa,Wolves,False,,,,,,,0,107870,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-09-21,Crystal Palace,Man United,False,,,,,,,0,107870,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-09-21,Fulham,Newcastle,False,,,,,,,0,107870,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-09-21,Leicester,Everton,False,,,,,,,0,107870,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-09-21,Liverpool,Bournemouth,False,,,,,,,0,107870,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-09-21,Southampton,Ipswich,False,,,,,,,0,107870,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-09-21,Tottenham,Brentford,False,,,,,,,0,107870,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-09-21,West Ham,Chelsea,False,,,,,,,0,107870,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-09-22,Brighton,Nott'm Forest,False,,,,,,,0,107870,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-09-22,Man City,Arsenal,False,,,,,,,0,107870,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-09-28,Arsenal,Leicester,True,book_bf,away,170000,168300,1546,False,-1000,106870,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2024/2025,2024-09-28,Brentford,West Ham,False,,,,,,,0,106870,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-09-28,Chelsea,Brighton,False,,,,,,,0,106870,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-09-28,Everton,Crystal Palace,False,,,,,,,0,106870,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-09-28,Newcastle,Man City,False,,,,,,,0,106870,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-09-28,Nott'm Forest,Fulham,False,,,,,,,0,106870,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-09-28,Wolves,Liverpool,True,book_bf,home,95000,94050,695,False,-1000,105870,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2024/2025,2024-09-29,Ipswich,Aston Villa,False,,,,,,,0,105870,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-09-29,Man United,Tottenham,False,,,,,,,0,105870,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-09-30,Bournemouth,Southampton,True,book_b365,away,65000,64350,546,False,-1000,104870,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2024/2025,2024-10-05,Arsenal,Southampton,True,book_wh,away,170000,168300,1292,False,-1000,103870,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2024/2025,2024-10-05,Brentford,Wolves,False,,,,,,,0,103870,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-10-05,Crystal Palace,Liverpool,False,,,,,,,0,103870,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-10-05,Everton,Newcastle,False,,,,,,,0,103870,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-10-05,Leicester,Bournemouth,False,,,,,,,0,103870,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-10-05,Man City,Fulham,False,,,,,,,0,103870,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-10-05,West Ham,Ipswich,False,,,,,,,0,103870,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-10-06,Aston Villa,Man United,False,,,,,,,0,103870,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-10-06,Brighton,Tottenham,False,,,,,,,0,103870,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-10-06,Chelsea,Nott'm Forest,False,,,,,,,0,103870,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-10-19,Bournemouth,Arsenal,True,book_1xb,home,53700,53163,636,True,4316,108186,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2024/2025,2024-10-19,Fulham,Aston Villa,False,,,,,,,0,108186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-10-19,Ipswich,Everton,False,,,,,,,0,108186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-10-19,Man United,Brentford,False,,,,,,,0,108186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-10-19,Newcastle,Brighton,False,,,,,,,0,108186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-10-19,Southampton,Leicester,False,,,,,,,0,108186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-10-19,Tottenham,West Ham,False,,,,,,,0,108186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-10-20,Liverpool,Chelsea,False,,,,,,,0,108186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-10-20,Wolves,Man City,False,,,,,,,0,108186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-10-21,Nott'm Forest,Crystal Palace,False,,,,,,,0,108186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-10-25,Leicester,Nott'm Forest,False,,,,,,,0,108186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-10-26,Aston Villa,Bournemouth,False,,,,,,,0,108186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-10-26,Brentford,Ipswich,False,,,,,,,0,108186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-10-26,Brighton,Wolves,False,,,,,,,0,108186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-10-26,Everton,Fulham,False,,,,,,,0,108186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-10-26,Man City,Southampton,True,book_bf,away,230000,227700,2251,False,-1000,107186,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2024/2025,2024-10-27,Arsenal,Liverpool,False,,,,,,,0,107186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-10-27,Chelsea,Newcastle,False,,,,,,,0,107186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-10-27,Crystal Palace,Tottenham,False,,,,,,,0,107186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-10-27,West Ham,Man United,False,,,,,,,0,107186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-11-02,Bournemouth,Man City,False,,,,,,,0,107186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-11-02,Ipswich,Leicester,False,,,,,,,0,107186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-11-02,Liverpool,Brighton,False,,,,,,,0,107186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-11-02,Newcastle,Arsenal,False,,,,,,,0,107186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-11-02,Nott'm Forest,West Ham,False,,,,,,,0,107186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-11-02,Southampton,Everton,False,,,,,,,0,107186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-11-02,Wolves,Crystal Palace,False,,,,,,,0,107186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-11-03,Man United,Chelsea,False,,,,,,,0,107186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-11-03,Tottenham,Aston Villa,False,,,,,,,0,107186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-11-04,Fulham,Brentford,False,,,,,,,0,107186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-11-09,Brentford,Bournemouth,False,,,,,,,0,107186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-11-09,Brighton,Man City,False,,,,,,,0,107186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-11-09,Crystal Palace,Fulham,False,,,,,,,0,107186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-11-09,Liverpool,Aston Villa,False,,,,,,,0,107186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-11-09,West Ham,Everton,False,,,,,,,0,107186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-11-09,Wolves,Southampton,False,,,,,,,0,107186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-11-10,Chelsea,Arsenal,False,,,,,,,0,107186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-11-10,Man United,Leicester,False,,,,,,,0,107186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-11-10,Nott'm Forest,Newcastle,False,,,,,,,0,107186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-11-10,Tottenham,Ipswich,False,,,,,,,0,107186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-11-23,Arsenal,Nott'm Forest,True,book_bf,away,90000,89100,726,False,-1000,106186,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2024/2025,2024-11-23,Aston Villa,Crystal Palace,False,,,,,,,0,106186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-11-23,Bournemouth,Brighton,False,,,,,,,0,106186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-11-23,Everton,Brentford,False,,,,,,,0,106186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-11-23,Fulham,Wolves,False,,,,,,,0,106186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-11-23,Leicester,Chelsea,False,,,,,,,0,106186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-11-23,Man City,Tottenham,False,,,,,,,0,106186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-11-24,Ipswich,Man United,False,,,,,,,0,106186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-11-24,Southampton,Liverpool,False,,,,,,,0,106186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-11-25,Newcastle,West Ham,False,,,,,,,0,106186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-11-29,Brighton,Southampton,False,,,,,,,0,106186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-11-30,Brentford,Leicester,False,,,,,,,0,106186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-11-30,Crystal Palace,Newcastle,False,,,,,,,0,106186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-11-30,Nott'm Forest,Ipswich,False,,,,,,,0,106186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-11-30,West Ham,Arsenal,False,,,,,,,0,106186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-11-30,Wolves,Bournemouth,False,,,,,,,0,106186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-01,Chelsea,Aston Villa,False,,,,,,,0,106186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-01,Liverpool,Man City,False,,,,,,,0,106186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-01,Man United,Everton,False,,,,,,,0,106186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-01,Tottenham,Fulham,False,,,,,,,0,106186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-03,Ipswich,Crystal Palace,False,,,,,,,0,106186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-03,Leicester,West Ham,False,,,,,,,0,106186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-04,Arsenal,Man United,False,,,,,,,0,106186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-04,Aston Villa,Brentford,False,,,,,,,0,106186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-04,Everton,Wolves,False,,,,,,,0,106186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-04,Man City,Nott'm Forest,True,book_1xb,away,105000,103950,543,False,-1000,105186,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2024/2025,2024-12-04,Newcastle,Liverpool,False,,,,,,,0,105186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-04,Southampton,Chelsea,False,,,,,,,0,105186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-05,Bournemouth,Tottenham,False,,,,,,,0,105186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-05,Fulham,Brighton,False,,,,,,,0,105186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-07,Aston Villa,Southampton,False,,,,,,,0,105186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-07,Brentford,Newcastle,False,,,,,,,0,105186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-07,Crystal Palace,Man City,False,,,,,,,0,105186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-07,Man United,Nott'm Forest,False,,,,,,,0,105186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-08,Fulham,Arsenal,False,,,,,,,0,105186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-08,Ipswich,Bournemouth,False,,,,,,,0,105186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-08,Leicester,Brighton,False,,,,,,,0,105186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-08,Tottenham,Chelsea,False,,,,,,,0,105186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-09,West Ham,Wolves,False,,,,,,,0,105186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-14,Arsenal,Everton,True,book_1xb,away,137000,135630,562,False,-1000,104186,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2024/2025,2024-12-14,Liverpool,Fulham,False,,,,,,,0,104186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-14,Newcastle,Leicester,False,,,,,,,0,104186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-14,Nott'm Forest,Aston Villa,False,,,,,,,0,104186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-14,Wolves,Ipswich,False,,,,,,,0,104186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-15,Brighton,Crystal Palace,False,,,,,,,0,104186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-15,Chelsea,Brentford,False,,,,,,,0,104186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-15,Man City,Man United,False,,,,,,,0,104186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-15,Southampton,Tottenham,False,,,,,,,0,104186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-16,Bournemouth,West Ham,False,,,,,,,0,104186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-21,Aston Villa,Man City,False,,,,,,,0,104186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-21,Brentford,Nott'm Forest,False,,,,,,,0,104186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-21,Crystal Palace,Arsenal,False,,,,,,,0,104186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-21,Ipswich,Newcastle,False,,,,,,,0,104186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-21,West Ham,Brighton,False,,,,,,,0,104186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-22,Everton,Chelsea,False,,,,,,,0,104186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-22,Fulham,Southampton,True,book_1xb,away,58100,57519,575,False,-1000,103186,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2024/2025,2024-12-22,Leicester,Wolves,False,,,,,,,0,103186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-22,Man United,Bournemouth,False,,,,,,,0,103186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-22,Tottenham,Liverpool,False,,,,,,,0,103186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-26,Bournemouth,Crystal Palace,False,,,,,,,0,103186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-26,Chelsea,Fulham,False,,,,,,,0,103186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-26,Liverpool,Leicester,True,book_1xb,draw,147000,145530,661,False,-1000,102186,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2024/2025,2024-12-26,Man City,Everton,False,,,,,,,0,102186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-26,Newcastle,Aston Villa,False,,,,,,,0,102186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-26,Nott'm Forest,Tottenham,False,,,,,,,0,102186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-26,Southampton,West Ham,False,,,,,,,0,102186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-26,Wolves,Man United,False,,,,,,,0,102186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-27,Arsenal,Ipswich,True,book_bf,away,190000,188100,941,False,-1000,101186,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2024/2025,2024-12-27,Brighton,Brentford,False,,,,,,,0,101186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-29,Crystal Palace,Southampton,False,,,,,,,0,101186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-29,Everton,Nott'm Forest,False,,,,,,,0,101186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-29,Fulham,Bournemouth,False,,,,,,,0,101186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-29,Leicester,Man City,False,,,,,,,0,101186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-29,Tottenham,Wolves,False,,,,,,,0,101186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-29,West Ham,Liverpool,False,,,,,,,0,101186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-30,Aston Villa,Brighton,False,,,,,,,0,101186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-30,Ipswich,Chelsea,False,,,,,,,0,101186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2024-12-30,Man United,Newcastle,False,,,,,,,0,101186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-01,Brentford,Arsenal,False,,,,,,,0,101186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-04,Aston Villa,Leicester,False,,,,,,,0,101186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-04,Bournemouth,Everton,False,,,,,,,0,101186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-04,Brighton,Arsenal,True,book_1xb,home,54500,53955,1036,False,-1000,100186,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2024/2025,2025-01-04,Crystal Palace,Chelsea,False,,,,,,,0,100186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-04,Man City,West Ham,False,,,,,,,0,100186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-04,Southampton,Brentford,False,,,,,,,0,100186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-04,Tottenham,Newcastle,False,,,,,,,0,100186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-05,Fulham,Ipswich,False,,,,,,,0,100186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-05,Liverpool,Man United,False,,,,,,,0,100186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-06,Wolves,Nott'm Forest,False,,,,,,,0,100186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-14,Brentford,Man City,True,book_1xb,home,56200,55638,600,False,-1000,99186,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2024/2025,2025-01-14,Chelsea,Bournemouth,False,,,,,,,0,99186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-14,Nott'm Forest,Liverpool,False,,,,,,,0,99186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-14,West Ham,Fulham,False,,,,,,,0,99186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-15,Arsenal,Tottenham,False,,,,,,,0,99186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-15,Everton,Aston Villa,False,,,,,,,0,99186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-15,Leicester,Crystal Palace,False,,,,,,,0,99186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-15,Newcastle,Wolves,False,,,,,,,0,99186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-16,Ipswich,Brighton,False,,,,,,,0,99186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-16,Man United,Southampton,False,,,,,,,0,99186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-18,Arsenal,Aston Villa,False,,,,,,,0,99186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-18,Brentford,Liverpool,False,,,,,,,0,99186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-18,Leicester,Fulham,False,,,,,,,0,99186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-18,Newcastle,Bournemouth,False,,,,,,,0,99186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-18,West Ham,Crystal Palace,False,,,,,,,0,99186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-19,Everton,Tottenham,False,,,,,,,0,99186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-19,Ipswich,Man City,False,,,,,,,0,99186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-19,Man United,Brighton,False,,,,,,,0,99186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-19,Nott'm Forest,Southampton,False,,,,,,,0,99186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-20,Chelsea,Wolves,False,,,,,,,0,99186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-25,Bournemouth,Nott'm Forest,False,,,,,,,0,99186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-25,Brighton,Everton,False,,,,,,,0,99186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-25,Liverpool,Ipswich,True,book_bf,away,230000,227700,2614,False,-1000,98186,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2024/2025,2025-01-25,Man City,Chelsea,False,,,,,,,0,98186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-25,Southampton,Newcastle,False,,,,,,,0,98186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-25,Wolves,Arsenal,False,,,,,,,0,98186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-26,Aston Villa,West Ham,False,,,,,,,0,98186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-26,Crystal Palace,Brentford,False,,,,,,,0,98186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-26,Fulham,Man United,False,,,,,,,0,98186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-01-26,Tottenham,Leicester,False,,,,,,,0,98186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-01,Bournemouth,Liverpool,False,,,,,,,0,98186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-01,Everton,Leicester,False,,,,,,,0,98186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-01,Ipswich,Southampton,False,,,,,,,0,98186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-01,Newcastle,Fulham,False,,,,,,,0,98186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-01,Nott'm Forest,Brighton,False,,,,,,,0,98186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-01,Wolves,Aston Villa,False,,,,,,,0,98186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-02,Arsenal,Man City,False,,,,,,,0,98186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-02,Brentford,Tottenham,False,,,,,,,0,98186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-02,Man United,Crystal Palace,False,,,,,,,0,98186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-03,Chelsea,West Ham,False,,,,,,,0,98186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-12,Everton,Liverpool,False,,,,,,,0,98186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-14,Brighton,Chelsea,False,,,,,,,0,98186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-15,Aston Villa,Ipswich,False,,,,,,,0,98186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-15,Crystal Palace,Everton,False,,,,,,,0,98186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-15,Fulham,Nott'm Forest,False,,,,,,,0,98186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-15,Leicester,Arsenal,False,,,,,,,0,98186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-15,Man City,Newcastle,False,,,,,,,0,98186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-15,Southampton,Bournemouth,False,,,,,,,0,98186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-15,West Ham,Brentford,False,,,,,,,0,98186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-16,Liverpool,Wolves,False,,,,,,,0,98186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-16,Tottenham,Man United,False,,,,,,,0,98186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-19,Aston Villa,Liverpool,False,,,,,,,0,98186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-21,Leicester,Brentford,False,,,,,,,0,98186,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-22,Arsenal,West Ham,True,book_bf,away,130000,128700,1036,True,11870,110056,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2024/2025,2025-02-22,Aston Villa,Chelsea,False,,,,,,,0,110056,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-22,Bournemouth,Wolves,False,,,,,,,0,110056,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-22,Everton,Man United,False,,,,,,,0,110056,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-22,Fulham,Crystal Palace,False,,,,,,,0,110056,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-22,Ipswich,Tottenham,False,,,,,,,0,110056,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-22,Southampton,Brighton,False,,,,,,,0,110056,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-23,Man City,Liverpool,False,,,,,,,0,110056,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-23,Newcastle,Nott'm Forest,False,,,,,,,0,110056,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-25,Brighton,Bournemouth,False,,,,,,,0,110056,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-25,Chelsea,Southampton,True,book_bf,away,180000,178200,1353,False,-1000,109056,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2024/2025,2025-02-25,Crystal Palace,Aston Villa,False,,,,,,,0,109056,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-25,Wolves,Fulham,False,,,,,,,0,109056,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-26,Brentford,Everton,False,,,,,,,0,109056,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-26,Liverpool,Newcastle,False,,,,,,,0,109056,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-26,Man United,Ipswich,False,,,,,,,0,109056,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-26,Nott'm Forest,Arsenal,False,,,,,,,0,109056,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-26,Tottenham,Man City,False,,,,,,,0,109056,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-02-27,West Ham,Leicester,False,,,,,,,0,109056,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-03-08,Brentford,Aston Villa,False,,,,,,,0,109056,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-03-08,Brighton,Fulham,False,,,,,,,0,109056,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-03-08,Crystal Palace,Ipswich,False,,,,,,,0,109056,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-03-08,Liverpool,Southampton,True,book_bf,draw,120000,118800,581,False,-1000,108056,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2024/2025,2025-03-08,Nott'm Forest,Man City,False,,,,,,,0,108056,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-03-08,Wolves,Everton,False,,,,,,,0,108056,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-03-09,Chelsea,Leicester,True,book_1xb,away,144000,142560,2021,False,-1000,107056,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2024/2025,2025-03-09,Man United,Arsenal,False,,,,,,,0,107056,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-03-09,Tottenham,Bournemouth,False,,,,,,,0,107056,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-03-10,West Ham,Newcastle,False,,,,,,,0,107056,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-03-15,Bournemouth,Brentford,False,,,,,,,0,107056,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-03-15,Everton,West Ham,False,,,,,,,0,107056,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-03-15,Ipswich,Nott'm Forest,False,,,,,,,0,107056,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-03-15,Man City,Brighton,False,,,,,,,0,107056,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-03-15,Southampton,Wolves,False,,,,,,,0,107056,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-03-16,Arsenal,Chelsea,False,,,,,,,0,107056,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-03-16,Fulham,Tottenham,False,,,,,,,0,107056,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-03-16,Leicester,Man United,False,,,,,,,0,107056,Ingen avvikelse klarar de låsta provreglerna.
+2024/2025,2025-04-01,Arsenal,Fulham,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-01,Nott'm Forest,Man United,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-01,Wolves,West Ham,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-02,Bournemouth,Ipswich,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-02,Brighton,Aston Villa,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-02,Liverpool,Everton,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-02,Man City,Leicester,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-02,Newcastle,Brentford,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-02,Southampton,Crystal Palace,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-03,Chelsea,Tottenham,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-05,Aston Villa,Nott'm Forest,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-05,Crystal Palace,Brighton,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-05,Everton,Arsenal,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-05,Ipswich,Wolves,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-05,West Ham,Bournemouth,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-06,Brentford,Chelsea,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-06,Fulham,Liverpool,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-06,Man United,Man City,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-06,Tottenham,Southampton,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-07,Leicester,Newcastle,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-12,Arsenal,Brentford,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-12,Brighton,Leicester,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-12,Man City,Crystal Palace,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-12,Nott'm Forest,Everton,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-12,Southampton,Aston Villa,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-13,Chelsea,Ipswich,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-13,Liverpool,West Ham,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-13,Newcastle,Man United,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-13,Wolves,Tottenham,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-14,Bournemouth,Fulham,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-16,Newcastle,Crystal Palace,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-19,Aston Villa,Newcastle,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-19,Brentford,Brighton,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-19,Crystal Palace,Bournemouth,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-19,Everton,Man City,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-19,West Ham,Southampton,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-20,Fulham,Chelsea,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-20,Ipswich,Arsenal,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-20,Leicester,Liverpool,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-20,Man United,Wolves,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-21,Tottenham,Nott'm Forest,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-22,Man City,Aston Villa,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-23,Arsenal,Crystal Palace,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-26,Brighton,West Ham,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-26,Chelsea,Everton,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-26,Newcastle,Ipswich,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-26,Southampton,Fulham,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-26,Wolves,Leicester,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-27,Bournemouth,Man United,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-04-27,Liverpool,Tottenham,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-01,Nott'm Forest,Brentford,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-02,Man City,Wolves,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-03,Arsenal,Bournemouth,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-03,Aston Villa,Fulham,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-03,Everton,Ipswich,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-03,Leicester,Southampton,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-04,Brentford,Man United,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-04,Brighton,Newcastle,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-04,Chelsea,Liverpool,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-04,West Ham,Tottenham,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-05,Crystal Palace,Nott'm Forest,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-10,Bournemouth,Aston Villa,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-10,Fulham,Everton,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-10,Ipswich,Brentford,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-10,Southampton,Man City,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-10,Wolves,Brighton,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-11,Liverpool,Arsenal,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-11,Man United,West Ham,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-11,Newcastle,Chelsea,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-11,Nott'm Forest,Leicester,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-11,Tottenham,Crystal Palace,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-16,Aston Villa,Tottenham,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-16,Chelsea,Man United,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-18,Arsenal,Newcastle,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-18,Brentford,Fulham,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-18,Everton,Southampton,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-18,Leicester,Ipswich,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-18,West Ham,Nott'm Forest,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-19,Brighton,Liverpool,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-20,Crystal Palace,Wolves,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-20,Man City,Bournemouth,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-25,Bournemouth,Leicester,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-25,Fulham,Man City,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-25,Ipswich,West Ham,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-25,Liverpool,Crystal Palace,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-25,Man United,Aston Villa,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-25,Newcastle,Everton,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-25,Nott'm Forest,Chelsea,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-25,Southampton,Arsenal,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-25,Tottenham,Brighton,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2024/2025,2025-05-25,Wolves,Brentford,False,,,,,,,0,107056,Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.
+2025/2026,2025-08-15,Liverpool,Bournemouth,True,book_bfd,away,95000,94050,525,False,-1000,106056,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2025-08-16,Aston Villa,Newcastle,False,,,,,,,0,106056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-08-16,Brighton,Fulham,False,,,,,,,0,106056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-08-16,Sunderland,West Ham,False,,,,,,,0,106056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-08-16,Tottenham,Burnley,False,,,,,,,0,106056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-08-16,Wolves,Man City,True,book_bfd,home,70000,69300,784,False,-1000,105056,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2025-08-17,Chelsea,Crystal Palace,False,,,,,,,0,105056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-08-17,Man United,Arsenal,False,,,,,,,0,105056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-08-17,Nott'm Forest,Brentford,False,,,,,,,0,105056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-08-18,Leeds,Everton,False,,,,,,,0,105056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-08-22,West Ham,Chelsea,False,,,,,,,0,105056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-08-23,Arsenal,Leeds,True,book_bfd,away,100000,99000,774,False,-1000,104056,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2025-08-23,Bournemouth,Wolves,False,,,,,,,0,104056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-08-23,Brentford,Aston Villa,False,,,,,,,0,104056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-08-23,Burnley,Sunderland,False,,,,,,,0,104056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-08-23,Man City,Tottenham,False,,,,,,,0,104056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-08-24,Crystal Palace,Nott'm Forest,False,,,,,,,0,104056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-08-24,Everton,Brighton,False,,,,,,,0,104056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-08-24,Fulham,Man United,False,,,,,,,0,104056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-08-25,Newcastle,Liverpool,False,,,,,,,0,104056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-08-30,Chelsea,Fulham,True,book_bfd,away,55000,54450,665,False,-1000,103056,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2025-08-30,Leeds,Newcastle,False,,,,,,,0,103056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-08-30,Man United,Burnley,False,,,,,,,0,103056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-08-30,Sunderland,Brentford,False,,,,,,,0,103056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-08-30,Tottenham,Bournemouth,False,,,,,,,0,103056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-08-30,Wolves,Everton,False,,,,,,,0,103056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-08-31,Aston Villa,Crystal Palace,False,,,,,,,0,103056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-08-31,Brighton,Man City,False,,,,,,,0,103056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-08-31,Liverpool,Arsenal,False,,,,,,,0,103056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-08-31,Nott'm Forest,West Ham,False,,,,,,,0,103056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-09-13,Arsenal,Nott'm Forest,False,,,,,,,0,103056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-09-13,Bournemouth,Brighton,False,,,,,,,0,103056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-09-13,Brentford,Chelsea,False,,,,,,,0,103056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-09-13,Crystal Palace,Sunderland,False,,,,,,,0,103056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-09-13,Everton,Aston Villa,False,,,,,,,0,103056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-09-13,Fulham,Leeds,False,,,,,,,0,103056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-09-13,Newcastle,Wolves,True,book_bfd,away,95000,94050,582,False,-1000,102056,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2025-09-13,West Ham,Tottenham,False,,,,,,,0,102056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-09-14,Burnley,Liverpool,False,,,,,,,0,102056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-09-14,Man City,Man United,False,,,,,,,0,102056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-09-20,Brighton,Tottenham,False,,,,,,,0,102056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-09-20,Burnley,Nott'm Forest,False,,,,,,,0,102056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-09-20,Fulham,Brentford,False,,,,,,,0,102056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-09-20,Liverpool,Everton,True,book_bfd,away,70000,69300,749,False,-1000,101056,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2025-09-20,Man United,Chelsea,False,,,,,,,0,101056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-09-20,West Ham,Crystal Palace,False,,,,,,,0,101056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-09-20,Wolves,Leeds,False,,,,,,,0,101056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-09-21,Arsenal,Man City,False,,,,,,,0,101056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-09-21,Bournemouth,Newcastle,False,,,,,,,0,101056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-09-21,Sunderland,Aston Villa,False,,,,,,,0,101056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-09-27,Brentford,Man United,False,,,,,,,0,101056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-09-27,Chelsea,Brighton,False,,,,,,,0,101056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-09-27,Crystal Palace,Liverpool,False,,,,,,,0,101056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-09-27,Leeds,Bournemouth,False,,,,,,,0,101056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-09-27,Man City,Burnley,False,,,,,,,0,101056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-09-27,Nott'm Forest,Sunderland,False,,,,,,,0,101056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-09-27,Tottenham,Wolves,False,,,,,,,0,101056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-09-28,Aston Villa,Fulham,False,,,,,,,0,101056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-09-28,Newcastle,Arsenal,False,,,,,,,0,101056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-09-29,Everton,West Ham,False,,,,,,,0,101056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-10-03,Bournemouth,Fulham,False,,,,,,,0,101056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-10-04,Arsenal,West Ham,True,book_bmgm,away,160000,158400,805,False,-1000,100056,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2025-10-04,Chelsea,Liverpool,False,,,,,,,0,100056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-10-04,Leeds,Tottenham,False,,,,,,,0,100056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-10-04,Man United,Sunderland,False,,,,,,,0,100056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-10-05,Aston Villa,Burnley,False,,,,,,,0,100056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-10-05,Brentford,Man City,False,,,,,,,0,100056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-10-05,Everton,Crystal Palace,False,,,,,,,0,100056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-10-05,Newcastle,Nott'm Forest,False,,,,,,,0,100056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-10-05,Wolves,Brighton,False,,,,,,,0,100056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-10-18,Brighton,Newcastle,False,,,,,,,0,100056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-10-18,Burnley,Leeds,False,,,,,,,0,100056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-10-18,Crystal Palace,Bournemouth,False,,,,,,,0,100056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-10-18,Fulham,Arsenal,True,book_bfd,home,75000,74250,1041,False,-1000,99056,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2025-10-18,Man City,Everton,True,book_b365,away,85000,84150,1747,False,-1000,98056,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2025-10-18,Nott'm Forest,Chelsea,False,,,,,,,0,98056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-10-18,Sunderland,Wolves,False,,,,,,,0,98056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-10-19,Liverpool,Man United,False,,,,,,,0,98056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-10-19,Tottenham,Aston Villa,False,,,,,,,0,98056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-10-20,West Ham,Brentford,False,,,,,,,0,98056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-10-24,Leeds,West Ham,False,,,,,,,0,98056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-10-25,Brentford,Liverpool,False,,,,,,,0,98056,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-10-25,Chelsea,Sunderland,True,book_bmgm,away,80000,79200,922,True,6920,104976,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2025-10-25,Man United,Brighton,False,,,,,,,0,104976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-10-25,Newcastle,Fulham,True,book_bmgm,away,62500,61875,884,False,-1000,103976,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2025-10-26,Arsenal,Crystal Palace,False,,,,,,,0,103976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-10-26,Aston Villa,Man City,False,,,,,,,0,103976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-10-26,Bournemouth,Nott'm Forest,False,,,,,,,0,103976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-10-26,Everton,Tottenham,False,,,,,,,0,103976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-10-26,Wolves,Burnley,False,,,,,,,0,103976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-11-01,Brighton,Leeds,False,,,,,,,0,103976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-11-01,Burnley,Arsenal,True,book_bfd,home,170000,168300,2286,False,-1000,102976,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2025-11-01,Crystal Palace,Brentford,False,,,,,,,0,102976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-11-01,Fulham,Wolves,False,,,,,,,0,102976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-11-01,Liverpool,Aston Villa,False,,,,,,,0,102976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-11-01,Nott'm Forest,Man United,False,,,,,,,0,102976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-11-01,Tottenham,Chelsea,False,,,,,,,0,102976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-11-02,Man City,Bournemouth,False,,,,,,,0,102976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-11-02,West Ham,Newcastle,False,,,,,,,0,102976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-11-03,Sunderland,Everton,False,,,,,,,0,102976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-11-08,Chelsea,Wolves,False,,,,,,,0,102976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-11-08,Everton,Fulham,False,,,,,,,0,102976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-11-08,Sunderland,Arsenal,False,,,,,,,0,102976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-11-08,Tottenham,Man United,False,,,,,,,0,102976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-11-08,West Ham,Burnley,False,,,,,,,0,102976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-11-09,Aston Villa,Bournemouth,False,,,,,,,0,102976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-11-09,Brentford,Newcastle,False,,,,,,,0,102976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-11-09,Crystal Palace,Brighton,False,,,,,,,0,102976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-11-09,Man City,Liverpool,False,,,,,,,0,102976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-11-09,Nott'm Forest,Leeds,False,,,,,,,0,102976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-11-22,Bournemouth,West Ham,False,,,,,,,0,102976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-11-22,Brighton,Brentford,False,,,,,,,0,102976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-11-22,Burnley,Chelsea,False,,,,,,,0,102976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-11-22,Fulham,Sunderland,False,,,,,,,0,102976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-11-22,Liverpool,Nott'm Forest,False,,,,,,,0,102976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-11-22,Newcastle,Man City,False,,,,,,,0,102976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-11-22,Wolves,Crystal Palace,False,,,,,,,0,102976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-11-23,Arsenal,Tottenham,True,book_bfd,away,80000,79200,780,False,-1000,101976,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2025-11-23,Leeds,Aston Villa,False,,,,,,,0,101976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-11-24,Man United,Everton,False,,,,,,,0,101976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-11-29,Brentford,Burnley,False,,,,,,,0,101976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-11-29,Everton,Newcastle,False,,,,,,,0,101976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-11-29,Man City,Leeds,True,book_bfd,away,130000,128700,1637,False,-1000,100976,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2025-11-29,Sunderland,Bournemouth,False,,,,,,,0,100976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-11-29,Tottenham,Fulham,False,,,,,,,0,100976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-11-30,Aston Villa,Wolves,True,book_bmgm,away,75000,74250,1299,False,-1000,99976,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2025-11-30,Chelsea,Arsenal,False,,,,,,,0,99976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-11-30,Crystal Palace,Man United,False,,,,,,,0,99976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-11-30,Nott'm Forest,Brighton,False,,,,,,,0,99976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-11-30,West Ham,Liverpool,False,,,,,,,0,99976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-02,Bournemouth,Everton,False,,,,,,,0,99976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-02,Fulham,Man City,False,,,,,,,0,99976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-02,Newcastle,Tottenham,False,,,,,,,0,99976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-03,Arsenal,Brentford,False,,,,,,,0,99976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-03,Brighton,Aston Villa,False,,,,,,,0,99976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-03,Burnley,Crystal Palace,False,,,,,,,0,99976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-03,Leeds,Chelsea,False,,,,,,,0,99976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-03,Liverpool,Sunderland,False,,,,,,,0,99976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-03,Wolves,Nott'm Forest,False,,,,,,,0,99976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-04,Man United,West Ham,False,,,,,,,0,99976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-06,Aston Villa,Arsenal,False,,,,,,,0,99976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-06,Bournemouth,Chelsea,False,,,,,,,0,99976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-06,Everton,Nott'm Forest,False,,,,,,,0,99976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-06,Leeds,Liverpool,False,,,,,,,0,99976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-06,Man City,Sunderland,True,book_bmgm,away,115000,113850,836,False,-1000,98976,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2025-12-06,Newcastle,Burnley,True,book_bfd,away,110000,108900,1185,False,-1000,97976,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2025-12-06,Tottenham,Brentford,False,,,,,,,0,97976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-07,Brighton,West Ham,False,,,,,,,0,97976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-07,Fulham,Crystal Palace,False,,,,,,,0,97976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-08,Wolves,Man United,True,book_bfd,home,55000,54450,514,False,-1000,96976,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2025-12-13,Arsenal,Wolves,True,book_bfd,away,260000,257400,1923,False,-1000,95976,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2025-12-13,Burnley,Fulham,False,,,,,,,0,95976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-13,Chelsea,Everton,False,,,,,,,0,95976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-13,Liverpool,Brighton,False,,,,,,,0,95976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-14,Brentford,Leeds,False,,,,,,,0,95976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-14,Crystal Palace,Man City,False,,,,,,,0,95976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-14,Nott'm Forest,Tottenham,False,,,,,,,0,95976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-14,Sunderland,Newcastle,False,,,,,,,0,95976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-14,West Ham,Aston Villa,False,,,,,,,0,95976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-15,Man United,Bournemouth,False,,,,,,,0,95976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-20,Bournemouth,Burnley,True,book_bfd,away,70000,69300,713,False,-1000,94976,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2025-12-20,Brighton,Sunderland,False,,,,,,,0,94976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-20,Everton,Arsenal,True,book_bfd,home,70000,69300,786,False,-1000,93976,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2025-12-20,Leeds,Crystal Palace,False,,,,,,,0,93976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-20,Man City,West Ham,True,book_bmgm,away,140000,138600,2253,False,-1000,92976,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2025-12-20,Newcastle,Chelsea,False,,,,,,,0,92976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-20,Tottenham,Liverpool,False,,,,,,,0,92976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-20,Wolves,Brentford,False,,,,,,,0,92976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-21,Aston Villa,Man United,False,,,,,,,0,92976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-22,Fulham,Nott'm Forest,False,,,,,,,0,92976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-26,Man United,Newcastle,False,,,,,,,0,92976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-27,Arsenal,Brighton,True,book_bfd,away,100000,99000,1688,False,-1000,91976,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2025-12-27,Brentford,Bournemouth,False,,,,,,,0,91976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-27,Burnley,Everton,False,,,,,,,0,91976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-27,Chelsea,Aston Villa,False,,,,,,,0,91976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-27,Liverpool,Wolves,True,book_bmgm,away,130000,128700,1948,False,-1000,90976,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2025-12-27,Nott'm Forest,Man City,True,book_bmgm,home,56000,55440,929,False,-1000,89976,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2025-12-27,West Ham,Fulham,False,,,,,,,0,89976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-28,Crystal Palace,Tottenham,False,,,,,,,0,89976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-28,Sunderland,Leeds,False,,,,,,,0,89976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-30,Arsenal,Aston Villa,True,book_bfd,away,90000,89100,1511,False,-1000,88976,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2025-12-30,Burnley,Newcastle,False,,,,,,,0,88976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-30,Chelsea,Bournemouth,True,book_bmgm,away,57500,56925,665,False,-1000,87976,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2025-12-30,Man United,Wolves,True,book_bfd,away,85000,84150,1150,False,-1000,86976,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2025-12-30,Nott'm Forest,Everton,False,,,,,,,0,86976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2025-12-30,West Ham,Brighton,False,,,,,,,0,86976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-01,Brentford,Tottenham,False,,,,,,,0,86976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-01,Crystal Palace,Fulham,False,,,,,,,0,86976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-01,Liverpool,Leeds,False,,,,,,,0,86976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-01,Sunderland,Man City,True,book_bfd,home,80000,79200,1119,False,-1000,85976,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2026-01-03,Aston Villa,Nott'm Forest,False,,,,,,,0,85976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-03,Bournemouth,Arsenal,False,,,,,,,0,85976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-03,Brighton,Burnley,False,,,,,,,0,85976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-03,Wolves,West Ham,False,,,,,,,0,85976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-04,Everton,Brentford,False,,,,,,,0,85976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-04,Fulham,Liverpool,False,,,,,,,0,85976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-04,Leeds,Man United,False,,,,,,,0,85976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-04,Man City,Chelsea,True,book_bfd,away,65000,64350,1063,False,-1000,84976,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2026-01-04,Newcastle,Crystal Palace,False,,,,,,,0,84976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-04,Tottenham,Sunderland,False,,,,,,,0,84976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-06,West Ham,Nott'm Forest,False,,,,,,,0,84976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-07,Bournemouth,Tottenham,False,,,,,,,0,84976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-07,Brentford,Sunderland,True,book_bmgm,away,46000,45540,882,False,-1000,83976,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2026-01-07,Burnley,Man United,False,,,,,,,0,83976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-07,Crystal Palace,Aston Villa,False,,,,,,,0,83976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-07,Everton,Wolves,False,,,,,,,0,83976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-07,Fulham,Chelsea,False,,,,,,,0,83976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-07,Man City,Brighton,True,book_bmgm,away,64000,63360,645,False,-1000,82976,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2026-01-07,Newcastle,Leeds,False,,,,,,,0,82976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-08,Arsenal,Liverpool,True,book_bmgm,away,64000,63360,886,False,-1000,81976,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2026-01-17,Chelsea,Brentford,False,,,,,,,0,81976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-17,Leeds,Fulham,False,,,,,,,0,81976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-17,Liverpool,Burnley,True,book_bmgm,away,140000,138600,2040,False,-1000,80976,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2026-01-17,Man United,Man City,False,,,,,,,0,80976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-17,Nott'm Forest,Arsenal,False,,,,,,,0,80976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-17,Sunderland,Crystal Palace,False,,,,,,,0,80976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-17,Tottenham,West Ham,False,,,,,,,0,80976,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-18,Aston Villa,Everton,True,book_bv,away,65000,64350,1070,True,5435,86411,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2026-01-18,Wolves,Newcastle,False,,,,,,,0,86411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-19,Brighton,Bournemouth,False,,,,,,,0,86411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-24,Bournemouth,Liverpool,False,,,,,,,0,86411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-24,Burnley,Tottenham,False,,,,,,,0,86411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-24,Fulham,Brighton,False,,,,,,,0,86411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-24,Man City,Wolves,False,,,,,,,0,86411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-24,West Ham,Sunderland,False,,,,,,,0,86411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-25,Arsenal,Man United,False,,,,,,,0,86411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-25,Brentford,Nott'm Forest,False,,,,,,,0,86411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-25,Crystal Palace,Chelsea,False,,,,,,,0,86411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-25,Newcastle,Aston Villa,False,,,,,,,0,86411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-26,Everton,Leeds,False,,,,,,,0,86411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-31,Brighton,Everton,False,,,,,,,0,86411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-31,Chelsea,West Ham,False,,,,,,,0,86411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-31,Leeds,Arsenal,True,book_bmgm,home,65000,64350,683,False,-1000,85411,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2026-01-31,Liverpool,Newcastle,False,,,,,,,0,85411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-01-31,Wolves,Bournemouth,False,,,,,,,0,85411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-02-01,Aston Villa,Brentford,False,,,,,,,0,85411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-02-01,Man United,Fulham,False,,,,,,,0,85411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-02-01,Nott'm Forest,Crystal Palace,False,,,,,,,0,85411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-02-01,Tottenham,Man City,True,book_bv,home,55000,54450,747,False,-1000,84411,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2026-02-02,Sunderland,Burnley,False,,,,,,,0,84411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-02-06,Leeds,Nott'm Forest,False,,,,,,,0,84411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-02-07,Arsenal,Sunderland,True,book_bmgm,away,140000,138600,1112,False,-1000,83411,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2026-02-07,Bournemouth,Aston Villa,False,,,,,,,0,83411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-02-07,Burnley,West Ham,False,,,,,,,0,83411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-02-07,Fulham,Everton,False,,,,,,,0,83411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-02-07,Man United,Tottenham,False,,,,,,,0,83411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-02-07,Newcastle,Brentford,False,,,,,,,0,83411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-02-07,Wolves,Chelsea,False,,,,,,,0,83411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-02-08,Brighton,Crystal Palace,False,,,,,,,0,83411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-02-08,Liverpool,Man City,False,,,,,,,0,83411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-02-10,Chelsea,Leeds,False,,,,,,,0,83411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-02-10,Everton,Bournemouth,False,,,,,,,0,83411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-02-10,Tottenham,Newcastle,False,,,,,,,0,83411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-02-10,West Ham,Man United,False,,,,,,,0,83411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-02-11,Aston Villa,Brighton,False,,,,,,,0,83411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-02-11,Crystal Palace,Burnley,False,,,,,,,0,83411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-02-11,Man City,Fulham,False,,,,,,,0,83411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-02-11,Nott'm Forest,Wolves,True,book_bmgm,away,51000,50490,617,False,-1000,82411,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2026-02-11,Sunderland,Liverpool,False,,,,,,,0,82411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-02-12,Brentford,Arsenal,True,book_bmgm,home,56000,55440,593,False,-1000,81411,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2026-02-18,Wolves,Arsenal,True,book_bmgm,home,140000,138600,572,False,-1000,80411,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2026-02-21,Aston Villa,Leeds,False,,,,,,,0,80411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-02-21,Brentford,Brighton,False,,,,,,,0,80411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-02-21,Chelsea,Burnley,True,book_bmgm,away,130000,128700,673,False,-1000,79411,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2026-02-21,Man City,Newcastle,True,book_bmgm,away,58000,57420,900,False,-1000,78411,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2026-02-21,West Ham,Bournemouth,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-02-22,Crystal Palace,Wolves,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-02-22,Nott'm Forest,Liverpool,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-02-22,Sunderland,Fulham,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-02-22,Tottenham,Arsenal,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-02-23,Everton,Man United,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-02-27,Wolves,Aston Villa,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-02-28,Bournemouth,Sunderland,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-02-28,Burnley,Brentford,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-02-28,Leeds,Man City,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-02-28,Liverpool,West Ham,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-02-28,Newcastle,Everton,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-03-01,Arsenal,Chelsea,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-03-01,Brighton,Nott'm Forest,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-03-01,Fulham,Tottenham,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-03-01,Man United,Crystal Palace,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-03-03,Bournemouth,Brentford,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-03-03,Everton,Burnley,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-03-03,Leeds,Sunderland,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-03-03,Wolves,Liverpool,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-03-04,Aston Villa,Chelsea,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-03-04,Brighton,Arsenal,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-03-04,Fulham,West Ham,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-03-04,Man City,Nott'm Forest,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-03-04,Newcastle,Man United,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-03-05,Tottenham,Crystal Palace,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-03-14,Arsenal,Everton,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-03-14,Burnley,Bournemouth,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-03-14,Chelsea,Newcastle,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-03-14,Sunderland,Brighton,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-03-14,West Ham,Man City,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-03-15,Crystal Palace,Leeds,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-03-15,Liverpool,Tottenham,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-03-15,Man United,Aston Villa,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-03-15,Nott'm Forest,Fulham,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-03-16,Brentford,Wolves,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-03-20,Bournemouth,Man United,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-03-21,Brighton,Liverpool,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-03-21,Everton,Chelsea,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-03-21,Fulham,Burnley,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-03-21,Leeds,Brentford,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-03-22,Aston Villa,West Ham,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-03-22,Newcastle,Sunderland,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-03-22,Tottenham,Nott'm Forest,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-04-10,West Ham,Wolves,False,,,,,,,0,78411,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-04-11,Arsenal,Bournemouth,True,book_b365,away,70000,69300,608,True,5930,84341,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2026-04-11,Brentford,Everton,False,,,,,,,0,84341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-04-11,Burnley,Brighton,False,,,,,,,0,84341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-04-11,Liverpool,Fulham,False,,,,,,,0,84341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-04-12,Chelsea,Man City,False,,,,,,,0,84341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-04-12,Crystal Palace,Newcastle,False,,,,,,,0,84341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-04-12,Nott'm Forest,Aston Villa,False,,,,,,,0,84341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-04-12,Sunderland,Tottenham,False,,,,,,,0,84341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-04-13,Man United,Leeds,False,,,,,,,0,84341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-04-18,Brentford,Fulham,False,,,,,,,0,84341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-04-18,Chelsea,Man United,False,,,,,,,0,84341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-04-18,Leeds,Wolves,False,,,,,,,0,84341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-04-18,Newcastle,Bournemouth,False,,,,,,,0,84341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-04-18,Tottenham,Brighton,False,,,,,,,0,84341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-04-19,Aston Villa,Sunderland,False,,,,,,,0,84341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-04-19,Everton,Liverpool,False,,,,,,,0,84341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-04-19,Man City,Arsenal,False,,,,,,,0,84341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-04-19,Nott'm Forest,Burnley,False,,,,,,,0,84341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-04-20,Crystal Palace,West Ham,False,,,,,,,0,84341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-04-21,Brighton,Chelsea,False,,,,,,,0,84341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-04-22,Bournemouth,Leeds,False,,,,,,,0,84341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-04-22,Burnley,Man City,True,book_bv,home,170000,168300,1488,False,-1000,83341,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2026-04-24,Sunderland,Nott'm Forest,False,,,,,,,0,83341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-04-25,Arsenal,Newcastle,True,book_bmgm,away,80000,79200,702,False,-1000,82341,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2026-04-25,Fulham,Aston Villa,False,,,,,,,0,82341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-04-25,Liverpool,Crystal Palace,True,book_bmgm,away,56000,55440,819,False,-1000,81341,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2026-04-25,West Ham,Everton,False,,,,,,,0,81341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-04-25,Wolves,Tottenham,False,,,,,,,0,81341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-04-27,Man United,Brentford,False,,,,,,,0,81341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-05-01,Leeds,Burnley,False,,,,,,,0,81341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-05-02,Arsenal,Fulham,False,,,,,,,0,81341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-05-02,Brentford,West Ham,False,,,,,,,0,81341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-05-02,Newcastle,Brighton,False,,,,,,,0,81341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-05-02,Wolves,Sunderland,False,,,,,,,0,81341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-05-03,Aston Villa,Tottenham,False,,,,,,,0,81341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-05-03,Bournemouth,Crystal Palace,False,,,,,,,0,81341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-05-03,Man United,Liverpool,False,,,,,,,0,81341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-05-04,Chelsea,Nott'm Forest,False,,,,,,,0,81341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-05-04,Everton,Man City,False,,,,,,,0,81341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-05-09,Brighton,Wolves,True,book_bfd,away,110000,108900,1458,False,-1000,80341,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2026-05-09,Fulham,Bournemouth,False,,,,,,,0,80341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-05-09,Liverpool,Chelsea,False,,,,,,,0,80341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-05-09,Man City,Brentford,True,book_bmgm,away,80000,79200,913,False,-1000,79341,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2026-05-09,Sunderland,Man United,False,,,,,,,0,79341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-05-10,Burnley,Aston Villa,False,,,,,,,0,79341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-05-10,Crystal Palace,Everton,False,,,,,,,0,79341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-05-10,Nott'm Forest,Newcastle,False,,,,,,,0,79341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-05-10,West Ham,Arsenal,True,book_bmgm,home,62500,61875,526,False,-1000,78341,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2026-05-11,Tottenham,Leeds,False,,,,,,,0,78341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-05-13,Man City,Crystal Palace,True,book_bv,away,95000,94050,502,False,-1000,77341,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2026-05-15,Aston Villa,Liverpool,False,,,,,,,0,77341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-05-17,Brentford,Crystal Palace,False,,,,,,,0,77341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-05-17,Everton,Sunderland,False,,,,,,,0,77341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-05-17,Leeds,Brighton,False,,,,,,,0,77341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-05-17,Man United,Nott'm Forest,False,,,,,,,0,77341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-05-17,Newcastle,West Ham,False,,,,,,,0,77341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-05-17,Wolves,Fulham,False,,,,,,,0,77341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-05-18,Arsenal,Burnley,True,book_b365,away,260000,257400,1175,False,-1000,76341,"Regelbaserad oddssignal. Sannolikhet, tillgänglighet och lönsamhet är inte verifierade."
+2025/2026,2026-05-19,Bournemouth,Man City,False,,,,,,,0,76341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-05-19,Chelsea,Tottenham,False,,,,,,,0,76341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-05-24,Brighton,Man United,False,,,,,,,0,76341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-05-24,Burnley,Wolves,False,,,,,,,0,76341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-05-24,Crystal Palace,Arsenal,False,,,,,,,0,76341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-05-24,Fulham,Newcastle,False,,,,,,,0,76341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-05-24,Liverpool,Brentford,False,,,,,,,0,76341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-05-24,Man City,Aston Villa,False,,,,,,,0,76341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-05-24,Nott'm Forest,Bournemouth,False,,,,,,,0,76341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-05-24,Sunderland,Chelsea,False,,,,,,,0,76341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-05-24,Tottenham,Everton,False,,,,,,,0,76341,Ingen avvikelse klarar de låsta provreglerna.
+2025/2026,2026-05-24,West Ham,Leeds,False,,,,,,,0,76341,Ingen avvikelse klarar de låsta provreglerna.

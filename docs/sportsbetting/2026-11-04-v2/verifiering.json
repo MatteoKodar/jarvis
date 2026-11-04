@@ -1,0 +1,13 @@
+{
+  "checked_at": "2026-11-04T18:47:34.181Z",
+  "passed": true,
+  "checks": [
+    "Huvudplan, 13 innehållslänkar och exakt kopierbart uppdrag.",
+    "Ankarlänkar, bakåtknapp och omladdning fungerar.",
+    "5 HTML-dokument kontrollerade vid 1280px/390px; 51 lokala länkar har mål.",
+    "Inga sidfel eller externa resursanrop i dokumentvisningen.",
+    "Nyckeltal, 90 målrader, 36 kostnadsfall och 172/146-kvotens aritmetik verifierade."
+  ],
+  "product_tests": "Inte körda: endast nya dokument och fristående studieprogram. Inga produktfiler ändrade.",
+  "paid_verification_calls": 0
+}

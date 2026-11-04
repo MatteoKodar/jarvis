@@ -1,0 +1,24 @@
+{
+  "independent_settlement_crosscheck": true,
+  "checked_signals": 76,
+  "profit_ore": -23659,
+  "wins": 6,
+  "by_book": {
+    "WH": 4,
+    "BF": 10,
+    "1XB": 9,
+    "B365": 4,
+    "BFD": 21,
+    "BMGM": 24,
+    "BV": 4
+  },
+  "by_outcome": {
+    "away": 55,
+    "home": 19,
+    "draw": 2
+  },
+  "minimum_quoted_odds": 4.03,
+  "maximum_quoted_odds": 29.0,
+  "paid_calls": 0,
+  "real_bets": 0
+}

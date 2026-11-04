@@ -1,0 +1,73 @@
+{
+  "evidence": "Verifierat genom helt lokal återspelning av frysta CSV-byte med oförändrad kod och policy.",
+  "comparison": {
+    "total": true,
+    "seasons": true,
+    "quality": true,
+    "ledger": true,
+    "initial_bankroll_ore": true,
+    "final_bankroll_ore": true,
+    "max_drawdown_ore": true,
+    "uncertainty": true,
+    "policy_hash": true
+  },
+  "total": {
+    "matches": 760,
+    "signals": 76,
+    "abstentions": 684,
+    "wins": 6,
+    "losses": 70,
+    "staked_ore": 76000,
+    "profit_ore": -23659,
+    "roi_bp": -3114
+  },
+  "seasons": [
+    {
+      "season": "2024/2025",
+      "matches": 380,
+      "signals": 24,
+      "abstentions": 356,
+      "wins": 3,
+      "losses": 21,
+      "staked_ore": 24000,
+      "profit_ore": 7056,
+      "roi_bp": 2940
+    },
+    {
+      "season": "2025/2026",
+      "matches": 380,
+      "signals": 52,
+      "abstentions": 328,
+      "wins": 3,
+      "losses": 49,
+      "staked_ore": 52000,
+      "profit_ore": -30715,
+      "roi_bp": -5907
+    }
+  ],
+  "policy_hash": "3512bd154606a1038d14907578ad3500fd8a7a1dd52b25e6fb834dbf8b887f5f",
+  "protocol_sha256": "903e76f0067fc2fe9449ef87011e920b1f4d7b8aeec86aacbe57dcc9e5dc13ac",
+  "final_bankroll_ore": 76341,
+  "max_drawdown_ore": 33715,
+  "uncertainty": {
+    "unit": "matchdatum",
+    "days_with_signals": 61,
+    "samples": 5000,
+    "seed": 20261103,
+    "roi_interval_bp": [
+      -8035,
+      3063
+    ],
+    "limitation": "Illustrativt 95-procentigt dagklustrat bootstrapintervall. Fångar inte felaktiga/asynkrona odds, urvalsfel eller alla tidsberoenden."
+  },
+  "maximum_selected_quoted_odds_x10000": 290000,
+  "minimum_selected_quoted_odds_x10000": 40300,
+  "paid_calls": 0,
+  "network_calls": 0,
+  "database_reads_or_writes": 0,
+  "limitations": [
+    "Ingen samtidig historisk oddstillgänglighet verifieras.",
+    "Återspelningen verifierar aritmetik och byte, inte ekonomisk fördel eller framtida frekvens.",
+    "Gamla två säsonger förblir sedda utvecklingsdata."
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "version": "data-kallor-v2-20261104",
+  "checked_at": "2026-11-04T19:34:00+01:00",
+  "timezone": "Europe/Stockholm",
+  "method": "Offentlig dokumentläsning via webbsök; ingen autentisering, API-anrop, konto, betalning eller insats. Webbsidornas råa fulltext lagras inte.",
+  "sources": [
+    {
+      "id": "D01",
+      "title": "The Odds API prislista",
+      "url": "https://the-odds-api.com/",
+      "published_or_updated_at": null,
+      "evidence_level": "läst primärkälla",
+      "limitation_or_note": "Gratis500 krediter/månad;20K30USD;100K59USD. Svensk faktisk åtkomst och SEK-slutpris ej verifierade."
+    },
+    {
+      "id": "D02",
+      "title": "The Odds API bolagslista",
+      "url": "https://the-odds-api.com/sports-odds-data/bookmaker-apis.html",
+      "published_or_updated_at": null,
+      "evidence_level": "läst primärkälla",
+      "limitation_or_note": "Regionse listar13bolag. Ingen faktisk pris- eller kontotäckning kontrollerad."
+    },
+    {
+      "id": "D03",
+      "title": "The Odds API v4",
+      "url": "https://the-odds-api.com/liveapi/guides/v4/",
+      "published_or_updated_at": null,
+      "evidence_level": "läst primärkälla",
+      "limitation_or_note": "Kvotmodell, marknadstid, anropstyper och historik lästa; inga anrop utförda."
+    },
+    {
+      "id": "D04",
+      "title": "The Odds API uppdatering",
+      "url": "https://the-odds-api.com/sports-odds-data/update-intervals.html",
+      "published_or_updated_at": null,
+      "evidence_level": "läst primärkälla",
+      "limitation_or_note": "Förhandsmarknader60sek enligt dokumentation; ingen latensgaranti."
+    },
+    {
+      "id": "D05",
+      "title": "The Odds API marknader",
+      "url": "https://the-odds-api.com/sports-odds-data/betting-markets.html",
+      "published_or_updated_at": null,
+      "evidence_level": "läst primärkälla",
+      "limitation_or_note": "h2h innehåller oavgjort i fotboll. Enskild operatörs fullständiga90minregler måste verifieras."
+    },
+    {
+      "id": "D06",
+      "title": "The Odds API datavillkor",
+      "url": "https://the-odds-api.com/terms-and-conditions.html",
+      "published_or_updated_at": "2026-08-31",
+      "evidence_level": "läst primärkälla",
+      "limitation_or_note": "Lokal lagring och analys tillåts; rådatatjänst/fristående vidareförsäljning förbjuds; externa mottagare ej verifierade."
+    },
+    {
+      "id": "D07",
+      "title": "API-Football prislista",
+      "url": "https://www.api-football.com/pricing",
+      "published_or_updated_at": null,
+      "evidence_level": "läst primärkälla",
+      "limitation_or_note": "Gratis100anrop/dag med säsongsbegränsning;Pro19USD/månad. Säsong2026/27 i gratiskonto ej verifierad."
+    },
+    {
+      "id": "D08",
+      "title": "API-Football officiell guide",
+      "url": "https://www.api-football.com/news/post/how-to-get-started-with-api-football-the-complete-beginners-guide",
+      "published_or_updated_at": "2026-03-13",
+      "evidence_level": "läst primärkälla",
+      "limitation_or_note": "Förhandsodds cirka3timmarsintervall, paginering. Ingen90minavräkning verifierad."
+    },
+    {
+      "id": "D09",
+      "title": "Football-Data användningspolicy",
+      "url": "https://football-data.co.uk/contact.php",
+      "published_or_updated_at": null,
+      "evidence_level": "läst primärkälla",
+      "limitation_or_note": "Privat/akademiskt, lätt hämtning högst2/vecka; inget generellt tillstånd för kommersiella/AIträningsprojekt. Sidohuvud2026-11-03 är inte policyns versionsdatum."
+    },
+    {
+      "id": "D10",
+      "title": "Svenska Spel val av Kambi",
+      "url": "https://om.svenskaspel.se/nyheter-sport-casino/svenska-spel-sport-casino-valjer-kambi-som-ny-sportboksleverantor/",
+      "published_or_updated_at": "2023-10-03",
+      "evidence_level": "läst primärkälla",
+      "limitation_or_note": "Dokumenterad leverantörsrelation, ingen observation av identiska odds."
+    },
+    {
+      "id": "D11",
+      "title": "Kambi förlänger ATG",
+      "url": "https://www.kambi.com/investors/news-pr/kambi-group-plc-extends-multi-channel-sportsbook-partnership-with-swedish-giant-atg/",
+      "published_or_updated_at": "2023-09-28",
+      "evidence_level": "läst primärkälla",
+      "limitation_or_note": "Flerårigt sportsbookavtal. Aktuell finmaskig oddsdata härleds inte ur avtalet."
+    },
+    {
+      "id": "D12",
+      "title": "Betsson varumärken",
+      "url": "https://betssongroup.com/about-us/products-and-brands/",
+      "published_or_updated_at": null,
+      "evidence_level": "läst primärkälla",
+      "limitation_or_note": "Betsson ochNordicBet samma koncern; oberoendeavser ejvarumärkesantal."
+    },
+    {
+      "id": "D13",
+      "title": "LeoVegas lanserar BetMGM Sverige",
+      "url": "https://www.leovegasgroup.com/wp-content/uploads/betmgm-launches-in-sweden-further-strengthening-leovegas-groups-leading-market-position-241023-1.pdf",
+      "published_or_updated_at": "2024-10-23",
+      "evidence_level": "läst primärkälla",
+      "limitation_or_note": "BetMGM/LeoVegas/Expekt koncernrelation; plattformsstatus nu kan ha ändrats."
+    },
+    {
+      "id": "D14",
+      "title": "Kambi ochFDJ OddsFeed+",
+      "url": "https://www.kambi.com/investors/news-pr/kambi-group-plc-and-fdj-united-sign-expanded-odds-feed-agreement/",
+      "published_or_updated_at": "2025-11-19",
+      "evidence_level": "läst primärkälla",
+      "limitation_or_note": "Egen plattform kan fortsätta nyttja gemensam oddsfeed; svensk matchspecifik användning okänd."
+    },
+    {
+      "id": "D15",
+      "title": "Kambi årsrapport2025 s21",
+      "url": "https://storage.mfn.se/07e328af-db31-4728-843f-b7c47a97b803/kambi-annual-report-2025.pdf",
+      "published_or_updated_at": null,
+      "evidence_level": "läst primärkälla",
+      "limitation_or_note": "Dokumentår2025, exakt publiceringsdag ej verifierad. LeoVegas ochFDJ nämns somOddsFeed+partners."
+    },
+    {
+      "id": "D16",
+      "title": "BetMGM svenska sportregler",
+      "url": "https://www.betmgm.se/sportregler",
+      "published_or_updated_at": "2026-10-02",
+      "evidence_level": "läst primärkälla",
+      "limitation_or_note": "Version1.4; AI/automationstext läst. Inget påstående om generell rättstolkning eller individuell behörighet."
+    },
+    {
+      "id": "D17",
+      "title": "bet365 svenska villkor",
+      "url": "https://help.bet365.com/s/sv-se/terms-and-conditions",
+      "published_or_updated_at": null,
+      "evidence_level": "läst primärkälla",
+      "limitation_or_note": "Begränsningar automatiserad fångst/användning lästa. Ingen automatisk bookmakeråtkomst tillåten i planen."
+    }
+  ],
+  "unavailable_pages": [
+    {
+      "url": "https://football-data.co.uk/data.php",
+      "status": "HTTP429 vid läsning; contact.php användes"
+    },
+    {
+      "url": "https://www.svenskaspel.se/oddset/spelregler",
+      "status": "oläsbar i verktyget; villkor okända"
+    },
+    {
+      "url": "https://www.svenskaspel.se/kundservice/villkor",
+      "status": "oläsbar i verktyget; villkor okända"
+    }
+  ],
+  "pilot_proposal": {
+    "activated": false,
+    "league": "soccer_epl",
+    "market": "1x2_90min",
+    "target_operator_proposed": "svenskaspel_se",
+    "conditions_before_start": [
+      "ägaren granskar ny plan",
+      "fasta bolag och koncern/leverantörsfamiljer verifieras",
+      "minst172gratiscredits kvar",
+      "manuell kontrollrätt klarläggs före nivå2",
+      "separat implementationsuppdrag"
+    ],
+    "observation_start": "2026-11-09T00:00:00+01:00",
+    "observation_end_exclusive": "2026-12-07T00:00:00+01:00",
+    "closeout_end_exclusive": "2026-12-10T00:00:00+01:00",
+    "match_cap": 30,
+    "moments_minutes_before_kickoff": [
+      60,
+      55
+    ],
+    "primary_decision_minute": 60,
+    "second_moment_role": "endast diagnostik, inget retroaktivt pris",
+    "receive_tolerance_seconds": 30,
+    "max_market_age_seconds": 120,
+    "max_source_time_spread_seconds": 60,
+    "max_future_clock_error_seconds": 0,
+    "source_timestamp_field": "markets[].last_update",
+    "source_time_means": "leverantören observerade senast marknaden, inte verifierad bolagstillgänglighet",
+    "max_named_books": 10,
+    "min_reference_families": 3,
+    "cash_cap_ore": 0,
+    "ai_cap_ore": 0,
+    "time_cap_hours": 12,
+    "quota": {
+      "sports_calls": 1,
+      "events_calls": 29,
+      "odds_calls_cap": 60,
+      "odds_cost_each": 1,
+      "score_calls": 31,
+      "score_cost_each": 2,
+      "base_http_calls": 121,
+      "base_credits": 122,
+      "reserve_http_calls": 25,
+      "reserve_credits": 50,
+      "http_cap": 146,
+      "credit_cap": 172,
+      "two_full_region_alternative_credit_cap": 232,
+      "same_kickoff_batch_saving_assumed": false,
+      "quota_reset_does_not_increase_local_cap": true
+    },
+    "suspected_clock_skew_flag_threshold_seconds": 5,
+    "hypothetical_delay_after_decision_seconds": 30,
+    "decision_and_validation_deadline_after_t0_seconds": 30
+  },
+  "unknown": [
+    "gratisnyckelns faktiska svenska bolag",
+    "samtidiga tre verifierade referensfamiljer",
+    "manuell kontrollrätt hos föreslagen måloperatör",
+    "90minavräkningsstatus vid avbrott",
+    "verklig30sekprisförsämring",
+    "insatsacceptans och kontokapacitet",
+    "kvarvarande kontokvot",
+    "framtida SEKslutpris"
+  ]
+}

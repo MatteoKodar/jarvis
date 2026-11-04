@@ -1,0 +1,53 @@
+{
+  "version": "statistik-forstudie-v2-2026-11-04",
+  "evidence": "Körning mot lokala historikfiler; ingen ny strategi eller ekonomisk återspelning.",
+  "input_sha256": {
+    "docs\\odds-reports\\2026-11-03-epl-paper-v1\\resultat.json": "76ad40470c4ba4ca67c82c3ec18c536f20fe4d2b66f75a8fd15ec9eadc6fd8ee",
+    "data\\odds-history\\2026-11-03-epl-paper-v1\\2425-E0.csv": "d0c8ce4a96d886cf60cf101f570f4a3893844226f91c7bd769eb568c49edbfa4",
+    "data\\odds-history\\2026-11-03-epl-paper-v1\\2526-E0.csv": "3e3a8352f9ada6789c508d6ca184424421fed56a30400904a4a327c583407e62",
+    "backend/jarvis/odds_lab.py": "7e13fc941acfea8a73b091c46e8b24911798216be0a04759f46038b275da6f77",
+    "backend/jarvis/odds_history.py": "74954f9ccc122b631378b2aded87228a86f0655fc352bdba1f7221a399ed9d1c"
+  },
+  "all_target_reference_combinations": {
+    "count": 3820,
+    "deviation_from_one_above_1e_12": 3425,
+    "minimum_sum_decimal": "0.9871875911168044322822932211",
+    "maximum_sum_decimal": "1.008604232263575870369486611"
+  },
+  "historically_selected_target_reference_combinations": {
+    "count": 76,
+    "deviation_from_one_above_1e_12": 67,
+    "minimum_sum_decimal": "0.9905196496147732436941183166",
+    "maximum_sum_decimal": "1.004712275659394032659691680"
+  },
+  "historical_selected_sample_return_standard_deviation": 2.5183250307548297,
+  "power_illustration": [
+    {
+      "hypothetical_edge": 0.01,
+      "iid_sigma_one_n": 61826,
+      "seasons_at_38": 1627.0,
+      "seasons_at_380": 162.7
+    },
+    {
+      "hypothetical_edge": 0.02,
+      "iid_sigma_one_n": 15457,
+      "seasons_at_38": 406.7631578947368,
+      "seasons_at_380": 40.67631578947368
+    },
+    {
+      "hypothetical_edge": 0.05,
+      "iid_sigma_one_n": 2474,
+      "seasons_at_38": 65.10526315789474,
+      "seasons_at_380": 6.510526315789473
+    }
+  ],
+  "power_assumptions": {
+    "one_sided_alpha": 0.05,
+    "power": 0.8,
+    "sigma": 1,
+    "formula": "ceil(((1.6448536269514722+0.8416212335729143)*sigma/edge)**2)",
+    "limitation": "Oberoende normalapproximation, ej garanterad provstorlek eller verklig fördel."
+  },
+  "paid_calls": 0,
+  "real_bets": 0
+}

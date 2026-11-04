@@ -1,0 +1,85 @@
+import {test,expect} from '@playwright/test';
+async function login(page:any){await page.goto('/');await page.getByLabel('Ägarlösenord').fill('browser-test-only-password');await page.getByRole('button',{name:'Öppna kontrollcentralen'}).click();await expect(page.getByRole('heading',{name:'Fotbollsanalys före riktiga insatser.'})).toBeVisible();}
+test('desktop workflow, decisions, saved result and ten agents',async({page})=>{
+ await page.setViewportSize({width:1440,height:1100});await login(page);
+ await expect(page.getByText('DEMOMILJÖ',{exact:true})).toBeVisible();
+ await page.getByRole('button',{name:'Återuppta',exact:true}).click();
+ await page.getByRole('button',{name:'Starta arbetsomgång',exact:true}).first().click();
+ await page.getByLabel('Vad ska teamet undersöka?').fill('Granska tidsstämplar och datakvalitet för fotbollens 1X2-odds');
+ await page.getByRole('button',{name:'Skapa uppdrag'}).click();
+ await page.getByRole('button',{name:'Förslag & beslut',exact:false}).first().click();
+ await expect(page.getByRole('button',{name:'Godkänn',exact:true})).toBeVisible({timeout:15000});
+ await expect(page.locator('.proposal-card').first()).toContainText('fotbollsoddsens datakvalitet');
+ await page.getByRole('button',{name:'Godkänn',exact:true}).click();
+ await page.getByRole('button',{name:'Bekräfta godkännande'}).click();
+ await expect.poll(async()=>{
+  const state=await page.evaluate(async()=>await(await fetch('/api/state')).json());
+  const work=state.tasks.find((task:any)=>task.phase==='work'&&task.result);
+  return work?JSON.parse(work.result).summary:'';
+ },{timeout:15000}).toContain('Datakvalitetens granskningspunkter');
+ await page.getByRole('button',{name:'Projekt & uppgifter',exact:true}).click();
+ await page.getByRole('heading',{name:'Granska underlaget för fotbollens 1X2-marknad',exact:true}).click();
+ await expect(page.getByRole('dialog')).toContainText('Inga verkliga odds har hämtats');
+ await expect(page.getByRole('dialog')).toContainText('inte ett genomfört odds- eller vinsttest');
+ await page.getByRole('button',{name:'Stäng',exact:true}).click();
+ await expect(page.getByRole('button',{name:'Research',exact:true})).toHaveCount(0);
+ await expect(page.getByRole('button',{name:'Researchlabb',exact:true})).toHaveCount(0);
+ await page.getByRole('button',{name:'Agentteam',exact:true}).click();
+ await expect(page.locator('.agent-card')).toHaveCount(10);
+ await page.getByRole('button',{name:'Översikt',exact:true}).click();
+ await page.screenshot({path:'../docs/screenshots/desktop.png',fullPage:true});
+});
+test('mobile layout and generated content remains plain text',async({page})=>{
+ await page.setViewportSize({width:390,height:844});await login(page);
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBeTruthy();
+ await page.screenshot({path:'../docs/screenshots/mobile.png',fullPage:true});
+ await page.getByRole('button',{name:'Öppna meny'}).click();
+ await page.getByRole('button',{name:'Chatta med JARVIS',exact:true}).click();
+ const payload='<img src=x onerror="window.hacked=true"><script>window.hacked=true</script>';
+ await page.getByLabel('Meddelande till JARVIS').fill(payload);
+ await page.getByRole('button',{name:'Skicka meddelande'}).click();
+ await expect(page.locator('.message.user').last()).toContainText(payload);
+ expect(await page.evaluate(()=>(window as any).hacked)).toBeUndefined();
+ expect(await page.locator('.message img,.message script').count()).toBe(0);
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBeTruthy();
+});
+test('worker continues after browser context is closed',async({browser})=>{
+ const context=await browser.newContext();const page=await context.newPage();await login(page);
+ await page.getByRole('button',{name:'Starta arbetsomgång',exact:true}).first().click();
+ await page.getByLabel('Vad ska teamet undersöka?').fill('Fortsätt granska fotbollsdata även när fliken är stängd');
+ await page.getByRole('button',{name:'Skapa uppdrag'}).click();
+ await expect(page.getByRole('dialog')).toHaveCount(0);await context.close();
+ const next=await browser.newContext();const p=await next.newPage();await login(p);
+ await p.getByRole('button',{name:'Förslag & beslut',exact:false}).first().click();
+ await expect(p.getByText('Fortsätt granska fotbollsdata även när fliken är stängd',{exact:true})).toBeVisible({timeout:15000});
+ await next.close();
+});
+
+test('owner settings, bounded schedule and safe retry of manual cost',async({page})=>{
+ await login(page);
+ await page.getByRole('button',{name:'Inställningar',exact:true}).click();
+ await page.getByLabel('Dagligt kostnadstak',{exact:true}).fill('9');
+ await page.getByRole('button',{name:'Spara budgetgränser'}).click();
+ await expect(page.getByRole('button',{name:'Spara budgetgränser'})).toBeEnabled();
+ await page.getByRole('button',{name:'Konfigurera schema'}).click();
+ await page.getByLabel('Mål för schemat').fill('Granska ett begränsat underlag för fotbollsodds');
+ await page.getByLabel('Tidigast klockan').fill('23:59');
+ await page.getByRole('button',{name:'Godkänn begränsat schema'}).click();
+ await expect(page.getByText(/1 VD-omgångar kvar/)).toBeVisible();
+ await page.getByRole('button',{name:'Stäng av schema'}).click();
+ await expect(page.getByText(/Inget aktivt schema/)).toBeVisible();
+ await page.getByRole('button',{name:'Ekonomi',exact:true}).click();
+ await page.getByRole('button',{name:'Registrera kostnad'}).click();
+ await page.getByLabel('Belopp (SEK)').fill('1.25');
+ await page.getByLabel('Underlag / kommentar').fill('Testkostnad med avbrutet nätverkssvar');
+ let first=true;
+ await page.route('**/api/costs',async route=>{if(first){first=false;await route.fetch();await route.abort('failed')}else{await route.continue()}});
+ await page.getByRole('button',{name:'Spara',exact:true}).click();
+ await expect(page.getByRole('alert')).toBeVisible();
+ await page.getByRole('button',{name:'Spara',exact:true}).click();
+ await expect(page.getByRole('dialog')).toHaveCount(0);
+ const state=await page.evaluate(async()=>await (await fetch('/api/state')).json());
+ expect(state.costs.filter((c:any)=>c.kind==='manual')).toHaveLength(1);
+ expect(state.settings.spent).toBe(125);
+ expect(state.settings.daily).toBe(900);
+});

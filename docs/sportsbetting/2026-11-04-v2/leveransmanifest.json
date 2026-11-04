@@ -1,0 +1,31 @@
+{
+  "version": "forstudie-2.0-2026-11-04",
+  "status": "Beslutsunderlag, inget körningstillstånd.",
+  "sha256": {
+    "baslinjekontroll.json": "54b2a3885ff8f387b4aea30f08b8da8dd8931233797c096132031a4c9a7761e1",
+    "bygg_rapport.py": "ae723465e430700d0ed31cb69466fa0c61ff68d788b643954787e72086535e2f",
+    "data-kallor.html": "ba4fb5d3aab1e7937c36c871bbc6c77c6451eda362b823feb9bbcd0801c1cc31",
+    "data-kallor.md": "45e6bb1804dc8e701bca44f68a8d8dc5e645e6f56de1a2a279b28fec3b07654f",
+    "ekonomi-mobil.png": "1b60ebfb6d8d4cfe5db034bd9f5e4394680fd397e2b91cbcd2e2e9f7296b7bc4",
+    "ekonomi.html": "8df3e51e3968b51429e2bb5eb0379fd2bb030acc4ab9d54e9f931247012f885d",
+    "ekonomi.json": "cf5ace2923c60761fe6cde73aaeadb2c116cffadf6f39da51e871654f4cb7064",
+    "ekonomi.md": "68e163b557ea370b41e6fdb9c361d4fd36082f250cb3074fab37c0a3663ce222",
+    "ekonomi.py": "0a3d597133985075d170f9499f85e6171765f1aabf730e2e9767601355f0deea",
+    "IMPLEMENTATIONSUPPDRAG.md": "2f86c53f9333ebe30e29c4726f365136f2da9772a2d01c764cb73406b2adef70",
+    "integritetskontroll.json": "06cb81352a040ffcfb5e8375c357cf48c66c4883699f1de1fa91384309aeede0",
+    "kallor.json": "36ce7d5719ffe2aa18895dbbaf8d22871ec6df274a751ddcb6117528fe3d8221",
+    "kontroll.py": "cbc63760b06c668358df9998a1ec9706614c6d436d4cc3818bee375c9716c511",
+    "kritikergranskning.html": "b8c8c713de6b8ba0505d7b8378801321eb225f94575008afbd42c1016927625b",
+    "kritikergranskning.md": "fcc408f6236f8df4d580e5abdcd86b1b466c8588756f3d9407efe8e8cd104c92",
+    "plan-desktop.png": "d2d46c9038d3f00e48a90221540d7942894ec82f6eb3a623656c166fdd4a6c6d",
+    "plan-mobil.png": "adccc69daa2f2eb0cdbdfa61fe53fef12ca10640a286571d5f7ece19bb9522bf",
+    "plan.html": "8e0079353defed150407daecdd1efd8ef41dd621da011401e12d08177c09b59e",
+    "skyddade-filer.json": "362d76f8d2b8ae927e57e9d7ab5e8bec36e1254d4a1c0dff7f6204d838c96fa5",
+    "statistik.html": "64309ebe98daf1f2a3bf33ce997c3b2480426f21ae7653e8193ad89a8a93b30c",
+    "statistik.json": "4c5360ff8b6a6caf0fadd855bf994a2f68231cc6c4e4aca04018dae901df4d34",
+    "statistik.md": "6a6a5fdf391677bf3ff247a828df5ab2d0cff6fda03ad6370d4568e13d567add",
+    "statistik.py": "b7c1372df70a5d4cc56c17445b6f3cff5585ce6928b9f3060f4dcfd074f1a334",
+    "verifiera.mjs": "801a5d7cd38a97e460736949dac001e3cfc329165be04e838a18d8853b4bb7bd",
+    "verifiering.json": "bd39e6906d8616d913dc368f6ac9cb38586ccc2206b6be6d92812f7b76588719"
+  }
+}
