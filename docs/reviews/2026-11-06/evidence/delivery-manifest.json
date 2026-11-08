@@ -1,0 +1,69 @@
+{
+  "root": "C:\\Users\\matte\\jarvis",
+  "head": "0e0707f1d103203c6e21c3d350019c9224b7f57f",
+  "date": "2026-11-06",
+  "authorization": "Owner subsequently explicitly allowed code changes; only reproduced request identity defects were fixed.",
+  "changed_existing_tracked_files": [
+    "backend/jarvis/api.py",
+    "backend/jarvis/service.py"
+  ],
+  "unchanged_existing_tracked_non_data_files": 135,
+  "source_files_matching_tested_copy": {
+    "backend/jarvis/api.py": "d3ac8fdaf7c42e124d048e523f7984e16a713aff2a50d5fb7f43ece572869b0b",
+    "backend/jarvis/service.py": "606722bada201fe4204194ad8098e630816bb8e1c2b59620c875618c1a76b893",
+    "tests/test_request_identity.py": "e6a5739b20381501a8d0d00f43e1fa62fe86c088dc1e0aa43b564478598d5f51"
+  },
+  "backend_before": {
+    "passed": 203,
+    "exit": 0
+  },
+  "backend_after": {
+    "passed": 218,
+    "exit": 0,
+    "new_cases": 15
+  },
+  "frontend": {
+    "typescript_exit": 0,
+    "build_exit": 0,
+    "modules": 1590
+  },
+  "e2e": {
+    "listed_cases": 13,
+    "executed": false,
+    "reason": "Required Playwright Chromium executable is absent"
+  },
+  "frozen_code_unchanged": {
+    "backend/jarvis/odds_lab.py": "ce19a84b977d75181af04f8514d16860d9335cf8e8cee6314a4ad5d29f390567",
+    "backend/jarvis/odds_history.py": "f967f314d427553f888901eccf5205081ad99310beab2c1c6a07da224aacdbb9",
+    "backend/jarvis/roles.py": "f8f60b1a5944da0b368167694817800f69886ebf9088bc519c7f1cb8299be328"
+  },
+  "data_and_env_read": false,
+  "production_servers_started": 0,
+  "temporary_server_processes_started": 0,
+  "full_git_status": " M backend/jarvis/api.py\n M backend/jarvis/service.py\n?? docs/reviews/\n?? tests/test_request_identity.py\n",
+  "deliverables_sha256": {
+    "BYGGSPECIFIKATION.md": "c60fe6a2c4e3aea4f5e18a560869b14393a4baf8d906d8a0862ee5588f4bb23f",
+    "evidence/backend-final-junit.xml": "dc3db8d118d9662bd20442e9804e36d793e18c2ee93bac7cc82dcc4c38cc993c",
+    "evidence/backend-final-runner.txt": "57841627f38651b215bf27a587f70ebf0ee303e85e43c43defeb52bf72dcadb0",
+    "evidence/backend-junit.xml": "fb5e5e19f437a02aa6076a85cfd241e2bab2ea796b4d08365e34573ce8c82544",
+    "evidence/backend-tests-final.txt": "203bd62dd90719608dfc5bd9adf091084994505f74d572d8ad89093d7a9215ff",
+    "evidence/backend-tests.txt": "2055d4ce7cd62ac8fb30e48200fc766616737b445c7af73abbc940e534c1674d",
+    "evidence/baseline.json": "05f89d90cdcb028c06593a2fe804e781308d34bc33370ddcbbd4fc28e202604d",
+    "evidence/final-git-status.txt": "45be2eb7af4d0bdb70b974bffd14d397034f301d5e6654642c29d0e55286eeca",
+    "evidence/frontend-build.txt": "f751912c84b3ed1d21d71c6dfd009b0b63d846f930d9ab733c8f92f61f6007b7",
+    "evidence/isolation-final.json": "966f80875b2d6674095438192161cfcd87f5813fd364d6e839cb8acb0621c20c",
+    "evidence/isolation.json": "a299b0bd2b6a006c1a22761fb376d7d3f1378f6162e284060cc024f0b1d3bce6",
+    "evidence/KORNINGAR.txt": "6288688c562198df7b6e38a83f200cdea98b19a3174e4d924ac00dba8333f6d4",
+    "evidence/pip-check.txt": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+    "evidence/playwright-browser.txt": "7aa562822cec2d33e49cb7c838525f8ccb64de181fa48facfad0db2d5cb426cd",
+    "evidence/playwright-list.txt": "279d031e410ff417469585a6a7de4475b363ef56af5079657acf8155ca6b7dab",
+    "evidence/protected-baseline.json": "4140aacb83bc9f908882e6df6f362a34ac024af17051813d32af3d042df49d34",
+    "evidence/protected-classification.json": "c1307ec3de74752d8a9b8988026c7f76a03c4c09457299d8d2e498b09d0f79d9",
+    "evidence/rattning.diff": "ec29624315b034a171aba71ae5e9c6f57d2862c03a6bf19124fb9854df936322",
+    "evidence/reproduction-after.json": "70b2876a450cd6ae34b566e9359be1d3e75384f3d8af33a064ea61b9b966c0c5",
+    "evidence/reproduction-before.json": "f50f6b81de0fccfd022ed7c133c995359b1a842e77d9f62a61378834b4a1e923",
+    "evidence/reproduction-runner.txt": "584a8efac4d1482d74703171702d16a1bfe60be9cb9f9724e51aae375bf6c997",
+    "evidence/tool-versions.json": "4425582c89a7e35c39499108f7770aa2639496e2b6736bd022d398ea711550a8",
+    "NULAGESGRANSKNING.md": "db2687b1d73ae4b97732a01613c59f3576734cfd149270b0e7d501a273911978"
+  }
+}

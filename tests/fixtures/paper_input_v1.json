@@ -1,0 +1,376 @@
+{
+  "version": "paper-input-v1",
+  "dataset_id": "synthetic-contract-v1",
+  "origin": "synthetic_fixture",
+  "source": {
+    "name": "Egna påhittade testdata",
+    "reference_url": "https://example.invalid/paper-fixture",
+    "permission_note": "Eget syntetiskt exempel. Inga verkliga matcher eller hämtade odds."
+  },
+  "records": [
+    {
+      "event_id": "paper-test-1",
+      "sport": "football",
+      "market": "1x2_90min",
+      "home": "Påhittat hemmalag 1",
+      "away": "Påhittat bortalag 1",
+      "starts_at": "2025-01-01T13:00:00+00:00",
+      "captured_at": "2025-01-01T10:00:00+00:00",
+      "data_cost_ore": 20,
+      "quotes": [
+        {
+          "book": "kalla_1",
+          "source_url": "https://example.invalid/kalla-1",
+          "updated_at": "2025-01-01T10:00:00+00:00",
+          "odds": {
+            "home": 25000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_2",
+          "source_url": "https://example.invalid/kalla-2",
+          "updated_at": "2025-01-01T10:00:00+00:00",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_3",
+          "source_url": "https://example.invalid/kalla-3",
+          "updated_at": "2025-01-01T10:00:00+00:00",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_4",
+          "source_url": "https://example.invalid/kalla-4",
+          "updated_at": "2025-01-01T10:00:00+00:00",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        }
+      ]
+    },
+    {
+      "event_id": "paper-test-2",
+      "sport": "football",
+      "market": "1x2_90min",
+      "home": "Påhittat hemmalag 2",
+      "away": "Påhittat bortalag 2",
+      "starts_at": "2025-01-02T13:00:00+00:00",
+      "captured_at": "2025-01-02T10:00:00+00:00",
+      "data_cost_ore": 20,
+      "quotes": [
+        {
+          "book": "kalla_1",
+          "source_url": "https://example.invalid/kalla-1",
+          "updated_at": "2025-01-02T10:00:00+00:00",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_2",
+          "source_url": "https://example.invalid/kalla-2",
+          "updated_at": "2025-01-02T10:00:00+00:00",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_3",
+          "source_url": "https://example.invalid/kalla-3",
+          "updated_at": "2025-01-02T10:00:00+00:00",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_4",
+          "source_url": "https://example.invalid/kalla-4",
+          "updated_at": "2025-01-02T10:00:00+00:00",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        }
+      ]
+    },
+    {
+      "event_id": "paper-test-3",
+      "sport": "football",
+      "market": "1x2_90min",
+      "home": "Påhittat hemmalag 3",
+      "away": "Påhittat bortalag 3",
+      "starts_at": "2025-01-03T13:00:00+00:00",
+      "captured_at": null,
+      "data_cost_ore": 20,
+      "quotes": [
+        {
+          "book": "kalla_1",
+          "source_url": "https://example.invalid/kalla-1",
+          "updated_at": "2025-01-03T10:00:00+00:00",
+          "odds": {
+            "home": 25000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_2",
+          "source_url": "https://example.invalid/kalla-2",
+          "updated_at": "2025-01-03T10:00:00+00:00",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_3",
+          "source_url": "https://example.invalid/kalla-3",
+          "updated_at": "2025-01-03T10:00:00+00:00",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_4",
+          "source_url": "https://example.invalid/kalla-4",
+          "updated_at": "2025-01-03T10:00:00+00:00",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        }
+      ]
+    },
+    {
+      "event_id": "paper-test-4",
+      "sport": "football",
+      "market": "1x2_90min",
+      "home": "Påhittat hemmalag 4",
+      "away": "Påhittat bortalag 4",
+      "starts_at": "2025-01-04T13:00:00+00:00",
+      "captured_at": "2025-01-04T10:00:00+00:00",
+      "data_cost_ore": 20,
+      "quotes": [
+        {
+          "book": "kalla_1",
+          "source_url": "https://example.invalid/kalla-1",
+          "updated_at": null,
+          "odds": {
+            "home": 25000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_2",
+          "source_url": "https://example.invalid/kalla-2",
+          "updated_at": "2025-01-04T10:00:00+00:00",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_3",
+          "source_url": "https://example.invalid/kalla-3",
+          "updated_at": "2025-01-04T10:00:00+00:00",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_4",
+          "source_url": "https://example.invalid/kalla-4",
+          "updated_at": "2025-01-04T10:00:00+00:00",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        }
+      ]
+    },
+    {
+      "event_id": "paper-test-5",
+      "sport": "football",
+      "market": "1x2_90min",
+      "home": "Påhittat hemmalag 5",
+      "away": "Påhittat bortalag 5",
+      "starts_at": "2025-01-05T13:00:00+00:00",
+      "captured_at": "2025-01-05T10:00:00+00:00",
+      "data_cost_ore": 20,
+      "quotes": [
+        {
+          "book": "kalla_1",
+          "source_url": "https://example.invalid/kalla-1",
+          "updated_at": "2025-01-05T09:57:59+00:00",
+          "odds": {
+            "home": 25000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_2",
+          "source_url": "https://example.invalid/kalla-2",
+          "updated_at": "2025-01-05T10:00:00+00:00",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_3",
+          "source_url": "https://example.invalid/kalla-3",
+          "updated_at": "2025-01-05T10:00:00+00:00",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_4",
+          "source_url": "https://example.invalid/kalla-4",
+          "updated_at": "2025-01-05T10:00:00+00:00",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        }
+      ]
+    },
+    {
+      "event_id": "paper-test-6",
+      "sport": "football",
+      "market": "1x2_90min",
+      "home": "Påhittat hemmalag 6",
+      "away": "Påhittat bortalag 6",
+      "starts_at": "2025-01-06T10:00:59+00:00",
+      "captured_at": "2025-01-06T10:00:00+00:00",
+      "data_cost_ore": 20,
+      "quotes": [
+        {
+          "book": "kalla_1",
+          "source_url": "https://example.invalid/kalla-1",
+          "updated_at": "2025-01-06T10:00:00+00:00",
+          "odds": {
+            "home": 25000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_2",
+          "source_url": "https://example.invalid/kalla-2",
+          "updated_at": "2025-01-06T10:00:00+00:00",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_3",
+          "source_url": "https://example.invalid/kalla-3",
+          "updated_at": "2025-01-06T10:00:00+00:00",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_4",
+          "source_url": "https://example.invalid/kalla-4",
+          "updated_at": "2025-01-06T10:00:00+00:00",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        }
+      ]
+    },
+    {
+      "event_id": "paper-test-7",
+      "sport": "football",
+      "market": "1x2_90min",
+      "home": "Påhittat hemmalag 7",
+      "away": "Påhittat bortalag 7",
+      "starts_at": "2025-01-07T13:00:00+00:00",
+      "captured_at": "2025-01-07T10:00:00+00:00",
+      "data_cost_ore": 20,
+      "quotes": [
+        {
+          "book": "z_offer",
+          "source_url": "https://example.invalid/kalla-1",
+          "updated_at": "2025-01-07T10:00:00+00:00",
+          "odds": {
+            "home": 25000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "a_ref",
+          "source_url": "https://example.invalid/kalla-2",
+          "updated_at": "2025-01-07T10:00:00+00:00",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "b_ref",
+          "source_url": "https://example.invalid/kalla-3",
+          "updated_at": "2025-01-07T10:00:00+00:00",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "c_ref",
+          "source_url": "https://example.invalid/kalla-4",
+          "updated_at": "2025-01-07T10:00:00+00:00",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        }
+      ]
+    }
+  ]
+}

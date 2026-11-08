@@ -1,0 +1,10 @@
+{
+  "dotenv_disabled": true,
+  "initial_mode": "DEMO",
+  "paid_initially_enabled": false,
+  "research_initially_enabled": false,
+  "sqlite_root": "C:\\Users\\matte\\OneDrive\\Dokument\\ChatGPT\\Jarvis odds\\review-2026-11-06\\temporary",
+  "blocked_events": [],
+  "pytest_exit": 0,
+  "note": "Isolated source copy plus the reported patch; no production server or worker process."
+}

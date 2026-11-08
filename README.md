@@ -8,12 +8,79 @@ Fokusbytet omfattar rollinstruktioner, demonstrationsinnehåll och borttagna gam
 
 **Börja i DEMO.** Inga API-nycklar behövs. Demoläget använder märkta reproducerbara exempel och gör inga externa AI- eller researchanrop. LIVE har en riktig OpenAI Agents SDK-adapter, men är avstängt tills du konfigurerar det. Ingen del av installationen köper tjänster eller publicerar något.
 
+## Sammanhängande bettingdemo
+
+Öppna **Översikt → Öppna matchdemot** i den befintliga startguiden, eller samma sida under **Bettingdemo**. Där finns ett fast syntetiskt sjumatchersscenario med en sparad arbetsgång:
+
+1. Återuppta uttryckligen om systemet är pausat. Klicka **Skapa demo-omgång**. Bara att öppna sidan skapar ingenting.
+2. Läs påhittade matcher, odds, offerttider och eget låtsaskapital. Välj **Analysera de sju matcherna**.
+3. Granska fyra förslag, tre avståenden och de sparade förklaringarna. Hela analysen kostar 1,40 kr i **simulerade** datakostnader, även för matcher där analysen avstår.
+4. **Godkänn hela låtsasbatchen** eller **Avstå från batchen**. Beslutet binds till exakt förslagsversion och innehållshash. Ett godkännande har ännu inte registrerat insatser.
+5. Efter godkännande: **Registrera låtsasinsatser**. Backend kontrollerar och registrerar hela batchen atomiskt.
+6. **Visa och avräkna simulerade resultat**. Alla spel avräknas samtidigt; sammanfattningen visar även förluster och kostnader.
+
+Varje omgång har **eget låtsaskapital på 1 000 kr** och **fast insats på 10 kr per spel**. Ingen gemensam plånbok, överföring mellan omgångar, insatshöjning eller påverkan på JARVIS vanliga AI-budget finns. En ny omgång behåller den äldre historiken och får ett separat startkapital.
+
+| Standardomgång | Simulerad kostnad | Spelresultat | Öppen insats | Kapital inklusive öppna insatser | Tillgängligt kapital |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Skapad | 0,00 kr | 0,00 kr | 0,00 kr | 1 000,00 kr | 1 000,00 kr |
+| Analyserad eller godkänd | 1,40 kr | 0,00 kr | 0,00 kr | 998,60 kr | 998,60 kr |
+| Fyra insatser registrerade | 1,40 kr | 0,00 kr | 40,00 kr | 998,60 kr | 958,60 kr |
+| Avräknad, två vinster och två förluster | 1,40 kr | +9,50 kr | 0,00 kr | 1 008,10 kr | 1 008,10 kr |
+| Avstått efter analys | 1,40 kr | 0,00 kr | 0,00 kr | 998,60 kr | 998,60 kr |
+
+Spelresultat är avgjorda utbetalningar minus dessa spels insatser. Netto är spelresultat minus simulerade kostnader. Kapital inklusive öppna insatser är startkapital plus netto; tillgängligt kapital drar dessutom av öppna insatser. Alla pengar beräknas i heltalsören. Effektiva odds innehåller det gamla scenariots 1 % prisavdrag. Vinstutbetalning avrundas nedåt till ören och får inget andra prisavdrag. Det fasta positiva exemplet är **inte ett lönsamhetsbevis** och ändrar inte den frysta modellen.
+
+Beständiga tillstånd är `created → analyzed → approved → simulated → settled`, med terminala alternativ `no_bets` och `declined`. Kostnader uppstår endast i den första lyckade analysövergången. Inga GET-anrop eller öppnade sammanfattningar skapar ekonomiska händelser. Otillräckligt kapital avvisar hela insatsbatchen och behåller `approved`.
+
+Vid ett osäkert nätverkssvar bevaras begärans innehåll och åtgärds-ID i flikens sessionslagring, även efter omladdning. **Försök samma begäran igen** hämtar det sparade svaret. Backend förhindrar även dubbla övergångar när två flikar använder olika ID:n. Paus/nödstopp blockerar nya åtgärder; exakt återläsning av en redan genomförd begäran tillåts fortsatt. Systemet återupptas aldrig automatiskt.
+
+Bettingdemot kör direkt i backend och **behöver ingen worker eller extern AI**. Förklaringarna märks ”Simulerat agentsvar – lokal demologik.” Framtida resultat hålls utanför analysobjektet och API-svaren tills hela avräkningen är sparad. Scenario, regler, förklaringar, beslut, kostnader och resultat fryses i separata demotabeller genom den nya migrationen `007_betting_demo.sql`. Den tillämpas vid en senare vanlig backendstart; inga ägardata migrerades under utvecklingsverifieringen.
+
+Det äldre **Oddslabb** och dess historiska serier är separata och bevarade. De äldre VD-/specialistuppdragen finns under startguidens extra information och kräver fortfarande worker. Inga nya roller, scheman, verkliga odds, bookmakerkonton, betalningar eller riktiga spel har tillkommit. Självständig AI-analys och externa källor för denna nya arbetsgång är framtida arbete.
+
+Aktuell verifiering, ändrade filer och skärmbilder: [Bettingdemo verifiering](docs/betting-demo/2026-11-06/VERIFIERING.md).
+
+### Granska egna JSON-filer och utvärdera med låtsaspengar
+
+Öppna **Bettingdemo → Granska egna matchdata och återspela med låtsaspengar**. Välj en indatafil eller ladda det tydligt påhittade fil-exemplet, granska underlaget, välj en separat resultatfil och utvärdera. Exportknappen laddar ned JSON lokalt. Filgranskningen skapar inga affärs- eller demo-omgångar, behöver ingen worker och registrerar inga insatser i databasen. Autentisering, CSRF, DEMO och uttryckligen återupptaget läge krävs för beräkningarna. Vanliga sparade sjumatchersomgångar och den äldre arkivåterspelningen är separata och oförändrade.
+
+Indata följer `paper-input-v1`; [det syntetiska exemplet](tests/fixtures/paper_input_v1.json) visar hela formatet. Ange `dataset_id`, påstått ursprung (`synthetic_fixture` eller `manual_unverified`), källreferens, tillståndsanteckning och högst 20 fotbollsmatcher för 1X2 efter ordinarie tid. Varje offert innehåller tre decimalodds som heltal gånger 10 000. Kostnader lagras som heltalsören. Källor och tillstånd är användarpåståenden, inte oberoende verifiering. Inga URL:er hämtas.
+
+Tider kräver ISO-text med sekunder och tidszon, utan bråkdelar, exempelvis `2025-01-01T10:00:00Z`. Saknad fångst- eller offerttid anges uttryckligen som `null` och blockerar hela matchen före analys. Tider fylls aldrig i från avspark eller filtid. Färskhet är beräknad från angivna tider; den bevisar inte verklig tillgänglighet. För få godtagna källor, närhet till avspark och otillräckligt kapital ger avstående enligt den befintliga policyn. Dubbletter enligt samma matchnyckel som Oddslabb avvisas. `synthetic_fixture` kräver reserverade URL-värdar.
+
+`paper-review-v1` använder den befintliga prismatematiken och fyra av de tio fasta rollerna. Rollernas versioner, namn och policyn är pinnade; även kravet på exakt tio roller ingår i versionskontrollen. Ändringar kräver granskning och versionshöjning. Alla deklarerade kostnader reserveras först, därefter kandidater i ordning efter faktisk avsparkstid och match-ID. Borttagna kandidaters kapital används inte till nya förslag i samma beräkning. Kritikern är en konsistenskontroll, inte oberoende AI-research. Den kan bara ta bort förslag.
+
+Baseline är **en referens, aldrig en rekommendation**: hemmaseger hos lexikografiskt första bok som kärnan godtar, inom samma tids- och källuniversum. Den har egen hypotetisk kapitalpott, samma datakostnader, prisavdrag och fasta insats. Den låses i granskningen före resultat. Primär och baseline kan ha olika antal insatser; en resultatskillnad visar inte kausal alpha. Kärnans äldre förklaringstext bevaras i tekniska `core_decisions` för paritet men används inte som filgranskningens presentation eller ursprungsmärkning.
+
+Resultat följer `paper-results-v1`; [resultatexemplet](tests/fixtures/paper_results_v1.json) är också påhittat. Dess `dataset_id` ska matcha indata. Slutresultat och makuleringar har egna ID-, poäng-, tids- och referenskontroller. Saknade resultat behåller öppna insatser. Resultat för matcher utan insats räknas separat. Vinst, förlust, makulering, deklarerade kostnader och öppna belopp redovisas för båda potterna. ROI före datakostnad visas bara när inget är öppet och insats finns; beräkningen avrundas nedåt även för negativa tal. Netto efter deklarerad kostnad visas separat.
+
+Utvärderingen gör **en ny deterministisk omräkning** av enbart indata och kräver samma `report_hash` som granskningen du såg. Först därefter valideras resultatkontraktet och avräkning sker. Detta verifierar inte att beslut sparades före matchen. Exporten är osignerad och använder öppna kontrollsummor; filer kan ändras, prövas om och selektivt exporteras. En enskild fil skiljer inte efterhandsurval från förhandsurval. Påhittade fångsttider på closing-odds kan passera strukturella kontroller. Ingen språkmodell körs, ingen uppmätt vinstedge visas och 20 matcher är ett tekniskt batchtak, inget statistiskt underlag. Deklarerade kostnader behöver inte vara fullständiga.
+
+Filgränser är 36 000 byte för indata och 9 000 för resultat, både råfil i klienten och kanoniskt validerad JSON i servern. Hela klientbegäran får vara högst 48 000 byte; befintlig strömmande servergräns är 50 000. UTF-8 utan BOM krävs. Resultatväljaren aktiveras efter granskning; en ny indatafil rensar tidigare beräkningar. En ny resultatfil behåller samma indatagranskning men rensar utvärderingen. Exportformatet återimporteras inte. JSON-nyckeldubbletter hanteras av Python och webbläsaren som sista värdet; använd entydiga nycklar. Kanoniska hashar avser validerad JSON: `Z`/`+00:00` normaliseras, medan andra offsetrepresentationer kan ändra hashen trots samma beslut.
+
+Inloggningssessionen kontrolleras före och efter beräkningar. En ändrad eller okänd session rensar filminnet när den upptäcks; utloggning och unmount avbryter direkt. Detta är ingen ständig sessionsövervakning: redan visade lokala uppgifter kan finnas kvar tills nästa kontroll, utloggning eller omladdning.
+
+API: autentiserad `POST /api/betting-demo/paper-replay/review` med `{input}`, respektive `.../evaluate` med `{input, results, expected_report_hash}`. Inga nya dataset har hämtats eller lagts till från Football-Data i denna utvecklingsomgång. Den äldre arkivrapporten är bevarad. Externa data måste ha lämpliga användningsvillkor; [Football-Datas aktuella databeskrivning och villkor](https://football-data.co.uk/data.php) är källdokumentation, ingen ansluten datatjänst.
+
+### Sparat researchunderlag och rollgranskning
+
+Nya demo-omgångar fryser kontraktet `betting-demo-review-v2`. När du analyserar sparas källunderlag och fyra regelbaserade steg från de befintliga rollerna **Researcher → Oddsanalytiker → Ekonom/Risk → Kritiker** i samma transaktion som analysen och de simulerade kostnaderna. Den befintliga prismatematiken och den frysta spelpolicyn används fortsatt. Det är en **regelbaserad offline-demo: ingen språkmodell körs och inga käll-URL:er hämtas**.
+
+Under varje match kan du öppna researchunderlaget och se källreferenser, offerttider, ålder, färskhetsgräns och avvisningsskäl. Tiderna är simulerade; ”färsk” betyder färsk inom scenariot. Form, skador och laguppställningar saknas och får inga påhittade värden. Käll-ID:n bevisar inte att källorna är oberoende. Den här delen bedömer underlagets kvalitet, inte en uppmätt vinstchans.
+
+Rollgranskningen visar grundförslag före kritik och slutliga förslag efter kritik. Ekonomens sparade fakta gäller före kritik; kritikerns slutbelopp gäller efter eventuell borttagning. Ett felaktigt förslag kan tas bort men aldrig läggas till av kritikern. Vid flera fel visas ett prioriterat blockeringsskäl per borttaget förslag. Spärrarna prövas med felinjektioner i tester; standardscenariots matcher 5–7 visar vanliga avståenden. Standardens fyra förslag och ekonomi är oförändrade.
+
+Ägarbeslutet binder den **yttre** förslagshashen, inklusive hela granskningen. Grundanalysens separata hash används bara som historisk referens. Nya övergångar kontrollerar sparade käll-/förslagskopplingar, summor och stegkedja utan nya research- eller modellkörningar. Detta är intern konsistenskontroll med öppna kontrollsummor, **inte en signatur eller autenticitet från en extern källa**. Någon med full skrivrätt till databasen kan ändra även observationer och kontrollsummor.
+
+Gamla v1-omgångar läses och fortsätts med sina ursprungliga sparade underlag; ingen research skapas i efterhand. Okänd granskningsversion går att läsa men kan inte användas för nya övergångar. Ingen ny migration, leverantör, agentroll, strategi, betalning eller riktig insats har aktiverats. Verkliga fotbollskällor och självständiga språkmodellskörningar återstår som separata utvecklingssteg.
+
 ## Snabbstart på Windows
 
 Öppna PowerShell i projektmappen. Installera Python 3.12+, Node.js 22.12+ och pnpm 11.25.0 om de saknas. Installationsskriptet kan även använda Codex medföljande Python och Node på denna dator.
 
 ```powershell
-cd 'C:\Users\matte\OneDrive\Documents\ChatGPT\Jarvis2.0'
+cd 'C:\Users\matte\jarvis'
 .\scripts\setup.ps1
 .\scripts\start.ps1
 ```
@@ -30,6 +97,8 @@ powershell -ExecutionPolicy Bypass -File .\scripts\start.ps1
 Öppna **http://127.0.0.1:8000** och logga in. Startskriptet skriver loggar till `data/logs`. Låt PowerShell-fönstret vara öppet. Att stänga webbläsaren stoppar inte arbetet. Datorn måste vara vaken.
 
 Om beroenden redan är installerade räcker `scripts/start.ps1`. Saknas ägarkonto kan du välja och upprepa ett lösenord direkt på den lokala första-start-sidan. Detta fungerar endast från loopback med lokal HTTP-origin och kan aldrig skriva över ett befintligt konto. För serverinstallation via HTTPS skapas kontot med CLI-kommandot ovan.
+
+För det sammanhängande bettingdemot följer du startguiden ovan. Följande äldre interna agentflöde är separat och kräver en worker:
 
 1. Klicka **Återuppta**; första starten är pausad.
 2. Välj **Starta arbetsomgång**, skriv ett mål och ange kostnadstak.
@@ -167,6 +236,15 @@ pnpm run build
 pnpm exec playwright install chromium
 pnpm test:e2e
 ```
+
+Om en kompatibel Google Chrome redan finns installerad kan Playwright använda den utan browserinstallation:
+
+```powershell
+$env:JARVIS_E2E_CHANNEL = 'chrome'
+pnpm test:e2e
+```
+
+Vid verifieringen av bettingdemot kördes sviterna i en separat testkopia med avstängd dotenv och temporära databaser. Detta skyddar tidigare skärmbilder eftersom äldre E2E-testfall fortfarande använder explicita sökvägar under `docs/screenshots`.
 
 Playwright startar sin egen backend och separat worker på port 8765 med en tillfällig DEMO-databas och ett testlösenord som enbart hör till testmiljön. Inga ägardata eller API-nycklar används. Skärmbilder skrivs till `docs/screenshots`.
 

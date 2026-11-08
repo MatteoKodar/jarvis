@@ -1,0 +1,127 @@
+JARVIS verifiering 2026-11-06
+
+Granskad originalrot: C:\Users\matte\jarvis
+HEAD: 0e0707f1d103203c6e21c3d350019c9224b7f57f
+Arbetskopia vid start: ren main.
+Granskningsutdata under körning:
+C:\Users\matte\OneDrive\Dokument\ChatGPT\Jarvis odds\review-2026-11-06
+
+Alla Git-kommandon använde -c safe.directory=C:/Users/matte/jarvis.
+Ingen global konfiguration, fetch eller pull utfördes.
+
+1. Beroenden
+CWD C:\Users\matte\jarvis
+.venv/Scripts/python.exe -B -m pip check
+PYTHONDONTWRITEBYTECODE=1
+PIP_DISABLE_PIP_VERSION_CHECK=1
+Exit 0. No broken requirements found.
+51 tillämpliga låsta Pythonpaket jämfördes med importlib.metadata: inga versionsavvikelser.
+
+2. Backend före rättning
+CWD C:\Users\matte\jarvis
+Python .venv/Scripts/python.exe -B -, runner över stdin.
+Runner anropade:
+pytest.main(['-q','-p','no:cacheprovider','--tb=short',
+ '--basetemp',AUDIT+'/temporary/pytest',
+ '--junitxml',AUDIT+'/evidence/backend-junit.xml'])
+203 passed in 90.72s. Exit 0.
+
+Miljö före första projektimport för backend/reproduktion:
+PYTHON_DOTENV_DISABLED=1
+PYTHONDONTWRITEBYTECODE=1
+JARVIS_MODE=DEMO
+JARVIS_PAID_ENABLED=false
+JARVIS_RESEARCH_ENABLED=false
+JARVIS_ORIGIN=http://testserver
+JARVIS_SECURE_COOKIE=false
+PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 för pytest
+OPENAI_API_KEY borttagen ur barnprocessmiljön, inget nyckelvärde läst.
+JARVIS_DATA_DIR=egen ny mapp under AUDIT/temporary, före fixtures.
+PYTHONPATH=C:\Users\matte\jarvis\backend för originalkörningen.
+
+Audit hook installerades före import av pytest/projektmoduler:
+- sqlite3.connect tilläts endast i AUDIT/temporary eller :memory:
+- open av .env och originalrotens data/ nekades
+- externa socket.connect och getaddrinfo nekades
+- loopback tilläts för TestClient/Windows asyncio
+Vakten registrerade inga förbjudna försök i båda fulla testsviterna.
+Fixtures valde egna tmp_path under --basetemp före DB-init.
+LIVE-tester använder syntetisk nyckel/priser och mocktransport; de aktiverar LIVE i test-DB själva.
+Två subprocessfall kodgranskades före körning: backup av test-DB och skyddat anropsfall.
+Ingen vanlig API-, demo- eller workerprocess startades.
+
+3. Frontend
+CWD C:\Users\matte\jarvis\frontend
+node node_modules/typescript/bin/tsc --noEmit --incremental false -p tsconfig.json
+Exit 0.
+node node_modules/vite/bin/vite.js build --configLoader runner --outDir AUDIT/temporary/frontend-dist
+Exit 0. Vite 7.1.12, 1590 moduler, 3.52s.
+Utdata: index.html 0.41 kB, CSS 41.44 kB, JS 270.79 kB före gzip.
+Ingen tsbuildinfo, original-dist eller .vite-temp skrevs över.
+Ingen frontendkod ändrades efter denna byggkörning.
+
+4. Playwright inventering
+CWD C:\Users\matte\jarvis\frontend
+node node_modules/@playwright/test/cli.js install --list
+Enbart inventering; ingen installation. Exit 1: ms-playwright/.links saknas.
+node node_modules/@playwright/test/cli.js test --list
+Exit 0. 13 testfall i 4 filer. Se playwright-list.txt.
+chromium.executablePath() och existsSync kontrollerades via installerat @playwright/test.
+Playwright 1.56.1 förväntar:
+C:\Users\matte\AppData\Local\ms-playwright\chromium-1194\chrome-win\chrome.exe
+Programmet saknas. Ingen browser/testserver startades. E2E blockerad, inte godkänd.
+data/browsers och den vanliga browserkatalogen gav ingen tillgänglig installation.
+Portkontroll: Get-NetTCPConnection -LocalPort 8765 -ErrorAction SilentlyContinue
+Ingen lyssnare visades, varken före eller efter arbetet. Ingen process stoppades.
+
+5. Riktad felreproduktion
+reproduction-runner.txt kördes i originalets Python med separat syntetisk DB.
+Första instrumenteringsförsöket stoppade även loopback, vilket bröt Windows asyncio.
+Det var ett fel i granskningsvakten. Riktad omkörning tillät endast loopback.
+Giltigt före-resultat: reproduction-before.json. Exit 0.
+Samma ID men olika kostnadsinnehåll: HTTP 200 följt av HTTP 200, bara första posten sparad.
+Samma ID men annat mål/tak: HTTP 200 följt av HTTP 200, samma gamla task_id returnerad.
+Syntetisk kontroll av komponentmedian: summa 0.75, ingen produktregel ändrad.
+
+6. Rättning och full regression
+Separat testkopia:
+AUDIT/temporary/isolated-project
+137 versionshanterade icke-datafiler kopierades byteidentiskt från originalets baslinje.
+Inga .env, .git, driftdata, venv eller node_modules kopierades.
+Endast backend/jarvis/api.py och backend/jarvis/service.py ändrades;
+tests/test_request_identity.py tillkom med 15 fall.
+Diff: rattning.diff.
+
+CWD AUDIT/temporary/isolated-project
+Python C:\Users\matte\jarvis\.venv\Scripts\python.exe -B -, runner över stdin.
+Samma miljö och skydd enligt ovan, med:
+JARVIS_DATA_DIR=AUDIT/temporary/final-import-data
+PYTHONPATH=AUDIT/temporary/isolated-project/backend
+Se backend-final-runner.txt för faktisk Pythonkod och slutlig pytest-kommandorad.
+pytest --basetemp AUDIT/temporary/pytest-final
+JUnit: evidence/backend-final-junit.xml
+218 passed in 98.56s. Exit 0.
+Inga fel, errors eller skips i JUnit. 15 fler tester än baslinjen.
+
+7. Samma reproduktion efter rättning
+CWD AUDIT/temporary/isolated-project
+Samma runner lästes med encoding=utf-8-sig och kördes med originalets Python -B.
+JARVIS_DATA_DIR=AUDIT/temporary/reproduction-after
+PYTHONPATH=AUDIT/temporary/isolated-project/backend
+Exit 0. Båda ändrade begäranden gav HTTP 409; originalens första svar var HTTP 200.
+Endast första kostnaden/arbetsomgången fanns kvar. Se reproduction-after.json.
+
+8. Integritet och leverans
+Historiska kontroll.py baseline/verify/audit kördes inte: de läser/skriver historiskt material.
+En ny separat baslinje beräknades utan data/ eller .env.
+137 filer hashas vid start. Originalet var fortfarande byteidentiskt före överföring.
+Historiska manifestets 102 poster utanför data jämfördes separat:
+17 byteidentiska, 81 enbart CRLF/LF, 4 innehållsskillnader redan vid start.
+6 data/-poster öppnades inte. Inga gamla manifest eller rapporter skrevs över.
+Överföring till ägarens uttryckliga destination kräver sandlådeåtkomst utanför arbetsroten.
+Filerna kontrolleras mot baslinjen före överföring och mot testkopians SHA-256 efteråt.
+delivery-manifest.json och final-git-status.txt redovisar det faktiska slutläget.
+
+Utdata under temporary/ innehåller enbart syntetiska testdata, testbackup, källkopia och bygge.
+Detta är ingen ägarbackup och inga sådana tillfälliga DB-filer ingår i leveransmappen.
+Ingen installation, vanlig appstart, extern anslutning, commit eller push utfördes.

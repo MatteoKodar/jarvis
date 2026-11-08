@@ -1,0 +1,1753 @@
+{
+  "id": "ffffffffffffffffffffffffffffffff",
+  "state": "analyzed",
+  "created_at": "2026-11-08T12:00:00+00:00",
+  "updated_at": "2026-11-08T12:00:00+00:00",
+  "scenario_version": "seven-matches-demo-v1",
+  "rules_version": "football-paper-v1",
+  "explanation_version": "betting-demo-explanations-v1",
+  "initial_capital_ore": 100000,
+  "stake_ore": 1000,
+  "summary": {
+    "available_ore": 99860,
+    "bet_count": 0,
+    "capital_ore": 99860,
+    "game_profit_ore": 0,
+    "initial_capital_ore": 100000,
+    "lost_count": 0,
+    "net_ore": -140,
+    "open_stake_ore": 0,
+    "payout_ore": 0,
+    "settled_count": 0,
+    "simulated_cost_ore": 140,
+    "total_stake_ore": 0,
+    "won_count": 0
+  },
+  "workflow_version": "betting-demo-review-v2",
+  "observations": [
+    {
+      "event_id": "syntetisk-1",
+      "sport": "football",
+      "market": "1x2_90min",
+      "home": "Påhittat hemmalag 1",
+      "away": "Påhittat bortalag 1",
+      "starts_at": "2025-01-01T13:00:00Z",
+      "captured_at": "2025-01-01T10:00:00Z",
+      "data_cost_ore": 20,
+      "quotes": [
+        {
+          "book": "kalla_1",
+          "source_url": "https://example.invalid/kalla-1",
+          "updated_at": "2025-01-01T10:00:00Z",
+          "odds": {
+            "home": 25000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_2",
+          "source_url": "https://example.invalid/kalla-2",
+          "updated_at": "2025-01-01T09:55:00+00:00",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_3",
+          "source_url": "https://example.invalid/kalla-3",
+          "updated_at": "2025-01-01T10:00:00Z",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_4",
+          "source_url": "https://example.invalid/kalla-4",
+          "updated_at": "2025-01-01T10:00:00Z",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_5",
+          "source_url": "https://example.invalid/kalla-5",
+          "updated_at": "2025-01-01T10:00:00Z",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        }
+      ]
+    },
+    {
+      "event_id": "syntetisk-2",
+      "sport": "football",
+      "market": "1x2_90min",
+      "home": "Påhittat hemmalag 2",
+      "away": "Påhittat bortalag 2",
+      "starts_at": "2025-01-02T13:00:00Z",
+      "captured_at": "2025-01-02T10:00:00Z",
+      "data_cost_ore": 20,
+      "quotes": [
+        {
+          "book": "kalla_1",
+          "source_url": "https://example.invalid/kalla-1",
+          "updated_at": "2025-01-02T10:00:00Z",
+          "odds": {
+            "home": 25000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_2",
+          "source_url": "https://example.invalid/kalla-2",
+          "updated_at": "2025-01-02T10:00:00Z",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_3",
+          "source_url": "https://example.invalid/kalla-3",
+          "updated_at": "2025-01-02T10:00:00Z",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_4",
+          "source_url": "https://example.invalid/kalla-4",
+          "updated_at": "2025-01-02T10:00:00Z",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        }
+      ]
+    },
+    {
+      "event_id": "syntetisk-3",
+      "sport": "football",
+      "market": "1x2_90min",
+      "home": "Påhittat hemmalag 3",
+      "away": "Påhittat bortalag 3",
+      "starts_at": "2025-01-03T13:00:00Z",
+      "captured_at": "2025-01-03T10:00:00Z",
+      "data_cost_ore": 20,
+      "quotes": [
+        {
+          "book": "kalla_1",
+          "source_url": "https://example.invalid/kalla-1",
+          "updated_at": "2025-01-03T10:00:00Z",
+          "odds": {
+            "home": 25000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_2",
+          "source_url": "https://example.invalid/kalla-2",
+          "updated_at": "2025-01-03T10:00:00Z",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_3",
+          "source_url": "https://example.invalid/kalla-3",
+          "updated_at": "2025-01-03T10:00:00Z",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_4",
+          "source_url": "https://example.invalid/kalla-4",
+          "updated_at": "2025-01-03T10:00:00Z",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        }
+      ]
+    },
+    {
+      "event_id": "syntetisk-4",
+      "sport": "football",
+      "market": "1x2_90min",
+      "home": "Påhittat hemmalag 4",
+      "away": "Påhittat bortalag 4",
+      "starts_at": "2025-01-04T13:00:00Z",
+      "captured_at": "2025-01-04T10:00:00Z",
+      "data_cost_ore": 20,
+      "quotes": [
+        {
+          "book": "kalla_1",
+          "source_url": "https://example.invalid/kalla-1",
+          "updated_at": "2025-01-04T10:00:00Z",
+          "odds": {
+            "home": 25000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_2",
+          "source_url": "https://example.invalid/kalla-2",
+          "updated_at": "2025-01-04T10:00:00Z",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_3",
+          "source_url": "https://example.invalid/kalla-3",
+          "updated_at": "2025-01-04T10:00:00Z",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_4",
+          "source_url": "https://example.invalid/kalla-4",
+          "updated_at": "2025-01-04T10:00:00Z",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        }
+      ]
+    },
+    {
+      "event_id": "syntetisk-5",
+      "sport": "football",
+      "market": "1x2_90min",
+      "home": "Påhittat hemmalag 5",
+      "away": "Påhittat bortalag 5",
+      "starts_at": "2025-01-05T13:00:00Z",
+      "captured_at": "2025-01-05T10:00:00Z",
+      "data_cost_ore": 20,
+      "quotes": [
+        {
+          "book": "kalla_1",
+          "source_url": "https://example.invalid/kalla-1",
+          "updated_at": "2025-01-05T09:55:00Z",
+          "odds": {
+            "home": 25000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_2",
+          "source_url": "https://example.invalid/kalla-2",
+          "updated_at": "2025-01-05T09:55:00Z",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_3",
+          "source_url": "https://example.invalid/kalla-3",
+          "updated_at": "2025-01-05T09:55:00Z",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_4",
+          "source_url": "https://example.invalid/kalla-4",
+          "updated_at": "2025-01-05T09:55:00Z",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        }
+      ]
+    },
+    {
+      "event_id": "syntetisk-6",
+      "sport": "football",
+      "market": "1x2_90min",
+      "home": "Påhittat hemmalag 6",
+      "away": "Påhittat bortalag 6",
+      "starts_at": "2025-01-06T13:00:00Z",
+      "captured_at": "2025-01-06T10:00:00Z",
+      "data_cost_ore": 20,
+      "quotes": [
+        {
+          "book": "kalla_1",
+          "source_url": "https://example.invalid/kalla-1",
+          "updated_at": "2025-01-06T10:00:00Z",
+          "odds": {
+            "home": 25000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_2",
+          "source_url": "https://example.invalid/kalla-2",
+          "updated_at": "2025-01-06T10:00:00Z",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_3",
+          "source_url": "https://example.invalid/kalla-3",
+          "updated_at": "2025-01-06T10:00:00Z",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        }
+      ]
+    },
+    {
+      "event_id": "syntetisk-7",
+      "sport": "football",
+      "market": "1x2_90min",
+      "home": "Påhittat hemmalag 7",
+      "away": "Påhittat bortalag 7",
+      "starts_at": "2025-01-07T13:00:00Z",
+      "captured_at": "2025-01-07T10:00:00Z",
+      "data_cost_ore": 20,
+      "quotes": [
+        {
+          "book": "kalla_1",
+          "source_url": "https://example.invalid/kalla-1",
+          "updated_at": "2025-01-07T10:00:00Z",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_2",
+          "source_url": "https://example.invalid/kalla-2",
+          "updated_at": "2025-01-07T10:00:00Z",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_3",
+          "source_url": "https://example.invalid/kalla-3",
+          "updated_at": "2025-01-07T10:00:00Z",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        },
+        {
+          "book": "kalla_4",
+          "source_url": "https://example.invalid/kalla-4",
+          "updated_at": "2025-01-07T10:00:00Z",
+          "odds": {
+            "home": 20000,
+            "draw": 34000,
+            "away": 36000
+          }
+        }
+      ]
+    }
+  ],
+  "analysis": {
+    "proposal_version": 2,
+    "proposal_hash": "aff5f01252e5be5b2a8ae401eb7962598c65a9dfe58f2d10db98a384970cb431",
+    "total_stake_ore": 3000,
+    "simulated_cost_ore": 140,
+    "analysis_input_hash": "5277fd9bb0450f3c1c5086c7699a06f9c96c0a730929f3212db70538789d3046",
+    "matches": [
+      {
+        "event_id": "syntetisk-1",
+        "simulated_analysis_at": "2025-01-01T10:00:00+00:00",
+        "explanation": "Avstå: Kritikern avstod från ett förslag med motstridigt underlag. Kostnaden för analysen kvarstår.",
+        "role_id": "analyst",
+        "notice": "Simulerat agentsvar – lokal demologik.",
+        "decision": {
+          "selected": false,
+          "reason": "Kritikern avstod från ett förslag med motstridigt underlag.",
+          "checks": [
+            {
+              "book": "kalla_1",
+              "accepted": true,
+              "reason": null,
+              "overround_bp": 9718
+            },
+            {
+              "book": "kalla_2",
+              "accepted": false,
+              "reason": "För gammal offert eller offert från framtiden.",
+              "overround_bp": 10718
+            },
+            {
+              "book": "kalla_3",
+              "accepted": true,
+              "reason": null,
+              "overround_bp": 10718
+            },
+            {
+              "book": "kalla_4",
+              "accepted": true,
+              "reason": null,
+              "overround_bp": 10718
+            },
+            {
+              "book": "kalla_5",
+              "accepted": true,
+              "reason": null,
+              "overround_bp": 10718
+            }
+          ]
+        }
+      },
+      {
+        "event_id": "syntetisk-2",
+        "simulated_analysis_at": "2025-01-02T10:00:00+00:00",
+        "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.",
+        "role_id": "analyst",
+        "notice": "Simulerat agentsvar – lokal demologik.",
+        "decision": {
+          "selected": true,
+          "reason": "Regelbaserat syntetiskt förslag. Referensen är ingen verifierad vinstchans.",
+          "book": "kalla_1",
+          "outcome": "home",
+          "quoted_odds": 25000,
+          "paper_odds": 24750,
+          "edge_bp": 1544,
+          "reference_probability_ppm": 466463,
+          "stake_ore": 1000,
+          "reference_books": [
+            "kalla_2",
+            "kalla_3",
+            "kalla_4"
+          ],
+          "checks": [
+            {
+              "book": "kalla_1",
+              "accepted": true,
+              "reason": null,
+              "overround_bp": 9718
+            },
+            {
+              "book": "kalla_2",
+              "accepted": true,
+              "reason": null,
+              "overround_bp": 10718
+            },
+            {
+              "book": "kalla_3",
+              "accepted": true,
+              "reason": null,
+              "overround_bp": 10718
+            },
+            {
+              "book": "kalla_4",
+              "accepted": true,
+              "reason": null,
+              "overround_bp": 10718
+            }
+          ]
+        }
+      },
+      {
+        "event_id": "syntetisk-3",
+        "simulated_analysis_at": "2025-01-03T10:00:00+00:00",
+        "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.",
+        "role_id": "analyst",
+        "notice": "Simulerat agentsvar – lokal demologik.",
+        "decision": {
+          "selected": true,
+          "reason": "Regelbaserat syntetiskt förslag. Referensen är ingen verifierad vinstchans.",
+          "book": "kalla_1",
+          "outcome": "home",
+          "quoted_odds": 25000,
+          "paper_odds": 24750,
+          "edge_bp": 1544,
+          "reference_probability_ppm": 466463,
+          "stake_ore": 1000,
+          "reference_books": [
+            "kalla_2",
+            "kalla_3",
+            "kalla_4"
+          ],
+          "checks": [
+            {
+              "book": "kalla_1",
+              "accepted": true,
+              "reason": null,
+              "overround_bp": 9718
+            },
+            {
+              "book": "kalla_2",
+              "accepted": true,
+              "reason": null,
+              "overround_bp": 10718
+            },
+            {
+              "book": "kalla_3",
+              "accepted": true,
+              "reason": null,
+              "overround_bp": 10718
+            },
+            {
+              "book": "kalla_4",
+              "accepted": true,
+              "reason": null,
+              "overround_bp": 10718
+            }
+          ]
+        }
+      },
+      {
+        "event_id": "syntetisk-4",
+        "simulated_analysis_at": "2025-01-04T10:00:00+00:00",
+        "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.",
+        "role_id": "analyst",
+        "notice": "Simulerat agentsvar – lokal demologik.",
+        "decision": {
+          "selected": true,
+          "reason": "Regelbaserat syntetiskt förslag. Referensen är ingen verifierad vinstchans.",
+          "book": "kalla_1",
+          "outcome": "home",
+          "quoted_odds": 25000,
+          "paper_odds": 24750,
+          "edge_bp": 1544,
+          "reference_probability_ppm": 466463,
+          "stake_ore": 1000,
+          "reference_books": [
+            "kalla_2",
+            "kalla_3",
+            "kalla_4"
+          ],
+          "checks": [
+            {
+              "book": "kalla_1",
+              "accepted": true,
+              "reason": null,
+              "overround_bp": 9718
+            },
+            {
+              "book": "kalla_2",
+              "accepted": true,
+              "reason": null,
+              "overround_bp": 10718
+            },
+            {
+              "book": "kalla_3",
+              "accepted": true,
+              "reason": null,
+              "overround_bp": 10718
+            },
+            {
+              "book": "kalla_4",
+              "accepted": true,
+              "reason": null,
+              "overround_bp": 10718
+            }
+          ]
+        }
+      },
+      {
+        "event_id": "syntetisk-5",
+        "simulated_analysis_at": "2025-01-05T10:00:00+00:00",
+        "explanation": "Avstå: Färre än fyra giltiga källor; tre andra jämförelsekällor krävs. Kostnaden för analysen kvarstår.",
+        "role_id": "analyst",
+        "notice": "Simulerat agentsvar – lokal demologik.",
+        "decision": {
+          "selected": false,
+          "reason": "Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.",
+          "checks": [
+            {
+              "book": "kalla_1",
+              "accepted": false,
+              "reason": "För gammal offert eller offert från framtiden.",
+              "overround_bp": 9718
+            },
+            {
+              "book": "kalla_2",
+              "accepted": false,
+              "reason": "För gammal offert eller offert från framtiden.",
+              "overround_bp": 10718
+            },
+            {
+              "book": "kalla_3",
+              "accepted": false,
+              "reason": "För gammal offert eller offert från framtiden.",
+              "overround_bp": 10718
+            },
+            {
+              "book": "kalla_4",
+              "accepted": false,
+              "reason": "För gammal offert eller offert från framtiden.",
+              "overround_bp": 10718
+            }
+          ]
+        }
+      },
+      {
+        "event_id": "syntetisk-6",
+        "simulated_analysis_at": "2025-01-06T10:00:00+00:00",
+        "explanation": "Avstå: Färre än fyra giltiga källor; tre andra jämförelsekällor krävs. Kostnaden för analysen kvarstår.",
+        "role_id": "analyst",
+        "notice": "Simulerat agentsvar – lokal demologik.",
+        "decision": {
+          "selected": false,
+          "reason": "Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.",
+          "checks": [
+            {
+              "book": "kalla_1",
+              "accepted": true,
+              "reason": null,
+              "overround_bp": 9718
+            },
+            {
+              "book": "kalla_2",
+              "accepted": true,
+              "reason": null,
+              "overround_bp": 10718
+            },
+            {
+              "book": "kalla_3",
+              "accepted": true,
+              "reason": null,
+              "overround_bp": 10718
+            }
+          ]
+        }
+      },
+      {
+        "event_id": "syntetisk-7",
+        "simulated_analysis_at": "2025-01-07T10:00:00+00:00",
+        "explanation": "Avstå: Ingen avvikelse klarar de låsta provreglerna. Kostnaden för analysen kvarstår.",
+        "role_id": "analyst",
+        "notice": "Simulerat agentsvar – lokal demologik.",
+        "decision": {
+          "selected": false,
+          "reason": "Ingen avvikelse klarar de låsta provreglerna.",
+          "checks": [
+            {
+              "book": "kalla_1",
+              "accepted": true,
+              "reason": null,
+              "overround_bp": 10718
+            },
+            {
+              "book": "kalla_2",
+              "accepted": true,
+              "reason": null,
+              "overround_bp": 10718
+            },
+            {
+              "book": "kalla_3",
+              "accepted": true,
+              "reason": null,
+              "overround_bp": 10718
+            },
+            {
+              "book": "kalla_4",
+              "accepted": true,
+              "reason": null,
+              "overround_bp": 10718
+            }
+          ]
+        }
+      }
+    ],
+    "proposals": [
+      {
+        "event_id": "syntetisk-2",
+        "home": "Påhittat hemmalag 2",
+        "away": "Påhittat bortalag 2",
+        "outcome": "home",
+        "book": "kalla_1",
+        "paper_odds": 24750,
+        "stake_ore": 1000,
+        "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet."
+      },
+      {
+        "event_id": "syntetisk-3",
+        "home": "Påhittat hemmalag 3",
+        "away": "Påhittat bortalag 3",
+        "outcome": "home",
+        "book": "kalla_1",
+        "paper_odds": 24750,
+        "stake_ore": 1000,
+        "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet."
+      },
+      {
+        "event_id": "syntetisk-4",
+        "home": "Påhittat hemmalag 4",
+        "away": "Påhittat bortalag 4",
+        "outcome": "home",
+        "book": "kalla_1",
+        "paper_odds": 24750,
+        "stake_ore": 1000,
+        "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet."
+      }
+    ],
+    "messages": [
+      {
+        "role_id": "finance",
+        "notice": "Simulerat agentsvar – lokal demologik.",
+        "text": "3 förslag efter kritik. Analysen kostar 140 simulerade öre även om du avstår. Kapitalet tillhör endast denna omgång."
+      },
+      {
+        "role_id": "critic",
+        "notice": "Simulerat agentsvar – lokal demologik.",
+        "text": "Påhittade odds och utfall prövar arbetsflödet. De ger inget tillstånd till riktiga insatser och inget belägg för lönsamhet."
+      }
+    ],
+    "review_version": "betting-demo-review-v2",
+    "core_proposal_hash": "590e94e07c13bf482f9c104f6c270165ead6591c121862857492c8719eea7169",
+    "notice": "Regelbaserad offline-demo – ingen språkmodell, inga hämtade källor.",
+    "core_analysis": {
+      "proposal_version": 1,
+      "proposal_hash": "590e94e07c13bf482f9c104f6c270165ead6591c121862857492c8719eea7169",
+      "total_stake_ore": 4000,
+      "simulated_cost_ore": 140,
+      "analysis_input_hash": "5277fd9bb0450f3c1c5086c7699a06f9c96c0a730929f3212db70538789d3046",
+      "matches": [
+        {
+          "event_id": "syntetisk-1",
+          "simulated_analysis_at": "2025-01-01T10:00:00+00:00",
+          "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_3, kalla_4, kalla_5. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.",
+          "role_id": "analyst",
+          "notice": "Simulerat agentsvar – lokal demologik.",
+          "decision": {
+            "selected": true,
+            "reason": "Regelbaserat syntetiskt förslag. Referensen är ingen verifierad vinstchans.",
+            "book": "kalla_1",
+            "outcome": "home",
+            "quoted_odds": 25000,
+            "paper_odds": 24750,
+            "edge_bp": 1544,
+            "reference_probability_ppm": 466463,
+            "stake_ore": 1000,
+            "reference_books": [
+              "kalla_2",
+              "kalla_3",
+              "kalla_4"
+            ],
+            "checks": [
+              {
+                "book": "kalla_1",
+                "accepted": true,
+                "reason": null,
+                "overround_bp": 9718
+              },
+              {
+                "book": "kalla_2",
+                "accepted": false,
+                "reason": "För gammal offert eller offert från framtiden.",
+                "overround_bp": 10718
+              },
+              {
+                "book": "kalla_3",
+                "accepted": true,
+                "reason": null,
+                "overround_bp": 10718
+              },
+              {
+                "book": "kalla_4",
+                "accepted": true,
+                "reason": null,
+                "overround_bp": 10718
+              },
+              {
+                "book": "kalla_5",
+                "accepted": true,
+                "reason": null,
+                "overround_bp": 10718
+              }
+            ]
+          }
+        },
+        {
+          "event_id": "syntetisk-2",
+          "simulated_analysis_at": "2025-01-02T10:00:00+00:00",
+          "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.",
+          "role_id": "analyst",
+          "notice": "Simulerat agentsvar – lokal demologik.",
+          "decision": {
+            "selected": true,
+            "reason": "Regelbaserat syntetiskt förslag. Referensen är ingen verifierad vinstchans.",
+            "book": "kalla_1",
+            "outcome": "home",
+            "quoted_odds": 25000,
+            "paper_odds": 24750,
+            "edge_bp": 1544,
+            "reference_probability_ppm": 466463,
+            "stake_ore": 1000,
+            "reference_books": [
+              "kalla_2",
+              "kalla_3",
+              "kalla_4"
+            ],
+            "checks": [
+              {
+                "book": "kalla_1",
+                "accepted": true,
+                "reason": null,
+                "overround_bp": 9718
+              },
+              {
+                "book": "kalla_2",
+                "accepted": true,
+                "reason": null,
+                "overround_bp": 10718
+              },
+              {
+                "book": "kalla_3",
+                "accepted": true,
+                "reason": null,
+                "overround_bp": 10718
+              },
+              {
+                "book": "kalla_4",
+                "accepted": true,
+                "reason": null,
+                "overround_bp": 10718
+              }
+            ]
+          }
+        },
+        {
+          "event_id": "syntetisk-3",
+          "simulated_analysis_at": "2025-01-03T10:00:00+00:00",
+          "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.",
+          "role_id": "analyst",
+          "notice": "Simulerat agentsvar – lokal demologik.",
+          "decision": {
+            "selected": true,
+            "reason": "Regelbaserat syntetiskt förslag. Referensen är ingen verifierad vinstchans.",
+            "book": "kalla_1",
+            "outcome": "home",
+            "quoted_odds": 25000,
+            "paper_odds": 24750,
+            "edge_bp": 1544,
+            "reference_probability_ppm": 466463,
+            "stake_ore": 1000,
+            "reference_books": [
+              "kalla_2",
+              "kalla_3",
+              "kalla_4"
+            ],
+            "checks": [
+              {
+                "book": "kalla_1",
+                "accepted": true,
+                "reason": null,
+                "overround_bp": 9718
+              },
+              {
+                "book": "kalla_2",
+                "accepted": true,
+                "reason": null,
+                "overround_bp": 10718
+              },
+              {
+                "book": "kalla_3",
+                "accepted": true,
+                "reason": null,
+                "overround_bp": 10718
+              },
+              {
+                "book": "kalla_4",
+                "accepted": true,
+                "reason": null,
+                "overround_bp": 10718
+              }
+            ]
+          }
+        },
+        {
+          "event_id": "syntetisk-4",
+          "simulated_analysis_at": "2025-01-04T10:00:00+00:00",
+          "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.",
+          "role_id": "analyst",
+          "notice": "Simulerat agentsvar – lokal demologik.",
+          "decision": {
+            "selected": true,
+            "reason": "Regelbaserat syntetiskt förslag. Referensen är ingen verifierad vinstchans.",
+            "book": "kalla_1",
+            "outcome": "home",
+            "quoted_odds": 25000,
+            "paper_odds": 24750,
+            "edge_bp": 1544,
+            "reference_probability_ppm": 466463,
+            "stake_ore": 1000,
+            "reference_books": [
+              "kalla_2",
+              "kalla_3",
+              "kalla_4"
+            ],
+            "checks": [
+              {
+                "book": "kalla_1",
+                "accepted": true,
+                "reason": null,
+                "overround_bp": 9718
+              },
+              {
+                "book": "kalla_2",
+                "accepted": true,
+                "reason": null,
+                "overround_bp": 10718
+              },
+              {
+                "book": "kalla_3",
+                "accepted": true,
+                "reason": null,
+                "overround_bp": 10718
+              },
+              {
+                "book": "kalla_4",
+                "accepted": true,
+                "reason": null,
+                "overround_bp": 10718
+              }
+            ]
+          }
+        },
+        {
+          "event_id": "syntetisk-5",
+          "simulated_analysis_at": "2025-01-05T10:00:00+00:00",
+          "explanation": "Avstå: Färre än fyra giltiga källor; tre andra jämförelsekällor krävs. Kostnaden för analysen kvarstår.",
+          "role_id": "analyst",
+          "notice": "Simulerat agentsvar – lokal demologik.",
+          "decision": {
+            "selected": false,
+            "reason": "Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.",
+            "checks": [
+              {
+                "book": "kalla_1",
+                "accepted": false,
+                "reason": "För gammal offert eller offert från framtiden.",
+                "overround_bp": 9718
+              },
+              {
+                "book": "kalla_2",
+                "accepted": false,
+                "reason": "För gammal offert eller offert från framtiden.",
+                "overround_bp": 10718
+              },
+              {
+                "book": "kalla_3",
+                "accepted": false,
+                "reason": "För gammal offert eller offert från framtiden.",
+                "overround_bp": 10718
+              },
+              {
+                "book": "kalla_4",
+                "accepted": false,
+                "reason": "För gammal offert eller offert från framtiden.",
+                "overround_bp": 10718
+              }
+            ]
+          }
+        },
+        {
+          "event_id": "syntetisk-6",
+          "simulated_analysis_at": "2025-01-06T10:00:00+00:00",
+          "explanation": "Avstå: Färre än fyra giltiga källor; tre andra jämförelsekällor krävs. Kostnaden för analysen kvarstår.",
+          "role_id": "analyst",
+          "notice": "Simulerat agentsvar – lokal demologik.",
+          "decision": {
+            "selected": false,
+            "reason": "Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.",
+            "checks": [
+              {
+                "book": "kalla_1",
+                "accepted": true,
+                "reason": null,
+                "overround_bp": 9718
+              },
+              {
+                "book": "kalla_2",
+                "accepted": true,
+                "reason": null,
+                "overround_bp": 10718
+              },
+              {
+                "book": "kalla_3",
+                "accepted": true,
+                "reason": null,
+                "overround_bp": 10718
+              }
+            ]
+          }
+        },
+        {
+          "event_id": "syntetisk-7",
+          "simulated_analysis_at": "2025-01-07T10:00:00+00:00",
+          "explanation": "Avstå: Ingen avvikelse klarar de låsta provreglerna. Kostnaden för analysen kvarstår.",
+          "role_id": "analyst",
+          "notice": "Simulerat agentsvar – lokal demologik.",
+          "decision": {
+            "selected": false,
+            "reason": "Ingen avvikelse klarar de låsta provreglerna.",
+            "checks": [
+              {
+                "book": "kalla_1",
+                "accepted": true,
+                "reason": null,
+                "overround_bp": 10718
+              },
+              {
+                "book": "kalla_2",
+                "accepted": true,
+                "reason": null,
+                "overround_bp": 10718
+              },
+              {
+                "book": "kalla_3",
+                "accepted": true,
+                "reason": null,
+                "overround_bp": 10718
+              },
+              {
+                "book": "kalla_4",
+                "accepted": true,
+                "reason": null,
+                "overround_bp": 10718
+              }
+            ]
+          }
+        }
+      ],
+      "proposals": [
+        {
+          "event_id": "syntetisk-1",
+          "home": "Påhittat hemmalag 1",
+          "away": "Påhittat bortalag 1",
+          "outcome": "home",
+          "book": "kalla_1",
+          "paper_odds": 24750,
+          "stake_ore": 1000,
+          "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_3, kalla_4, kalla_5. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet."
+        },
+        {
+          "event_id": "syntetisk-2",
+          "home": "Påhittat hemmalag 2",
+          "away": "Påhittat bortalag 2",
+          "outcome": "home",
+          "book": "kalla_1",
+          "paper_odds": 24750,
+          "stake_ore": 1000,
+          "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet."
+        },
+        {
+          "event_id": "syntetisk-3",
+          "home": "Påhittat hemmalag 3",
+          "away": "Påhittat bortalag 3",
+          "outcome": "home",
+          "book": "kalla_1",
+          "paper_odds": 24750,
+          "stake_ore": 1000,
+          "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet."
+        },
+        {
+          "event_id": "syntetisk-4",
+          "home": "Påhittat hemmalag 4",
+          "away": "Påhittat bortalag 4",
+          "outcome": "home",
+          "book": "kalla_1",
+          "paper_odds": 24750,
+          "stake_ore": 1000,
+          "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet."
+        }
+      ],
+      "messages": [
+        {
+          "role_id": "finance",
+          "notice": "Simulerat agentsvar – lokal demologik.",
+          "text": "4 förslag. Analysen kostar 140 simulerade öre även om du avstår. Kapitalet tillhör endast denna omgång."
+        },
+        {
+          "role_id": "critic",
+          "notice": "Simulerat agentsvar – lokal demologik.",
+          "text": "Påhittade odds och utfall prövar arbetsflödet. De ger inget tillstånd till riktiga insatser och inget belägg för lönsamhet."
+        }
+      ]
+    },
+    "research": {
+      "version": "demo-research-v1",
+      "packets": [
+        {
+          "research_version": "demo-research-v1",
+          "data_kind": "synthetic_demo",
+          "event_id": "syntetisk-1",
+          "observation_hash": "c282ad6c842e9cc6a9c4f7db9bd00baf9015ece3bb674a00a8fed29a69c62789",
+          "as_of": "2025-01-01T10:00:00Z",
+          "starts_at": "2025-01-01T13:00:00Z",
+          "seconds_to_kickoff": 10800.0,
+          "max_quote_age_seconds": 120,
+          "minimum_fresh_sources": 4,
+          "fresh_count": 4,
+          "source_independence": "unverified",
+          "notice": "Regelbaserad offline-demo – ingen språkmodell, inga hämtade källor.",
+          "packet_hash": "fd958c485cbcf2628512897f0bb4c10c51cd67138512503ea13056867acb4968",
+          "missing_context": [
+            "form",
+            "injuries",
+            "lineups"
+          ],
+          "rejections": [],
+          "sources": [
+            {
+              "book": "kalla_1",
+              "source_url": "https://example.invalid/kalla-1",
+              "updated_at": "2025-01-01T10:00:00Z",
+              "age_seconds": 0.0,
+              "fresh": true,
+              "reason": null
+            },
+            {
+              "book": "kalla_2",
+              "source_url": "https://example.invalid/kalla-2",
+              "updated_at": "2025-01-01T09:55:00Z",
+              "age_seconds": 300.0,
+              "fresh": false,
+              "reason": "STALE_QUOTE"
+            },
+            {
+              "book": "kalla_3",
+              "source_url": "https://example.invalid/kalla-3",
+              "updated_at": "2025-01-01T10:00:00Z",
+              "age_seconds": 0.0,
+              "fresh": true,
+              "reason": null
+            },
+            {
+              "book": "kalla_4",
+              "source_url": "https://example.invalid/kalla-4",
+              "updated_at": "2025-01-01T10:00:00Z",
+              "age_seconds": 0.0,
+              "fresh": true,
+              "reason": null
+            },
+            {
+              "book": "kalla_5",
+              "source_url": "https://example.invalid/kalla-5",
+              "updated_at": "2025-01-01T10:00:00Z",
+              "age_seconds": 0.0,
+              "fresh": true,
+              "reason": null
+            }
+          ]
+        },
+        {
+          "research_version": "demo-research-v1",
+          "data_kind": "synthetic_demo",
+          "event_id": "syntetisk-2",
+          "observation_hash": "d74e0b9e6d112d57630ed8d70759ddcce5400f595959c4def90657644a22c3a7",
+          "as_of": "2025-01-02T10:00:00Z",
+          "starts_at": "2025-01-02T13:00:00Z",
+          "seconds_to_kickoff": 10800.0,
+          "max_quote_age_seconds": 120,
+          "minimum_fresh_sources": 4,
+          "fresh_count": 4,
+          "source_independence": "unverified",
+          "notice": "Regelbaserad offline-demo – ingen språkmodell, inga hämtade källor.",
+          "packet_hash": "6e1e6ec95e745a36b304f3f2a641a9dce55358f896f4d733f50abe182812ba76",
+          "missing_context": [
+            "form",
+            "injuries",
+            "lineups"
+          ],
+          "rejections": [],
+          "sources": [
+            {
+              "book": "kalla_1",
+              "source_url": "https://example.invalid/kalla-1",
+              "updated_at": "2025-01-02T10:00:00Z",
+              "age_seconds": 0.0,
+              "fresh": true,
+              "reason": null
+            },
+            {
+              "book": "kalla_2",
+              "source_url": "https://example.invalid/kalla-2",
+              "updated_at": "2025-01-02T10:00:00Z",
+              "age_seconds": 0.0,
+              "fresh": true,
+              "reason": null
+            },
+            {
+              "book": "kalla_3",
+              "source_url": "https://example.invalid/kalla-3",
+              "updated_at": "2025-01-02T10:00:00Z",
+              "age_seconds": 0.0,
+              "fresh": true,
+              "reason": null
+            },
+            {
+              "book": "kalla_4",
+              "source_url": "https://example.invalid/kalla-4",
+              "updated_at": "2025-01-02T10:00:00Z",
+              "age_seconds": 0.0,
+              "fresh": true,
+              "reason": null
+            }
+          ]
+        },
+        {
+          "research_version": "demo-research-v1",
+          "data_kind": "synthetic_demo",
+          "event_id": "syntetisk-3",
+          "observation_hash": "f2b26ae0fe1978795293e83993760d6f54b820114d95c81f1d69090778bd6809",
+          "as_of": "2025-01-03T10:00:00Z",
+          "starts_at": "2025-01-03T13:00:00Z",
+          "seconds_to_kickoff": 10800.0,
+          "max_quote_age_seconds": 120,
+          "minimum_fresh_sources": 4,
+          "fresh_count": 4,
+          "source_independence": "unverified",
+          "notice": "Regelbaserad offline-demo – ingen språkmodell, inga hämtade källor.",
+          "packet_hash": "bb4922b56959b6ee4fc5efe2483a291a188635f2a5d52351463e7dacca78b2ac",
+          "missing_context": [
+            "form",
+            "injuries",
+            "lineups"
+          ],
+          "rejections": [],
+          "sources": [
+            {
+              "book": "kalla_1",
+              "source_url": "https://example.invalid/kalla-1",
+              "updated_at": "2025-01-03T10:00:00Z",
+              "age_seconds": 0.0,
+              "fresh": true,
+              "reason": null
+            },
+            {
+              "book": "kalla_2",
+              "source_url": "https://example.invalid/kalla-2",
+              "updated_at": "2025-01-03T10:00:00Z",
+              "age_seconds": 0.0,
+              "fresh": true,
+              "reason": null
+            },
+            {
+              "book": "kalla_3",
+              "source_url": "https://example.invalid/kalla-3",
+              "updated_at": "2025-01-03T10:00:00Z",
+              "age_seconds": 0.0,
+              "fresh": true,
+              "reason": null
+            },
+            {
+              "book": "kalla_4",
+              "source_url": "https://example.invalid/kalla-4",
+              "updated_at": "2025-01-03T10:00:00Z",
+              "age_seconds": 0.0,
+              "fresh": true,
+              "reason": null
+            }
+          ]
+        },
+        {
+          "research_version": "demo-research-v1",
+          "data_kind": "synthetic_demo",
+          "event_id": "syntetisk-4",
+          "observation_hash": "60a422f0f15f2bb9edb3d462354eb377bb0c90a988d9c0749267de6599224781",
+          "as_of": "2025-01-04T10:00:00Z",
+          "starts_at": "2025-01-04T13:00:00Z",
+          "seconds_to_kickoff": 10800.0,
+          "max_quote_age_seconds": 120,
+          "minimum_fresh_sources": 4,
+          "fresh_count": 4,
+          "source_independence": "unverified",
+          "notice": "Regelbaserad offline-demo – ingen språkmodell, inga hämtade källor.",
+          "packet_hash": "4bc89f742a1ffe66c80fdbbae5fbf6123917648595c64aea0a2b56995ae560cf",
+          "missing_context": [
+            "form",
+            "injuries",
+            "lineups"
+          ],
+          "rejections": [],
+          "sources": [
+            {
+              "book": "kalla_1",
+              "source_url": "https://example.invalid/kalla-1",
+              "updated_at": "2025-01-04T10:00:00Z",
+              "age_seconds": 0.0,
+              "fresh": true,
+              "reason": null
+            },
+            {
+              "book": "kalla_2",
+              "source_url": "https://example.invalid/kalla-2",
+              "updated_at": "2025-01-04T10:00:00Z",
+              "age_seconds": 0.0,
+              "fresh": true,
+              "reason": null
+            },
+            {
+              "book": "kalla_3",
+              "source_url": "https://example.invalid/kalla-3",
+              "updated_at": "2025-01-04T10:00:00Z",
+              "age_seconds": 0.0,
+              "fresh": true,
+              "reason": null
+            },
+            {
+              "book": "kalla_4",
+              "source_url": "https://example.invalid/kalla-4",
+              "updated_at": "2025-01-04T10:00:00Z",
+              "age_seconds": 0.0,
+              "fresh": true,
+              "reason": null
+            }
+          ]
+        },
+        {
+          "research_version": "demo-research-v1",
+          "data_kind": "synthetic_demo",
+          "event_id": "syntetisk-5",
+          "observation_hash": "dc80dc329fd089c1cee0d8c85c8ab542bfb1b728484cd712b0a7c863392894cc",
+          "as_of": "2025-01-05T10:00:00Z",
+          "starts_at": "2025-01-05T13:00:00Z",
+          "seconds_to_kickoff": 10800.0,
+          "max_quote_age_seconds": 120,
+          "minimum_fresh_sources": 4,
+          "fresh_count": 0,
+          "source_independence": "unverified",
+          "notice": "Regelbaserad offline-demo – ingen språkmodell, inga hämtade källor.",
+          "packet_hash": "d9b78bd9a38778e7ed1b21eeda697004d392b8d38b08eef4f17f667a829e3752",
+          "missing_context": [
+            "form",
+            "injuries",
+            "lineups"
+          ],
+          "rejections": [
+            "INSUFFICIENT_FRESH_SOURCES"
+          ],
+          "sources": [
+            {
+              "book": "kalla_1",
+              "source_url": "https://example.invalid/kalla-1",
+              "updated_at": "2025-01-05T09:55:00Z",
+              "age_seconds": 300.0,
+              "fresh": false,
+              "reason": "STALE_QUOTE"
+            },
+            {
+              "book": "kalla_2",
+              "source_url": "https://example.invalid/kalla-2",
+              "updated_at": "2025-01-05T09:55:00Z",
+              "age_seconds": 300.0,
+              "fresh": false,
+              "reason": "STALE_QUOTE"
+            },
+            {
+              "book": "kalla_3",
+              "source_url": "https://example.invalid/kalla-3",
+              "updated_at": "2025-01-05T09:55:00Z",
+              "age_seconds": 300.0,
+              "fresh": false,
+              "reason": "STALE_QUOTE"
+            },
+            {
+              "book": "kalla_4",
+              "source_url": "https://example.invalid/kalla-4",
+              "updated_at": "2025-01-05T09:55:00Z",
+              "age_seconds": 300.0,
+              "fresh": false,
+              "reason": "STALE_QUOTE"
+            }
+          ]
+        },
+        {
+          "research_version": "demo-research-v1",
+          "data_kind": "synthetic_demo",
+          "event_id": "syntetisk-6",
+          "observation_hash": "1b70f7bfd1dbd339bbada755ae50ff8a64500962f5492a5bb08f8362d96c64c3",
+          "as_of": "2025-01-06T10:00:00Z",
+          "starts_at": "2025-01-06T13:00:00Z",
+          "seconds_to_kickoff": 10800.0,
+          "max_quote_age_seconds": 120,
+          "minimum_fresh_sources": 4,
+          "fresh_count": 3,
+          "source_independence": "unverified",
+          "notice": "Regelbaserad offline-demo – ingen språkmodell, inga hämtade källor.",
+          "packet_hash": "4f9cdaee7f4740bd68626627ae65fe08a5bcc13c10774f9f97f3e5c807c65565",
+          "missing_context": [
+            "form",
+            "injuries",
+            "lineups"
+          ],
+          "rejections": [
+            "INSUFFICIENT_FRESH_SOURCES"
+          ],
+          "sources": [
+            {
+              "book": "kalla_1",
+              "source_url": "https://example.invalid/kalla-1",
+              "updated_at": "2025-01-06T10:00:00Z",
+              "age_seconds": 0.0,
+              "fresh": true,
+              "reason": null
+            },
+            {
+              "book": "kalla_2",
+              "source_url": "https://example.invalid/kalla-2",
+              "updated_at": "2025-01-06T10:00:00Z",
+              "age_seconds": 0.0,
+              "fresh": true,
+              "reason": null
+            },
+            {
+              "book": "kalla_3",
+              "source_url": "https://example.invalid/kalla-3",
+              "updated_at": "2025-01-06T10:00:00Z",
+              "age_seconds": 0.0,
+              "fresh": true,
+              "reason": null
+            }
+          ]
+        },
+        {
+          "research_version": "demo-research-v1",
+          "data_kind": "synthetic_demo",
+          "event_id": "syntetisk-7",
+          "observation_hash": "5f1b0a2ca22850c47821b906ec91f9560b7ea9a48612d780228a251110d15b06",
+          "as_of": "2025-01-07T10:00:00Z",
+          "starts_at": "2025-01-07T13:00:00Z",
+          "seconds_to_kickoff": 10800.0,
+          "max_quote_age_seconds": 120,
+          "minimum_fresh_sources": 4,
+          "fresh_count": 4,
+          "source_independence": "unverified",
+          "notice": "Regelbaserad offline-demo – ingen språkmodell, inga hämtade källor.",
+          "packet_hash": "7967b1b55353886579bde11f0dabef53badd74636473cfc66bc81de06a9857b7",
+          "missing_context": [
+            "form",
+            "injuries",
+            "lineups"
+          ],
+          "rejections": [],
+          "sources": [
+            {
+              "book": "kalla_1",
+              "source_url": "https://example.invalid/kalla-1",
+              "updated_at": "2025-01-07T10:00:00Z",
+              "age_seconds": 0.0,
+              "fresh": true,
+              "reason": null
+            },
+            {
+              "book": "kalla_2",
+              "source_url": "https://example.invalid/kalla-2",
+              "updated_at": "2025-01-07T10:00:00Z",
+              "age_seconds": 0.0,
+              "fresh": true,
+              "reason": null
+            },
+            {
+              "book": "kalla_3",
+              "source_url": "https://example.invalid/kalla-3",
+              "updated_at": "2025-01-07T10:00:00Z",
+              "age_seconds": 0.0,
+              "fresh": true,
+              "reason": null
+            },
+            {
+              "book": "kalla_4",
+              "source_url": "https://example.invalid/kalla-4",
+              "updated_at": "2025-01-07T10:00:00Z",
+              "age_seconds": 0.0,
+              "fresh": true,
+              "reason": null
+            }
+          ]
+        }
+      ]
+    },
+    "review": {
+      "contract": {
+        "workflow_version": "betting-demo-review-v2",
+        "research_version": "demo-research-v1",
+        "research_rules": {
+          "as_of_source": "captured_at",
+          "notice": "Regelbaserad offline-demo – ingen språkmodell, inga hämtade källor.",
+          "required_context": [
+            "form",
+            "injuries",
+            "lineups"
+          ]
+        },
+        "review_roles": [
+          {
+            "role_id": "researcher",
+            "name": "Researcher / Fotbollsdata",
+            "version": "2.0.0-football"
+          },
+          {
+            "role_id": "analyst",
+            "name": "Oddsanalytiker",
+            "version": "2.0.0-football"
+          },
+          {
+            "role_id": "finance",
+            "name": "Ekonom / Risk",
+            "version": "2.0.0-football"
+          },
+          {
+            "role_id": "critic",
+            "name": "Kritiker / Kvalitetskontroll",
+            "version": "2.0.0-football"
+          }
+        ]
+      },
+      "steps": [
+        {
+          "role_id": "researcher",
+          "role_name": "Researcher / Fotbollsdata",
+          "role_version": "2.0.0-football",
+          "input_hash": "6b834c3eb9139a3735bd7b95e5c3b8c9fe5b8e71f415ec819e5eeab755baf7df",
+          "status": "with_limitations",
+          "output_hash": "98a2b8b36f455845b078d07bbc3c0daddac387b0f2b47f05d3106e8c5b270e20",
+          "facts": {
+            "kind": "researcher",
+            "event_ids": [
+              "syntetisk-1",
+              "syntetisk-2",
+              "syntetisk-3",
+              "syntetisk-4",
+              "syntetisk-5",
+              "syntetisk-6",
+              "syntetisk-7"
+            ],
+            "packet_hashes": [
+              "fd958c485cbcf2628512897f0bb4c10c51cd67138512503ea13056867acb4968",
+              "6e1e6ec95e745a36b304f3f2a641a9dce55358f896f4d733f50abe182812ba76",
+              "bb4922b56959b6ee4fc5efe2483a291a188635f2a5d52351463e7dacca78b2ac",
+              "4bc89f742a1ffe66c80fdbbae5fbf6123917648595c64aea0a2b56995ae560cf",
+              "d9b78bd9a38778e7ed1b21eeda697004d392b8d38b08eef4f17f667a829e3752",
+              "4f9cdaee7f4740bd68626627ae65fe08a5bcc13c10774f9f97f3e5c807c65565",
+              "7967b1b55353886579bde11f0dabef53badd74636473cfc66bc81de06a9857b7"
+            ],
+            "fresh_counts": [
+              4,
+              4,
+              4,
+              4,
+              0,
+              3,
+              4
+            ],
+            "rejected_event_ids": [
+              "syntetisk-5",
+              "syntetisk-6"
+            ]
+          },
+          "limitations": [
+            "Form, skador och laguppställningar saknas och ingår inte i beräkningen."
+          ]
+        },
+        {
+          "role_id": "analyst",
+          "role_name": "Oddsanalytiker",
+          "role_version": "2.0.0-football",
+          "input_hash": "f8114f283cafe4a0325aa03c53cdf3f241cc51c04f7248ec6a4e5b13d0d52f5d",
+          "status": "with_limitations",
+          "output_hash": "374c7dde21ff9f2f0914355572cf8fcd173e04288edb317b407d5870bf2165e2",
+          "facts": {
+            "kind": "analyst",
+            "core_input_hash": "5277fd9bb0450f3c1c5086c7699a06f9c96c0a730929f3212db70538789d3046",
+            "core_output_hash": "590e94e07c13bf482f9c104f6c270165ead6591c121862857492c8719eea7169",
+            "candidate_event_ids": [
+              "syntetisk-1",
+              "syntetisk-2",
+              "syntetisk-3",
+              "syntetisk-4"
+            ]
+          },
+          "limitations": [
+            "Prisreferensen är ingen uppmätt vinstchans."
+          ]
+        },
+        {
+          "role_id": "finance",
+          "role_name": "Ekonom / Risk",
+          "role_version": "2.0.0-football",
+          "input_hash": "581484adb7fe4eba41f58fee2b873733bc5945513a86ce42db67321901709a24",
+          "status": "with_limitations",
+          "output_hash": "ffe98197a7baca79dbacd2c9965d5df6409bc26b7d4fc6712fbf55462b206e40",
+          "facts": {
+            "kind": "finance",
+            "initial_capital_ore": 100000,
+            "simulated_cost_ore": 140,
+            "proposal_count": 4,
+            "fixed_stake_ore": 1000,
+            "expected_fixed_total_ore": 4000,
+            "total_stake_ore": 4000,
+            "projected_available_ore": 95860,
+            "capital_sufficient": true
+          },
+          "limitations": [
+            "Simulerade belopp. Kapital kontrolleras atomiskt vid registrering."
+          ]
+        },
+        {
+          "role_id": "critic",
+          "role_name": "Kritiker / Kvalitetskontroll",
+          "role_version": "2.0.0-football",
+          "input_hash": "6f20c18e437c3712aeff933ce5be786c7065668f68fb32a883d8dea92daa3490",
+          "status": "with_abstentions",
+          "output_hash": "9c1ba19418bf026182646731ed50938a9c5fcd6de85087fee9cca0299747d384",
+          "facts": {
+            "kind": "critic",
+            "retained_event_ids": [
+              "syntetisk-2",
+              "syntetisk-3",
+              "syntetisk-4"
+            ],
+            "removed_event_ids": [
+              "syntetisk-1"
+            ],
+            "findings_hash": "8a99876dd544b53aa12d6ea058631c4377d3cd6bb339e0537ad31ceeacf89afc",
+            "final_money": {
+              "initial_capital_ore": 100000,
+              "simulated_cost_ore": 140,
+              "proposal_count": 3,
+              "fixed_stake_ore": 1000,
+              "expected_fixed_total_ore": 3000,
+              "total_stake_ore": 3000,
+              "projected_available_ore": 96860,
+              "capital_sufficient": true
+            }
+          },
+          "limitations": [
+            "Källoberoende och verklig spelbarhet är inte verifierade."
+          ]
+        }
+      ],
+      "findings": [
+        {
+          "code": "CONTEXT_MISSING",
+          "severity": "limitation",
+          "event_id": null
+        },
+        {
+          "code": "SOURCE_INDEPENDENCE_UNVERIFIED",
+          "severity": "limitation",
+          "event_id": null
+        },
+        {
+          "code": "STALE_OR_FUTURE_SOURCE",
+          "severity": "blocker",
+          "event_id": "syntetisk-1"
+        }
+      ]
+    }
+  },
+  "decision": null,
+  "costs": [
+    {
+      "event_id": "syntetisk-1",
+      "cost_kind": "analysis_data",
+      "amount_ore": 20,
+      "simulated_at": "2025-01-01T10:00:00+00:00",
+      "recorded_at": "2026-11-08T12:00:00+00:00"
+    },
+    {
+      "event_id": "syntetisk-2",
+      "cost_kind": "analysis_data",
+      "amount_ore": 20,
+      "simulated_at": "2025-01-02T10:00:00+00:00",
+      "recorded_at": "2026-11-08T12:00:00+00:00"
+    },
+    {
+      "event_id": "syntetisk-3",
+      "cost_kind": "analysis_data",
+      "amount_ore": 20,
+      "simulated_at": "2025-01-03T10:00:00+00:00",
+      "recorded_at": "2026-11-08T12:00:00+00:00"
+    },
+    {
+      "event_id": "syntetisk-4",
+      "cost_kind": "analysis_data",
+      "amount_ore": 20,
+      "simulated_at": "2025-01-04T10:00:00+00:00",
+      "recorded_at": "2026-11-08T12:00:00+00:00"
+    },
+    {
+      "event_id": "syntetisk-5",
+      "cost_kind": "analysis_data",
+      "amount_ore": 20,
+      "simulated_at": "2025-01-05T10:00:00+00:00",
+      "recorded_at": "2026-11-08T12:00:00+00:00"
+    },
+    {
+      "event_id": "syntetisk-6",
+      "cost_kind": "analysis_data",
+      "amount_ore": 20,
+      "simulated_at": "2025-01-06T10:00:00+00:00",
+      "recorded_at": "2026-11-08T12:00:00+00:00"
+    },
+    {
+      "event_id": "syntetisk-7",
+      "cost_kind": "analysis_data",
+      "amount_ore": 20,
+      "simulated_at": "2025-01-07T10:00:00+00:00",
+      "recorded_at": "2026-11-08T12:00:00+00:00"
+    }
+  ],
+  "bets": [],
+  "history": [
+    {
+      "operation": "create",
+      "from_state": null,
+      "to_state": "created",
+      "recorded_at": "2026-11-08T12:00:00+00:00"
+    },
+    {
+      "operation": "analyze",
+      "from_state": "created",
+      "to_state": "analyzed",
+      "recorded_at": "2026-11-08T12:00:00+00:00"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+import sys,os,ipaddress,json
+from pathlib import Path
+base=Path(r'C:\Users\matte\OneDrive\Dokument\ChatGPT\Jarvis odds\review-2026-11-06\temporary').resolve()
+blocked=[]
+def audit(event,args):
+    if event=='sqlite3.connect':
+        db=args[0]
+        if str(db)!=':memory:' and not Path(db).resolve().is_relative_to(base):
+            blocked.append('sqlite3.connect outside temporary'); raise RuntimeError('Audit: database outside test root forbidden')
+    if event=='open' and isinstance(args[0],(str,bytes,os.PathLike)):
+        p=Path(os.fsdecode(args[0])).absolute()
+        if p.name=='.env' or p.is_relative_to(Path(r'C:\Users\matte\jarvis\data')):
+            blocked.append('protected open'); raise RuntimeError('Audit: protected input forbidden')
+    if event in {'socket.connect','socket.getaddrinfo'}:
+        host=args[1][0] if event=='socket.connect' else args[0]
+        try: local=ipaddress.ip_address(host).is_loopback
+        except ValueError: local=host in {'localhost',None}
+        if not local:
+            blocked.append('external socket'); raise RuntimeError('Audit: external network forbidden')
+sys.addaudithook(audit)
+import pytest
+rc=pytest.main(['-q','-p','no:cacheprovider','--tb=short','--basetemp',str(base/'pytest-final'),'--junitxml',str(base.parent/'evidence/backend-final-junit.xml')])
+(base.parent/'evidence/isolation-final.json').write_text(json.dumps({'dotenv_disabled':True,'initial_mode':'DEMO','paid_initially_enabled':False,'research_initially_enabled':False,'sqlite_root':str(base),'blocked_events':blocked,'pytest_exit':int(rc),'note':'Isolated source copy plus the reported patch; no production server or worker process.'},indent=2),encoding='utf-8')
+sys.exit(rc)

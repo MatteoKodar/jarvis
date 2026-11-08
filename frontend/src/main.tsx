@@ -5,6 +5,8 @@ import type { State, Agent, Task, Proposal } from './types';
 import './style.css';
 import { Schedule } from './Schedule';
 import { OddsLab } from './OddsLab';
+import { DemoGuide, DEMO_GOAL } from './DemoGuide';
+import { BettingDemo } from './BettingDemo';
 import { request as api, setCsrfToken } from './api';
 import { date, money } from './format';
 import { Modal } from './components/Modal';
@@ -28,7 +30,7 @@ const statuses: Record<string, string> = {
   active: 'Aktivt',
   closed: 'Avslutat'
 };
-const nav = [['Översikt', LayoutDashboard], ['Agentteam', Users], ['Chatta med JARVIS', MessageSquare], ['Förslag & beslut', CheckCheck], ['Oddslabb', Activity], ['Projekt & uppgifter', Kanban], ['Ekonomi', Wallet], ['Filer', Files], ['Dokument', BookOpen], ['Historik', History], ['Inställningar', Settings]] as const;
+const nav = [['Översikt', LayoutDashboard], ['Bettingdemo', Beaker], ['Agentteam', Users], ['Chatta med JARVIS', MessageSquare], ['Förslag & beslut', CheckCheck], ['Oddslabb', Activity], ['Projekt & uppgifter', Kanban], ['Ekonomi', Wallet], ['Filer', Files], ['Dokument', BookOpen], ['Historik', History], ['Inställningar', Settings]] as const;
 function Badge({
   children,
   tone = ''
@@ -166,6 +168,10 @@ function App() {
     setRoundAction(crypto.randomUUID());
     setRound(true);
   };
+  const openDemoRound = () => {
+    openRound();
+    setGoal(DEMO_GOAL);
+  };
   const selectedAgent = agent ? d.agents.find(a => a.id === agent.id) || agent : null;
   const selectedTask = task ? d.tasks.find(t => t.id === task.id) || task : null;
   const control = (state: string) => act(() => api('/control', {
@@ -206,14 +212,15 @@ function App() {
  <div className="main-wrap"><header className="topbar"><button className="mobile-toggle" aria-label="Öppna meny" onClick={() => setMobile(!mobile)}><Menu size={20} /></button><div className="breadcrumbs">Arbetsyta <ChevronRight size={14} /><strong>{page}</strong></div><div className="top-status"><Badge tone={d.mode === 'DEMO' ? 'amber' : 'cyan'}>{d.mode}</Badge><span className={connected ? 'connection' : 'connection offline'}><i />{connected ? 'Ansluten' : 'Återansluter'}</span><span className="state-label">{b.state === 'running' ? 'Arbete tillåtet' : statuses[b.state]}</span><button className="decision-top" onClick={() => go('Förslag & beslut')}><CheckCheck size={16} />{pending.length} beslut</button></div></header>
  <main className="content"><div className="page-heading"><div><div className="eyebrow">JARVIS / {page === 'Översikt' ? 'MISSION CONTROL' : 'FOOTBALL RESEARCH'}</div><h1>{page === 'Översikt' ? 'Fotbollsanalys före riktiga insatser.' : page}</h1><p>{page === 'Översikt' ? 'Fotbollsodds, datakvalitet och simulerade resultat. Inga riktiga spel.' : ({
                 Agentteam: 'Tio fasta specialister. Tydliga uppdrag och begränsade behörigheter.',
-                Oddslabb: 'Jämför odds, granska underlaget och följ upp pappersresultaten.',
+                Bettingdemo: 'Följ en syntetisk omgång från odds och ägarbeslut till avräkning.',
+                Oddslabb: 'Äldre papperslabb och manuella observationer, skilda från bettingdemot.',
                 Ekonomi: 'Planeringsbudget i SEK. Inga pengar har överförts till programmet.',
                 'Förslag & beslut': 'Granska exakt vad som föreslås innan nästa steg får köras.',
                 'Chatta med JARVIS': 'Fråga om läget. Databassvar utan AI-kostnad.'
               } as Record<string, string>)[page] || 'Följ arbetet och behåll kontrollen.'}</p></div>{page === 'Översikt' && <button className="primary" disabled={busy} onClick={openRound}><Play size={15} /> Starta arbetsomgång</button>}</div>
  {error && <div role="alert" className="error-banner"><AlertTriangle size={18} />{error}<button aria-label="Stäng felmeddelande" onClick={() => setError('')}><X size={16} /></button></div>}
  {d.mode === 'DEMO' && <div className="demo-strip"><span><span className="demo-dot" /> DEMOMILJÖ</span><p>Utforska arbetsflödet med märkta exempel. Inga AI-anrop eller verkliga kostnader.</p><button onClick={() => go('Inställningar')}>Om LIVE <ArrowUpRight size={14} /></button></div>}
- {page === 'Översikt' && <><div className="metrics"><article><span>AGENTTEAM <Users size={17} /></span><div>10 <small>specialister</small></div><p><i className="cyan-dot" />{working} arbetar <span>· {10 - working} {b.state === 'running' ? 'väntar' : 'pausade'}</span></p></article><article><span>ATT TA STÄLLNING TILL <CheckCheck size={17} /></span><div>{pending.length.toString().padStart(2, '0')} <small>beslut väntar</small></div><p>{pending.length ? 'Ditt godkännande behövs' : 'Inga beslut väntar just nu'}</p></article><article><span>ANVÄNDBAR BUDGET <Wallet size={17} /></span><div>{money(b.available)}</div><p>{money(b.locked)} i låst reserv</p></article><article><span>REGISTRERAD ANVÄNDNING <Activity size={17} /></span><div>{money(b.spent)}</div><p>{money(b.reserved)} reserverat <span>· totalt</span></p></article></div>
+ {page === 'Översikt' && <>{d.mode === 'DEMO' && <DemoGuide data={d} busy={busy} prepareRound={openDemoRound} navigate={go} />}<div className="metrics"><article><span>AGENTTEAM <Users size={17} /></span><div>10 <small>specialister</small></div><p><i className="cyan-dot" />{working} arbetar <span>· {10 - working} {b.state === 'running' ? 'väntar' : 'pausade'}</span></p></article><article><span>ATT TA STÄLLNING TILL <CheckCheck size={17} /></span><div>{pending.length.toString().padStart(2, '0')} <small>beslut väntar</small></div><p>{pending.length ? 'Ditt godkännande behövs' : 'Inga beslut väntar just nu'}</p></article><article><span>ANVÄNDBAR BUDGET <Wallet size={17} /></span><div>{money(b.available)}</div><p>{money(b.locked)} i låst reserv</p></article><article><span>REGISTRERAD ANVÄNDNING <Activity size={17} /></span><div>{money(b.spent)}</div><p>{money(b.reserved)} reserverat <span>· totalt</span></p></article></div>
  <div className="overview-grid"><section className="panel mission"><div className="panel-header"><h2><span className="square-icon"><Compass size={17} /></span>Aktuellt uppdrag</h2><Badge tone={b.state === 'running' ? 'cyan' : 'amber'}>{b.state === 'running' ? 'Redo för arbete' : statuses[b.state]}</Badge></div><span className="eyebrow">HUVUDMÅL</span><h2 className="mission-goal">{b.goal}</h2><p>Granska odds. Följ upp låtsasinsatser.<br />Gå vidare först när underlaget håller.</p><div className="workflow"><span className="active">01 <b>Undersök</b></span><ChevronRight size={16} /><span>02 <b>Jämför</b></span><ChevronRight size={16} /><span>03 <b>Besluta</b></span></div><div className="next-step"><span className="tiny-orbit" /><div><small>NÄSTA STEG</small><strong>{pending.length ? 'Granska förslagen och välj om arbetet ska fortsätta.' : b.state !== 'running' ? 'Återuppta arbetet när du är redo.' : 'Starta ett uppdrag eller invänta köade uppgifter.'}</strong></div></div><div className="mission-controls"><button disabled={busy || b.state === 'running'} onClick={() => control('running')}><Play size={15} />Återuppta</button><button disabled={busy || b.state !== 'running'} onClick={() => control('paused')}><Pause size={15} />Pausa</button><button className="stop" disabled={busy || b.state === 'stopped'} onClick={() => control('stopped')}><Square size={13} />Nödstopp</button></div><small className="muted">Paus stoppar nya uppgifter. Nödstopp försöker även avbryta pågående anrop.</small></section>
  <section className="panel attention"><div className="panel-header"><h2>Din uppmärksamhet</h2><Badge tone="amber">{pending.length}</Badge></div>{pending.length ? <><div className="attention-symbol"><CheckCheck size={25} /></div><small className="eyebrow">FÖRSLAG ATT GRANSKA</small><h3>{pending[0].payload.title}</h3><p>{pending[0].payload.purpose}</p><div className="cost-line"><span>Maximalt nästa steg</span><strong>{money(pending[0].payload.cap + pending[0].payload.review_cap)}</strong></div><button className="wide" onClick={() => go('Förslag & beslut')}>Granska förslag <ArrowRight size={16} /></button></> : <><div className="attention-symbol"><ShieldCheck size={28} /></div><h3>Inget väntar på ditt beslut.</h3><p>När teamet har ett konkret nästa steg hittar du underlag, risker och kostnadstak här.</p><div className="quiet-note">Inget utförs externt utan en ansluten integration och rätt behörighet.</div></>}</section>
  <section className="panel team-panel"><div className="panel-header"><h2>Teamet, samlat</h2><button className="text-button" onClick={() => go('Agentteam')}>Alla agenter <ArrowUpRight size={15} /></button></div><div className="team-mini">{d.agents.map((a, i) => <button key={a.id} onClick={() => setAgent(a)}><span className={'agent-symbol color-' + i % 4}>{i === 0 ? <Cpu size={20} /> : String(i + 1).padStart(2, '0')}</span><strong>{a.name.split(' / ')[0]}</strong><small><i className={a.status === 'Arbetar' ? 'cyan-dot' : 'gray-dot'} />{a.status}</small></button>)}</div></section>
@@ -259,6 +266,7 @@ function App() {
                   [k]: e.target.value
                 })} required /></label>)}<button className="primary" disabled={busy}>Spara budgetgränser</button></form></section><section className="panel"><h2>Körläge & integrationer</h2><Badge tone="amber">{d.mode}</Badge><p>Byt läge i serverns .env och starta om backend och worker. DEMO och LIVE använder olika databaser och ägarkonton.</p><h3>LIVE-konfiguration</h3>{d.live_missing.length ? <ul className="config-list">{d.live_missing.map(m => <li key={m}><AlertTriangle size={14} />{m}</li>)}</ul> : <p>Obligatoriska konfigurationsfält är ifyllda. Kontoåtkomst och faktisk debitering har inte verifierats här.</p>}<p>Agentmodeller, prisversion, valutakurs och källinställningar anges serversidigt i .env. V1 kräver en gemensam verifierad prisprofil.</p><hr /><p><strong>Oddsdata:</strong> ingen löpande leverantör är ansluten. Wikipedia och den gamla affärsidéresearchen är arkiverade. Oddslabb använder märkta exempel och manuella observationer.</p><p><strong>Arbetsschema:</strong> begränsade VD-omgångar kan förhandsgodkännas nedan.</p><p><strong>Avstängt:</strong> betalningar, köp, annonser, publicering, utskick och avtal.</p></section></div>}
  {page === 'Dokument' && <DocumentLibrary route={route} navigate={navigate} />}
+ {page === 'Bettingdemo' && <BettingDemo request={api} systemState={b.state} mode={d.mode} resume={() => control('running')} />}
  {page === 'Oddslabb' && <OddsLab request={api} systemState={b.state} mode={d.mode} resume={() => control('running')} />}
  {page === 'Inställningar' && <Schedule value={d.schedule} busy={busy} save={v => act(() => api('/schedule', v))} />}
  <footer className="system-footer"><span><Radio size={14} />{d.worker.online ? 'Worker ansluten' : 'Worker saknas eller svarar inte'}{d.worker.heartbeat && ' · senast ' + date(d.worker.heartbeat * 1000)}</span><span>EUROPE / STOCKHOLM <span className="footer-divider">/</span> JARVIS 1.0</span></footer>

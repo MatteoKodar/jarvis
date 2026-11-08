@@ -8,12 +8,18 @@ from typing import Literal
 from fastapi import FastAPI, Depends, Request, Response, HTTPException
 from fastapi.responses import JSONResponse, StreamingResponse, FileResponse
 from fastapi.staticfiles import StaticFiles
-from pydantic import Field
+from pydantic import Field, ValidationError
 from . import config, auth, service, poc_service, odds_service
 from .budget import RuleError, totals
 from .db import initialize, connect, rows, now, uid, day, pack, event
 from .models import Strict
 from .odds_lab import Start as OddsStart, ImportSnapshot as OddsSnapshot, Result as OddsResult, Cost as OddsCost
+from .odds_lab import Action as DemoAction
+from . import betting_demo_service
+from .betting_demo_service import Decision as DemoDecision, ApprovedBatch as DemoBatch
+from .paper_data import PaperInput
+from .paper_review import build_review as build_paper_review, ContractDrift
+from .paper_evaluation import evaluate as evaluate_paper, ReportMismatch
 
 @asynccontextmanager
 async def lifespan(app):
@@ -30,7 +36,7 @@ app = FastAPI(title="JARVIS", lifespan=lifespan, docs_url=None, redoc_url=None, 
 async def security_headers(request, call_next):
     if int(request.headers.get("content-length", "0")) > 50000:
         return JSONResponse({"detail": "För stor begäran"}, status_code=413)
-    if request.method == "POST" and request.url.path.startswith("/api/odds-lab/"):
+    if request.method == "POST" and request.url.path.startswith(("/api/odds-lab/", "/api/betting-demo/")):
         chunks, size = [], 0
         async for chunk in request.stream():
             size += len(chunk)
@@ -87,6 +93,42 @@ def logout(request: Request, response: Response, owner=Depends(auth.authenticate
 @app.get("/api/state")
 def state(owner=Depends(auth.authenticate)):
     return service.snapshot()
+
+
+class PaperReviewRequest(Strict):
+    input: dict
+
+
+class PaperEvaluateRequest(PaperReviewRequest):
+    results: dict
+    expected_report_hash: str = Field(pattern=r'^[0-9a-f]{64}$')
+
+
+def _paper_request(body, evaluate=False):
+    betting_demo_service.require_demo()
+    with connect() as c:
+        if c.execute('SELECT state FROM settings WHERE id=1').fetchone()[0] != 'running':
+            raise RuleError('Pappersgranskningen kräver att demot uttryckligen återupptas.')
+    try:
+        data = PaperInput.model_validate(body.input)
+        return evaluate_paper(data, body.results, body.expected_report_hash) if evaluate else build_paper_review(data)
+    except (ContractDrift, ReportMismatch) as exc:
+        raise HTTPException(409, str(exc)) from None
+    except ValidationError as exc:
+        error = exc.errors(include_url=False, include_context=False)[0]
+        raise HTTPException(422, 'Ogiltig fil vid '+'.'.join(str(v) for v in error['loc'])+': '+error['msg']) from None
+    except ValueError as exc:
+        raise HTTPException(422, str(exc)) from None
+
+
+@app.post('/api/betting-demo/paper-replay/review')
+def paper_review(body: PaperReviewRequest, owner=Depends(auth.authenticate)):
+    return _paper_request(body)
+
+
+@app.post('/api/betting-demo/paper-replay/evaluate')
+def paper_evaluate(body: PaperEvaluateRequest, owner=Depends(auth.authenticate)):
+    return _paper_request(body, evaluate=True)
 
 class Control(Strict):
     state: Literal["running", "paused", "stopped"]
@@ -196,7 +238,16 @@ class ManualCost(Strict):
 @app.post("/api/costs")
 def manual_cost(body: ManualCost, owner=Depends(auth.authenticate)):
     with connect(True) as c:
-        if c.execute("SELECT 1 FROM costs WHERE id=?", (body.action_id,)).fetchone():
+        existing = c.execute("SELECT * FROM costs WHERE id=?", (body.action_id,)).fetchone()
+        if existing:
+            try:
+                metadata = json.loads(existing["metadata"])
+            except (ValueError, TypeError):
+                metadata = None
+            if (existing["kind"] != "manual" or existing["task_id"] is not None
+                    or existing["agent_id"] is not None or existing["amount"] != body.amount
+                    or not isinstance(metadata, dict) or metadata.get("note") != body.note):
+                raise RuleError("Åtgärds-ID:t är bundet till annat innehåll. Kontrollera den sparade kostnaden innan du skapar en ny begäran.")
             return {"ok": True}
         if body.amount > totals(c)["available"]:
             raise RuleError("Kostnaden ryms inte i användbar budget. Justera budgeten först.")
@@ -318,6 +369,34 @@ def odds_result(run_id: str, body: OddsResult, owner=Depends(auth.authenticate))
 @app.post("/api/odds-lab/runs/{run_id}/costs")
 def odds_cost(run_id: str, body: OddsCost, owner=Depends(auth.authenticate)):
     return odds_service.record_cost(run_id, body)
+
+@app.get("/api/betting-demo/sessions")
+def demo_sessions(owner=Depends(auth.authenticate)):
+    return betting_demo_service.catalog()
+
+@app.post("/api/betting-demo/sessions")
+def demo_create(body: DemoAction, owner=Depends(auth.authenticate)):
+    return betting_demo_service.create(body)
+
+@app.get("/api/betting-demo/sessions/{session_id}")
+def demo_session(session_id: str, owner=Depends(auth.authenticate)):
+    return betting_demo_service.get_session(session_id)
+
+@app.post("/api/betting-demo/sessions/{session_id}/analyze")
+def demo_analyze(session_id: str, body: DemoAction, owner=Depends(auth.authenticate)):
+    return betting_demo_service.analyze(session_id, body)
+
+@app.post("/api/betting-demo/sessions/{session_id}/decision")
+def demo_decision(session_id: str, body: DemoDecision, owner=Depends(auth.authenticate)):
+    return betting_demo_service.decide(session_id, body)
+
+@app.post("/api/betting-demo/sessions/{session_id}/simulate")
+def demo_simulate(session_id: str, body: DemoBatch, owner=Depends(auth.authenticate)):
+    return betting_demo_service.simulate(session_id, body)
+
+@app.post("/api/betting-demo/sessions/{session_id}/settle")
+def demo_settle(session_id: str, body: DemoAction, owner=Depends(auth.authenticate)):
+    return betting_demo_service.settle(session_id, body)
 
 @app.get("/api/documents")
 def document_catalog(owner=Depends(auth.authenticate)):

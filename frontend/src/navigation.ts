@@ -2,7 +2,7 @@ import {useCallback, useEffect, useState} from 'react';
 
 const pages = {
   oversikt: 'Översikt', agenter: 'Agentteam', chatt: 'Chatta med JARVIS',
-  forslag: 'Förslag & beslut', oddslabb: 'Oddslabb',
+  forslag: 'Förslag & beslut', bettingdemo: 'Bettingdemo', oddslabb: 'Oddslabb',
   projekt: 'Projekt & uppgifter', ekonomi: 'Ekonomi',
   filer: 'Filer', dokument: 'Dokument', historik: 'Historik', installningar: 'Inställningar',
 } as const;

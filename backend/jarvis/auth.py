@@ -11,8 +11,8 @@ def hash_password(password, salt):
     return hashlib.scrypt(password.encode(), salt=bytes.fromhex(salt), n=16384, r=8, p=1).hex()
 
 def set_owner(password):
-    if len(password) < 12:
-        raise ValueError("Välj minst 12 tecken.")
+    if not 12 <= len(password) <= 256:
+        raise ValueError("Välj ett lösenord med 12–256 tecken.")
     salt = secrets.token_hex(16)
     with connect(True) as c:
         c.execute("INSERT INTO owner VALUES(1,?,?) ON CONFLICT(id) DO UPDATE SET salt=excluded.salt,password_hash=excluded.password_hash", (salt, hash_password(password, salt)))
@@ -72,6 +72,10 @@ def login(request, password):
         raise HTTPException(401, "Fel lösenord.")
     token, csrf = secrets.token_urlsafe(32), secrets.token_urlsafe(32)
     with connect(True) as c:
+        current_owner = c.execute("SELECT * FROM owner WHERE id=1").fetchone()
+        if (not current_owner or current_owner["salt"] != owner["salt"]
+                or current_owner["password_hash"] != owner["password_hash"]):
+            raise HTTPException(401, "Ägarkontot ändrades under inloggningen. Logga in igen med aktuellt lösenord.")
         c.execute("DELETE FROM login_attempts WHERE ip=?", (ip,))
         c.execute("DELETE FROM sessions WHERE expires<?", (time.time(),))
         c.execute("INSERT INTO sessions VALUES(?,?,?)", (hashlib.sha256(token.encode()).hexdigest(), csrf, time.time()+12*3600))

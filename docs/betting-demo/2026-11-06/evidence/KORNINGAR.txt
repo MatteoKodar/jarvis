@@ -1,0 +1,103 @@
+JARVIS bettingdemo: faktisk lokal verifiering
+
+Originalprojekt: C:\Users\matte\jarvis
+HEAD: 0e0707f1d103203c6e21c3d350019c9224b7f57f
+Testkopia: C:\Users\matte\OneDrive\Dokument\ChatGPT\Jarvis odds\demo-build-2026-11-06\project
+Python: C:\Users\matte\jarvis\.venv\Scripts\python.exe
+
+Baslinje:
+git -c safe.directory=C:/Users/matte/jarvis status --short
+git -c safe.directory=C:/Users/matte/jarvis rev-parse HEAD
+git ls-files --cached --others --exclude-standard -z
+164 käll-/dokumentfiler utanför .env och data/ kopierades med oförändrade byte.
+Befintliga lokala ändringar ingår i kopian; inga owner-data, .env, .git eller venv kopierades.
+Testkopians frontend/node_modules var en junction till befintliga installerade paket.
+Vite runner användes för att undvika konfigurationscache i originalets node_modules.
+
+Miljö före första backendimport:
+PYTHON_DOTENV_DISABLED=1
+PYTHONDONTWRITEBYTECODE=1
+PYTHONIOENCODING=utf-8
+PYTEST_DISABLE_PLUGIN_AUTOLOAD=1
+JARVIS_MODE=DEMO
+JARVIS_PAID_ENABLED=false
+JARVIS_RESEARCH_ENABLED=false
+JARVIS_DATA_DIR=egen importmapp under demo-build-2026-11-06/test-data
+PYTHONPATH=testkopians backend
+OPENAI_API_KEY borttagen ur subprocessmiljön; inget verkligt värde lästes.
+
+Beroenden:
+python -B -m pip check
+Exit 0: No broken requirements found.
+Ingen installation eller ändring av låsfiler.
+
+Riktade nya tester, CWD testkopians projektrot:
+python -B -m pytest tests/test_betting_demo.py -q -p no:cacheprovider --tb=short
+  --basetemp ../test-data/targeted --junitxml ../evidence/backend-targeted.xml
+51 passed in 29.18s, exit 0.
+Sex ytterligare fall tillkom före slutlig full körning.
+Ett första försök saknade --basetemps föräldramapp. Den skapades i arbetsytan;
+inga produkttester hade då körts. Detta var ett testmiljöfel, inte ett produktfel.
+
+Full backendregression, CWD testkopians projektrot:
+python -B - (backend-runner.txt via stdin)
+Runner installerade audit hook före pytest/projektimport och körde:
+pytest.main(['-q','-p','no:cacheprovider','--tb=short',
+ '--basetemp',ABSOLUT_TEST_DATA+'/full','--junitxml','../evidence/backend-full.xml'])
+275 passed in 140.51s, exit 0. 218 tidigare fall och 57 nya.
+0 failures, 0 errors, 0 skipped enligt JUnit.
+Vakt: inga externa sockets/DNS; ingen .env eller originalets/stagingprojektets data/;
+SQLite endast under den uttryckliga test-data-mappen. Loopback tilläts för asyncio/TestClient.
+isolation.json: blocked_events=[], pytest_exit=0.
+LIVE-fall i den gamla sviten använde enbart syntetiska nycklar och mockade transporter.
+
+Frontend, CWD testkopians frontend:
+node node_modules/typescript/bin/tsc --noEmit --incremental false -p tsconfig.json
+Exit 0.
+node node_modules/vite/bin/vite.js build --configLoader runner
+Exit 0. 1594 moduler, cirka 3.66s.
+index.html 0.41 kB, CSS 48.39 kB, JS 291.32 kB före gzip.
+Utdata skrevs till testkopians frontend/dist; samma byte levereras som produktionsbygge.
+
+Webbläsare, CWD testkopians frontend:
+PYTHON_DOTENV_DISABLED=1
+PYTHONDONTWRITEBYTECODE=1
+JARVIS_PAID_ENABLED=false
+JARVIS_RESEARCH_ENABLED=false
+JARVIS_E2E_CHANNEL=chrome
+JARVIS_PYTHON=C:/Users/matte/jarvis/.venv/Scripts/python.exe
+OPENAI_API_KEY borttagen.
+node node_modules/@playwright/test/cli.js test --reporter=line
+18 passed (1.1m), exit 0.
+Installerad Google Chrome 157.0.8103.38 användes i egen headless-testprofil.
+Ingen browserinstallation gjordes.
+Port 8765 inventerades före start och efter teardown. Ingen kvarvarande lyssnare.
+Befintlig e2e_server.py skapade temporär DEMO-databas och syntetiskt testkonto.
+API och worker låg i Windows kill-on-close-jobb och avslutades i teardown.
+Den vanliga appinstansen startades inte. Den nya demokoden köade inga workeruppgifter.
+
+Browserfall:
+- 13 tidigare app-/dokument-/Oddslabb-/arkivfall.
+- Befintligt startguidetest uppdaterat till samma guide och den nya matchdemosidan.
+- Komplett ny omgång med analys, godkännande, omladdning, registrering, avräkning,
+  upprepad sammanfattningsläsning och ny oberoende omgång.
+- Avståendeflöde där analyskostnader kvarstår och inga insatser skapas.
+- Förlorat simuleringssvar, omladdning, paus och replay med exakt samma innehåll/ID.
+- Två flikar med olika ID:n som inte kan registrera två batcher.
+
+Skärmbilder:
+docs/betting-demo/2026-11-06/dator.png, 1440x3742, sparad analys före beslut.
+docs/betting-demo/2026-11-06/mobil.png, 390x5423, avräknad omgång.
+Båda bilderna inspekterades. Mobiltestet verifierade ingen horisontell sidöverströmning.
+Tidigare tester skrev fyra historiska screenshotpaths endast i testkopian;
+dessa ändrade historiska bilder kopierades inte till originalprojektet.
+
+Skydd och överföring:
+Originalets 164 baslinjefiler kontrollerades som oförändrade före leverans.
+Endast de åtta redovisade integrationsfilerna får ersättas; sju nya kod-/testfiler tillkommer.
+Ny rapport, nya screenshots, loggar och ett byggmanifest läggs under en ny dokumentmapp.
+Fryst odds_lab.py, odds_history.py, roles.py, demo.py, gamla migrationer och rapporter skyddas av baslinjehashar.
+Tidigare lokala idempotensrättningar behålls. service.py ändras inte i detta bygge.
+Levererade kod- och dist-filer jämförs byte för byte med den verifierade testkopian.
+Inga .env, ägarlösenord, driftdata eller owner-backuper öppnades.
+Inga globala inställningar, commits, pushar eller publiceringar.

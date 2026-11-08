@@ -1,0 +1,19 @@
+ M README.md
+ M backend/jarvis/api.py
+ M backend/jarvis/service.py
+ M frontend/playwright.config.mjs
+ M frontend/src/main.tsx
+ M frontend/src/navigation.ts
+?? backend/jarvis/betting_demo.py
+?? backend/jarvis/betting_demo_service.py
+?? backend/migrations/007_betting_demo.sql
+?? docs/betting-demo/
+?? docs/reviews/
+?? frontend/e2e/betting-demo.spec.ts
+?? frontend/e2e/demo-guide.spec.ts
+?? frontend/src/BettingDemo.tsx
+?? frontend/src/DemoGuide.tsx
+?? frontend/src/betting-demo.css
+?? frontend/src/demo-guide.css
+?? tests/test_betting_demo.py
+?? tests/test_request_identity.py

@@ -1,0 +1,22 @@
+import sys,os,ipaddress,json
+from pathlib import Path
+base=Path(r'C:\Users\matte\OneDrive\Dokument\ChatGPT\Jarvis odds\demo-build-2026-11-06\test-data').resolve()
+blocked=[]
+def guard(event,args):
+    if event=='sqlite3.connect':
+        if str(args[0])!=':memory:' and not Path(args[0]).resolve().is_relative_to(base):
+            blocked.append('database');raise RuntimeError('Database outside isolated test area')
+    if event=='open' and isinstance(args[0],(str,bytes,os.PathLike)):
+        p=Path(os.fsdecode(args[0])).absolute()
+        if p.name=='.env' or p.is_relative_to(Path(r'C:\Users\matte\jarvis\data')) or p.is_relative_to(Path.cwd()/'data'):
+            blocked.append('protected input');raise RuntimeError('Protected file access')
+    if event in {'socket.connect','socket.getaddrinfo'}:
+        host=args[1][0] if event=='socket.connect' else args[0]
+        try: allowed=ipaddress.ip_address(host).is_loopback
+        except ValueError: allowed=host in {'localhost',None}
+        if not allowed:blocked.append('external network');raise RuntimeError('External network forbidden')
+sys.addaudithook(guard)
+import pytest
+rc=pytest.main(['-q','-p','no:cacheprovider','--tb=short','--basetemp',str(base/'full'),'--junitxml','../evidence/backend-full.xml'])
+Path('../evidence/isolation.json').write_text(json.dumps({'blocked_events':blocked,'pytest_exit':int(rc),'dotenv_disabled':True,'mode_initial':'DEMO','production_data_read':False},indent=2),encoding='utf-8')
+sys.exit(rc)

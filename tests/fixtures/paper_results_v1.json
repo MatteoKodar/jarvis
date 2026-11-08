@@ -1,0 +1,13 @@
+{
+  "version": "paper-results-v1",
+  "dataset_id": "synthetic-contract-v1",
+  "records": [
+    {"event_id":"paper-test-1","status":"final","home_score":0,"away_score":1,"finished_at":"2025-01-01T22:00:00Z","source_url":"https://example.invalid/result-1"},
+    {"event_id":"paper-test-2","status":"final","home_score":2,"away_score":0,"finished_at":"2025-01-02T22:00:00Z","source_url":"https://example.invalid/result-2"},
+    {"event_id":"paper-test-3","status":"final","home_score":2,"away_score":0,"finished_at":"2025-01-03T22:00:00Z","source_url":"https://example.invalid/result-3"},
+    {"event_id":"paper-test-4","status":"final","home_score":2,"away_score":0,"finished_at":"2025-01-04T22:00:00Z","source_url":"https://example.invalid/result-4"},
+    {"event_id":"paper-test-5","status":"final","home_score":2,"away_score":0,"finished_at":"2025-01-05T22:00:00Z","source_url":"https://example.invalid/result-5"},
+    {"event_id":"paper-test-6","status":"final","home_score":2,"away_score":0,"finished_at":"2025-01-06T22:00:00Z","source_url":"https://example.invalid/result-6"},
+    {"event_id":"paper-test-7","status":"final","home_score":2,"away_score":0,"finished_at":"2025-01-07T22:00:00Z","source_url":"https://example.invalid/result-7"}
+  ]
+}

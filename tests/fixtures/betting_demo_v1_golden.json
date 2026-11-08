@@ -1,0 +1,3422 @@
+{
+  "fixture_version": "betting-demo-v1-baseline",
+  "recorded_at": "2026-11-08T12:00:00+00:00",
+  "session_id": "00000000000000000000000000000000",
+  "views": {
+    "created": {
+      "id": "00000000000000000000000000000000",
+      "state": "created",
+      "created_at": "2026-11-08T12:00:00+00:00",
+      "updated_at": "2026-11-08T12:00:00+00:00",
+      "scenario_version": "seven-matches-demo-v1",
+      "rules_version": "football-paper-v1",
+      "explanation_version": "betting-demo-explanations-v1",
+      "initial_capital_ore": 100000,
+      "stake_ore": 1000,
+      "summary": {
+        "available_ore": 100000,
+        "bet_count": 0,
+        "capital_ore": 100000,
+        "game_profit_ore": 0,
+        "initial_capital_ore": 100000,
+        "lost_count": 0,
+        "net_ore": 0,
+        "open_stake_ore": 0,
+        "payout_ore": 0,
+        "settled_count": 0,
+        "simulated_cost_ore": 0,
+        "total_stake_ore": 0,
+        "won_count": 0
+      },
+      "observations": [
+        {
+          "event_id": "syntetisk-1",
+          "sport": "football",
+          "market": "1x2_90min",
+          "home": "Påhittat hemmalag 1",
+          "away": "Påhittat bortalag 1",
+          "starts_at": "2025-01-01T13:00:00Z",
+          "captured_at": "2025-01-01T10:00:00Z",
+          "data_cost_ore": 20,
+          "quotes": [
+            {
+              "book": "kalla_1",
+              "source_url": "https://example.invalid/kalla-1",
+              "updated_at": "2025-01-01T10:00:00Z",
+              "odds": {
+                "home": 25000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_2",
+              "source_url": "https://example.invalid/kalla-2",
+              "updated_at": "2025-01-01T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_3",
+              "source_url": "https://example.invalid/kalla-3",
+              "updated_at": "2025-01-01T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_4",
+              "source_url": "https://example.invalid/kalla-4",
+              "updated_at": "2025-01-01T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            }
+          ]
+        },
+        {
+          "event_id": "syntetisk-2",
+          "sport": "football",
+          "market": "1x2_90min",
+          "home": "Påhittat hemmalag 2",
+          "away": "Påhittat bortalag 2",
+          "starts_at": "2025-01-02T13:00:00Z",
+          "captured_at": "2025-01-02T10:00:00Z",
+          "data_cost_ore": 20,
+          "quotes": [
+            {
+              "book": "kalla_1",
+              "source_url": "https://example.invalid/kalla-1",
+              "updated_at": "2025-01-02T10:00:00Z",
+              "odds": {
+                "home": 25000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_2",
+              "source_url": "https://example.invalid/kalla-2",
+              "updated_at": "2025-01-02T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_3",
+              "source_url": "https://example.invalid/kalla-3",
+              "updated_at": "2025-01-02T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_4",
+              "source_url": "https://example.invalid/kalla-4",
+              "updated_at": "2025-01-02T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            }
+          ]
+        },
+        {
+          "event_id": "syntetisk-3",
+          "sport": "football",
+          "market": "1x2_90min",
+          "home": "Påhittat hemmalag 3",
+          "away": "Påhittat bortalag 3",
+          "starts_at": "2025-01-03T13:00:00Z",
+          "captured_at": "2025-01-03T10:00:00Z",
+          "data_cost_ore": 20,
+          "quotes": [
+            {
+              "book": "kalla_1",
+              "source_url": "https://example.invalid/kalla-1",
+              "updated_at": "2025-01-03T10:00:00Z",
+              "odds": {
+                "home": 25000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_2",
+              "source_url": "https://example.invalid/kalla-2",
+              "updated_at": "2025-01-03T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_3",
+              "source_url": "https://example.invalid/kalla-3",
+              "updated_at": "2025-01-03T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_4",
+              "source_url": "https://example.invalid/kalla-4",
+              "updated_at": "2025-01-03T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            }
+          ]
+        },
+        {
+          "event_id": "syntetisk-4",
+          "sport": "football",
+          "market": "1x2_90min",
+          "home": "Påhittat hemmalag 4",
+          "away": "Påhittat bortalag 4",
+          "starts_at": "2025-01-04T13:00:00Z",
+          "captured_at": "2025-01-04T10:00:00Z",
+          "data_cost_ore": 20,
+          "quotes": [
+            {
+              "book": "kalla_1",
+              "source_url": "https://example.invalid/kalla-1",
+              "updated_at": "2025-01-04T10:00:00Z",
+              "odds": {
+                "home": 25000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_2",
+              "source_url": "https://example.invalid/kalla-2",
+              "updated_at": "2025-01-04T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_3",
+              "source_url": "https://example.invalid/kalla-3",
+              "updated_at": "2025-01-04T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_4",
+              "source_url": "https://example.invalid/kalla-4",
+              "updated_at": "2025-01-04T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            }
+          ]
+        },
+        {
+          "event_id": "syntetisk-5",
+          "sport": "football",
+          "market": "1x2_90min",
+          "home": "Påhittat hemmalag 5",
+          "away": "Påhittat bortalag 5",
+          "starts_at": "2025-01-05T13:00:00Z",
+          "captured_at": "2025-01-05T10:00:00Z",
+          "data_cost_ore": 20,
+          "quotes": [
+            {
+              "book": "kalla_1",
+              "source_url": "https://example.invalid/kalla-1",
+              "updated_at": "2025-01-05T09:55:00Z",
+              "odds": {
+                "home": 25000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_2",
+              "source_url": "https://example.invalid/kalla-2",
+              "updated_at": "2025-01-05T09:55:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_3",
+              "source_url": "https://example.invalid/kalla-3",
+              "updated_at": "2025-01-05T09:55:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_4",
+              "source_url": "https://example.invalid/kalla-4",
+              "updated_at": "2025-01-05T09:55:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            }
+          ]
+        },
+        {
+          "event_id": "syntetisk-6",
+          "sport": "football",
+          "market": "1x2_90min",
+          "home": "Påhittat hemmalag 6",
+          "away": "Påhittat bortalag 6",
+          "starts_at": "2025-01-06T13:00:00Z",
+          "captured_at": "2025-01-06T10:00:00Z",
+          "data_cost_ore": 20,
+          "quotes": [
+            {
+              "book": "kalla_1",
+              "source_url": "https://example.invalid/kalla-1",
+              "updated_at": "2025-01-06T10:00:00Z",
+              "odds": {
+                "home": 25000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_2",
+              "source_url": "https://example.invalid/kalla-2",
+              "updated_at": "2025-01-06T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_3",
+              "source_url": "https://example.invalid/kalla-3",
+              "updated_at": "2025-01-06T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            }
+          ]
+        },
+        {
+          "event_id": "syntetisk-7",
+          "sport": "football",
+          "market": "1x2_90min",
+          "home": "Påhittat hemmalag 7",
+          "away": "Påhittat bortalag 7",
+          "starts_at": "2025-01-07T13:00:00Z",
+          "captured_at": "2025-01-07T10:00:00Z",
+          "data_cost_ore": 20,
+          "quotes": [
+            {
+              "book": "kalla_1",
+              "source_url": "https://example.invalid/kalla-1",
+              "updated_at": "2025-01-07T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_2",
+              "source_url": "https://example.invalid/kalla-2",
+              "updated_at": "2025-01-07T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_3",
+              "source_url": "https://example.invalid/kalla-3",
+              "updated_at": "2025-01-07T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_4",
+              "source_url": "https://example.invalid/kalla-4",
+              "updated_at": "2025-01-07T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            }
+          ]
+        }
+      ],
+      "analysis": null,
+      "decision": null,
+      "costs": [],
+      "bets": [],
+      "history": [
+        {
+          "operation": "create",
+          "from_state": null,
+          "to_state": "created",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        }
+      ]
+    },
+    "analyzed": {
+      "id": "00000000000000000000000000000000",
+      "state": "analyzed",
+      "created_at": "2026-11-08T12:00:00+00:00",
+      "updated_at": "2026-11-08T12:00:00+00:00",
+      "scenario_version": "seven-matches-demo-v1",
+      "rules_version": "football-paper-v1",
+      "explanation_version": "betting-demo-explanations-v1",
+      "initial_capital_ore": 100000,
+      "stake_ore": 1000,
+      "summary": {
+        "available_ore": 99860,
+        "bet_count": 0,
+        "capital_ore": 99860,
+        "game_profit_ore": 0,
+        "initial_capital_ore": 100000,
+        "lost_count": 0,
+        "net_ore": -140,
+        "open_stake_ore": 0,
+        "payout_ore": 0,
+        "settled_count": 0,
+        "simulated_cost_ore": 140,
+        "total_stake_ore": 0,
+        "won_count": 0
+      },
+      "observations": [
+        {
+          "event_id": "syntetisk-1",
+          "sport": "football",
+          "market": "1x2_90min",
+          "home": "Påhittat hemmalag 1",
+          "away": "Påhittat bortalag 1",
+          "starts_at": "2025-01-01T13:00:00Z",
+          "captured_at": "2025-01-01T10:00:00Z",
+          "data_cost_ore": 20,
+          "quotes": [
+            {
+              "book": "kalla_1",
+              "source_url": "https://example.invalid/kalla-1",
+              "updated_at": "2025-01-01T10:00:00Z",
+              "odds": {
+                "home": 25000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_2",
+              "source_url": "https://example.invalid/kalla-2",
+              "updated_at": "2025-01-01T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_3",
+              "source_url": "https://example.invalid/kalla-3",
+              "updated_at": "2025-01-01T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_4",
+              "source_url": "https://example.invalid/kalla-4",
+              "updated_at": "2025-01-01T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            }
+          ]
+        },
+        {
+          "event_id": "syntetisk-2",
+          "sport": "football",
+          "market": "1x2_90min",
+          "home": "Påhittat hemmalag 2",
+          "away": "Påhittat bortalag 2",
+          "starts_at": "2025-01-02T13:00:00Z",
+          "captured_at": "2025-01-02T10:00:00Z",
+          "data_cost_ore": 20,
+          "quotes": [
+            {
+              "book": "kalla_1",
+              "source_url": "https://example.invalid/kalla-1",
+              "updated_at": "2025-01-02T10:00:00Z",
+              "odds": {
+                "home": 25000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_2",
+              "source_url": "https://example.invalid/kalla-2",
+              "updated_at": "2025-01-02T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_3",
+              "source_url": "https://example.invalid/kalla-3",
+              "updated_at": "2025-01-02T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_4",
+              "source_url": "https://example.invalid/kalla-4",
+              "updated_at": "2025-01-02T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            }
+          ]
+        },
+        {
+          "event_id": "syntetisk-3",
+          "sport": "football",
+          "market": "1x2_90min",
+          "home": "Påhittat hemmalag 3",
+          "away": "Påhittat bortalag 3",
+          "starts_at": "2025-01-03T13:00:00Z",
+          "captured_at": "2025-01-03T10:00:00Z",
+          "data_cost_ore": 20,
+          "quotes": [
+            {
+              "book": "kalla_1",
+              "source_url": "https://example.invalid/kalla-1",
+              "updated_at": "2025-01-03T10:00:00Z",
+              "odds": {
+                "home": 25000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_2",
+              "source_url": "https://example.invalid/kalla-2",
+              "updated_at": "2025-01-03T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_3",
+              "source_url": "https://example.invalid/kalla-3",
+              "updated_at": "2025-01-03T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_4",
+              "source_url": "https://example.invalid/kalla-4",
+              "updated_at": "2025-01-03T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            }
+          ]
+        },
+        {
+          "event_id": "syntetisk-4",
+          "sport": "football",
+          "market": "1x2_90min",
+          "home": "Påhittat hemmalag 4",
+          "away": "Påhittat bortalag 4",
+          "starts_at": "2025-01-04T13:00:00Z",
+          "captured_at": "2025-01-04T10:00:00Z",
+          "data_cost_ore": 20,
+          "quotes": [
+            {
+              "book": "kalla_1",
+              "source_url": "https://example.invalid/kalla-1",
+              "updated_at": "2025-01-04T10:00:00Z",
+              "odds": {
+                "home": 25000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_2",
+              "source_url": "https://example.invalid/kalla-2",
+              "updated_at": "2025-01-04T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_3",
+              "source_url": "https://example.invalid/kalla-3",
+              "updated_at": "2025-01-04T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_4",
+              "source_url": "https://example.invalid/kalla-4",
+              "updated_at": "2025-01-04T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            }
+          ]
+        },
+        {
+          "event_id": "syntetisk-5",
+          "sport": "football",
+          "market": "1x2_90min",
+          "home": "Påhittat hemmalag 5",
+          "away": "Påhittat bortalag 5",
+          "starts_at": "2025-01-05T13:00:00Z",
+          "captured_at": "2025-01-05T10:00:00Z",
+          "data_cost_ore": 20,
+          "quotes": [
+            {
+              "book": "kalla_1",
+              "source_url": "https://example.invalid/kalla-1",
+              "updated_at": "2025-01-05T09:55:00Z",
+              "odds": {
+                "home": 25000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_2",
+              "source_url": "https://example.invalid/kalla-2",
+              "updated_at": "2025-01-05T09:55:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_3",
+              "source_url": "https://example.invalid/kalla-3",
+              "updated_at": "2025-01-05T09:55:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_4",
+              "source_url": "https://example.invalid/kalla-4",
+              "updated_at": "2025-01-05T09:55:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            }
+          ]
+        },
+        {
+          "event_id": "syntetisk-6",
+          "sport": "football",
+          "market": "1x2_90min",
+          "home": "Påhittat hemmalag 6",
+          "away": "Påhittat bortalag 6",
+          "starts_at": "2025-01-06T13:00:00Z",
+          "captured_at": "2025-01-06T10:00:00Z",
+          "data_cost_ore": 20,
+          "quotes": [
+            {
+              "book": "kalla_1",
+              "source_url": "https://example.invalid/kalla-1",
+              "updated_at": "2025-01-06T10:00:00Z",
+              "odds": {
+                "home": 25000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_2",
+              "source_url": "https://example.invalid/kalla-2",
+              "updated_at": "2025-01-06T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_3",
+              "source_url": "https://example.invalid/kalla-3",
+              "updated_at": "2025-01-06T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            }
+          ]
+        },
+        {
+          "event_id": "syntetisk-7",
+          "sport": "football",
+          "market": "1x2_90min",
+          "home": "Påhittat hemmalag 7",
+          "away": "Påhittat bortalag 7",
+          "starts_at": "2025-01-07T13:00:00Z",
+          "captured_at": "2025-01-07T10:00:00Z",
+          "data_cost_ore": 20,
+          "quotes": [
+            {
+              "book": "kalla_1",
+              "source_url": "https://example.invalid/kalla-1",
+              "updated_at": "2025-01-07T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_2",
+              "source_url": "https://example.invalid/kalla-2",
+              "updated_at": "2025-01-07T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_3",
+              "source_url": "https://example.invalid/kalla-3",
+              "updated_at": "2025-01-07T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_4",
+              "source_url": "https://example.invalid/kalla-4",
+              "updated_at": "2025-01-07T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            }
+          ]
+        }
+      ],
+      "analysis": {
+        "proposal_version": 1,
+        "proposal_hash": "64fb1ad4a3654e953baa242e6d399bb6a1229072c3b8df374ae94ab9b66847f4",
+        "total_stake_ore": 4000,
+        "simulated_cost_ore": 140,
+        "matches": [
+          {
+            "event_id": "syntetisk-1",
+            "simulated_analysis_at": "2025-01-01T10:00:00+00:00",
+            "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.",
+            "role_id": "analyst",
+            "notice": "Simulerat agentsvar – lokal demologik.",
+            "decision": {
+              "selected": true,
+              "reason": "Regelbaserat syntetiskt förslag. Referensen är ingen verifierad vinstchans.",
+              "book": "kalla_1",
+              "outcome": "home",
+              "quoted_odds": 25000,
+              "paper_odds": 24750,
+              "edge_bp": 1544,
+              "reference_probability_ppm": 466463,
+              "reference_books": [
+                "kalla_2",
+                "kalla_3",
+                "kalla_4"
+              ],
+              "stake_ore": 1000,
+              "checks": [
+                {
+                  "book": "kalla_1",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 9718
+                },
+                {
+                  "book": "kalla_2",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 10718
+                },
+                {
+                  "book": "kalla_3",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 10718
+                },
+                {
+                  "book": "kalla_4",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 10718
+                }
+              ]
+            }
+          },
+          {
+            "event_id": "syntetisk-2",
+            "simulated_analysis_at": "2025-01-02T10:00:00+00:00",
+            "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.",
+            "role_id": "analyst",
+            "notice": "Simulerat agentsvar – lokal demologik.",
+            "decision": {
+              "selected": true,
+              "reason": "Regelbaserat syntetiskt förslag. Referensen är ingen verifierad vinstchans.",
+              "book": "kalla_1",
+              "outcome": "home",
+              "quoted_odds": 25000,
+              "paper_odds": 24750,
+              "edge_bp": 1544,
+              "reference_probability_ppm": 466463,
+              "reference_books": [
+                "kalla_2",
+                "kalla_3",
+                "kalla_4"
+              ],
+              "stake_ore": 1000,
+              "checks": [
+                {
+                  "book": "kalla_1",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 9718
+                },
+                {
+                  "book": "kalla_2",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 10718
+                },
+                {
+                  "book": "kalla_3",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 10718
+                },
+                {
+                  "book": "kalla_4",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 10718
+                }
+              ]
+            }
+          },
+          {
+            "event_id": "syntetisk-3",
+            "simulated_analysis_at": "2025-01-03T10:00:00+00:00",
+            "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.",
+            "role_id": "analyst",
+            "notice": "Simulerat agentsvar – lokal demologik.",
+            "decision": {
+              "selected": true,
+              "reason": "Regelbaserat syntetiskt förslag. Referensen är ingen verifierad vinstchans.",
+              "book": "kalla_1",
+              "outcome": "home",
+              "quoted_odds": 25000,
+              "paper_odds": 24750,
+              "edge_bp": 1544,
+              "reference_probability_ppm": 466463,
+              "reference_books": [
+                "kalla_2",
+                "kalla_3",
+                "kalla_4"
+              ],
+              "stake_ore": 1000,
+              "checks": [
+                {
+                  "book": "kalla_1",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 9718
+                },
+                {
+                  "book": "kalla_2",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 10718
+                },
+                {
+                  "book": "kalla_3",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 10718
+                },
+                {
+                  "book": "kalla_4",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 10718
+                }
+              ]
+            }
+          },
+          {
+            "event_id": "syntetisk-4",
+            "simulated_analysis_at": "2025-01-04T10:00:00+00:00",
+            "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.",
+            "role_id": "analyst",
+            "notice": "Simulerat agentsvar – lokal demologik.",
+            "decision": {
+              "selected": true,
+              "reason": "Regelbaserat syntetiskt förslag. Referensen är ingen verifierad vinstchans.",
+              "book": "kalla_1",
+              "outcome": "home",
+              "quoted_odds": 25000,
+              "paper_odds": 24750,
+              "edge_bp": 1544,
+              "reference_probability_ppm": 466463,
+              "reference_books": [
+                "kalla_2",
+                "kalla_3",
+                "kalla_4"
+              ],
+              "stake_ore": 1000,
+              "checks": [
+                {
+                  "book": "kalla_1",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 9718
+                },
+                {
+                  "book": "kalla_2",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 10718
+                },
+                {
+                  "book": "kalla_3",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 10718
+                },
+                {
+                  "book": "kalla_4",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 10718
+                }
+              ]
+            }
+          },
+          {
+            "event_id": "syntetisk-5",
+            "simulated_analysis_at": "2025-01-05T10:00:00+00:00",
+            "explanation": "Avstå: Färre än fyra giltiga källor; tre andra jämförelsekällor krävs. Kostnaden för analysen kvarstår.",
+            "role_id": "analyst",
+            "notice": "Simulerat agentsvar – lokal demologik.",
+            "decision": {
+              "selected": false,
+              "reason": "Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.",
+              "checks": [
+                {
+                  "book": "kalla_1",
+                  "accepted": false,
+                  "reason": "För gammal offert eller offert från framtiden.",
+                  "overround_bp": 9718
+                },
+                {
+                  "book": "kalla_2",
+                  "accepted": false,
+                  "reason": "För gammal offert eller offert från framtiden.",
+                  "overround_bp": 10718
+                },
+                {
+                  "book": "kalla_3",
+                  "accepted": false,
+                  "reason": "För gammal offert eller offert från framtiden.",
+                  "overround_bp": 10718
+                },
+                {
+                  "book": "kalla_4",
+                  "accepted": false,
+                  "reason": "För gammal offert eller offert från framtiden.",
+                  "overround_bp": 10718
+                }
+              ]
+            }
+          },
+          {
+            "event_id": "syntetisk-6",
+            "simulated_analysis_at": "2025-01-06T10:00:00+00:00",
+            "explanation": "Avstå: Färre än fyra giltiga källor; tre andra jämförelsekällor krävs. Kostnaden för analysen kvarstår.",
+            "role_id": "analyst",
+            "notice": "Simulerat agentsvar – lokal demologik.",
+            "decision": {
+              "selected": false,
+              "reason": "Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.",
+              "checks": [
+                {
+                  "book": "kalla_1",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 9718
+                },
+                {
+                  "book": "kalla_2",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 10718
+                },
+                {
+                  "book": "kalla_3",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 10718
+                }
+              ]
+            }
+          },
+          {
+            "event_id": "syntetisk-7",
+            "simulated_analysis_at": "2025-01-07T10:00:00+00:00",
+            "explanation": "Avstå: Ingen avvikelse klarar de låsta provreglerna. Kostnaden för analysen kvarstår.",
+            "role_id": "analyst",
+            "notice": "Simulerat agentsvar – lokal demologik.",
+            "decision": {
+              "selected": false,
+              "reason": "Ingen avvikelse klarar de låsta provreglerna.",
+              "checks": [
+                {
+                  "book": "kalla_1",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 10718
+                },
+                {
+                  "book": "kalla_2",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 10718
+                },
+                {
+                  "book": "kalla_3",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 10718
+                },
+                {
+                  "book": "kalla_4",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 10718
+                }
+              ]
+            }
+          }
+        ],
+        "proposals": [
+          {
+            "event_id": "syntetisk-1",
+            "home": "Påhittat hemmalag 1",
+            "away": "Påhittat bortalag 1",
+            "outcome": "home",
+            "book": "kalla_1",
+            "paper_odds": 24750,
+            "stake_ore": 1000,
+            "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet."
+          },
+          {
+            "event_id": "syntetisk-2",
+            "home": "Påhittat hemmalag 2",
+            "away": "Påhittat bortalag 2",
+            "outcome": "home",
+            "book": "kalla_1",
+            "paper_odds": 24750,
+            "stake_ore": 1000,
+            "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet."
+          },
+          {
+            "event_id": "syntetisk-3",
+            "home": "Påhittat hemmalag 3",
+            "away": "Påhittat bortalag 3",
+            "outcome": "home",
+            "book": "kalla_1",
+            "paper_odds": 24750,
+            "stake_ore": 1000,
+            "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet."
+          },
+          {
+            "event_id": "syntetisk-4",
+            "home": "Påhittat hemmalag 4",
+            "away": "Påhittat bortalag 4",
+            "outcome": "home",
+            "book": "kalla_1",
+            "paper_odds": 24750,
+            "stake_ore": 1000,
+            "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet."
+          }
+        ],
+        "messages": [
+          {
+            "role_id": "finance",
+            "notice": "Simulerat agentsvar – lokal demologik.",
+            "text": "4 förslag. Analysen kostar 140 simulerade öre även om du avstår. Kapitalet tillhör endast denna omgång."
+          },
+          {
+            "role_id": "critic",
+            "notice": "Simulerat agentsvar – lokal demologik.",
+            "text": "Påhittade odds och utfall prövar arbetsflödet. De ger inget tillstånd till riktiga insatser och inget belägg för lönsamhet."
+          }
+        ]
+      },
+      "decision": null,
+      "costs": [
+        {
+          "event_id": "syntetisk-1",
+          "cost_kind": "analysis_data",
+          "amount_ore": 20,
+          "simulated_at": "2025-01-01T10:00:00+00:00",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "event_id": "syntetisk-2",
+          "cost_kind": "analysis_data",
+          "amount_ore": 20,
+          "simulated_at": "2025-01-02T10:00:00+00:00",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "event_id": "syntetisk-3",
+          "cost_kind": "analysis_data",
+          "amount_ore": 20,
+          "simulated_at": "2025-01-03T10:00:00+00:00",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "event_id": "syntetisk-4",
+          "cost_kind": "analysis_data",
+          "amount_ore": 20,
+          "simulated_at": "2025-01-04T10:00:00+00:00",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "event_id": "syntetisk-5",
+          "cost_kind": "analysis_data",
+          "amount_ore": 20,
+          "simulated_at": "2025-01-05T10:00:00+00:00",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "event_id": "syntetisk-6",
+          "cost_kind": "analysis_data",
+          "amount_ore": 20,
+          "simulated_at": "2025-01-06T10:00:00+00:00",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "event_id": "syntetisk-7",
+          "cost_kind": "analysis_data",
+          "amount_ore": 20,
+          "simulated_at": "2025-01-07T10:00:00+00:00",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        }
+      ],
+      "bets": [],
+      "history": [
+        {
+          "operation": "create",
+          "from_state": null,
+          "to_state": "created",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "operation": "analyze",
+          "from_state": "created",
+          "to_state": "analyzed",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        }
+      ]
+    },
+    "settled": {
+      "id": "00000000000000000000000000000000",
+      "state": "settled",
+      "created_at": "2026-11-08T12:00:00+00:00",
+      "updated_at": "2026-11-08T12:00:00+00:00",
+      "scenario_version": "seven-matches-demo-v1",
+      "rules_version": "football-paper-v1",
+      "explanation_version": "betting-demo-explanations-v1",
+      "initial_capital_ore": 100000,
+      "stake_ore": 1000,
+      "summary": {
+        "available_ore": 100810,
+        "bet_count": 4,
+        "capital_ore": 100810,
+        "game_profit_ore": 950,
+        "initial_capital_ore": 100000,
+        "lost_count": 2,
+        "net_ore": 810,
+        "open_stake_ore": 0,
+        "payout_ore": 4950,
+        "settled_count": 4,
+        "simulated_cost_ore": 140,
+        "total_stake_ore": 4000,
+        "won_count": 2
+      },
+      "observations": [
+        {
+          "event_id": "syntetisk-1",
+          "sport": "football",
+          "market": "1x2_90min",
+          "home": "Påhittat hemmalag 1",
+          "away": "Påhittat bortalag 1",
+          "starts_at": "2025-01-01T13:00:00Z",
+          "captured_at": "2025-01-01T10:00:00Z",
+          "data_cost_ore": 20,
+          "quotes": [
+            {
+              "book": "kalla_1",
+              "source_url": "https://example.invalid/kalla-1",
+              "updated_at": "2025-01-01T10:00:00Z",
+              "odds": {
+                "home": 25000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_2",
+              "source_url": "https://example.invalid/kalla-2",
+              "updated_at": "2025-01-01T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_3",
+              "source_url": "https://example.invalid/kalla-3",
+              "updated_at": "2025-01-01T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_4",
+              "source_url": "https://example.invalid/kalla-4",
+              "updated_at": "2025-01-01T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            }
+          ]
+        },
+        {
+          "event_id": "syntetisk-2",
+          "sport": "football",
+          "market": "1x2_90min",
+          "home": "Påhittat hemmalag 2",
+          "away": "Påhittat bortalag 2",
+          "starts_at": "2025-01-02T13:00:00Z",
+          "captured_at": "2025-01-02T10:00:00Z",
+          "data_cost_ore": 20,
+          "quotes": [
+            {
+              "book": "kalla_1",
+              "source_url": "https://example.invalid/kalla-1",
+              "updated_at": "2025-01-02T10:00:00Z",
+              "odds": {
+                "home": 25000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_2",
+              "source_url": "https://example.invalid/kalla-2",
+              "updated_at": "2025-01-02T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_3",
+              "source_url": "https://example.invalid/kalla-3",
+              "updated_at": "2025-01-02T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_4",
+              "source_url": "https://example.invalid/kalla-4",
+              "updated_at": "2025-01-02T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            }
+          ]
+        },
+        {
+          "event_id": "syntetisk-3",
+          "sport": "football",
+          "market": "1x2_90min",
+          "home": "Påhittat hemmalag 3",
+          "away": "Påhittat bortalag 3",
+          "starts_at": "2025-01-03T13:00:00Z",
+          "captured_at": "2025-01-03T10:00:00Z",
+          "data_cost_ore": 20,
+          "quotes": [
+            {
+              "book": "kalla_1",
+              "source_url": "https://example.invalid/kalla-1",
+              "updated_at": "2025-01-03T10:00:00Z",
+              "odds": {
+                "home": 25000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_2",
+              "source_url": "https://example.invalid/kalla-2",
+              "updated_at": "2025-01-03T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_3",
+              "source_url": "https://example.invalid/kalla-3",
+              "updated_at": "2025-01-03T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_4",
+              "source_url": "https://example.invalid/kalla-4",
+              "updated_at": "2025-01-03T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            }
+          ]
+        },
+        {
+          "event_id": "syntetisk-4",
+          "sport": "football",
+          "market": "1x2_90min",
+          "home": "Påhittat hemmalag 4",
+          "away": "Påhittat bortalag 4",
+          "starts_at": "2025-01-04T13:00:00Z",
+          "captured_at": "2025-01-04T10:00:00Z",
+          "data_cost_ore": 20,
+          "quotes": [
+            {
+              "book": "kalla_1",
+              "source_url": "https://example.invalid/kalla-1",
+              "updated_at": "2025-01-04T10:00:00Z",
+              "odds": {
+                "home": 25000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_2",
+              "source_url": "https://example.invalid/kalla-2",
+              "updated_at": "2025-01-04T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_3",
+              "source_url": "https://example.invalid/kalla-3",
+              "updated_at": "2025-01-04T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_4",
+              "source_url": "https://example.invalid/kalla-4",
+              "updated_at": "2025-01-04T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            }
+          ]
+        },
+        {
+          "event_id": "syntetisk-5",
+          "sport": "football",
+          "market": "1x2_90min",
+          "home": "Påhittat hemmalag 5",
+          "away": "Påhittat bortalag 5",
+          "starts_at": "2025-01-05T13:00:00Z",
+          "captured_at": "2025-01-05T10:00:00Z",
+          "data_cost_ore": 20,
+          "quotes": [
+            {
+              "book": "kalla_1",
+              "source_url": "https://example.invalid/kalla-1",
+              "updated_at": "2025-01-05T09:55:00Z",
+              "odds": {
+                "home": 25000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_2",
+              "source_url": "https://example.invalid/kalla-2",
+              "updated_at": "2025-01-05T09:55:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_3",
+              "source_url": "https://example.invalid/kalla-3",
+              "updated_at": "2025-01-05T09:55:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_4",
+              "source_url": "https://example.invalid/kalla-4",
+              "updated_at": "2025-01-05T09:55:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            }
+          ]
+        },
+        {
+          "event_id": "syntetisk-6",
+          "sport": "football",
+          "market": "1x2_90min",
+          "home": "Påhittat hemmalag 6",
+          "away": "Påhittat bortalag 6",
+          "starts_at": "2025-01-06T13:00:00Z",
+          "captured_at": "2025-01-06T10:00:00Z",
+          "data_cost_ore": 20,
+          "quotes": [
+            {
+              "book": "kalla_1",
+              "source_url": "https://example.invalid/kalla-1",
+              "updated_at": "2025-01-06T10:00:00Z",
+              "odds": {
+                "home": 25000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_2",
+              "source_url": "https://example.invalid/kalla-2",
+              "updated_at": "2025-01-06T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_3",
+              "source_url": "https://example.invalid/kalla-3",
+              "updated_at": "2025-01-06T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            }
+          ]
+        },
+        {
+          "event_id": "syntetisk-7",
+          "sport": "football",
+          "market": "1x2_90min",
+          "home": "Påhittat hemmalag 7",
+          "away": "Påhittat bortalag 7",
+          "starts_at": "2025-01-07T13:00:00Z",
+          "captured_at": "2025-01-07T10:00:00Z",
+          "data_cost_ore": 20,
+          "quotes": [
+            {
+              "book": "kalla_1",
+              "source_url": "https://example.invalid/kalla-1",
+              "updated_at": "2025-01-07T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_2",
+              "source_url": "https://example.invalid/kalla-2",
+              "updated_at": "2025-01-07T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_3",
+              "source_url": "https://example.invalid/kalla-3",
+              "updated_at": "2025-01-07T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            },
+            {
+              "book": "kalla_4",
+              "source_url": "https://example.invalid/kalla-4",
+              "updated_at": "2025-01-07T10:00:00Z",
+              "odds": {
+                "home": 20000,
+                "draw": 34000,
+                "away": 36000
+              }
+            }
+          ]
+        }
+      ],
+      "analysis": {
+        "proposal_version": 1,
+        "proposal_hash": "64fb1ad4a3654e953baa242e6d399bb6a1229072c3b8df374ae94ab9b66847f4",
+        "total_stake_ore": 4000,
+        "simulated_cost_ore": 140,
+        "matches": [
+          {
+            "event_id": "syntetisk-1",
+            "simulated_analysis_at": "2025-01-01T10:00:00+00:00",
+            "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.",
+            "role_id": "analyst",
+            "notice": "Simulerat agentsvar – lokal demologik.",
+            "decision": {
+              "selected": true,
+              "reason": "Regelbaserat syntetiskt förslag. Referensen är ingen verifierad vinstchans.",
+              "book": "kalla_1",
+              "outcome": "home",
+              "quoted_odds": 25000,
+              "paper_odds": 24750,
+              "edge_bp": 1544,
+              "reference_probability_ppm": 466463,
+              "reference_books": [
+                "kalla_2",
+                "kalla_3",
+                "kalla_4"
+              ],
+              "stake_ore": 1000,
+              "checks": [
+                {
+                  "book": "kalla_1",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 9718
+                },
+                {
+                  "book": "kalla_2",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 10718
+                },
+                {
+                  "book": "kalla_3",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 10718
+                },
+                {
+                  "book": "kalla_4",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 10718
+                }
+              ]
+            }
+          },
+          {
+            "event_id": "syntetisk-2",
+            "simulated_analysis_at": "2025-01-02T10:00:00+00:00",
+            "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.",
+            "role_id": "analyst",
+            "notice": "Simulerat agentsvar – lokal demologik.",
+            "decision": {
+              "selected": true,
+              "reason": "Regelbaserat syntetiskt förslag. Referensen är ingen verifierad vinstchans.",
+              "book": "kalla_1",
+              "outcome": "home",
+              "quoted_odds": 25000,
+              "paper_odds": 24750,
+              "edge_bp": 1544,
+              "reference_probability_ppm": 466463,
+              "reference_books": [
+                "kalla_2",
+                "kalla_3",
+                "kalla_4"
+              ],
+              "stake_ore": 1000,
+              "checks": [
+                {
+                  "book": "kalla_1",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 9718
+                },
+                {
+                  "book": "kalla_2",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 10718
+                },
+                {
+                  "book": "kalla_3",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 10718
+                },
+                {
+                  "book": "kalla_4",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 10718
+                }
+              ]
+            }
+          },
+          {
+            "event_id": "syntetisk-3",
+            "simulated_analysis_at": "2025-01-03T10:00:00+00:00",
+            "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.",
+            "role_id": "analyst",
+            "notice": "Simulerat agentsvar – lokal demologik.",
+            "decision": {
+              "selected": true,
+              "reason": "Regelbaserat syntetiskt förslag. Referensen är ingen verifierad vinstchans.",
+              "book": "kalla_1",
+              "outcome": "home",
+              "quoted_odds": 25000,
+              "paper_odds": 24750,
+              "edge_bp": 1544,
+              "reference_probability_ppm": 466463,
+              "reference_books": [
+                "kalla_2",
+                "kalla_3",
+                "kalla_4"
+              ],
+              "stake_ore": 1000,
+              "checks": [
+                {
+                  "book": "kalla_1",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 9718
+                },
+                {
+                  "book": "kalla_2",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 10718
+                },
+                {
+                  "book": "kalla_3",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 10718
+                },
+                {
+                  "book": "kalla_4",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 10718
+                }
+              ]
+            }
+          },
+          {
+            "event_id": "syntetisk-4",
+            "simulated_analysis_at": "2025-01-04T10:00:00+00:00",
+            "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.",
+            "role_id": "analyst",
+            "notice": "Simulerat agentsvar – lokal demologik.",
+            "decision": {
+              "selected": true,
+              "reason": "Regelbaserat syntetiskt förslag. Referensen är ingen verifierad vinstchans.",
+              "book": "kalla_1",
+              "outcome": "home",
+              "quoted_odds": 25000,
+              "paper_odds": 24750,
+              "edge_bp": 1544,
+              "reference_probability_ppm": 466463,
+              "reference_books": [
+                "kalla_2",
+                "kalla_3",
+                "kalla_4"
+              ],
+              "stake_ore": 1000,
+              "checks": [
+                {
+                  "book": "kalla_1",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 9718
+                },
+                {
+                  "book": "kalla_2",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 10718
+                },
+                {
+                  "book": "kalla_3",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 10718
+                },
+                {
+                  "book": "kalla_4",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 10718
+                }
+              ]
+            }
+          },
+          {
+            "event_id": "syntetisk-5",
+            "simulated_analysis_at": "2025-01-05T10:00:00+00:00",
+            "explanation": "Avstå: Färre än fyra giltiga källor; tre andra jämförelsekällor krävs. Kostnaden för analysen kvarstår.",
+            "role_id": "analyst",
+            "notice": "Simulerat agentsvar – lokal demologik.",
+            "decision": {
+              "selected": false,
+              "reason": "Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.",
+              "checks": [
+                {
+                  "book": "kalla_1",
+                  "accepted": false,
+                  "reason": "För gammal offert eller offert från framtiden.",
+                  "overround_bp": 9718
+                },
+                {
+                  "book": "kalla_2",
+                  "accepted": false,
+                  "reason": "För gammal offert eller offert från framtiden.",
+                  "overround_bp": 10718
+                },
+                {
+                  "book": "kalla_3",
+                  "accepted": false,
+                  "reason": "För gammal offert eller offert från framtiden.",
+                  "overround_bp": 10718
+                },
+                {
+                  "book": "kalla_4",
+                  "accepted": false,
+                  "reason": "För gammal offert eller offert från framtiden.",
+                  "overround_bp": 10718
+                }
+              ]
+            }
+          },
+          {
+            "event_id": "syntetisk-6",
+            "simulated_analysis_at": "2025-01-06T10:00:00+00:00",
+            "explanation": "Avstå: Färre än fyra giltiga källor; tre andra jämförelsekällor krävs. Kostnaden för analysen kvarstår.",
+            "role_id": "analyst",
+            "notice": "Simulerat agentsvar – lokal demologik.",
+            "decision": {
+              "selected": false,
+              "reason": "Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.",
+              "checks": [
+                {
+                  "book": "kalla_1",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 9718
+                },
+                {
+                  "book": "kalla_2",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 10718
+                },
+                {
+                  "book": "kalla_3",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 10718
+                }
+              ]
+            }
+          },
+          {
+            "event_id": "syntetisk-7",
+            "simulated_analysis_at": "2025-01-07T10:00:00+00:00",
+            "explanation": "Avstå: Ingen avvikelse klarar de låsta provreglerna. Kostnaden för analysen kvarstår.",
+            "role_id": "analyst",
+            "notice": "Simulerat agentsvar – lokal demologik.",
+            "decision": {
+              "selected": false,
+              "reason": "Ingen avvikelse klarar de låsta provreglerna.",
+              "checks": [
+                {
+                  "book": "kalla_1",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 10718
+                },
+                {
+                  "book": "kalla_2",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 10718
+                },
+                {
+                  "book": "kalla_3",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 10718
+                },
+                {
+                  "book": "kalla_4",
+                  "accepted": true,
+                  "reason": null,
+                  "overround_bp": 10718
+                }
+              ]
+            }
+          }
+        ],
+        "proposals": [
+          {
+            "event_id": "syntetisk-1",
+            "home": "Påhittat hemmalag 1",
+            "away": "Påhittat bortalag 1",
+            "outcome": "home",
+            "book": "kalla_1",
+            "paper_odds": 24750,
+            "stake_ore": 1000,
+            "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet."
+          },
+          {
+            "event_id": "syntetisk-2",
+            "home": "Påhittat hemmalag 2",
+            "away": "Påhittat bortalag 2",
+            "outcome": "home",
+            "book": "kalla_1",
+            "paper_odds": 24750,
+            "stake_ore": 1000,
+            "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet."
+          },
+          {
+            "event_id": "syntetisk-3",
+            "home": "Påhittat hemmalag 3",
+            "away": "Påhittat bortalag 3",
+            "outcome": "home",
+            "book": "kalla_1",
+            "paper_odds": 24750,
+            "stake_ore": 1000,
+            "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet."
+          },
+          {
+            "event_id": "syntetisk-4",
+            "home": "Påhittat hemmalag 4",
+            "away": "Påhittat bortalag 4",
+            "outcome": "home",
+            "book": "kalla_1",
+            "paper_odds": 24750,
+            "stake_ore": 1000,
+            "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet."
+          }
+        ],
+        "messages": [
+          {
+            "role_id": "finance",
+            "notice": "Simulerat agentsvar – lokal demologik.",
+            "text": "4 förslag. Analysen kostar 140 simulerade öre även om du avstår. Kapitalet tillhör endast denna omgång."
+          },
+          {
+            "role_id": "critic",
+            "notice": "Simulerat agentsvar – lokal demologik.",
+            "text": "Påhittade odds och utfall prövar arbetsflödet. De ger inget tillstånd till riktiga insatser och inget belägg för lönsamhet."
+          }
+        ]
+      },
+      "decision": {
+        "value": "approved",
+        "proposal_version": 1,
+        "proposal_hash": "64fb1ad4a3654e953baa242e6d399bb6a1229072c3b8df374ae94ab9b66847f4",
+        "recorded_at": "2026-11-08T12:00:00+00:00"
+      },
+      "costs": [
+        {
+          "event_id": "syntetisk-1",
+          "cost_kind": "analysis_data",
+          "amount_ore": 20,
+          "simulated_at": "2025-01-01T10:00:00+00:00",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "event_id": "syntetisk-2",
+          "cost_kind": "analysis_data",
+          "amount_ore": 20,
+          "simulated_at": "2025-01-02T10:00:00+00:00",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "event_id": "syntetisk-3",
+          "cost_kind": "analysis_data",
+          "amount_ore": 20,
+          "simulated_at": "2025-01-03T10:00:00+00:00",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "event_id": "syntetisk-4",
+          "cost_kind": "analysis_data",
+          "amount_ore": 20,
+          "simulated_at": "2025-01-04T10:00:00+00:00",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "event_id": "syntetisk-5",
+          "cost_kind": "analysis_data",
+          "amount_ore": 20,
+          "simulated_at": "2025-01-05T10:00:00+00:00",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "event_id": "syntetisk-6",
+          "cost_kind": "analysis_data",
+          "amount_ore": 20,
+          "simulated_at": "2025-01-06T10:00:00+00:00",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "event_id": "syntetisk-7",
+          "cost_kind": "analysis_data",
+          "amount_ore": 20,
+          "simulated_at": "2025-01-07T10:00:00+00:00",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        }
+      ],
+      "bets": [
+        {
+          "event_id": "syntetisk-1",
+          "outcome": "home",
+          "paper_odds": 24750,
+          "stake_ore": 1000,
+          "proposal_version": 1,
+          "proposal_hash": "64fb1ad4a3654e953baa242e6d399bb6a1229072c3b8df374ae94ab9b66847f4",
+          "state": "won",
+          "placed_at": "2026-11-08T12:00:00+00:00",
+          "return_ore": 2475,
+          "profit_ore": 1475,
+          "settled_at": "2026-11-08T12:00:00+00:00",
+          "result": {
+            "status": "final",
+            "home_score": 2,
+            "away_score": 0,
+            "simulated_finished_at": "2025-01-01T15:00:00+00:00"
+          }
+        },
+        {
+          "event_id": "syntetisk-2",
+          "outcome": "home",
+          "paper_odds": 24750,
+          "stake_ore": 1000,
+          "proposal_version": 1,
+          "proposal_hash": "64fb1ad4a3654e953baa242e6d399bb6a1229072c3b8df374ae94ab9b66847f4",
+          "state": "lost",
+          "placed_at": "2026-11-08T12:00:00+00:00",
+          "return_ore": 0,
+          "profit_ore": -1000,
+          "settled_at": "2026-11-08T12:00:00+00:00",
+          "result": {
+            "status": "final",
+            "home_score": 0,
+            "away_score": 1,
+            "simulated_finished_at": "2025-01-02T15:00:00+00:00"
+          }
+        },
+        {
+          "event_id": "syntetisk-3",
+          "outcome": "home",
+          "paper_odds": 24750,
+          "stake_ore": 1000,
+          "proposal_version": 1,
+          "proposal_hash": "64fb1ad4a3654e953baa242e6d399bb6a1229072c3b8df374ae94ab9b66847f4",
+          "state": "won",
+          "placed_at": "2026-11-08T12:00:00+00:00",
+          "return_ore": 2475,
+          "profit_ore": 1475,
+          "settled_at": "2026-11-08T12:00:00+00:00",
+          "result": {
+            "status": "final",
+            "home_score": 2,
+            "away_score": 0,
+            "simulated_finished_at": "2025-01-03T15:00:00+00:00"
+          }
+        },
+        {
+          "event_id": "syntetisk-4",
+          "outcome": "home",
+          "paper_odds": 24750,
+          "stake_ore": 1000,
+          "proposal_version": 1,
+          "proposal_hash": "64fb1ad4a3654e953baa242e6d399bb6a1229072c3b8df374ae94ab9b66847f4",
+          "state": "lost",
+          "placed_at": "2026-11-08T12:00:00+00:00",
+          "return_ore": 0,
+          "profit_ore": -1000,
+          "settled_at": "2026-11-08T12:00:00+00:00",
+          "result": {
+            "status": "final",
+            "home_score": 0,
+            "away_score": 1,
+            "simulated_finished_at": "2025-01-04T15:00:00+00:00"
+          }
+        }
+      ],
+      "history": [
+        {
+          "operation": "create",
+          "from_state": null,
+          "to_state": "created",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "operation": "analyze",
+          "from_state": "created",
+          "to_state": "analyzed",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "operation": "decision",
+          "from_state": "analyzed",
+          "to_state": "approved",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "operation": "simulate",
+          "from_state": "approved",
+          "to_state": "simulated",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "operation": "settle",
+          "from_state": "simulated",
+          "to_state": "settled",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        }
+      ],
+      "results": [
+        {
+          "event_id": "syntetisk-1",
+          "status": "final",
+          "home_score": 2,
+          "away_score": 0,
+          "simulated_finished_at": "2025-01-01T15:00:00+00:00"
+        },
+        {
+          "event_id": "syntetisk-2",
+          "status": "final",
+          "home_score": 0,
+          "away_score": 1,
+          "simulated_finished_at": "2025-01-02T15:00:00+00:00"
+        },
+        {
+          "event_id": "syntetisk-3",
+          "status": "final",
+          "home_score": 2,
+          "away_score": 0,
+          "simulated_finished_at": "2025-01-03T15:00:00+00:00"
+        },
+        {
+          "event_id": "syntetisk-4",
+          "status": "final",
+          "home_score": 0,
+          "away_score": 1,
+          "simulated_finished_at": "2025-01-04T15:00:00+00:00"
+        },
+        {
+          "event_id": "syntetisk-5",
+          "status": "final",
+          "home_score": 2,
+          "away_score": 0,
+          "simulated_finished_at": "2025-01-05T15:00:00+00:00"
+        },
+        {
+          "event_id": "syntetisk-6",
+          "status": "final",
+          "home_score": 0,
+          "away_score": 1,
+          "simulated_finished_at": "2025-01-06T15:00:00+00:00"
+        },
+        {
+          "event_id": "syntetisk-7",
+          "status": "final",
+          "home_score": 2,
+          "away_score": 0,
+          "simulated_finished_at": "2025-01-07T15:00:00+00:00"
+        }
+      ]
+    }
+  },
+  "rows": {
+    "created": {
+      "sessions": [
+        {
+          "id": "00000000000000000000000000000000",
+          "state": "created",
+          "frozen": "{\"cost_definitions\":[{\"amount_ore\":20,\"cost_kind\":\"analysis_data\",\"description\":\"Simulerad datakostnad vid sparad analys, även vid avstående.\",\"event_id\":\"syntetisk-1\",\"simulated_at\":\"2025-01-01T10:00:00+00:00\"},{\"amount_ore\":20,\"cost_kind\":\"analysis_data\",\"description\":\"Simulerad datakostnad vid sparad analys, även vid avstående.\",\"event_id\":\"syntetisk-2\",\"simulated_at\":\"2025-01-02T10:00:00+00:00\"},{\"amount_ore\":20,\"cost_kind\":\"analysis_data\",\"description\":\"Simulerad datakostnad vid sparad analys, även vid avstående.\",\"event_id\":\"syntetisk-3\",\"simulated_at\":\"2025-01-03T10:00:00+00:00\"},{\"amount_ore\":20,\"cost_kind\":\"analysis_data\",\"description\":\"Simulerad datakostnad vid sparad analys, även vid avstående.\",\"event_id\":\"syntetisk-4\",\"simulated_at\":\"2025-01-04T10:00:00+00:00\"},{\"amount_ore\":20,\"cost_kind\":\"analysis_data\",\"description\":\"Simulerad datakostnad vid sparad analys, även vid avstående.\",\"event_id\":\"syntetisk-5\",\"simulated_at\":\"2025-01-05T10:00:00+00:00\"},{\"amount_ore\":20,\"cost_kind\":\"analysis_data\",\"description\":\"Simulerad datakostnad vid sparad analys, även vid avstående.\",\"event_id\":\"syntetisk-6\",\"simulated_at\":\"2025-01-06T10:00:00+00:00\"},{\"amount_ore\":20,\"cost_kind\":\"analysis_data\",\"description\":\"Simulerad datakostnad vid sparad analys, även vid avstående.\",\"event_id\":\"syntetisk-7\",\"simulated_at\":\"2025-01-07T10:00:00+00:00\"}],\"engine_version\":\"betting-demo-analysis-v1\",\"explanation_version\":\"betting-demo-explanations-v1\",\"initial_capital_ore\":100000,\"observations\":[{\"away\":\"Påhittat bortalag 1\",\"captured_at\":\"2025-01-01T10:00:00Z\",\"data_cost_ore\":20,\"event_id\":\"syntetisk-1\",\"home\":\"Påhittat hemmalag 1\",\"market\":\"1x2_90min\",\"quotes\":[{\"book\":\"kalla_1\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":25000},\"source_url\":\"https://example.invalid/kalla-1\",\"updated_at\":\"2025-01-01T10:00:00Z\"},{\"book\":\"kalla_2\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-2\",\"updated_at\":\"2025-01-01T10:00:00Z\"},{\"book\":\"kalla_3\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-3\",\"updated_at\":\"2025-01-01T10:00:00Z\"},{\"book\":\"kalla_4\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-4\",\"updated_at\":\"2025-01-01T10:00:00Z\"}],\"sport\":\"football\",\"starts_at\":\"2025-01-01T13:00:00Z\"},{\"away\":\"Påhittat bortalag 2\",\"captured_at\":\"2025-01-02T10:00:00Z\",\"data_cost_ore\":20,\"event_id\":\"syntetisk-2\",\"home\":\"Påhittat hemmalag 2\",\"market\":\"1x2_90min\",\"quotes\":[{\"book\":\"kalla_1\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":25000},\"source_url\":\"https://example.invalid/kalla-1\",\"updated_at\":\"2025-01-02T10:00:00Z\"},{\"book\":\"kalla_2\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-2\",\"updated_at\":\"2025-01-02T10:00:00Z\"},{\"book\":\"kalla_3\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-3\",\"updated_at\":\"2025-01-02T10:00:00Z\"},{\"book\":\"kalla_4\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-4\",\"updated_at\":\"2025-01-02T10:00:00Z\"}],\"sport\":\"football\",\"starts_at\":\"2025-01-02T13:00:00Z\"},{\"away\":\"Påhittat bortalag 3\",\"captured_at\":\"2025-01-03T10:00:00Z\",\"data_cost_ore\":20,\"event_id\":\"syntetisk-3\",\"home\":\"Påhittat hemmalag 3\",\"market\":\"1x2_90min\",\"quotes\":[{\"book\":\"kalla_1\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":25000},\"source_url\":\"https://example.invalid/kalla-1\",\"updated_at\":\"2025-01-03T10:00:00Z\"},{\"book\":\"kalla_2\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-2\",\"updated_at\":\"2025-01-03T10:00:00Z\"},{\"book\":\"kalla_3\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-3\",\"updated_at\":\"2025-01-03T10:00:00Z\"},{\"book\":\"kalla_4\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-4\",\"updated_at\":\"2025-01-03T10:00:00Z\"}],\"sport\":\"football\",\"starts_at\":\"2025-01-03T13:00:00Z\"},{\"away\":\"Påhittat bortalag 4\",\"captured_at\":\"2025-01-04T10:00:00Z\",\"data_cost_ore\":20,\"event_id\":\"syntetisk-4\",\"home\":\"Påhittat hemmalag 4\",\"market\":\"1x2_90min\",\"quotes\":[{\"book\":\"kalla_1\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":25000},\"source_url\":\"https://example.invalid/kalla-1\",\"updated_at\":\"2025-01-04T10:00:00Z\"},{\"book\":\"kalla_2\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-2\",\"updated_at\":\"2025-01-04T10:00:00Z\"},{\"book\":\"kalla_3\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-3\",\"updated_at\":\"2025-01-04T10:00:00Z\"},{\"book\":\"kalla_4\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-4\",\"updated_at\":\"2025-01-04T10:00:00Z\"}],\"sport\":\"football\",\"starts_at\":\"2025-01-04T13:00:00Z\"},{\"away\":\"Påhittat bortalag 5\",\"captured_at\":\"2025-01-05T10:00:00Z\",\"data_cost_ore\":20,\"event_id\":\"syntetisk-5\",\"home\":\"Påhittat hemmalag 5\",\"market\":\"1x2_90min\",\"quotes\":[{\"book\":\"kalla_1\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":25000},\"source_url\":\"https://example.invalid/kalla-1\",\"updated_at\":\"2025-01-05T09:55:00Z\"},{\"book\":\"kalla_2\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-2\",\"updated_at\":\"2025-01-05T09:55:00Z\"},{\"book\":\"kalla_3\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-3\",\"updated_at\":\"2025-01-05T09:55:00Z\"},{\"book\":\"kalla_4\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-4\",\"updated_at\":\"2025-01-05T09:55:00Z\"}],\"sport\":\"football\",\"starts_at\":\"2025-01-05T13:00:00Z\"},{\"away\":\"Påhittat bortalag 6\",\"captured_at\":\"2025-01-06T10:00:00Z\",\"data_cost_ore\":20,\"event_id\":\"syntetisk-6\",\"home\":\"Påhittat hemmalag 6\",\"market\":\"1x2_90min\",\"quotes\":[{\"book\":\"kalla_1\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":25000},\"source_url\":\"https://example.invalid/kalla-1\",\"updated_at\":\"2025-01-06T10:00:00Z\"},{\"book\":\"kalla_2\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-2\",\"updated_at\":\"2025-01-06T10:00:00Z\"},{\"book\":\"kalla_3\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-3\",\"updated_at\":\"2025-01-06T10:00:00Z\"}],\"sport\":\"football\",\"starts_at\":\"2025-01-06T13:00:00Z\"},{\"away\":\"Påhittat bortalag 7\",\"captured_at\":\"2025-01-07T10:00:00Z\",\"data_cost_ore\":20,\"event_id\":\"syntetisk-7\",\"home\":\"Påhittat hemmalag 7\",\"market\":\"1x2_90min\",\"quotes\":[{\"book\":\"kalla_1\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-1\",\"updated_at\":\"2025-01-07T10:00:00Z\"},{\"book\":\"kalla_2\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-2\",\"updated_at\":\"2025-01-07T10:00:00Z\"},{\"book\":\"kalla_3\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-3\",\"updated_at\":\"2025-01-07T10:00:00Z\"},{\"book\":\"kalla_4\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-4\",\"updated_at\":\"2025-01-07T10:00:00Z\"}],\"sport\":\"football\",\"starts_at\":\"2025-01-07T13:00:00Z\"}],\"role_labels\":{\"analyst\":\"Oddsanalytiker\",\"critic\":\"Kritiker / Kvalitetskontroll\",\"finance\":\"Ekonom / Risk\"},\"rules\":{\"costs\":\"Manuellt angivna datakostnader; fullständighet och faktura är inte verifierade.\",\"initial_bankroll_ore\":100000,\"market\":\"1x2_90min\",\"max_edge_bp\":3000,\"max_import_delay_seconds\":60,\"max_quote_age_seconds\":120,\"max_snapshots\":1000,\"min_days_for_review\":30,\"min_edge_bp\":500,\"min_reference_books\":3,\"min_seconds_before_kickoff\":60,\"min_settled_for_review\":100,\"price_haircut_bp\":100,\"real_money_enabled\":false,\"reference\":\"Median av övriga källors marginalnormaliserade sannolikheter. Ingen sann sannolikhet.\",\"selection\":\"Högst en signal per match; högst beräknad avvikelse, sedan käll-ID och utfall.\",\"settlement\":\"Ordinarie tid inklusive tilläggstid; exklusive förlängning och straffar.\",\"sport\":\"football\",\"stake_ore\":1000,\"version\":\"football-paper-v1\"},\"rules_version\":\"football-paper-v1\",\"scenario_version\":\"seven-matches-demo-v1\",\"settlement_data\":{\"syntetisk-1\":{\"away_score\":0,\"home_score\":2,\"simulated_finished_at\":\"2025-01-01T15:00:00+00:00\",\"status\":\"final\"},\"syntetisk-2\":{\"away_score\":1,\"home_score\":0,\"simulated_finished_at\":\"2025-01-02T15:00:00+00:00\",\"status\":\"final\"},\"syntetisk-3\":{\"away_score\":0,\"home_score\":2,\"simulated_finished_at\":\"2025-01-03T15:00:00+00:00\",\"status\":\"final\"},\"syntetisk-4\":{\"away_score\":1,\"home_score\":0,\"simulated_finished_at\":\"2025-01-04T15:00:00+00:00\",\"status\":\"final\"},\"syntetisk-5\":{\"away_score\":0,\"home_score\":2,\"simulated_finished_at\":\"2025-01-05T15:00:00+00:00\",\"status\":\"final\"},\"syntetisk-6\":{\"away_score\":1,\"home_score\":0,\"simulated_finished_at\":\"2025-01-06T15:00:00+00:00\",\"status\":\"final\"},\"syntetisk-7\":{\"away_score\":0,\"home_score\":2,\"simulated_finished_at\":\"2025-01-07T15:00:00+00:00\",\"status\":\"final\"}},\"settlement_version\":\"effective-odds-floor-ore-v1\",\"stake_ore\":1000}",
+          "frozen_hash": "71420e204a447b822a9a91ad4d653bdfa3d03bd69bf84218329b9226f21ccc9b",
+          "analysis": null,
+          "decision": null,
+          "decision_version": null,
+          "decision_hash": null,
+          "decision_at": null,
+          "summary": "{\"available_ore\":100000,\"bet_count\":0,\"capital_ore\":100000,\"game_profit_ore\":0,\"initial_capital_ore\":100000,\"lost_count\":0,\"net_ore\":0,\"open_stake_ore\":0,\"payout_ore\":0,\"settled_count\":0,\"simulated_cost_ore\":0,\"total_stake_ore\":0,\"won_count\":0}",
+          "settlement": null,
+          "created_at": "2026-11-08T12:00:00+00:00",
+          "updated_at": "2026-11-08T12:00:00+00:00"
+        }
+      ],
+      "costs": [],
+      "bets": [],
+      "actions": [
+        {
+          "action_id": "00000000-0000-0000-0000-000000000001",
+          "session_id": "00000000000000000000000000000000",
+          "operation": "create",
+          "request_hash": "4845dfd123f5ce8fdf03850fe54190110c0580cbd56c60560ba71096f0d51898",
+          "response": "{\"id\":\"00000000000000000000000000000000\",\"state\":\"created\"}",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "session_id": "00000000000000000000000000000000",
+          "operation": "create",
+          "from_state": null,
+          "to_state": "created",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        }
+      ]
+    },
+    "analyzed": {
+      "sessions": [
+        {
+          "id": "00000000000000000000000000000000",
+          "state": "analyzed",
+          "frozen": "{\"cost_definitions\":[{\"amount_ore\":20,\"cost_kind\":\"analysis_data\",\"description\":\"Simulerad datakostnad vid sparad analys, även vid avstående.\",\"event_id\":\"syntetisk-1\",\"simulated_at\":\"2025-01-01T10:00:00+00:00\"},{\"amount_ore\":20,\"cost_kind\":\"analysis_data\",\"description\":\"Simulerad datakostnad vid sparad analys, även vid avstående.\",\"event_id\":\"syntetisk-2\",\"simulated_at\":\"2025-01-02T10:00:00+00:00\"},{\"amount_ore\":20,\"cost_kind\":\"analysis_data\",\"description\":\"Simulerad datakostnad vid sparad analys, även vid avstående.\",\"event_id\":\"syntetisk-3\",\"simulated_at\":\"2025-01-03T10:00:00+00:00\"},{\"amount_ore\":20,\"cost_kind\":\"analysis_data\",\"description\":\"Simulerad datakostnad vid sparad analys, även vid avstående.\",\"event_id\":\"syntetisk-4\",\"simulated_at\":\"2025-01-04T10:00:00+00:00\"},{\"amount_ore\":20,\"cost_kind\":\"analysis_data\",\"description\":\"Simulerad datakostnad vid sparad analys, även vid avstående.\",\"event_id\":\"syntetisk-5\",\"simulated_at\":\"2025-01-05T10:00:00+00:00\"},{\"amount_ore\":20,\"cost_kind\":\"analysis_data\",\"description\":\"Simulerad datakostnad vid sparad analys, även vid avstående.\",\"event_id\":\"syntetisk-6\",\"simulated_at\":\"2025-01-06T10:00:00+00:00\"},{\"amount_ore\":20,\"cost_kind\":\"analysis_data\",\"description\":\"Simulerad datakostnad vid sparad analys, även vid avstående.\",\"event_id\":\"syntetisk-7\",\"simulated_at\":\"2025-01-07T10:00:00+00:00\"}],\"engine_version\":\"betting-demo-analysis-v1\",\"explanation_version\":\"betting-demo-explanations-v1\",\"initial_capital_ore\":100000,\"observations\":[{\"away\":\"Påhittat bortalag 1\",\"captured_at\":\"2025-01-01T10:00:00Z\",\"data_cost_ore\":20,\"event_id\":\"syntetisk-1\",\"home\":\"Påhittat hemmalag 1\",\"market\":\"1x2_90min\",\"quotes\":[{\"book\":\"kalla_1\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":25000},\"source_url\":\"https://example.invalid/kalla-1\",\"updated_at\":\"2025-01-01T10:00:00Z\"},{\"book\":\"kalla_2\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-2\",\"updated_at\":\"2025-01-01T10:00:00Z\"},{\"book\":\"kalla_3\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-3\",\"updated_at\":\"2025-01-01T10:00:00Z\"},{\"book\":\"kalla_4\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-4\",\"updated_at\":\"2025-01-01T10:00:00Z\"}],\"sport\":\"football\",\"starts_at\":\"2025-01-01T13:00:00Z\"},{\"away\":\"Påhittat bortalag 2\",\"captured_at\":\"2025-01-02T10:00:00Z\",\"data_cost_ore\":20,\"event_id\":\"syntetisk-2\",\"home\":\"Påhittat hemmalag 2\",\"market\":\"1x2_90min\",\"quotes\":[{\"book\":\"kalla_1\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":25000},\"source_url\":\"https://example.invalid/kalla-1\",\"updated_at\":\"2025-01-02T10:00:00Z\"},{\"book\":\"kalla_2\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-2\",\"updated_at\":\"2025-01-02T10:00:00Z\"},{\"book\":\"kalla_3\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-3\",\"updated_at\":\"2025-01-02T10:00:00Z\"},{\"book\":\"kalla_4\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-4\",\"updated_at\":\"2025-01-02T10:00:00Z\"}],\"sport\":\"football\",\"starts_at\":\"2025-01-02T13:00:00Z\"},{\"away\":\"Påhittat bortalag 3\",\"captured_at\":\"2025-01-03T10:00:00Z\",\"data_cost_ore\":20,\"event_id\":\"syntetisk-3\",\"home\":\"Påhittat hemmalag 3\",\"market\":\"1x2_90min\",\"quotes\":[{\"book\":\"kalla_1\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":25000},\"source_url\":\"https://example.invalid/kalla-1\",\"updated_at\":\"2025-01-03T10:00:00Z\"},{\"book\":\"kalla_2\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-2\",\"updated_at\":\"2025-01-03T10:00:00Z\"},{\"book\":\"kalla_3\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-3\",\"updated_at\":\"2025-01-03T10:00:00Z\"},{\"book\":\"kalla_4\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-4\",\"updated_at\":\"2025-01-03T10:00:00Z\"}],\"sport\":\"football\",\"starts_at\":\"2025-01-03T13:00:00Z\"},{\"away\":\"Påhittat bortalag 4\",\"captured_at\":\"2025-01-04T10:00:00Z\",\"data_cost_ore\":20,\"event_id\":\"syntetisk-4\",\"home\":\"Påhittat hemmalag 4\",\"market\":\"1x2_90min\",\"quotes\":[{\"book\":\"kalla_1\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":25000},\"source_url\":\"https://example.invalid/kalla-1\",\"updated_at\":\"2025-01-04T10:00:00Z\"},{\"book\":\"kalla_2\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-2\",\"updated_at\":\"2025-01-04T10:00:00Z\"},{\"book\":\"kalla_3\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-3\",\"updated_at\":\"2025-01-04T10:00:00Z\"},{\"book\":\"kalla_4\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-4\",\"updated_at\":\"2025-01-04T10:00:00Z\"}],\"sport\":\"football\",\"starts_at\":\"2025-01-04T13:00:00Z\"},{\"away\":\"Påhittat bortalag 5\",\"captured_at\":\"2025-01-05T10:00:00Z\",\"data_cost_ore\":20,\"event_id\":\"syntetisk-5\",\"home\":\"Påhittat hemmalag 5\",\"market\":\"1x2_90min\",\"quotes\":[{\"book\":\"kalla_1\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":25000},\"source_url\":\"https://example.invalid/kalla-1\",\"updated_at\":\"2025-01-05T09:55:00Z\"},{\"book\":\"kalla_2\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-2\",\"updated_at\":\"2025-01-05T09:55:00Z\"},{\"book\":\"kalla_3\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-3\",\"updated_at\":\"2025-01-05T09:55:00Z\"},{\"book\":\"kalla_4\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-4\",\"updated_at\":\"2025-01-05T09:55:00Z\"}],\"sport\":\"football\",\"starts_at\":\"2025-01-05T13:00:00Z\"},{\"away\":\"Påhittat bortalag 6\",\"captured_at\":\"2025-01-06T10:00:00Z\",\"data_cost_ore\":20,\"event_id\":\"syntetisk-6\",\"home\":\"Påhittat hemmalag 6\",\"market\":\"1x2_90min\",\"quotes\":[{\"book\":\"kalla_1\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":25000},\"source_url\":\"https://example.invalid/kalla-1\",\"updated_at\":\"2025-01-06T10:00:00Z\"},{\"book\":\"kalla_2\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-2\",\"updated_at\":\"2025-01-06T10:00:00Z\"},{\"book\":\"kalla_3\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-3\",\"updated_at\":\"2025-01-06T10:00:00Z\"}],\"sport\":\"football\",\"starts_at\":\"2025-01-06T13:00:00Z\"},{\"away\":\"Påhittat bortalag 7\",\"captured_at\":\"2025-01-07T10:00:00Z\",\"data_cost_ore\":20,\"event_id\":\"syntetisk-7\",\"home\":\"Påhittat hemmalag 7\",\"market\":\"1x2_90min\",\"quotes\":[{\"book\":\"kalla_1\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-1\",\"updated_at\":\"2025-01-07T10:00:00Z\"},{\"book\":\"kalla_2\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-2\",\"updated_at\":\"2025-01-07T10:00:00Z\"},{\"book\":\"kalla_3\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-3\",\"updated_at\":\"2025-01-07T10:00:00Z\"},{\"book\":\"kalla_4\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-4\",\"updated_at\":\"2025-01-07T10:00:00Z\"}],\"sport\":\"football\",\"starts_at\":\"2025-01-07T13:00:00Z\"}],\"role_labels\":{\"analyst\":\"Oddsanalytiker\",\"critic\":\"Kritiker / Kvalitetskontroll\",\"finance\":\"Ekonom / Risk\"},\"rules\":{\"costs\":\"Manuellt angivna datakostnader; fullständighet och faktura är inte verifierade.\",\"initial_bankroll_ore\":100000,\"market\":\"1x2_90min\",\"max_edge_bp\":3000,\"max_import_delay_seconds\":60,\"max_quote_age_seconds\":120,\"max_snapshots\":1000,\"min_days_for_review\":30,\"min_edge_bp\":500,\"min_reference_books\":3,\"min_seconds_before_kickoff\":60,\"min_settled_for_review\":100,\"price_haircut_bp\":100,\"real_money_enabled\":false,\"reference\":\"Median av övriga källors marginalnormaliserade sannolikheter. Ingen sann sannolikhet.\",\"selection\":\"Högst en signal per match; högst beräknad avvikelse, sedan käll-ID och utfall.\",\"settlement\":\"Ordinarie tid inklusive tilläggstid; exklusive förlängning och straffar.\",\"sport\":\"football\",\"stake_ore\":1000,\"version\":\"football-paper-v1\"},\"rules_version\":\"football-paper-v1\",\"scenario_version\":\"seven-matches-demo-v1\",\"settlement_data\":{\"syntetisk-1\":{\"away_score\":0,\"home_score\":2,\"simulated_finished_at\":\"2025-01-01T15:00:00+00:00\",\"status\":\"final\"},\"syntetisk-2\":{\"away_score\":1,\"home_score\":0,\"simulated_finished_at\":\"2025-01-02T15:00:00+00:00\",\"status\":\"final\"},\"syntetisk-3\":{\"away_score\":0,\"home_score\":2,\"simulated_finished_at\":\"2025-01-03T15:00:00+00:00\",\"status\":\"final\"},\"syntetisk-4\":{\"away_score\":1,\"home_score\":0,\"simulated_finished_at\":\"2025-01-04T15:00:00+00:00\",\"status\":\"final\"},\"syntetisk-5\":{\"away_score\":0,\"home_score\":2,\"simulated_finished_at\":\"2025-01-05T15:00:00+00:00\",\"status\":\"final\"},\"syntetisk-6\":{\"away_score\":1,\"home_score\":0,\"simulated_finished_at\":\"2025-01-06T15:00:00+00:00\",\"status\":\"final\"},\"syntetisk-7\":{\"away_score\":0,\"home_score\":2,\"simulated_finished_at\":\"2025-01-07T15:00:00+00:00\",\"status\":\"final\"}},\"settlement_version\":\"effective-odds-floor-ore-v1\",\"stake_ore\":1000}",
+          "frozen_hash": "71420e204a447b822a9a91ad4d653bdfa3d03bd69bf84218329b9226f21ccc9b",
+          "analysis": "{\"analysis_input_hash\":\"43f6749968bd81ff63df5ac415b5049d89e2d10aba3450ee70168c94bab576a5\",\"matches\":[{\"decision\":{\"book\":\"kalla_1\",\"checks\":[{\"accepted\":true,\"book\":\"kalla_1\",\"overround_bp\":9718,\"reason\":null},{\"accepted\":true,\"book\":\"kalla_2\",\"overround_bp\":10718,\"reason\":null},{\"accepted\":true,\"book\":\"kalla_3\",\"overround_bp\":10718,\"reason\":null},{\"accepted\":true,\"book\":\"kalla_4\",\"overround_bp\":10718,\"reason\":null}],\"edge_bp\":1544,\"outcome\":\"home\",\"paper_odds\":24750,\"quoted_odds\":25000,\"reason\":\"Regelbaserat syntetiskt förslag. Referensen är ingen verifierad vinstchans.\",\"reference_books\":[\"kalla_2\",\"kalla_3\",\"kalla_4\"],\"reference_probability_ppm\":466463,\"selected\":true,\"stake_ore\":1000},\"event_id\":\"syntetisk-1\",\"explanation\":\"Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.\",\"notice\":\"Simulerat agentsvar – lokal demologik.\",\"role_id\":\"analyst\",\"simulated_analysis_at\":\"2025-01-01T10:00:00+00:00\"},{\"decision\":{\"book\":\"kalla_1\",\"checks\":[{\"accepted\":true,\"book\":\"kalla_1\",\"overround_bp\":9718,\"reason\":null},{\"accepted\":true,\"book\":\"kalla_2\",\"overround_bp\":10718,\"reason\":null},{\"accepted\":true,\"book\":\"kalla_3\",\"overround_bp\":10718,\"reason\":null},{\"accepted\":true,\"book\":\"kalla_4\",\"overround_bp\":10718,\"reason\":null}],\"edge_bp\":1544,\"outcome\":\"home\",\"paper_odds\":24750,\"quoted_odds\":25000,\"reason\":\"Regelbaserat syntetiskt förslag. Referensen är ingen verifierad vinstchans.\",\"reference_books\":[\"kalla_2\",\"kalla_3\",\"kalla_4\"],\"reference_probability_ppm\":466463,\"selected\":true,\"stake_ore\":1000},\"event_id\":\"syntetisk-2\",\"explanation\":\"Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.\",\"notice\":\"Simulerat agentsvar – lokal demologik.\",\"role_id\":\"analyst\",\"simulated_analysis_at\":\"2025-01-02T10:00:00+00:00\"},{\"decision\":{\"book\":\"kalla_1\",\"checks\":[{\"accepted\":true,\"book\":\"kalla_1\",\"overround_bp\":9718,\"reason\":null},{\"accepted\":true,\"book\":\"kalla_2\",\"overround_bp\":10718,\"reason\":null},{\"accepted\":true,\"book\":\"kalla_3\",\"overround_bp\":10718,\"reason\":null},{\"accepted\":true,\"book\":\"kalla_4\",\"overround_bp\":10718,\"reason\":null}],\"edge_bp\":1544,\"outcome\":\"home\",\"paper_odds\":24750,\"quoted_odds\":25000,\"reason\":\"Regelbaserat syntetiskt förslag. Referensen är ingen verifierad vinstchans.\",\"reference_books\":[\"kalla_2\",\"kalla_3\",\"kalla_4\"],\"reference_probability_ppm\":466463,\"selected\":true,\"stake_ore\":1000},\"event_id\":\"syntetisk-3\",\"explanation\":\"Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.\",\"notice\":\"Simulerat agentsvar – lokal demologik.\",\"role_id\":\"analyst\",\"simulated_analysis_at\":\"2025-01-03T10:00:00+00:00\"},{\"decision\":{\"book\":\"kalla_1\",\"checks\":[{\"accepted\":true,\"book\":\"kalla_1\",\"overround_bp\":9718,\"reason\":null},{\"accepted\":true,\"book\":\"kalla_2\",\"overround_bp\":10718,\"reason\":null},{\"accepted\":true,\"book\":\"kalla_3\",\"overround_bp\":10718,\"reason\":null},{\"accepted\":true,\"book\":\"kalla_4\",\"overround_bp\":10718,\"reason\":null}],\"edge_bp\":1544,\"outcome\":\"home\",\"paper_odds\":24750,\"quoted_odds\":25000,\"reason\":\"Regelbaserat syntetiskt förslag. Referensen är ingen verifierad vinstchans.\",\"reference_books\":[\"kalla_2\",\"kalla_3\",\"kalla_4\"],\"reference_probability_ppm\":466463,\"selected\":true,\"stake_ore\":1000},\"event_id\":\"syntetisk-4\",\"explanation\":\"Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.\",\"notice\":\"Simulerat agentsvar – lokal demologik.\",\"role_id\":\"analyst\",\"simulated_analysis_at\":\"2025-01-04T10:00:00+00:00\"},{\"decision\":{\"checks\":[{\"accepted\":false,\"book\":\"kalla_1\",\"overround_bp\":9718,\"reason\":\"För gammal offert eller offert från framtiden.\"},{\"accepted\":false,\"book\":\"kalla_2\",\"overround_bp\":10718,\"reason\":\"För gammal offert eller offert från framtiden.\"},{\"accepted\":false,\"book\":\"kalla_3\",\"overround_bp\":10718,\"reason\":\"För gammal offert eller offert från framtiden.\"},{\"accepted\":false,\"book\":\"kalla_4\",\"overround_bp\":10718,\"reason\":\"För gammal offert eller offert från framtiden.\"}],\"reason\":\"Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.\",\"selected\":false},\"event_id\":\"syntetisk-5\",\"explanation\":\"Avstå: Färre än fyra giltiga källor; tre andra jämförelsekällor krävs. Kostnaden för analysen kvarstår.\",\"notice\":\"Simulerat agentsvar – lokal demologik.\",\"role_id\":\"analyst\",\"simulated_analysis_at\":\"2025-01-05T10:00:00+00:00\"},{\"decision\":{\"checks\":[{\"accepted\":true,\"book\":\"kalla_1\",\"overround_bp\":9718,\"reason\":null},{\"accepted\":true,\"book\":\"kalla_2\",\"overround_bp\":10718,\"reason\":null},{\"accepted\":true,\"book\":\"kalla_3\",\"overround_bp\":10718,\"reason\":null}],\"reason\":\"Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.\",\"selected\":false},\"event_id\":\"syntetisk-6\",\"explanation\":\"Avstå: Färre än fyra giltiga källor; tre andra jämförelsekällor krävs. Kostnaden för analysen kvarstår.\",\"notice\":\"Simulerat agentsvar – lokal demologik.\",\"role_id\":\"analyst\",\"simulated_analysis_at\":\"2025-01-06T10:00:00+00:00\"},{\"decision\":{\"checks\":[{\"accepted\":true,\"book\":\"kalla_1\",\"overround_bp\":10718,\"reason\":null},{\"accepted\":true,\"book\":\"kalla_2\",\"overround_bp\":10718,\"reason\":null},{\"accepted\":true,\"book\":\"kalla_3\",\"overround_bp\":10718,\"reason\":null},{\"accepted\":true,\"book\":\"kalla_4\",\"overround_bp\":10718,\"reason\":null}],\"reason\":\"Ingen avvikelse klarar de låsta provreglerna.\",\"selected\":false},\"event_id\":\"syntetisk-7\",\"explanation\":\"Avstå: Ingen avvikelse klarar de låsta provreglerna. Kostnaden för analysen kvarstår.\",\"notice\":\"Simulerat agentsvar – lokal demologik.\",\"role_id\":\"analyst\",\"simulated_analysis_at\":\"2025-01-07T10:00:00+00:00\"}],\"messages\":[{\"notice\":\"Simulerat agentsvar – lokal demologik.\",\"role_id\":\"finance\",\"text\":\"4 förslag. Analysen kostar 140 simulerade öre även om du avstår. Kapitalet tillhör endast denna omgång.\"},{\"notice\":\"Simulerat agentsvar – lokal demologik.\",\"role_id\":\"critic\",\"text\":\"Påhittade odds och utfall prövar arbetsflödet. De ger inget tillstånd till riktiga insatser och inget belägg för lönsamhet.\"}],\"proposal_hash\":\"64fb1ad4a3654e953baa242e6d399bb6a1229072c3b8df374ae94ab9b66847f4\",\"proposal_version\":1,\"proposals\":[{\"away\":\"Påhittat bortalag 1\",\"book\":\"kalla_1\",\"event_id\":\"syntetisk-1\",\"explanation\":\"Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.\",\"home\":\"Påhittat hemmalag 1\",\"outcome\":\"home\",\"paper_odds\":24750,\"stake_ore\":1000},{\"away\":\"Påhittat bortalag 2\",\"book\":\"kalla_1\",\"event_id\":\"syntetisk-2\",\"explanation\":\"Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.\",\"home\":\"Påhittat hemmalag 2\",\"outcome\":\"home\",\"paper_odds\":24750,\"stake_ore\":1000},{\"away\":\"Påhittat bortalag 3\",\"book\":\"kalla_1\",\"event_id\":\"syntetisk-3\",\"explanation\":\"Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.\",\"home\":\"Påhittat hemmalag 3\",\"outcome\":\"home\",\"paper_odds\":24750,\"stake_ore\":1000},{\"away\":\"Påhittat bortalag 4\",\"book\":\"kalla_1\",\"event_id\":\"syntetisk-4\",\"explanation\":\"Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.\",\"home\":\"Påhittat hemmalag 4\",\"outcome\":\"home\",\"paper_odds\":24750,\"stake_ore\":1000}],\"simulated_cost_ore\":140,\"total_stake_ore\":4000}",
+          "decision": null,
+          "decision_version": null,
+          "decision_hash": null,
+          "decision_at": null,
+          "summary": "{\"available_ore\":99860,\"bet_count\":0,\"capital_ore\":99860,\"game_profit_ore\":0,\"initial_capital_ore\":100000,\"lost_count\":0,\"net_ore\":-140,\"open_stake_ore\":0,\"payout_ore\":0,\"settled_count\":0,\"simulated_cost_ore\":140,\"total_stake_ore\":0,\"won_count\":0}",
+          "settlement": null,
+          "created_at": "2026-11-08T12:00:00+00:00",
+          "updated_at": "2026-11-08T12:00:00+00:00"
+        }
+      ],
+      "costs": [
+        {
+          "session_id": "00000000000000000000000000000000",
+          "event_id": "syntetisk-1",
+          "cost_kind": "analysis_data",
+          "amount_ore": 20,
+          "simulated_at": "2025-01-01T10:00:00+00:00",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "session_id": "00000000000000000000000000000000",
+          "event_id": "syntetisk-2",
+          "cost_kind": "analysis_data",
+          "amount_ore": 20,
+          "simulated_at": "2025-01-02T10:00:00+00:00",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "session_id": "00000000000000000000000000000000",
+          "event_id": "syntetisk-3",
+          "cost_kind": "analysis_data",
+          "amount_ore": 20,
+          "simulated_at": "2025-01-03T10:00:00+00:00",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "session_id": "00000000000000000000000000000000",
+          "event_id": "syntetisk-4",
+          "cost_kind": "analysis_data",
+          "amount_ore": 20,
+          "simulated_at": "2025-01-04T10:00:00+00:00",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "session_id": "00000000000000000000000000000000",
+          "event_id": "syntetisk-5",
+          "cost_kind": "analysis_data",
+          "amount_ore": 20,
+          "simulated_at": "2025-01-05T10:00:00+00:00",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "session_id": "00000000000000000000000000000000",
+          "event_id": "syntetisk-6",
+          "cost_kind": "analysis_data",
+          "amount_ore": 20,
+          "simulated_at": "2025-01-06T10:00:00+00:00",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "session_id": "00000000000000000000000000000000",
+          "event_id": "syntetisk-7",
+          "cost_kind": "analysis_data",
+          "amount_ore": 20,
+          "simulated_at": "2025-01-07T10:00:00+00:00",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        }
+      ],
+      "bets": [],
+      "actions": [
+        {
+          "action_id": "00000000-0000-0000-0000-000000000001",
+          "session_id": "00000000000000000000000000000000",
+          "operation": "create",
+          "request_hash": "4845dfd123f5ce8fdf03850fe54190110c0580cbd56c60560ba71096f0d51898",
+          "response": "{\"id\":\"00000000000000000000000000000000\",\"state\":\"created\"}",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "action_id": "00000000-0000-0000-0000-000000000002",
+          "session_id": "00000000000000000000000000000000",
+          "operation": "analyze",
+          "request_hash": "46a2bd260ad62b529ece895f85355aca45f74b470c3732403d4a6a6c75e2f4b6",
+          "response": "{\"id\":\"00000000000000000000000000000000\",\"state\":\"analyzed\"}",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "session_id": "00000000000000000000000000000000",
+          "operation": "create",
+          "from_state": null,
+          "to_state": "created",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "seq": 2,
+          "session_id": "00000000000000000000000000000000",
+          "operation": "analyze",
+          "from_state": "created",
+          "to_state": "analyzed",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        }
+      ]
+    },
+    "settled": {
+      "sessions": [
+        {
+          "id": "00000000000000000000000000000000",
+          "state": "settled",
+          "frozen": "{\"cost_definitions\":[{\"amount_ore\":20,\"cost_kind\":\"analysis_data\",\"description\":\"Simulerad datakostnad vid sparad analys, även vid avstående.\",\"event_id\":\"syntetisk-1\",\"simulated_at\":\"2025-01-01T10:00:00+00:00\"},{\"amount_ore\":20,\"cost_kind\":\"analysis_data\",\"description\":\"Simulerad datakostnad vid sparad analys, även vid avstående.\",\"event_id\":\"syntetisk-2\",\"simulated_at\":\"2025-01-02T10:00:00+00:00\"},{\"amount_ore\":20,\"cost_kind\":\"analysis_data\",\"description\":\"Simulerad datakostnad vid sparad analys, även vid avstående.\",\"event_id\":\"syntetisk-3\",\"simulated_at\":\"2025-01-03T10:00:00+00:00\"},{\"amount_ore\":20,\"cost_kind\":\"analysis_data\",\"description\":\"Simulerad datakostnad vid sparad analys, även vid avstående.\",\"event_id\":\"syntetisk-4\",\"simulated_at\":\"2025-01-04T10:00:00+00:00\"},{\"amount_ore\":20,\"cost_kind\":\"analysis_data\",\"description\":\"Simulerad datakostnad vid sparad analys, även vid avstående.\",\"event_id\":\"syntetisk-5\",\"simulated_at\":\"2025-01-05T10:00:00+00:00\"},{\"amount_ore\":20,\"cost_kind\":\"analysis_data\",\"description\":\"Simulerad datakostnad vid sparad analys, även vid avstående.\",\"event_id\":\"syntetisk-6\",\"simulated_at\":\"2025-01-06T10:00:00+00:00\"},{\"amount_ore\":20,\"cost_kind\":\"analysis_data\",\"description\":\"Simulerad datakostnad vid sparad analys, även vid avstående.\",\"event_id\":\"syntetisk-7\",\"simulated_at\":\"2025-01-07T10:00:00+00:00\"}],\"engine_version\":\"betting-demo-analysis-v1\",\"explanation_version\":\"betting-demo-explanations-v1\",\"initial_capital_ore\":100000,\"observations\":[{\"away\":\"Påhittat bortalag 1\",\"captured_at\":\"2025-01-01T10:00:00Z\",\"data_cost_ore\":20,\"event_id\":\"syntetisk-1\",\"home\":\"Påhittat hemmalag 1\",\"market\":\"1x2_90min\",\"quotes\":[{\"book\":\"kalla_1\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":25000},\"source_url\":\"https://example.invalid/kalla-1\",\"updated_at\":\"2025-01-01T10:00:00Z\"},{\"book\":\"kalla_2\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-2\",\"updated_at\":\"2025-01-01T10:00:00Z\"},{\"book\":\"kalla_3\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-3\",\"updated_at\":\"2025-01-01T10:00:00Z\"},{\"book\":\"kalla_4\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-4\",\"updated_at\":\"2025-01-01T10:00:00Z\"}],\"sport\":\"football\",\"starts_at\":\"2025-01-01T13:00:00Z\"},{\"away\":\"Påhittat bortalag 2\",\"captured_at\":\"2025-01-02T10:00:00Z\",\"data_cost_ore\":20,\"event_id\":\"syntetisk-2\",\"home\":\"Påhittat hemmalag 2\",\"market\":\"1x2_90min\",\"quotes\":[{\"book\":\"kalla_1\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":25000},\"source_url\":\"https://example.invalid/kalla-1\",\"updated_at\":\"2025-01-02T10:00:00Z\"},{\"book\":\"kalla_2\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-2\",\"updated_at\":\"2025-01-02T10:00:00Z\"},{\"book\":\"kalla_3\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-3\",\"updated_at\":\"2025-01-02T10:00:00Z\"},{\"book\":\"kalla_4\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-4\",\"updated_at\":\"2025-01-02T10:00:00Z\"}],\"sport\":\"football\",\"starts_at\":\"2025-01-02T13:00:00Z\"},{\"away\":\"Påhittat bortalag 3\",\"captured_at\":\"2025-01-03T10:00:00Z\",\"data_cost_ore\":20,\"event_id\":\"syntetisk-3\",\"home\":\"Påhittat hemmalag 3\",\"market\":\"1x2_90min\",\"quotes\":[{\"book\":\"kalla_1\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":25000},\"source_url\":\"https://example.invalid/kalla-1\",\"updated_at\":\"2025-01-03T10:00:00Z\"},{\"book\":\"kalla_2\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-2\",\"updated_at\":\"2025-01-03T10:00:00Z\"},{\"book\":\"kalla_3\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-3\",\"updated_at\":\"2025-01-03T10:00:00Z\"},{\"book\":\"kalla_4\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-4\",\"updated_at\":\"2025-01-03T10:00:00Z\"}],\"sport\":\"football\",\"starts_at\":\"2025-01-03T13:00:00Z\"},{\"away\":\"Påhittat bortalag 4\",\"captured_at\":\"2025-01-04T10:00:00Z\",\"data_cost_ore\":20,\"event_id\":\"syntetisk-4\",\"home\":\"Påhittat hemmalag 4\",\"market\":\"1x2_90min\",\"quotes\":[{\"book\":\"kalla_1\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":25000},\"source_url\":\"https://example.invalid/kalla-1\",\"updated_at\":\"2025-01-04T10:00:00Z\"},{\"book\":\"kalla_2\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-2\",\"updated_at\":\"2025-01-04T10:00:00Z\"},{\"book\":\"kalla_3\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-3\",\"updated_at\":\"2025-01-04T10:00:00Z\"},{\"book\":\"kalla_4\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-4\",\"updated_at\":\"2025-01-04T10:00:00Z\"}],\"sport\":\"football\",\"starts_at\":\"2025-01-04T13:00:00Z\"},{\"away\":\"Påhittat bortalag 5\",\"captured_at\":\"2025-01-05T10:00:00Z\",\"data_cost_ore\":20,\"event_id\":\"syntetisk-5\",\"home\":\"Påhittat hemmalag 5\",\"market\":\"1x2_90min\",\"quotes\":[{\"book\":\"kalla_1\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":25000},\"source_url\":\"https://example.invalid/kalla-1\",\"updated_at\":\"2025-01-05T09:55:00Z\"},{\"book\":\"kalla_2\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-2\",\"updated_at\":\"2025-01-05T09:55:00Z\"},{\"book\":\"kalla_3\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-3\",\"updated_at\":\"2025-01-05T09:55:00Z\"},{\"book\":\"kalla_4\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-4\",\"updated_at\":\"2025-01-05T09:55:00Z\"}],\"sport\":\"football\",\"starts_at\":\"2025-01-05T13:00:00Z\"},{\"away\":\"Påhittat bortalag 6\",\"captured_at\":\"2025-01-06T10:00:00Z\",\"data_cost_ore\":20,\"event_id\":\"syntetisk-6\",\"home\":\"Påhittat hemmalag 6\",\"market\":\"1x2_90min\",\"quotes\":[{\"book\":\"kalla_1\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":25000},\"source_url\":\"https://example.invalid/kalla-1\",\"updated_at\":\"2025-01-06T10:00:00Z\"},{\"book\":\"kalla_2\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-2\",\"updated_at\":\"2025-01-06T10:00:00Z\"},{\"book\":\"kalla_3\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-3\",\"updated_at\":\"2025-01-06T10:00:00Z\"}],\"sport\":\"football\",\"starts_at\":\"2025-01-06T13:00:00Z\"},{\"away\":\"Påhittat bortalag 7\",\"captured_at\":\"2025-01-07T10:00:00Z\",\"data_cost_ore\":20,\"event_id\":\"syntetisk-7\",\"home\":\"Påhittat hemmalag 7\",\"market\":\"1x2_90min\",\"quotes\":[{\"book\":\"kalla_1\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-1\",\"updated_at\":\"2025-01-07T10:00:00Z\"},{\"book\":\"kalla_2\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-2\",\"updated_at\":\"2025-01-07T10:00:00Z\"},{\"book\":\"kalla_3\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-3\",\"updated_at\":\"2025-01-07T10:00:00Z\"},{\"book\":\"kalla_4\",\"odds\":{\"away\":36000,\"draw\":34000,\"home\":20000},\"source_url\":\"https://example.invalid/kalla-4\",\"updated_at\":\"2025-01-07T10:00:00Z\"}],\"sport\":\"football\",\"starts_at\":\"2025-01-07T13:00:00Z\"}],\"role_labels\":{\"analyst\":\"Oddsanalytiker\",\"critic\":\"Kritiker / Kvalitetskontroll\",\"finance\":\"Ekonom / Risk\"},\"rules\":{\"costs\":\"Manuellt angivna datakostnader; fullständighet och faktura är inte verifierade.\",\"initial_bankroll_ore\":100000,\"market\":\"1x2_90min\",\"max_edge_bp\":3000,\"max_import_delay_seconds\":60,\"max_quote_age_seconds\":120,\"max_snapshots\":1000,\"min_days_for_review\":30,\"min_edge_bp\":500,\"min_reference_books\":3,\"min_seconds_before_kickoff\":60,\"min_settled_for_review\":100,\"price_haircut_bp\":100,\"real_money_enabled\":false,\"reference\":\"Median av övriga källors marginalnormaliserade sannolikheter. Ingen sann sannolikhet.\",\"selection\":\"Högst en signal per match; högst beräknad avvikelse, sedan käll-ID och utfall.\",\"settlement\":\"Ordinarie tid inklusive tilläggstid; exklusive förlängning och straffar.\",\"sport\":\"football\",\"stake_ore\":1000,\"version\":\"football-paper-v1\"},\"rules_version\":\"football-paper-v1\",\"scenario_version\":\"seven-matches-demo-v1\",\"settlement_data\":{\"syntetisk-1\":{\"away_score\":0,\"home_score\":2,\"simulated_finished_at\":\"2025-01-01T15:00:00+00:00\",\"status\":\"final\"},\"syntetisk-2\":{\"away_score\":1,\"home_score\":0,\"simulated_finished_at\":\"2025-01-02T15:00:00+00:00\",\"status\":\"final\"},\"syntetisk-3\":{\"away_score\":0,\"home_score\":2,\"simulated_finished_at\":\"2025-01-03T15:00:00+00:00\",\"status\":\"final\"},\"syntetisk-4\":{\"away_score\":1,\"home_score\":0,\"simulated_finished_at\":\"2025-01-04T15:00:00+00:00\",\"status\":\"final\"},\"syntetisk-5\":{\"away_score\":0,\"home_score\":2,\"simulated_finished_at\":\"2025-01-05T15:00:00+00:00\",\"status\":\"final\"},\"syntetisk-6\":{\"away_score\":1,\"home_score\":0,\"simulated_finished_at\":\"2025-01-06T15:00:00+00:00\",\"status\":\"final\"},\"syntetisk-7\":{\"away_score\":0,\"home_score\":2,\"simulated_finished_at\":\"2025-01-07T15:00:00+00:00\",\"status\":\"final\"}},\"settlement_version\":\"effective-odds-floor-ore-v1\",\"stake_ore\":1000}",
+          "frozen_hash": "71420e204a447b822a9a91ad4d653bdfa3d03bd69bf84218329b9226f21ccc9b",
+          "analysis": "{\"analysis_input_hash\":\"43f6749968bd81ff63df5ac415b5049d89e2d10aba3450ee70168c94bab576a5\",\"matches\":[{\"decision\":{\"book\":\"kalla_1\",\"checks\":[{\"accepted\":true,\"book\":\"kalla_1\",\"overround_bp\":9718,\"reason\":null},{\"accepted\":true,\"book\":\"kalla_2\",\"overround_bp\":10718,\"reason\":null},{\"accepted\":true,\"book\":\"kalla_3\",\"overround_bp\":10718,\"reason\":null},{\"accepted\":true,\"book\":\"kalla_4\",\"overround_bp\":10718,\"reason\":null}],\"edge_bp\":1544,\"outcome\":\"home\",\"paper_odds\":24750,\"quoted_odds\":25000,\"reason\":\"Regelbaserat syntetiskt förslag. Referensen är ingen verifierad vinstchans.\",\"reference_books\":[\"kalla_2\",\"kalla_3\",\"kalla_4\"],\"reference_probability_ppm\":466463,\"selected\":true,\"stake_ore\":1000},\"event_id\":\"syntetisk-1\",\"explanation\":\"Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.\",\"notice\":\"Simulerat agentsvar – lokal demologik.\",\"role_id\":\"analyst\",\"simulated_analysis_at\":\"2025-01-01T10:00:00+00:00\"},{\"decision\":{\"book\":\"kalla_1\",\"checks\":[{\"accepted\":true,\"book\":\"kalla_1\",\"overround_bp\":9718,\"reason\":null},{\"accepted\":true,\"book\":\"kalla_2\",\"overround_bp\":10718,\"reason\":null},{\"accepted\":true,\"book\":\"kalla_3\",\"overround_bp\":10718,\"reason\":null},{\"accepted\":true,\"book\":\"kalla_4\",\"overround_bp\":10718,\"reason\":null}],\"edge_bp\":1544,\"outcome\":\"home\",\"paper_odds\":24750,\"quoted_odds\":25000,\"reason\":\"Regelbaserat syntetiskt förslag. Referensen är ingen verifierad vinstchans.\",\"reference_books\":[\"kalla_2\",\"kalla_3\",\"kalla_4\"],\"reference_probability_ppm\":466463,\"selected\":true,\"stake_ore\":1000},\"event_id\":\"syntetisk-2\",\"explanation\":\"Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.\",\"notice\":\"Simulerat agentsvar – lokal demologik.\",\"role_id\":\"analyst\",\"simulated_analysis_at\":\"2025-01-02T10:00:00+00:00\"},{\"decision\":{\"book\":\"kalla_1\",\"checks\":[{\"accepted\":true,\"book\":\"kalla_1\",\"overround_bp\":9718,\"reason\":null},{\"accepted\":true,\"book\":\"kalla_2\",\"overround_bp\":10718,\"reason\":null},{\"accepted\":true,\"book\":\"kalla_3\",\"overround_bp\":10718,\"reason\":null},{\"accepted\":true,\"book\":\"kalla_4\",\"overround_bp\":10718,\"reason\":null}],\"edge_bp\":1544,\"outcome\":\"home\",\"paper_odds\":24750,\"quoted_odds\":25000,\"reason\":\"Regelbaserat syntetiskt förslag. Referensen är ingen verifierad vinstchans.\",\"reference_books\":[\"kalla_2\",\"kalla_3\",\"kalla_4\"],\"reference_probability_ppm\":466463,\"selected\":true,\"stake_ore\":1000},\"event_id\":\"syntetisk-3\",\"explanation\":\"Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.\",\"notice\":\"Simulerat agentsvar – lokal demologik.\",\"role_id\":\"analyst\",\"simulated_analysis_at\":\"2025-01-03T10:00:00+00:00\"},{\"decision\":{\"book\":\"kalla_1\",\"checks\":[{\"accepted\":true,\"book\":\"kalla_1\",\"overround_bp\":9718,\"reason\":null},{\"accepted\":true,\"book\":\"kalla_2\",\"overround_bp\":10718,\"reason\":null},{\"accepted\":true,\"book\":\"kalla_3\",\"overround_bp\":10718,\"reason\":null},{\"accepted\":true,\"book\":\"kalla_4\",\"overround_bp\":10718,\"reason\":null}],\"edge_bp\":1544,\"outcome\":\"home\",\"paper_odds\":24750,\"quoted_odds\":25000,\"reason\":\"Regelbaserat syntetiskt förslag. Referensen är ingen verifierad vinstchans.\",\"reference_books\":[\"kalla_2\",\"kalla_3\",\"kalla_4\"],\"reference_probability_ppm\":466463,\"selected\":true,\"stake_ore\":1000},\"event_id\":\"syntetisk-4\",\"explanation\":\"Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.\",\"notice\":\"Simulerat agentsvar – lokal demologik.\",\"role_id\":\"analyst\",\"simulated_analysis_at\":\"2025-01-04T10:00:00+00:00\"},{\"decision\":{\"checks\":[{\"accepted\":false,\"book\":\"kalla_1\",\"overround_bp\":9718,\"reason\":\"För gammal offert eller offert från framtiden.\"},{\"accepted\":false,\"book\":\"kalla_2\",\"overround_bp\":10718,\"reason\":\"För gammal offert eller offert från framtiden.\"},{\"accepted\":false,\"book\":\"kalla_3\",\"overround_bp\":10718,\"reason\":\"För gammal offert eller offert från framtiden.\"},{\"accepted\":false,\"book\":\"kalla_4\",\"overround_bp\":10718,\"reason\":\"För gammal offert eller offert från framtiden.\"}],\"reason\":\"Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.\",\"selected\":false},\"event_id\":\"syntetisk-5\",\"explanation\":\"Avstå: Färre än fyra giltiga källor; tre andra jämförelsekällor krävs. Kostnaden för analysen kvarstår.\",\"notice\":\"Simulerat agentsvar – lokal demologik.\",\"role_id\":\"analyst\",\"simulated_analysis_at\":\"2025-01-05T10:00:00+00:00\"},{\"decision\":{\"checks\":[{\"accepted\":true,\"book\":\"kalla_1\",\"overround_bp\":9718,\"reason\":null},{\"accepted\":true,\"book\":\"kalla_2\",\"overround_bp\":10718,\"reason\":null},{\"accepted\":true,\"book\":\"kalla_3\",\"overround_bp\":10718,\"reason\":null}],\"reason\":\"Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.\",\"selected\":false},\"event_id\":\"syntetisk-6\",\"explanation\":\"Avstå: Färre än fyra giltiga källor; tre andra jämförelsekällor krävs. Kostnaden för analysen kvarstår.\",\"notice\":\"Simulerat agentsvar – lokal demologik.\",\"role_id\":\"analyst\",\"simulated_analysis_at\":\"2025-01-06T10:00:00+00:00\"},{\"decision\":{\"checks\":[{\"accepted\":true,\"book\":\"kalla_1\",\"overround_bp\":10718,\"reason\":null},{\"accepted\":true,\"book\":\"kalla_2\",\"overround_bp\":10718,\"reason\":null},{\"accepted\":true,\"book\":\"kalla_3\",\"overround_bp\":10718,\"reason\":null},{\"accepted\":true,\"book\":\"kalla_4\",\"overround_bp\":10718,\"reason\":null}],\"reason\":\"Ingen avvikelse klarar de låsta provreglerna.\",\"selected\":false},\"event_id\":\"syntetisk-7\",\"explanation\":\"Avstå: Ingen avvikelse klarar de låsta provreglerna. Kostnaden för analysen kvarstår.\",\"notice\":\"Simulerat agentsvar – lokal demologik.\",\"role_id\":\"analyst\",\"simulated_analysis_at\":\"2025-01-07T10:00:00+00:00\"}],\"messages\":[{\"notice\":\"Simulerat agentsvar – lokal demologik.\",\"role_id\":\"finance\",\"text\":\"4 förslag. Analysen kostar 140 simulerade öre även om du avstår. Kapitalet tillhör endast denna omgång.\"},{\"notice\":\"Simulerat agentsvar – lokal demologik.\",\"role_id\":\"critic\",\"text\":\"Påhittade odds och utfall prövar arbetsflödet. De ger inget tillstånd till riktiga insatser och inget belägg för lönsamhet.\"}],\"proposal_hash\":\"64fb1ad4a3654e953baa242e6d399bb6a1229072c3b8df374ae94ab9b66847f4\",\"proposal_version\":1,\"proposals\":[{\"away\":\"Påhittat bortalag 1\",\"book\":\"kalla_1\",\"event_id\":\"syntetisk-1\",\"explanation\":\"Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.\",\"home\":\"Påhittat hemmalag 1\",\"outcome\":\"home\",\"paper_odds\":24750,\"stake_ore\":1000},{\"away\":\"Påhittat bortalag 2\",\"book\":\"kalla_1\",\"event_id\":\"syntetisk-2\",\"explanation\":\"Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.\",\"home\":\"Påhittat hemmalag 2\",\"outcome\":\"home\",\"paper_odds\":24750,\"stake_ore\":1000},{\"away\":\"Påhittat bortalag 3\",\"book\":\"kalla_1\",\"event_id\":\"syntetisk-3\",\"explanation\":\"Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.\",\"home\":\"Påhittat hemmalag 3\",\"outcome\":\"home\",\"paper_odds\":24750,\"stake_ore\":1000},{\"away\":\"Påhittat bortalag 4\",\"book\":\"kalla_1\",\"event_id\":\"syntetisk-4\",\"explanation\":\"Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.\",\"home\":\"Påhittat hemmalag 4\",\"outcome\":\"home\",\"paper_odds\":24750,\"stake_ore\":1000}],\"simulated_cost_ore\":140,\"total_stake_ore\":4000}",
+          "decision": "approved",
+          "decision_version": 1,
+          "decision_hash": "64fb1ad4a3654e953baa242e6d399bb6a1229072c3b8df374ae94ab9b66847f4",
+          "decision_at": "2026-11-08T12:00:00+00:00",
+          "summary": "{\"available_ore\":100810,\"bet_count\":4,\"capital_ore\":100810,\"game_profit_ore\":950,\"initial_capital_ore\":100000,\"lost_count\":2,\"net_ore\":810,\"open_stake_ore\":0,\"payout_ore\":4950,\"settled_count\":4,\"simulated_cost_ore\":140,\"total_stake_ore\":4000,\"won_count\":2}",
+          "settlement": "{\"recorded_at\":\"2026-11-08T12:00:00+00:00\",\"results\":[{\"away_score\":0,\"event_id\":\"syntetisk-1\",\"home_score\":2,\"simulated_finished_at\":\"2025-01-01T15:00:00+00:00\",\"status\":\"final\"},{\"away_score\":1,\"event_id\":\"syntetisk-2\",\"home_score\":0,\"simulated_finished_at\":\"2025-01-02T15:00:00+00:00\",\"status\":\"final\"},{\"away_score\":0,\"event_id\":\"syntetisk-3\",\"home_score\":2,\"simulated_finished_at\":\"2025-01-03T15:00:00+00:00\",\"status\":\"final\"},{\"away_score\":1,\"event_id\":\"syntetisk-4\",\"home_score\":0,\"simulated_finished_at\":\"2025-01-04T15:00:00+00:00\",\"status\":\"final\"},{\"away_score\":0,\"event_id\":\"syntetisk-5\",\"home_score\":2,\"simulated_finished_at\":\"2025-01-05T15:00:00+00:00\",\"status\":\"final\"},{\"away_score\":1,\"event_id\":\"syntetisk-6\",\"home_score\":0,\"simulated_finished_at\":\"2025-01-06T15:00:00+00:00\",\"status\":\"final\"},{\"away_score\":0,\"event_id\":\"syntetisk-7\",\"home_score\":2,\"simulated_finished_at\":\"2025-01-07T15:00:00+00:00\",\"status\":\"final\"}],\"rules_version\":\"football-paper-v1\",\"settlement_version\":\"effective-odds-floor-ore-v1\",\"summary\":{\"available_ore\":100810,\"bet_count\":4,\"capital_ore\":100810,\"game_profit_ore\":950,\"initial_capital_ore\":100000,\"lost_count\":2,\"net_ore\":810,\"open_stake_ore\":0,\"payout_ore\":4950,\"settled_count\":4,\"simulated_cost_ore\":140,\"total_stake_ore\":4000,\"won_count\":2}}",
+          "created_at": "2026-11-08T12:00:00+00:00",
+          "updated_at": "2026-11-08T12:00:00+00:00"
+        }
+      ],
+      "costs": [
+        {
+          "session_id": "00000000000000000000000000000000",
+          "event_id": "syntetisk-1",
+          "cost_kind": "analysis_data",
+          "amount_ore": 20,
+          "simulated_at": "2025-01-01T10:00:00+00:00",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "session_id": "00000000000000000000000000000000",
+          "event_id": "syntetisk-2",
+          "cost_kind": "analysis_data",
+          "amount_ore": 20,
+          "simulated_at": "2025-01-02T10:00:00+00:00",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "session_id": "00000000000000000000000000000000",
+          "event_id": "syntetisk-3",
+          "cost_kind": "analysis_data",
+          "amount_ore": 20,
+          "simulated_at": "2025-01-03T10:00:00+00:00",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "session_id": "00000000000000000000000000000000",
+          "event_id": "syntetisk-4",
+          "cost_kind": "analysis_data",
+          "amount_ore": 20,
+          "simulated_at": "2025-01-04T10:00:00+00:00",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "session_id": "00000000000000000000000000000000",
+          "event_id": "syntetisk-5",
+          "cost_kind": "analysis_data",
+          "amount_ore": 20,
+          "simulated_at": "2025-01-05T10:00:00+00:00",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "session_id": "00000000000000000000000000000000",
+          "event_id": "syntetisk-6",
+          "cost_kind": "analysis_data",
+          "amount_ore": 20,
+          "simulated_at": "2025-01-06T10:00:00+00:00",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "session_id": "00000000000000000000000000000000",
+          "event_id": "syntetisk-7",
+          "cost_kind": "analysis_data",
+          "amount_ore": 20,
+          "simulated_at": "2025-01-07T10:00:00+00:00",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        }
+      ],
+      "bets": [
+        {
+          "session_id": "00000000000000000000000000000000",
+          "event_id": "syntetisk-1",
+          "outcome": "home",
+          "paper_odds": 24750,
+          "stake_ore": 1000,
+          "proposal_version": 1,
+          "proposal_hash": "64fb1ad4a3654e953baa242e6d399bb6a1229072c3b8df374ae94ab9b66847f4",
+          "state": "won",
+          "return_ore": 2475,
+          "profit_ore": 1475,
+          "result": "{\"away_score\":0,\"home_score\":2,\"simulated_finished_at\":\"2025-01-01T15:00:00+00:00\",\"status\":\"final\"}",
+          "placed_at": "2026-11-08T12:00:00+00:00",
+          "settled_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "session_id": "00000000000000000000000000000000",
+          "event_id": "syntetisk-2",
+          "outcome": "home",
+          "paper_odds": 24750,
+          "stake_ore": 1000,
+          "proposal_version": 1,
+          "proposal_hash": "64fb1ad4a3654e953baa242e6d399bb6a1229072c3b8df374ae94ab9b66847f4",
+          "state": "lost",
+          "return_ore": 0,
+          "profit_ore": -1000,
+          "result": "{\"away_score\":1,\"home_score\":0,\"simulated_finished_at\":\"2025-01-02T15:00:00+00:00\",\"status\":\"final\"}",
+          "placed_at": "2026-11-08T12:00:00+00:00",
+          "settled_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "session_id": "00000000000000000000000000000000",
+          "event_id": "syntetisk-3",
+          "outcome": "home",
+          "paper_odds": 24750,
+          "stake_ore": 1000,
+          "proposal_version": 1,
+          "proposal_hash": "64fb1ad4a3654e953baa242e6d399bb6a1229072c3b8df374ae94ab9b66847f4",
+          "state": "won",
+          "return_ore": 2475,
+          "profit_ore": 1475,
+          "result": "{\"away_score\":0,\"home_score\":2,\"simulated_finished_at\":\"2025-01-03T15:00:00+00:00\",\"status\":\"final\"}",
+          "placed_at": "2026-11-08T12:00:00+00:00",
+          "settled_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "session_id": "00000000000000000000000000000000",
+          "event_id": "syntetisk-4",
+          "outcome": "home",
+          "paper_odds": 24750,
+          "stake_ore": 1000,
+          "proposal_version": 1,
+          "proposal_hash": "64fb1ad4a3654e953baa242e6d399bb6a1229072c3b8df374ae94ab9b66847f4",
+          "state": "lost",
+          "return_ore": 0,
+          "profit_ore": -1000,
+          "result": "{\"away_score\":1,\"home_score\":0,\"simulated_finished_at\":\"2025-01-04T15:00:00+00:00\",\"status\":\"final\"}",
+          "placed_at": "2026-11-08T12:00:00+00:00",
+          "settled_at": "2026-11-08T12:00:00+00:00"
+        }
+      ],
+      "actions": [
+        {
+          "action_id": "00000000-0000-0000-0000-000000000001",
+          "session_id": "00000000000000000000000000000000",
+          "operation": "create",
+          "request_hash": "4845dfd123f5ce8fdf03850fe54190110c0580cbd56c60560ba71096f0d51898",
+          "response": "{\"id\":\"00000000000000000000000000000000\",\"state\":\"created\"}",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "action_id": "00000000-0000-0000-0000-000000000002",
+          "session_id": "00000000000000000000000000000000",
+          "operation": "analyze",
+          "request_hash": "46a2bd260ad62b529ece895f85355aca45f74b470c3732403d4a6a6c75e2f4b6",
+          "response": "{\"id\":\"00000000000000000000000000000000\",\"state\":\"analyzed\"}",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "action_id": "00000000-0000-0000-0000-000000000003",
+          "session_id": "00000000000000000000000000000000",
+          "operation": "decision",
+          "request_hash": "b4d85eee754605e3996641604df399ac0840a2494292bccee260f590efd16305",
+          "response": "{\"id\":\"00000000000000000000000000000000\",\"state\":\"approved\"}",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "action_id": "00000000-0000-0000-0000-000000000004",
+          "session_id": "00000000000000000000000000000000",
+          "operation": "simulate",
+          "request_hash": "f7e0f8c2c538e421d85b06484575772c0eb42d7492b1de48b1f9af67a73cb916",
+          "response": "{\"id\":\"00000000000000000000000000000000\",\"state\":\"simulated\"}",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "action_id": "00000000-0000-0000-0000-000000000005",
+          "session_id": "00000000000000000000000000000000",
+          "operation": "settle",
+          "request_hash": "a9ccdaee8e533b6c82d2eb7ead1e39dfda8f4a3ac05b678fb5b7210281a5236d",
+          "response": "{\"id\":\"00000000000000000000000000000000\",\"state\":\"settled\"}",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        }
+      ],
+      "events": [
+        {
+          "seq": 1,
+          "session_id": "00000000000000000000000000000000",
+          "operation": "create",
+          "from_state": null,
+          "to_state": "created",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "seq": 2,
+          "session_id": "00000000000000000000000000000000",
+          "operation": "analyze",
+          "from_state": "created",
+          "to_state": "analyzed",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "seq": 3,
+          "session_id": "00000000000000000000000000000000",
+          "operation": "decision",
+          "from_state": "analyzed",
+          "to_state": "approved",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "seq": 4,
+          "session_id": "00000000000000000000000000000000",
+          "operation": "simulate",
+          "from_state": "approved",
+          "to_state": "simulated",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        },
+        {
+          "seq": 5,
+          "session_id": "00000000000000000000000000000000",
+          "operation": "settle",
+          "from_state": "simulated",
+          "to_state": "settled",
+          "recorded_at": "2026-11-08T12:00:00+00:00"
+        }
+      ]
+    }
+  },
+  "frozen": {
+    "cost_definitions": [
+      {
+        "amount_ore": 20,
+        "cost_kind": "analysis_data",
+        "description": "Simulerad datakostnad vid sparad analys, även vid avstående.",
+        "event_id": "syntetisk-1",
+        "simulated_at": "2025-01-01T10:00:00+00:00"
+      },
+      {
+        "amount_ore": 20,
+        "cost_kind": "analysis_data",
+        "description": "Simulerad datakostnad vid sparad analys, även vid avstående.",
+        "event_id": "syntetisk-2",
+        "simulated_at": "2025-01-02T10:00:00+00:00"
+      },
+      {
+        "amount_ore": 20,
+        "cost_kind": "analysis_data",
+        "description": "Simulerad datakostnad vid sparad analys, även vid avstående.",
+        "event_id": "syntetisk-3",
+        "simulated_at": "2025-01-03T10:00:00+00:00"
+      },
+      {
+        "amount_ore": 20,
+        "cost_kind": "analysis_data",
+        "description": "Simulerad datakostnad vid sparad analys, även vid avstående.",
+        "event_id": "syntetisk-4",
+        "simulated_at": "2025-01-04T10:00:00+00:00"
+      },
+      {
+        "amount_ore": 20,
+        "cost_kind": "analysis_data",
+        "description": "Simulerad datakostnad vid sparad analys, även vid avstående.",
+        "event_id": "syntetisk-5",
+        "simulated_at": "2025-01-05T10:00:00+00:00"
+      },
+      {
+        "amount_ore": 20,
+        "cost_kind": "analysis_data",
+        "description": "Simulerad datakostnad vid sparad analys, även vid avstående.",
+        "event_id": "syntetisk-6",
+        "simulated_at": "2025-01-06T10:00:00+00:00"
+      },
+      {
+        "amount_ore": 20,
+        "cost_kind": "analysis_data",
+        "description": "Simulerad datakostnad vid sparad analys, även vid avstående.",
+        "event_id": "syntetisk-7",
+        "simulated_at": "2025-01-07T10:00:00+00:00"
+      }
+    ],
+    "engine_version": "betting-demo-analysis-v1",
+    "explanation_version": "betting-demo-explanations-v1",
+    "initial_capital_ore": 100000,
+    "observations": [
+      {
+        "away": "Påhittat bortalag 1",
+        "captured_at": "2025-01-01T10:00:00Z",
+        "data_cost_ore": 20,
+        "event_id": "syntetisk-1",
+        "home": "Påhittat hemmalag 1",
+        "market": "1x2_90min",
+        "quotes": [
+          {
+            "book": "kalla_1",
+            "odds": {
+              "away": 36000,
+              "draw": 34000,
+              "home": 25000
+            },
+            "source_url": "https://example.invalid/kalla-1",
+            "updated_at": "2025-01-01T10:00:00Z"
+          },
+          {
+            "book": "kalla_2",
+            "odds": {
+              "away": 36000,
+              "draw": 34000,
+              "home": 20000
+            },
+            "source_url": "https://example.invalid/kalla-2",
+            "updated_at": "2025-01-01T10:00:00Z"
+          },
+          {
+            "book": "kalla_3",
+            "odds": {
+              "away": 36000,
+              "draw": 34000,
+              "home": 20000
+            },
+            "source_url": "https://example.invalid/kalla-3",
+            "updated_at": "2025-01-01T10:00:00Z"
+          },
+          {
+            "book": "kalla_4",
+            "odds": {
+              "away": 36000,
+              "draw": 34000,
+              "home": 20000
+            },
+            "source_url": "https://example.invalid/kalla-4",
+            "updated_at": "2025-01-01T10:00:00Z"
+          }
+        ],
+        "sport": "football",
+        "starts_at": "2025-01-01T13:00:00Z"
+      },
+      {
+        "away": "Påhittat bortalag 2",
+        "captured_at": "2025-01-02T10:00:00Z",
+        "data_cost_ore": 20,
+        "event_id": "syntetisk-2",
+        "home": "Påhittat hemmalag 2",
+        "market": "1x2_90min",
+        "quotes": [
+          {
+            "book": "kalla_1",
+            "odds": {
+              "away": 36000,
+              "draw": 34000,
+              "home": 25000
+            },
+            "source_url": "https://example.invalid/kalla-1",
+            "updated_at": "2025-01-02T10:00:00Z"
+          },
+          {
+            "book": "kalla_2",
+            "odds": {
+              "away": 36000,
+              "draw": 34000,
+              "home": 20000
+            },
+            "source_url": "https://example.invalid/kalla-2",
+            "updated_at": "2025-01-02T10:00:00Z"
+          },
+          {
+            "book": "kalla_3",
+            "odds": {
+              "away": 36000,
+              "draw": 34000,
+              "home": 20000
+            },
+            "source_url": "https://example.invalid/kalla-3",
+            "updated_at": "2025-01-02T10:00:00Z"
+          },
+          {
+            "book": "kalla_4",
+            "odds": {
+              "away": 36000,
+              "draw": 34000,
+              "home": 20000
+            },
+            "source_url": "https://example.invalid/kalla-4",
+            "updated_at": "2025-01-02T10:00:00Z"
+          }
+        ],
+        "sport": "football",
+        "starts_at": "2025-01-02T13:00:00Z"
+      },
+      {
+        "away": "Påhittat bortalag 3",
+        "captured_at": "2025-01-03T10:00:00Z",
+        "data_cost_ore": 20,
+        "event_id": "syntetisk-3",
+        "home": "Påhittat hemmalag 3",
+        "market": "1x2_90min",
+        "quotes": [
+          {
+            "book": "kalla_1",
+            "odds": {
+              "away": 36000,
+              "draw": 34000,
+              "home": 25000
+            },
+            "source_url": "https://example.invalid/kalla-1",
+            "updated_at": "2025-01-03T10:00:00Z"
+          },
+          {
+            "book": "kalla_2",
+            "odds": {
+              "away": 36000,
+              "draw": 34000,
+              "home": 20000
+            },
+            "source_url": "https://example.invalid/kalla-2",
+            "updated_at": "2025-01-03T10:00:00Z"
+          },
+          {
+            "book": "kalla_3",
+            "odds": {
+              "away": 36000,
+              "draw": 34000,
+              "home": 20000
+            },
+            "source_url": "https://example.invalid/kalla-3",
+            "updated_at": "2025-01-03T10:00:00Z"
+          },
+          {
+            "book": "kalla_4",
+            "odds": {
+              "away": 36000,
+              "draw": 34000,
+              "home": 20000
+            },
+            "source_url": "https://example.invalid/kalla-4",
+            "updated_at": "2025-01-03T10:00:00Z"
+          }
+        ],
+        "sport": "football",
+        "starts_at": "2025-01-03T13:00:00Z"
+      },
+      {
+        "away": "Påhittat bortalag 4",
+        "captured_at": "2025-01-04T10:00:00Z",
+        "data_cost_ore": 20,
+        "event_id": "syntetisk-4",
+        "home": "Påhittat hemmalag 4",
+        "market": "1x2_90min",
+        "quotes": [
+          {
+            "book": "kalla_1",
+            "odds": {
+              "away": 36000,
+              "draw": 34000,
+              "home": 25000
+            },
+            "source_url": "https://example.invalid/kalla-1",
+            "updated_at": "2025-01-04T10:00:00Z"
+          },
+          {
+            "book": "kalla_2",
+            "odds": {
+              "away": 36000,
+              "draw": 34000,
+              "home": 20000
+            },
+            "source_url": "https://example.invalid/kalla-2",
+            "updated_at": "2025-01-04T10:00:00Z"
+          },
+          {
+            "book": "kalla_3",
+            "odds": {
+              "away": 36000,
+              "draw": 34000,
+              "home": 20000
+            },
+            "source_url": "https://example.invalid/kalla-3",
+            "updated_at": "2025-01-04T10:00:00Z"
+          },
+          {
+            "book": "kalla_4",
+            "odds": {
+              "away": 36000,
+              "draw": 34000,
+              "home": 20000
+            },
+            "source_url": "https://example.invalid/kalla-4",
+            "updated_at": "2025-01-04T10:00:00Z"
+          }
+        ],
+        "sport": "football",
+        "starts_at": "2025-01-04T13:00:00Z"
+      },
+      {
+        "away": "Påhittat bortalag 5",
+        "captured_at": "2025-01-05T10:00:00Z",
+        "data_cost_ore": 20,
+        "event_id": "syntetisk-5",
+        "home": "Påhittat hemmalag 5",
+        "market": "1x2_90min",
+        "quotes": [
+          {
+            "book": "kalla_1",
+            "odds": {
+              "away": 36000,
+              "draw": 34000,
+              "home": 25000
+            },
+            "source_url": "https://example.invalid/kalla-1",
+            "updated_at": "2025-01-05T09:55:00Z"
+          },
+          {
+            "book": "kalla_2",
+            "odds": {
+              "away": 36000,
+              "draw": 34000,
+              "home": 20000
+            },
+            "source_url": "https://example.invalid/kalla-2",
+            "updated_at": "2025-01-05T09:55:00Z"
+          },
+          {
+            "book": "kalla_3",
+            "odds": {
+              "away": 36000,
+              "draw": 34000,
+              "home": 20000
+            },
+            "source_url": "https://example.invalid/kalla-3",
+            "updated_at": "2025-01-05T09:55:00Z"
+          },
+          {
+            "book": "kalla_4",
+            "odds": {
+              "away": 36000,
+              "draw": 34000,
+              "home": 20000
+            },
+            "source_url": "https://example.invalid/kalla-4",
+            "updated_at": "2025-01-05T09:55:00Z"
+          }
+        ],
+        "sport": "football",
+        "starts_at": "2025-01-05T13:00:00Z"
+      },
+      {
+        "away": "Påhittat bortalag 6",
+        "captured_at": "2025-01-06T10:00:00Z",
+        "data_cost_ore": 20,
+        "event_id": "syntetisk-6",
+        "home": "Påhittat hemmalag 6",
+        "market": "1x2_90min",
+        "quotes": [
+          {
+            "book": "kalla_1",
+            "odds": {
+              "away": 36000,
+              "draw": 34000,
+              "home": 25000
+            },
+            "source_url": "https://example.invalid/kalla-1",
+            "updated_at": "2025-01-06T10:00:00Z"
+          },
+          {
+            "book": "kalla_2",
+            "odds": {
+              "away": 36000,
+              "draw": 34000,
+              "home": 20000
+            },
+            "source_url": "https://example.invalid/kalla-2",
+            "updated_at": "2025-01-06T10:00:00Z"
+          },
+          {
+            "book": "kalla_3",
+            "odds": {
+              "away": 36000,
+              "draw": 34000,
+              "home": 20000
+            },
+            "source_url": "https://example.invalid/kalla-3",
+            "updated_at": "2025-01-06T10:00:00Z"
+          }
+        ],
+        "sport": "football",
+        "starts_at": "2025-01-06T13:00:00Z"
+      },
+      {
+        "away": "Påhittat bortalag 7",
+        "captured_at": "2025-01-07T10:00:00Z",
+        "data_cost_ore": 20,
+        "event_id": "syntetisk-7",
+        "home": "Påhittat hemmalag 7",
+        "market": "1x2_90min",
+        "quotes": [
+          {
+            "book": "kalla_1",
+            "odds": {
+              "away": 36000,
+              "draw": 34000,
+              "home": 20000
+            },
+            "source_url": "https://example.invalid/kalla-1",
+            "updated_at": "2025-01-07T10:00:00Z"
+          },
+          {
+            "book": "kalla_2",
+            "odds": {
+              "away": 36000,
+              "draw": 34000,
+              "home": 20000
+            },
+            "source_url": "https://example.invalid/kalla-2",
+            "updated_at": "2025-01-07T10:00:00Z"
+          },
+          {
+            "book": "kalla_3",
+            "odds": {
+              "away": 36000,
+              "draw": 34000,
+              "home": 20000
+            },
+            "source_url": "https://example.invalid/kalla-3",
+            "updated_at": "2025-01-07T10:00:00Z"
+          },
+          {
+            "book": "kalla_4",
+            "odds": {
+              "away": 36000,
+              "draw": 34000,
+              "home": 20000
+            },
+            "source_url": "https://example.invalid/kalla-4",
+            "updated_at": "2025-01-07T10:00:00Z"
+          }
+        ],
+        "sport": "football",
+        "starts_at": "2025-01-07T13:00:00Z"
+      }
+    ],
+    "role_labels": {
+      "analyst": "Oddsanalytiker",
+      "critic": "Kritiker / Kvalitetskontroll",
+      "finance": "Ekonom / Risk"
+    },
+    "rules": {
+      "costs": "Manuellt angivna datakostnader; fullständighet och faktura är inte verifierade.",
+      "initial_bankroll_ore": 100000,
+      "market": "1x2_90min",
+      "max_edge_bp": 3000,
+      "max_import_delay_seconds": 60,
+      "max_quote_age_seconds": 120,
+      "max_snapshots": 1000,
+      "min_days_for_review": 30,
+      "min_edge_bp": 500,
+      "min_reference_books": 3,
+      "min_seconds_before_kickoff": 60,
+      "min_settled_for_review": 100,
+      "price_haircut_bp": 100,
+      "real_money_enabled": false,
+      "reference": "Median av övriga källors marginalnormaliserade sannolikheter. Ingen sann sannolikhet.",
+      "selection": "Högst en signal per match; högst beräknad avvikelse, sedan käll-ID och utfall.",
+      "settlement": "Ordinarie tid inklusive tilläggstid; exklusive förlängning och straffar.",
+      "sport": "football",
+      "stake_ore": 1000,
+      "version": "football-paper-v1"
+    },
+    "rules_version": "football-paper-v1",
+    "scenario_version": "seven-matches-demo-v1",
+    "settlement_data": {
+      "syntetisk-1": {
+        "away_score": 0,
+        "home_score": 2,
+        "simulated_finished_at": "2025-01-01T15:00:00+00:00",
+        "status": "final"
+      },
+      "syntetisk-2": {
+        "away_score": 1,
+        "home_score": 0,
+        "simulated_finished_at": "2025-01-02T15:00:00+00:00",
+        "status": "final"
+      },
+      "syntetisk-3": {
+        "away_score": 0,
+        "home_score": 2,
+        "simulated_finished_at": "2025-01-03T15:00:00+00:00",
+        "status": "final"
+      },
+      "syntetisk-4": {
+        "away_score": 1,
+        "home_score": 0,
+        "simulated_finished_at": "2025-01-04T15:00:00+00:00",
+        "status": "final"
+      },
+      "syntetisk-5": {
+        "away_score": 0,
+        "home_score": 2,
+        "simulated_finished_at": "2025-01-05T15:00:00+00:00",
+        "status": "final"
+      },
+      "syntetisk-6": {
+        "away_score": 1,
+        "home_score": 0,
+        "simulated_finished_at": "2025-01-06T15:00:00+00:00",
+        "status": "final"
+      },
+      "syntetisk-7": {
+        "away_score": 0,
+        "home_score": 2,
+        "simulated_finished_at": "2025-01-07T15:00:00+00:00",
+        "status": "final"
+      }
+    },
+    "settlement_version": "effective-odds-floor-ore-v1",
+    "stake_ore": 1000
+  },
+  "analysis": {
+    "analysis_input_hash": "43f6749968bd81ff63df5ac415b5049d89e2d10aba3450ee70168c94bab576a5",
+    "matches": [
+      {
+        "decision": {
+          "book": "kalla_1",
+          "checks": [
+            {
+              "accepted": true,
+              "book": "kalla_1",
+              "overround_bp": 9718,
+              "reason": null
+            },
+            {
+              "accepted": true,
+              "book": "kalla_2",
+              "overround_bp": 10718,
+              "reason": null
+            },
+            {
+              "accepted": true,
+              "book": "kalla_3",
+              "overround_bp": 10718,
+              "reason": null
+            },
+            {
+              "accepted": true,
+              "book": "kalla_4",
+              "overround_bp": 10718,
+              "reason": null
+            }
+          ],
+          "edge_bp": 1544,
+          "outcome": "home",
+          "paper_odds": 24750,
+          "quoted_odds": 25000,
+          "reason": "Regelbaserat syntetiskt förslag. Referensen är ingen verifierad vinstchans.",
+          "reference_books": [
+            "kalla_2",
+            "kalla_3",
+            "kalla_4"
+          ],
+          "reference_probability_ppm": 466463,
+          "selected": true,
+          "stake_ore": 1000
+        },
+        "event_id": "syntetisk-1",
+        "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.",
+        "notice": "Simulerat agentsvar – lokal demologik.",
+        "role_id": "analyst",
+        "simulated_analysis_at": "2025-01-01T10:00:00+00:00"
+      },
+      {
+        "decision": {
+          "book": "kalla_1",
+          "checks": [
+            {
+              "accepted": true,
+              "book": "kalla_1",
+              "overround_bp": 9718,
+              "reason": null
+            },
+            {
+              "accepted": true,
+              "book": "kalla_2",
+              "overround_bp": 10718,
+              "reason": null
+            },
+            {
+              "accepted": true,
+              "book": "kalla_3",
+              "overround_bp": 10718,
+              "reason": null
+            },
+            {
+              "accepted": true,
+              "book": "kalla_4",
+              "overround_bp": 10718,
+              "reason": null
+            }
+          ],
+          "edge_bp": 1544,
+          "outcome": "home",
+          "paper_odds": 24750,
+          "quoted_odds": 25000,
+          "reason": "Regelbaserat syntetiskt förslag. Referensen är ingen verifierad vinstchans.",
+          "reference_books": [
+            "kalla_2",
+            "kalla_3",
+            "kalla_4"
+          ],
+          "reference_probability_ppm": 466463,
+          "selected": true,
+          "stake_ore": 1000
+        },
+        "event_id": "syntetisk-2",
+        "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.",
+        "notice": "Simulerat agentsvar – lokal demologik.",
+        "role_id": "analyst",
+        "simulated_analysis_at": "2025-01-02T10:00:00+00:00"
+      },
+      {
+        "decision": {
+          "book": "kalla_1",
+          "checks": [
+            {
+              "accepted": true,
+              "book": "kalla_1",
+              "overround_bp": 9718,
+              "reason": null
+            },
+            {
+              "accepted": true,
+              "book": "kalla_2",
+              "overround_bp": 10718,
+              "reason": null
+            },
+            {
+              "accepted": true,
+              "book": "kalla_3",
+              "overround_bp": 10718,
+              "reason": null
+            },
+            {
+              "accepted": true,
+              "book": "kalla_4",
+              "overround_bp": 10718,
+              "reason": null
+            }
+          ],
+          "edge_bp": 1544,
+          "outcome": "home",
+          "paper_odds": 24750,
+          "quoted_odds": 25000,
+          "reason": "Regelbaserat syntetiskt förslag. Referensen är ingen verifierad vinstchans.",
+          "reference_books": [
+            "kalla_2",
+            "kalla_3",
+            "kalla_4"
+          ],
+          "reference_probability_ppm": 466463,
+          "selected": true,
+          "stake_ore": 1000
+        },
+        "event_id": "syntetisk-3",
+        "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.",
+        "notice": "Simulerat agentsvar – lokal demologik.",
+        "role_id": "analyst",
+        "simulated_analysis_at": "2025-01-03T10:00:00+00:00"
+      },
+      {
+        "decision": {
+          "book": "kalla_1",
+          "checks": [
+            {
+              "accepted": true,
+              "book": "kalla_1",
+              "overround_bp": 9718,
+              "reason": null
+            },
+            {
+              "accepted": true,
+              "book": "kalla_2",
+              "overround_bp": 10718,
+              "reason": null
+            },
+            {
+              "accepted": true,
+              "book": "kalla_3",
+              "overround_bp": 10718,
+              "reason": null
+            },
+            {
+              "accepted": true,
+              "book": "kalla_4",
+              "overround_bp": 10718,
+              "reason": null
+            }
+          ],
+          "edge_bp": 1544,
+          "outcome": "home",
+          "paper_odds": 24750,
+          "quoted_odds": 25000,
+          "reason": "Regelbaserat syntetiskt förslag. Referensen är ingen verifierad vinstchans.",
+          "reference_books": [
+            "kalla_2",
+            "kalla_3",
+            "kalla_4"
+          ],
+          "reference_probability_ppm": 466463,
+          "selected": true,
+          "stake_ore": 1000
+        },
+        "event_id": "syntetisk-4",
+        "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.",
+        "notice": "Simulerat agentsvar – lokal demologik.",
+        "role_id": "analyst",
+        "simulated_analysis_at": "2025-01-04T10:00:00+00:00"
+      },
+      {
+        "decision": {
+          "checks": [
+            {
+              "accepted": false,
+              "book": "kalla_1",
+              "overround_bp": 9718,
+              "reason": "För gammal offert eller offert från framtiden."
+            },
+            {
+              "accepted": false,
+              "book": "kalla_2",
+              "overround_bp": 10718,
+              "reason": "För gammal offert eller offert från framtiden."
+            },
+            {
+              "accepted": false,
+              "book": "kalla_3",
+              "overround_bp": 10718,
+              "reason": "För gammal offert eller offert från framtiden."
+            },
+            {
+              "accepted": false,
+              "book": "kalla_4",
+              "overround_bp": 10718,
+              "reason": "För gammal offert eller offert från framtiden."
+            }
+          ],
+          "reason": "Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.",
+          "selected": false
+        },
+        "event_id": "syntetisk-5",
+        "explanation": "Avstå: Färre än fyra giltiga källor; tre andra jämförelsekällor krävs. Kostnaden för analysen kvarstår.",
+        "notice": "Simulerat agentsvar – lokal demologik.",
+        "role_id": "analyst",
+        "simulated_analysis_at": "2025-01-05T10:00:00+00:00"
+      },
+      {
+        "decision": {
+          "checks": [
+            {
+              "accepted": true,
+              "book": "kalla_1",
+              "overround_bp": 9718,
+              "reason": null
+            },
+            {
+              "accepted": true,
+              "book": "kalla_2",
+              "overround_bp": 10718,
+              "reason": null
+            },
+            {
+              "accepted": true,
+              "book": "kalla_3",
+              "overround_bp": 10718,
+              "reason": null
+            }
+          ],
+          "reason": "Färre än fyra giltiga källor; tre andra jämförelsekällor krävs.",
+          "selected": false
+        },
+        "event_id": "syntetisk-6",
+        "explanation": "Avstå: Färre än fyra giltiga källor; tre andra jämförelsekällor krävs. Kostnaden för analysen kvarstår.",
+        "notice": "Simulerat agentsvar – lokal demologik.",
+        "role_id": "analyst",
+        "simulated_analysis_at": "2025-01-06T10:00:00+00:00"
+      },
+      {
+        "decision": {
+          "checks": [
+            {
+              "accepted": true,
+              "book": "kalla_1",
+              "overround_bp": 10718,
+              "reason": null
+            },
+            {
+              "accepted": true,
+              "book": "kalla_2",
+              "overround_bp": 10718,
+              "reason": null
+            },
+            {
+              "accepted": true,
+              "book": "kalla_3",
+              "overround_bp": 10718,
+              "reason": null
+            },
+            {
+              "accepted": true,
+              "book": "kalla_4",
+              "overround_bp": 10718,
+              "reason": null
+            }
+          ],
+          "reason": "Ingen avvikelse klarar de låsta provreglerna.",
+          "selected": false
+        },
+        "event_id": "syntetisk-7",
+        "explanation": "Avstå: Ingen avvikelse klarar de låsta provreglerna. Kostnaden för analysen kvarstår.",
+        "notice": "Simulerat agentsvar – lokal demologik.",
+        "role_id": "analyst",
+        "simulated_analysis_at": "2025-01-07T10:00:00+00:00"
+      }
+    ],
+    "messages": [
+      {
+        "notice": "Simulerat agentsvar – lokal demologik.",
+        "role_id": "finance",
+        "text": "4 förslag. Analysen kostar 140 simulerade öre även om du avstår. Kapitalet tillhör endast denna omgång."
+      },
+      {
+        "notice": "Simulerat agentsvar – lokal demologik.",
+        "role_id": "critic",
+        "text": "Påhittade odds och utfall prövar arbetsflödet. De ger inget tillstånd till riktiga insatser och inget belägg för lönsamhet."
+      }
+    ],
+    "proposal_hash": "64fb1ad4a3654e953baa242e6d399bb6a1229072c3b8df374ae94ab9b66847f4",
+    "proposal_version": 1,
+    "proposals": [
+      {
+        "away": "Påhittat bortalag 1",
+        "book": "kalla_1",
+        "event_id": "syntetisk-1",
+        "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.",
+        "home": "Påhittat hemmalag 1",
+        "outcome": "home",
+        "paper_odds": 24750,
+        "stake_ore": 1000
+      },
+      {
+        "away": "Påhittat bortalag 2",
+        "book": "kalla_1",
+        "event_id": "syntetisk-2",
+        "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.",
+        "home": "Påhittat hemmalag 2",
+        "outcome": "home",
+        "paper_odds": 24750,
+        "stake_ore": 1000
+      },
+      {
+        "away": "Påhittat bortalag 3",
+        "book": "kalla_1",
+        "event_id": "syntetisk-3",
+        "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.",
+        "home": "Påhittat hemmalag 3",
+        "outcome": "home",
+        "paper_odds": 24750,
+        "stake_ore": 1000
+      },
+      {
+        "away": "Påhittat bortalag 4",
+        "book": "kalla_1",
+        "event_id": "syntetisk-4",
+        "explanation": "Förslag: hemmaseger hos kalla_1. Effektivt odds 2.4750 efter det enda prisavdraget; beräknad referensavvikelse 15.44 %. Referens utan målbolaget: kalla_2, kalla_3, kalla_4. Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.",
+        "home": "Påhittat hemmalag 4",
+        "outcome": "home",
+        "paper_odds": 24750,
+        "stake_ore": 1000
+      }
+    ],
+    "simulated_cost_ore": 140,
+    "total_stake_ore": 4000
+  },
+  "final_summary": {
+    "available_ore": 100810,
+    "bet_count": 4,
+    "capital_ore": 100810,
+    "game_profit_ore": 950,
+    "initial_capital_ore": 100000,
+    "lost_count": 2,
+    "net_ore": 810,
+    "open_stake_ore": 0,
+    "payout_ore": 4950,
+    "settled_count": 4,
+    "simulated_cost_ore": 140,
+    "total_stake_ore": 4000,
+    "won_count": 2
+  }
+}

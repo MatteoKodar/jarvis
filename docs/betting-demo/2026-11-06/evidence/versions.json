@@ -1,0 +1,11 @@
+{
+  "python": "3.12.14",
+  "packages": {
+    "pytest": "9.1.1",
+    "fastapi": "0.144.0",
+    "pydantic": "2.14.1",
+    "python-dotenv": "1.2.4"
+  },
+  "browser": "existing Google Chrome channel",
+  "node": "v24.22.1"
+}

@@ -1,0 +1,54 @@
+{
+  "cost": {
+    "initial": {
+      "action_id": "audit-cost-identity",
+      "amount": 100,
+      "note": "Syntetisk kostnad A"
+    },
+    "retry": {
+      "action_id": "audit-cost-identity",
+      "amount": 300,
+      "note": "Syntetisk kostnad B"
+    },
+    "statuses": [
+      200,
+      200
+    ],
+    "retry_response": {
+      "ok": true
+    },
+    "stored": [
+      {
+        "amount": 100,
+        "note": "Syntetisk kostnad A"
+      }
+    ]
+  },
+  "round": {
+    "initial": {
+      "action_id": "audit-round-identity",
+      "goal": "Granska fotbollsdata A",
+      "cap": 100
+    },
+    "retry": {
+      "action_id": "audit-round-identity",
+      "goal": "Granska fotbollsdata B",
+      "cap": 200
+    },
+    "statuses": [
+      200,
+      200
+    ],
+    "same_task_id": true,
+    "stored": [
+      {
+        "title": "Granska fotbollsdata A",
+        "cap": 100
+      }
+    ]
+  },
+  "median_example": {
+    "component_median_sum": "0.75",
+    "note": "Syntetiska giltiga prisvektorer. Fryst modell �ndras inte."
+  }
+}

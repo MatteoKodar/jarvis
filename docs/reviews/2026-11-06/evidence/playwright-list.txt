@@ -1,0 +1,15 @@
+Listing tests:
+  app.spec.ts:12:1 › desktop workflow, decisions, saved result and ten agents
+  app.spec.ts:96:1 › mobile layout and generated content remains plain text
+  app.spec.ts:126:1 › worker continues after browser context is closed
+  app.spec.ts:156:1 › owner settings, bounded schedule and safe retry of manual cost
+  documents.spec.ts:12:1 › documents support sections, search, paging, reload and browser history
+  documents.spec.ts:56:1 › document reader works on mobile without horizontal overflow
+  documents.spec.ts:86:1 › document text cannot execute HTML or javascript links
+  odds-lab.spec.ts:23:1 › football paper lab separates invented profits, losses and abstentions and exports
+  odds-lab.spec.ts:81:1 › lost response retries with same identity and does not duplicate series
+  odds-lab.spec.ts:104:1 › forward series starts empty, blocks example import and never offers real bets
+  research-lab.spec.ts:12:1 › football focus replaces legacy research navigation and old hashes fall back safely
+  research-lab.spec.ts:54:1 › archived A0 start is rejected while authentication and CSRF remain enforced
+  research-lab.spec.ts:100:1 › football lab respects persistent emergency stop on mobile without legacy controls
+Total: 13 tests in 4 files

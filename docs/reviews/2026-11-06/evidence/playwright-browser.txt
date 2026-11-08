@@ -1,0 +1,1 @@
+{"version":"1.56.1","expectedExecutable":"C:\\Users\\matte\\AppData\\Local\\ms-playwright\\chromium-1194\\chrome-win\\chrome.exe","executableExists":false}

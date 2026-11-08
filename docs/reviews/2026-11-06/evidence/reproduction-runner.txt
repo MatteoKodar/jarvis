@@ -1,0 +1,32 @@
+import json,sys,os,ipaddress
+from pathlib import Path
+base=Path(os.environ['JARVIS_DATA_DIR']).resolve()
+def guard(event,args):
+    if event=='sqlite3.connect' and not Path(args[0]).resolve().is_relative_to(base): raise RuntimeError('DB outside reproduction forbidden')
+    if event in ('socket.connect','socket.getaddrinfo'):
+        host=args[1][0] if event=='socket.connect' else args[0]
+        try: local=ipaddress.ip_address(host).is_loopback
+        except ValueError: local=host in {'localhost',None}
+        if not local: raise RuntimeError('External network forbidden')
+    if event=='open' and isinstance(args[0],str) and (Path(args[0]).name=='.env' or Path(args[0]).absolute().is_relative_to(Path(r'C:\Users\matte\jarvis\data'))): raise RuntimeError('Protected input forbidden')
+sys.addaudithook(guard)
+from fastapi.testclient import TestClient
+from jarvis.api import app
+from jarvis.db import initialize
+from jarvis.auth import set_owner
+from jarvis.odds_lab import Prices,normalize_prices
+from statistics import median
+initialize();set_owner('audit-synthetic-password-123')
+c=TestClient(app,headers={'origin':'http://testserver'})
+c.headers['x-csrf-token']=c.post('/api/login',json={'password':'audit-synthetic-password-123'}).json()['csrf']
+c.post('/api/control',json={'state':'running'})
+first={'action_id':'audit-cost-identity','amount':100,'note':'Syntetisk kostnad A'}
+changed={**first,'amount':300,'note':'Syntetisk kostnad B'}
+r1=c.post('/api/costs',json=first);r2=c.post('/api/costs',json=changed)
+round1={'action_id':'audit-round-identity','goal':'Granska fotbollsdata A','cap':100}
+round2={**round1,'goal':'Granska fotbollsdata B','cap':200}
+t1=c.post('/api/rounds',json=round1);t2=c.post('/api/rounds',json=round2)
+s=c.get('/api/state').json()
+refs=[normalize_prices(Prices(home=h,draw=d,away=a))[0] for h,d,a in [(20000,40000,40000),(40000,20000,40000),(40000,40000,20000)]]
+result={'cost':{'initial':first,'retry':changed,'statuses':[r1.status_code,r2.status_code],'retry_response':r2.json(),'stored':[{'amount':v['amount'],'note':json.loads(v['metadata'])['note']} for v in s['costs']]},'round':{'initial':round1,'retry':round2,'statuses':[t1.status_code,t2.status_code],'same_task_id':t1.json()==t2.json(),'stored':[{'title':v['title'],'cap':v['cap']} for v in s['tasks']]},'median_example':{'component_median_sum':str(sum(median(p[k] for p in refs) for k in ('home','draw','away'))),'note':'Syntetiska giltiga prisvektorer. Fryst modell ändras inte.'}}
+print(json.dumps(result,ensure_ascii=False,indent=2))

@@ -1,0 +1,30 @@
+
+Running 18 tests using 1 worker
+
+
+
+(node:25684) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:25684) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[1/18] e2e\app.spec.ts:12:1 › desktop workflow, decisions, saved result and ten agents
+[2/18] e2e\app.spec.ts:96:1 › mobile layout and generated content remains plain text
+[3/18] e2e\app.spec.ts:126:1 › worker continues after browser context is closed
+[4/18] e2e\app.spec.ts:156:1 › owner settings, bounded schedule and safe retry of manual cost
+[5/18] e2e\betting-demo.spec.ts:48:1 › persistent full batch workflow shows independent capital and desktop/mobile summaries
+[6/18] e2e\betting-demo.spec.ts:114:1 › declining retains analysis costs and never creates stakes
+[7/18] e2e\betting-demo.spec.ts:131:1 › lost simulation response preserves identity across reload and replay after pause
+[8/18] e2e\betting-demo.spec.ts:186:1 › two tabs with different action identities cannot simulate twice
+[9/18] e2e\demo-guide.spec.ts:2:1 › demo guide prepares an editable task and opens the match lab without starting work
+[10/18] e2e\documents.spec.ts:12:1 › documents support sections, search, paging, reload and browser history
+[11/18] e2e\documents.spec.ts:56:1 › document reader works on mobile without horizontal overflow
+[12/18] e2e\documents.spec.ts:86:1 › document text cannot execute HTML or javascript links
+[13/18] e2e\odds-lab.spec.ts:23:1 › football paper lab separates invented profits, losses and abstentions and exports
+[14/18] e2e\odds-lab.spec.ts:81:1 › lost response retries with same identity and does not duplicate series
+[15/18] e2e\odds-lab.spec.ts:104:1 › forward series starts empty, blocks example import and never offers real bets
+[16/18] e2e\research-lab.spec.ts:12:1 › football focus replaces legacy research navigation and old hashes fall back safely
+[17/18] e2e\research-lab.spec.ts:54:1 › archived A0 start is rejected while authentication and CSRF remain enforced
+[18/18] e2e\research-lab.spec.ts:100:1 › football lab respects persistent emergency stop on mobile without legacy controls
+  18 passed (1.1m)

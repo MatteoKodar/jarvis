@@ -1,0 +1,13 @@
+vite v7.1.12 building for production...
+transforming...
+✓ 1590 modules transformed.
+
+(!) outDir C:\Users\matte\OneDrive\Dokument\ChatGPT\Jarvis odds\review-2026-11-06\temporary\frontend-dist is not inside project root and will not be emptied.
+Use --emptyOutDir to override.
+
+rendering chunks...
+computing gzip size...
+../../OneDrive/Dokument/ChatGPT/Jarvis odds/review-2026-11-06/temporary/frontend-dist/index.html                   0.41 kB │ gzip:  0.30 kB
+../../OneDrive/Dokument/ChatGPT/Jarvis odds/review-2026-11-06/temporary/frontend-dist/assets/index-WMRafblL.css   41.44 kB │ gzip:  9.69 kB
+../../OneDrive/Dokument/ChatGPT/Jarvis odds/review-2026-11-06/temporary/frontend-dist/assets/index-CzOj60ML.js   270.79 kB │ gzip: 82.58 kB
+✓ built in 3.52s

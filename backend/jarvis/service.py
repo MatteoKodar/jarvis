@@ -29,9 +29,12 @@ def add_task(c, *, action_id, agent_id, title, context, criteria, cap, phase, pa
 
 def start_round(goal, cap, action_id):
     with connect(True) as c:
-        old = c.execute("SELECT id FROM tasks WHERE action_id=?", (action_id,)).fetchone()
+        old = c.execute("SELECT * FROM tasks WHERE action_id=?", (action_id,)).fetchone()
         if old:
-            return old[0]
+            if (old["agent_id"] != "ceo" or old["phase"] != "plan"
+                    or old["title"] != goal or old["cap"] != cap):
+                raise RuleError("Åtgärds-ID:t är bundet till annat innehåll. Kontrollera den sparade arbetsomgången innan du skapar en ny begäran.")
+            return old["id"]
         if config.mode() == "LIVE" and config.missing_live():
             raise RuleError("LIVE saknar: " + ", ".join(config.missing_live()))
         if c.execute("SELECT state FROM settings").fetchone()[0] != "running":

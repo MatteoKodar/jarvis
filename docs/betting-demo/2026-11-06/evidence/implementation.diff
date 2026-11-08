@@ -1,0 +1,1602 @@
+--- before/README.md
++++ after/README.md
+@@ -8,12 +8,45 @@
+ 
+ **Börja i DEMO.** Inga API-nycklar behövs. Demoläget använder märkta reproducerbara exempel och gör inga externa AI- eller researchanrop. LIVE har en riktig OpenAI Agents SDK-adapter, men är avstängt tills du konfigurerar det. Ingen del av installationen köper tjänster eller publicerar något.
+ 
++## Sammanhängande bettingdemo
++
++Öppna **Översikt → Öppna matchdemot** i den befintliga startguiden, eller samma sida under **Bettingdemo**. Där finns ett fast syntetiskt sjumatchersscenario med en sparad arbetsgång:
++
++1. Återuppta uttryckligen om systemet är pausat. Klicka **Skapa demo-omgång**. Bara att öppna sidan skapar ingenting.
++2. Läs påhittade matcher, odds, offerttider och eget låtsaskapital. Välj **Analysera de sju matcherna**.
++3. Granska fyra förslag, tre avståenden och de sparade förklaringarna. Hela analysen kostar 1,40 kr i **simulerade** datakostnader, även för matcher där analysen avstår.
++4. **Godkänn hela låtsasbatchen** eller **Avstå från batchen**. Beslutet binds till exakt förslagsversion och innehållshash. Ett godkännande har ännu inte registrerat insatser.
++5. Efter godkännande: **Registrera låtsasinsatser**. Backend kontrollerar och registrerar hela batchen atomiskt.
++6. **Visa och avräkna simulerade resultat**. Alla spel avräknas samtidigt; sammanfattningen visar även förluster och kostnader.
++
++Varje omgång har **eget låtsaskapital på 1 000 kr** och **fast insats på 10 kr per spel**. Ingen gemensam plånbok, överföring mellan omgångar, insatshöjning eller påverkan på JARVIS vanliga AI-budget finns. En ny omgång behåller den äldre historiken och får ett separat startkapital.
++
++| Standardomgång | Simulerad kostnad | Spelresultat | Öppen insats | Kapital inklusive öppna insatser | Tillgängligt kapital |
++| --- | ---: | ---: | ---: | ---: | ---: |
++| Skapad | 0,00 kr | 0,00 kr | 0,00 kr | 1 000,00 kr | 1 000,00 kr |
++| Analyserad eller godkänd | 1,40 kr | 0,00 kr | 0,00 kr | 998,60 kr | 998,60 kr |
++| Fyra insatser registrerade | 1,40 kr | 0,00 kr | 40,00 kr | 998,60 kr | 958,60 kr |
++| Avräknad, två vinster och två förluster | 1,40 kr | +9,50 kr | 0,00 kr | 1 008,10 kr | 1 008,10 kr |
++| Avstått efter analys | 1,40 kr | 0,00 kr | 0,00 kr | 998,60 kr | 998,60 kr |
++
++Spelresultat är avgjorda utbetalningar minus dessa spels insatser. Netto är spelresultat minus simulerade kostnader. Kapital inklusive öppna insatser är startkapital plus netto; tillgängligt kapital drar dessutom av öppna insatser. Alla pengar beräknas i heltalsören. Effektiva odds innehåller det gamla scenariots 1 % prisavdrag. Vinstutbetalning avrundas nedåt till ören och får inget andra prisavdrag. Det fasta positiva exemplet är **inte ett lönsamhetsbevis** och ändrar inte den frysta modellen.
++
++Beständiga tillstånd är `created → analyzed → approved → simulated → settled`, med terminala alternativ `no_bets` och `declined`. Kostnader uppstår endast i den första lyckade analysövergången. Inga GET-anrop eller öppnade sammanfattningar skapar ekonomiska händelser. Otillräckligt kapital avvisar hela insatsbatchen och behåller `approved`.
++
++Vid ett osäkert nätverkssvar bevaras begärans innehåll och åtgärds-ID i flikens sessionslagring, även efter omladdning. **Försök samma begäran igen** hämtar det sparade svaret. Backend förhindrar även dubbla övergångar när två flikar använder olika ID:n. Paus/nödstopp blockerar nya åtgärder; exakt återläsning av en redan genomförd begäran tillåts fortsatt. Systemet återupptas aldrig automatiskt.
++
++Bettingdemot kör direkt i backend och **behöver ingen worker eller extern AI**. Förklaringarna märks ”Simulerat agentsvar – lokal demologik.” Framtida resultat hålls utanför analysobjektet och API-svaren tills hela avräkningen är sparad. Scenario, regler, förklaringar, beslut, kostnader och resultat fryses i separata demotabeller genom den nya migrationen `007_betting_demo.sql`. Den tillämpas vid en senare vanlig backendstart; inga ägardata migrerades under utvecklingsverifieringen.
++
++Det äldre **Oddslabb** och dess historiska serier är separata och bevarade. De äldre VD-/specialistuppdragen finns under startguidens extra information och kräver fortfarande worker. Inga nya roller, scheman, verkliga odds, bookmakerkonton, betalningar eller riktiga spel har tillkommit. Självständig AI-analys och externa källor för denna nya arbetsgång är framtida arbete.
++
++Aktuell verifiering, ändrade filer och skärmbilder: [Bettingdemo verifiering](docs/betting-demo/2026-11-06/VERIFIERING.md).
++
+ ## Snabbstart på Windows
+ 
+ Öppna PowerShell i projektmappen. Installera Python 3.12+, Node.js 22.12+ och pnpm 11.25.0 om de saknas. Installationsskriptet kan även använda Codex medföljande Python och Node på denna dator.
+ 
+ ```powershell
+-cd 'C:\Users\matte\OneDrive\Documents\ChatGPT\Jarvis2.0'
++cd 'C:\Users\matte\jarvis'
+ .\scripts\setup.ps1
+ .\scripts\start.ps1
+ ```
+@@ -30,6 +63,8 @@
+ Öppna **http://127.0.0.1:8000** och logga in. Startskriptet skriver loggar till `data/logs`. Låt PowerShell-fönstret vara öppet. Att stänga webbläsaren stoppar inte arbetet. Datorn måste vara vaken.
+ 
+ Om beroenden redan är installerade räcker `scripts/start.ps1`. Saknas ägarkonto kan du välja och upprepa ett lösenord direkt på den lokala första-start-sidan. Detta fungerar endast från loopback med lokal HTTP-origin och kan aldrig skriva över ett befintligt konto. För serverinstallation via HTTPS skapas kontot med CLI-kommandot ovan.
++
++För det sammanhängande bettingdemot följer du startguiden ovan. Följande äldre interna agentflöde är separat och kräver en worker:
+ 
+ 1. Klicka **Återuppta**; första starten är pausad.
+ 2. Välj **Starta arbetsomgång**, skriv ett mål och ange kostnadstak.
+@@ -168,6 +203,15 @@
+ pnpm test:e2e
+ ```
+ 
++Om en kompatibel Google Chrome redan finns installerad kan Playwright använda den utan browserinstallation:
++
++```powershell
++$env:JARVIS_E2E_CHANNEL = 'chrome'
++pnpm test:e2e
++```
++
++Vid verifieringen av bettingdemot kördes sviterna i en separat testkopia med avstängd dotenv och temporära databaser. Detta skyddar tidigare skärmbilder eftersom äldre E2E-testfall fortfarande använder explicita sökvägar under `docs/screenshots`.
++
+ Playwright startar sin egen backend och separat worker på port 8765 med en tillfällig DEMO-databas och ett testlösenord som enbart hör till testmiljön. Inga ägardata eller API-nycklar används. Skärmbilder skrivs till `docs/screenshots`.
+ 
+ Se `docs/VERIFIERING.md` för faktiskt körda tester och kvarvarande verifieringsgränser.
+--- before/backend/jarvis/api.py
++++ after/backend/jarvis/api.py
+@@ -14,6 +14,9 @@
+ from .db import initialize, connect, rows, now, uid, day, pack, event
+ from .models import Strict
+ from .odds_lab import Start as OddsStart, ImportSnapshot as OddsSnapshot, Result as OddsResult, Cost as OddsCost
++from .odds_lab import Action as DemoAction
++from . import betting_demo_service
++from .betting_demo_service import Decision as DemoDecision, ApprovedBatch as DemoBatch
+ 
+ @asynccontextmanager
+ async def lifespan(app):
+@@ -30,7 +33,7 @@
+ async def security_headers(request, call_next):
+     if int(request.headers.get("content-length", "0")) > 50000:
+         return JSONResponse({"detail": "För stor begäran"}, status_code=413)
+-    if request.method == "POST" and request.url.path.startswith("/api/odds-lab/"):
++    if request.method == "POST" and request.url.path.startswith(("/api/odds-lab/", "/api/betting-demo/")):
+         chunks, size = [], 0
+         async for chunk in request.stream():
+             size += len(chunk)
+@@ -328,6 +331,34 @@
+ def odds_cost(run_id: str, body: OddsCost, owner=Depends(auth.authenticate)):
+     return odds_service.record_cost(run_id, body)
+ 
++@app.get("/api/betting-demo/sessions")
++def demo_sessions(owner=Depends(auth.authenticate)):
++    return betting_demo_service.catalog()
++
++@app.post("/api/betting-demo/sessions")
++def demo_create(body: DemoAction, owner=Depends(auth.authenticate)):
++    return betting_demo_service.create(body)
++
++@app.get("/api/betting-demo/sessions/{session_id}")
++def demo_session(session_id: str, owner=Depends(auth.authenticate)):
++    return betting_demo_service.get_session(session_id)
++
++@app.post("/api/betting-demo/sessions/{session_id}/analyze")
++def demo_analyze(session_id: str, body: DemoAction, owner=Depends(auth.authenticate)):
++    return betting_demo_service.analyze(session_id, body)
++
++@app.post("/api/betting-demo/sessions/{session_id}/decision")
++def demo_decision(session_id: str, body: DemoDecision, owner=Depends(auth.authenticate)):
++    return betting_demo_service.decide(session_id, body)
++
++@app.post("/api/betting-demo/sessions/{session_id}/simulate")
++def demo_simulate(session_id: str, body: DemoBatch, owner=Depends(auth.authenticate)):
++    return betting_demo_service.simulate(session_id, body)
++
++@app.post("/api/betting-demo/sessions/{session_id}/settle")
++def demo_settle(session_id: str, body: DemoAction, owner=Depends(auth.authenticate)):
++    return betting_demo_service.settle(session_id, body)
++
+ @app.get("/api/documents")
+ def document_catalog(owner=Depends(auth.authenticate)):
+     from .documents import catalog
+--- before/frontend/src/main.tsx
++++ after/frontend/src/main.tsx
+@@ -6,6 +6,7 @@
+ import { Schedule } from './Schedule';
+ import { OddsLab } from './OddsLab';
+ import { DemoGuide, DEMO_GOAL } from './DemoGuide';
++import { BettingDemo } from './BettingDemo';
+ import { request as api, setCsrfToken } from './api';
+ import { date, money } from './format';
+ import { Modal } from './components/Modal';
+@@ -29,7 +30,7 @@
+   active: 'Aktivt',
+   closed: 'Avslutat'
+ };
+-const nav = [['Översikt', LayoutDashboard], ['Agentteam', Users], ['Chatta med JARVIS', MessageSquare], ['Förslag & beslut', CheckCheck], ['Oddslabb', Activity], ['Projekt & uppgifter', Kanban], ['Ekonomi', Wallet], ['Filer', Files], ['Dokument', BookOpen], ['Historik', History], ['Inställningar', Settings]] as const;
++const nav = [['Översikt', LayoutDashboard], ['Bettingdemo', Beaker], ['Agentteam', Users], ['Chatta med JARVIS', MessageSquare], ['Förslag & beslut', CheckCheck], ['Oddslabb', Activity], ['Projekt & uppgifter', Kanban], ['Ekonomi', Wallet], ['Filer', Files], ['Dokument', BookOpen], ['Historik', History], ['Inställningar', Settings]] as const;
+ function Badge({
+   children,
+   tone = ''
+@@ -211,7 +212,8 @@
+  <div className="main-wrap"><header className="topbar"><button className="mobile-toggle" aria-label="Öppna meny" onClick={() => setMobile(!mobile)}><Menu size={20} /></button><div className="breadcrumbs">Arbetsyta <ChevronRight size={14} /><strong>{page}</strong></div><div className="top-status"><Badge tone={d.mode === 'DEMO' ? 'amber' : 'cyan'}>{d.mode}</Badge><span className={connected ? 'connection' : 'connection offline'}><i />{connected ? 'Ansluten' : 'Återansluter'}</span><span className="state-label">{b.state === 'running' ? 'Arbete tillåtet' : statuses[b.state]}</span><button className="decision-top" onClick={() => go('Förslag & beslut')}><CheckCheck size={16} />{pending.length} beslut</button></div></header>
+  <main className="content"><div className="page-heading"><div><div className="eyebrow">JARVIS / {page === 'Översikt' ? 'MISSION CONTROL' : 'FOOTBALL RESEARCH'}</div><h1>{page === 'Översikt' ? 'Fotbollsanalys före riktiga insatser.' : page}</h1><p>{page === 'Översikt' ? 'Fotbollsodds, datakvalitet och simulerade resultat. Inga riktiga spel.' : ({
+                 Agentteam: 'Tio fasta specialister. Tydliga uppdrag och begränsade behörigheter.',
+-                Oddslabb: 'Jämför odds, granska underlaget och följ upp pappersresultaten.',
++                Bettingdemo: 'Följ en syntetisk omgång från odds och ägarbeslut till avräkning.',
++                Oddslabb: 'Äldre papperslabb och manuella observationer, skilda från bettingdemot.',
+                 Ekonomi: 'Planeringsbudget i SEK. Inga pengar har överförts till programmet.',
+                 'Förslag & beslut': 'Granska exakt vad som föreslås innan nästa steg får köras.',
+                 'Chatta med JARVIS': 'Fråga om läget. Databassvar utan AI-kostnad.'
+@@ -264,6 +266,7 @@
+                   [k]: e.target.value
+                 })} required /></label>)}<button className="primary" disabled={busy}>Spara budgetgränser</button></form></section><section className="panel"><h2>Körläge & integrationer</h2><Badge tone="amber">{d.mode}</Badge><p>Byt läge i serverns .env och starta om backend och worker. DEMO och LIVE använder olika databaser och ägarkonton.</p><h3>LIVE-konfiguration</h3>{d.live_missing.length ? <ul className="config-list">{d.live_missing.map(m => <li key={m}><AlertTriangle size={14} />{m}</li>)}</ul> : <p>Obligatoriska konfigurationsfält är ifyllda. Kontoåtkomst och faktisk debitering har inte verifierats här.</p>}<p>Agentmodeller, prisversion, valutakurs och källinställningar anges serversidigt i .env. V1 kräver en gemensam verifierad prisprofil.</p><hr /><p><strong>Oddsdata:</strong> ingen löpande leverantör är ansluten. Wikipedia och den gamla affärsidéresearchen är arkiverade. Oddslabb använder märkta exempel och manuella observationer.</p><p><strong>Arbetsschema:</strong> begränsade VD-omgångar kan förhandsgodkännas nedan.</p><p><strong>Avstängt:</strong> betalningar, köp, annonser, publicering, utskick och avtal.</p></section></div>}
+  {page === 'Dokument' && <DocumentLibrary route={route} navigate={navigate} />}
++ {page === 'Bettingdemo' && <BettingDemo request={api} systemState={b.state} mode={d.mode} resume={() => control('running')} />}
+  {page === 'Oddslabb' && <OddsLab request={api} systemState={b.state} mode={d.mode} resume={() => control('running')} />}
+  {page === 'Inställningar' && <Schedule value={d.schedule} busy={busy} save={v => act(() => api('/schedule', v))} />}
+  <footer className="system-footer"><span><Radio size={14} />{d.worker.online ? 'Worker ansluten' : 'Worker saknas eller svarar inte'}{d.worker.heartbeat && ' · senast ' + date(d.worker.heartbeat * 1000)}</span><span>EUROPE / STOCKHOLM <span className="footer-divider">/</span> JARVIS 1.0</span></footer>
+--- before/frontend/src/navigation.ts
++++ after/frontend/src/navigation.ts
+@@ -2,7 +2,7 @@
+ 
+ const pages = {
+   oversikt: 'Översikt', agenter: 'Agentteam', chatt: 'Chatta med JARVIS',
+-  forslag: 'Förslag & beslut', oddslabb: 'Oddslabb',
++  forslag: 'Förslag & beslut', bettingdemo: 'Bettingdemo', oddslabb: 'Oddslabb',
+   projekt: 'Projekt & uppgifter', ekonomi: 'Ekonomi',
+   filer: 'Filer', dokument: 'Dokument', historik: 'Historik', installningar: 'Inställningar',
+ } as const;
+--- before/frontend/src/DemoGuide.tsx
++++ after/frontend/src/DemoGuide.tsx
+@@ -5,61 +5,19 @@
+ 
+ export const DEMO_GOAL = 'Granska tidsstämplar, oddsunderlag och kostnader för fotbollens 1X2-marknad. Visa vad som saknas innan en simulerad signal kan bedömas.';
+ 
+-type Props = {
+-  data: State;
+-  busy: boolean;
+-  prepareRound: () => void;
+-  navigate: (page: Page) => void;
+-};
++type Props = {data:State;busy:boolean;prepareRound:()=>void;navigate:(page:Page)=>void};
+ 
+-export function DemoGuide({data, busy, prepareRound, navigate}: Props) {
+-  const pending = data.proposals.filter(p => p.status === 'pending' && new Date(p.expires).getTime() > Date.now()).length;
+-  const latestPlan = data.tasks.find(t => t.phase === 'plan');
+-  const latestWork = latestPlan && data.tasks.find(t => t.phase === 'work' && t.parent_id === latestPlan.id);
+-  const review = latestWork && data.tasks.find(t => t.phase === 'review' && t.parent_id === latestWork.id);
+-  const planStatus = latestPlan
+-    ? latestPlan.status === 'blocked' ? 'Senaste uppdraget är blockerat. Läs orsaken under Projekt & uppgifter.'
+-      : latestPlan.result ? 'VD har lämnat ett svar. Du kan följa uppdraget under Projekt & uppgifter.'
+-        : 'Ett uppdrag finns i kön eller håller på att bearbetas.'
+-    : 'Inget agentuppdrag har skapats ännu.';
+-  const reviewStatus = review?.result
+-    ? review.status === 'blocked' ? 'Kritikern har granskat och stoppat fortsatt arbete. Läs bedömningen i rapporterna.'
+-      : 'Kritikerns rapport finns sparad.'
+-    : latestWork ? 'Specialistarbete eller kritikergranskning återstår.'
+-      : 'Specialistens och kritikerns rapporter skapas efter ett godkänt förslag.';
+-
++export function DemoGuide({data,busy,prepareRound,navigate}:Props) {
+   return <section className="panel demo-guide" aria-labelledby="demo-guide-title">
+-    <header className="demo-guide-heading">
+-      <div><span className="eyebrow">DEMO UNDER UTVECKLING</span><h2 id="demo-guide-title">Så testar vi bettingagentens arbetsflöde</h2></div>
+-      <span className="badge amber">Simulerade data</span>
+-    </header>
+-    <p>Vi bygger mot en agent som analyserar fotboll, föreslår spel och följer upp resultat. Här kan du testa de delar som finns idag.</p>
+-    <div className="demo-guide-state" role="status">
+-      <strong>{data.settings.state === 'running' ? 'Arbete är tillåtet.' : data.settings.state === 'stopped' ? 'Nödstopp är aktivt.' : 'Arbetet är pausat.'}</strong>{' '}
+-      {!data.worker.online ? 'Worker saknar aktuell livssignal. Agentuppdrag behöver en körande worker.'
+-        : data.settings.state !== 'running' ? 'Återuppta i uppdragsformuläret eller kontrollpanelen när du vill köra ett uppdrag.'
+-          : 'Worker är ansluten och kan bearbeta kön.'}
++    <header className="demo-guide-heading"><div><span className="eyebrow">DEMO UNDER UTVECKLING</span><h2 id="demo-guide-title">Så testar vi bettingagentens arbetsflöde</h2></div><span className="badge amber">Påhittade matcher och odds</span></header>
++    <p>Följ en sammanhängande demo: sju påhittade matcher → lokal analys → ditt batchbeslut → låtsasinsatser → simulerade resultat och ekonomi. Den visar arbetsgången, inte bevisad lönsamhet.</p>
++    <div className="demo-guide-state" role="status"><strong>{data.settings.state==='running'?'Nya demoåtgärder är tillåtna.':data.settings.state==='stopped'?'Nödstopp är aktivt.':'Arbetet är pausat.'}</strong>{' '}Du kan alltid läsa sparade omgångar. Demot körs direkt i backend och behöver ingen worker.</div>
++    <div className="demo-guide-cards">
++      <article><Bot size={22} aria-hidden="true"/><h3>1. Skapa och analysera</h3><p>Varje omgång får 1 000 kr i eget låtsaskapital. Analysen sparar fyra förslag, tre avståenden och 1,40 kr i simulerade kostnader.</p><small>Inga insatser registreras när du bara öppnar eller analyserar omgången.</small><button disabled={busy} onClick={()=>navigate('Bettingdemo')}>Öppna matchdemot <ArrowRight size={15}/></button></article>
++      <article><CheckCheck size={22} aria-hidden="true"/><h3>2. Besluta om hela batchen</h3><p>Granska match, utfall, effektivt odds, insats och kostnader. Godkänn exakt den sparade batchen eller avstå.</p><small>Godkännande registrerar ännu inga insatser. Analyskostnaderna kvarstår även om du avstår.</small></article>
++      <article><Activity size={22} aria-hidden="true"/><h3>3. Registrera och avräkna</h3><p>Registrera hela låtsasbatchen och avräkna sedan samtliga spel. Följ öppna insatser, vinster, förluster och netto efter kostnader.</p><small>Omladdning behåller läget. En ny omgång raderar inte historiken och delar inte kapital med gamla omgångar.</small></article>
+     </div>
+-    <div className="demo-guide-cards">
+-      <article>
+-        <Bot size={22} aria-hidden="true"/><h3>1. Ge agenten ett uppdrag</h3>
+-        <p>Öppna ett redigerbart exempeluppdrag. När du skickar det tar VD fram ett förslag.</p>
+-        <small>{planStatus}</small>
+-        <button disabled={busy} onClick={prepareRound}>Förbered demo-uppdrag <ArrowRight size={15}/></button>
+-      </article>
+-      <article>
+-        <CheckCheck size={22} aria-hidden="true"/><h3>2. Granska och följ arbetet</h3>
+-        <p>Du godkänner nästa steg. Därefter lämnar specialisten och kritikern varsin rapport. Kritikern kan stoppa arbetet när underlag saknas.</p>
+-        <small>{pending ? `${pending} ${pending === 1 ? "aktuellt förslag väntar" : "aktuella förslag väntar"} på beslut. ` : 'Inga aktuella förslag väntar på beslut. '}{reviewStatus}</small>
+-        <div className="demo-guide-actions"><button disabled={busy} onClick={() => navigate('Förslag & beslut')}>Öppna agentförslag</button><button disabled={busy} onClick={() => navigate('Filer')}>Se agentrapporter</button></div>
+-      </article>
+-      <article>
+-        <Activity size={22} aria-hidden="true"/><h3>3. Utforska simulerade matcher</h3>
+-        <p>I Oddslabb kan du skapa ett påhittat exempel och följa sju matcher med vinster, förluster, avståenden och kostnader.</p>
+-        <small>Matchlabbet använder fasta beräkningsregler. Agentuppdragen är ännu inte kopplade till matchernas signaler.</small>
+-        <button disabled={busy} onClick={() => navigate('Oddslabb')}>Öppna matchdemot <ArrowRight size={15}/></button>
+-      </article>
+-    </div>
+-    <p className="demo-guide-note">Agenternas svar är förskrivna i DEMO. Inga externa AI-anrop eller riktiga spel görs. Ett simulerat resultat visar funktionerna; det visar inte att agenten kan tjäna pengar.</p>
++    <p className="demo-guide-note">Simulerade agentsvar – lokal demologik. Inga externa AI-anrop eller riktiga spel görs. Agenternas svar är förskrivna i DEMO och bygger på det sparade analysresultatet.</p>
++    <details className="demo-guide-advanced"><summary>Separata agentuppdrag och äldre Oddslabb</summary><p>Det äldre VD → specialist → kritiker-flödet finns kvar som ett separat verktyg och kräver worker. Det kör inte det nya demots insatser. Äldre Oddslabb behåller sina tidigare serier och manuella observationer.</p><div className="demo-guide-actions"><button disabled={busy} onClick={prepareRound}>Förbered demo-uppdrag <ArrowRight size={15}/></button><button disabled={busy} onClick={()=>navigate('Förslag & beslut')}>Öppna agentförslag</button><button disabled={busy} onClick={()=>navigate('Filer')}>Se agentrapporter</button><button disabled={busy} onClick={()=>navigate('Oddslabb')}>Öppna äldre Oddslabb</button></div></details>
+   </section>;
+ }
+--- before/frontend/src/demo-guide.css
++++ after/frontend/src/demo-guide.css
+@@ -13,5 +13,9 @@
+ .demo-guide-cards button{font-size:11px;max-width:100%;white-space:normal;text-align:left}
+ .demo-guide-actions{display:flex;flex-wrap:wrap;gap:8px}
+ .demo-guide .demo-guide-note{margin:18px 0 0;color:#9eb3c7;font-size:11px}
++.demo-guide-advanced{margin-top:18px;font-size:11px;line-height:1.8}
++.demo-guide-advanced summary{cursor:pointer;color:#bbd6e5}
++.demo-guide-advanced p{color:#9eb3c7}
++.demo-guide-advanced button{white-space:normal;max-width:100%;text-align:left}
+ @media(max-width:1100px){.demo-guide-cards{grid-template-columns:1fr}.demo-guide-heading{flex-wrap:wrap}}
+ @media(max-width:650px){.demo-guide-heading h2{font-size:18px}.demo-guide-cards article{padding:15px}}
+--- before/frontend/e2e/demo-guide.spec.ts
++++ after/frontend/e2e/demo-guide.spec.ts
+@@ -12,6 +12,7 @@
+     state: await (await fetch('/api/state')).json(),
+     lab: await (await fetch('/api/odds-lab')).json(),
+   }));
++  await guide.getByText('Separata agentuppdrag och äldre Oddslabb', {exact:true}).click();
+   await guide.getByRole('button', {name: 'Förbered demo-uppdrag'}).click();
+   await expect(page.getByRole('dialog')).toBeVisible();
+   await expect(page.getByLabel('Vad ska teamet undersöka?')).toHaveValue(/Granska tidsstämplar, oddsunderlag och kostnader/);
+@@ -21,7 +22,7 @@
+   await expect(page).toHaveURL(/#\/forslag$/);
+   await page.goto('/#/oversikt');
+   await guide.getByRole('button', {name: 'Öppna matchdemot'}).click();
+-  await expect(page.getByRole('heading', {name: 'Testa signalerna. Behåll pengarna.'})).toBeVisible();
++  await expect(page.getByRole('heading', {name: 'Från odds till avräkning.'})).toBeVisible();
+   const after = await page.evaluate(async () => ({
+     state: await (await fetch('/api/state')).json(),
+     lab: await (await fetch('/api/odds-lab')).json(),
+--- before/frontend/playwright.config.mjs
++++ after/frontend/playwright.config.mjs
+@@ -1,4 +1,4 @@
+ import {defineConfig} from '@playwright/test';
+ import path from 'node:path';
+ process.env.JARVIS_E2E_STOP_FILE=path.resolve('../data',`e2e-stop-${process.pid}`);
+-export default defineConfig({testDir:'./e2e',globalTeardown:'./e2e/teardown.mjs',workers:1,timeout:30000,use:{baseURL:'http://127.0.0.1:8765',headless:true,trace:'retain-on-failure'},webServer:{command:`"${process.env.JARVIS_PYTHON||(process.platform==='win32'?'../.venv/Scripts/python.exe':'../.venv/bin/python')}" ../scripts/e2e_server.py`,url:'http://127.0.0.1:8765',reuseExistingServer:false,timeout:30000}});
++export default defineConfig({testDir:'./e2e',globalTeardown:'./e2e/teardown.mjs',workers:1,timeout:30000,use:{baseURL:'http://127.0.0.1:8765',headless:true,channel:process.env.JARVIS_E2E_CHANNEL||undefined,trace:'retain-on-failure'},webServer:{command:`"${process.env.JARVIS_PYTHON||(process.platform==='win32'?'../.venv/Scripts/python.exe':'../.venv/bin/python')}" ../scripts/e2e_server.py`,url:'http://127.0.0.1:8765',reuseExistingServer:false,timeout:30000}});
+--- /dev/null
++++ after/backend/jarvis/betting_demo.py
+@@ -0,0 +1,213 @@
++"""Ren, versionsbunden syntetisk matchanalys. Ingen DB, klocka eller transport."""
++from copy import deepcopy
++from datetime import datetime, timedelta, timezone
++from decimal import Decimal, ROUND_FLOOR, localcontext
++from statistics import median
++
++from pydantic import AwareDatetime, BaseModel, ConfigDict, Field
++
++from .odds_lab import POLICY, Snapshot, digest, example_snapshot, normalize_prices
++
++SCENARIO_VERSION = "seven-matches-demo-v1"
++ENGINE_VERSION = "betting-demo-analysis-v1"
++EXPLANATION_VERSION = "betting-demo-explanations-v1"
++SETTLEMENT_VERSION = "effective-odds-floor-ore-v1"
++AGENT_NOTICE = "Simulerat agentsvar – lokal demologik."
++OUTCOMES = {"home": "hemmaseger", "draw": "oavgjort", "away": "bortaseger"}
++STATES = ("created", "analyzed", "no_bets", "approved", "declined", "simulated", "settled")
++
++
++class AnalysisInput(BaseModel):
++    """Endast tillgängliga offerter; framtida resultat får inte passera gränsen."""
++    model_config = ConfigDict(extra="forbid")
++    observation: Snapshot
++    simulated_analysis_at: AwareDatetime
++    rules: dict
++    available_capital_ore: int = Field(strict=True, ge=0)
++
++
++class ScenarioAnalysisInput(BaseModel):
++    model_config = ConfigDict(extra="forbid")
++    scenario_version: str
++    rules_version: str
++    engine_version: str
++    explanation_version: str
++    initial_capital_ore: int = Field(strict=True, gt=0)
++    stake_ore: int = Field(strict=True, gt=0)
++    rules: dict
++    observations: list[Snapshot]
++    cost_definitions: list[dict]
++    role_labels: dict[str, str]
++
++
++def analysis_input(frozen):
++    """Bygg gränsobjektet innan någon analysfunktion anropas."""
++    return ScenarioAnalysisInput.model_validate({k: frozen[k] for k in ScenarioAnalysisInput.model_fields})
++
++
++def build_scenario():
++    # Samma sju observationer, tider, kostnader och resultat som odds_service._synthetic.
++    observations, results, costs = [], {}, []
++    start = datetime(2025, 1, 1, 10, tzinfo=timezone.utc)
++    for index in range(7):
++        at = start + timedelta(days=index)
++        data = example_snapshot(at)
++        data.update(event_id=f"syntetisk-{index + 1}", home=f"Påhittat hemmalag {index + 1}",
++                    away=f"Påhittat bortalag {index + 1}", data_cost_ore=20)
++        if index == 4:
++            for quote in data["quotes"]:
++                quote["updated_at"] = (at - timedelta(minutes=5)).isoformat()
++        elif index == 5:
++            data["quotes"] = data["quotes"][:3]
++        elif index == 6:
++            data["quotes"][0]["odds"]["home"] = 20000
++        observation = Snapshot.model_validate(data).model_dump(mode="json")
++        observations.append(observation)
++        results[data["event_id"]] = {
++            "status": "final", "home_score": 2 if index % 2 == 0 else 0,
++            "away_score": 0 if index % 2 == 0 else 1,
++            "simulated_finished_at": (at + timedelta(hours=5)).isoformat(),
++        }
++        costs.append({"event_id": data["event_id"], "cost_kind": "analysis_data",
++                      "amount_ore": 20, "simulated_at": at.isoformat(),
++                      "description": "Simulerad datakostnad vid sparad analys, även vid avstående."})
++    return {
++        "scenario_version": SCENARIO_VERSION, "rules_version": POLICY["version"],
++        "engine_version": ENGINE_VERSION, "explanation_version": EXPLANATION_VERSION,
++        "settlement_version": SETTLEMENT_VERSION,
++        "initial_capital_ore": POLICY["initial_bankroll_ore"], "stake_ore": POLICY["stake_ore"],
++        "rules": deepcopy(POLICY), "observations": observations, "settlement_data": results,
++        "cost_definitions": costs,
++        "role_labels": {"analyst": "Oddsanalytiker", "finance": "Ekonom / Risk", "critic": "Kritiker / Kvalitetskontroll"},
++    }
++
++
++def validate_scenario(scenario):
++    for field in ("initial_capital_ore", "stake_ore"):
++        if type(scenario[field]) is not int or scenario[field] <= 0:
++            raise ValueError("Scenariot måste ha positivt heltalskapital och fast insats.")
++    ids = [Snapshot.model_validate(o).event_id for o in scenario["observations"]]
++    if not ids or len(ids) != len(set(ids)) or set(ids) != set(scenario["settlement_data"]):
++        raise ValueError("Scenariots matchidentiteter är ofullständiga eller duplicerade.")
++    if scenario["rules"]["stake_ore"] != scenario["stake_ore"]:
++        raise ValueError("Scenariots fasta insats stämmer inte med de frysta reglerna.")
++    keys = set()
++    for cost in scenario["cost_definitions"]:
++        key = (cost["event_id"], cost["cost_kind"])
++        if (key in keys or key[0] not in ids or type(cost["amount_ore"]) is not int
++                or cost["amount_ore"] < 0):
++            raise ValueError("Scenariots kostnadsdefinitioner är ogiltiga.")
++        keys.add(key)
++    if sum(c["amount_ore"] for c in scenario["cost_definitions"]) > scenario["initial_capital_ore"]:
++        raise ValueError("Scenariots obligatoriska analyskostnader överstiger startkapitalet.")
++
++
++def analyze_match(data: AnalysisInput):
++    """Samma prismatematik som v1, med uttryckliga frysta parametrar."""
++    snapshot, rules = data.observation, data.rules
++    checks, valid = [], []
++    with localcontext() as ctx:
++        ctx.prec = 40
++        for quote in snapshot.quotes:
++            age = (snapshot.captured_at - quote.updated_at).total_seconds()
++            probabilities, total = normalize_prices(quote.odds)
++            reason = None
++            if not 0 <= age <= rules["max_quote_age_seconds"]:
++                reason = "För gammal offert eller offert från framtiden."
++            if not Decimal("0.95") <= total <= Decimal("1.25"):
++                reason = "Avvikande marginal; offerten behöver kontrolleras."
++            checks.append({"book": quote.book, "accepted": reason is None, "reason": reason,
++                           "overround_bp": int(total * 10000)})
++            if reason is None:
++                valid.append((quote, probabilities))
++        decision = {"selected": False, "reason": "Ingen avvikelse klarar de låsta provreglerna.", "checks": checks}
++        if (snapshot.starts_at - data.simulated_analysis_at).total_seconds() < rules["min_seconds_before_kickoff"]:
++            return {**decision, "reason": "För nära avspark eller redan startad match."}
++        if len(valid) < rules["min_reference_books"] + 1:
++            return {**decision, "reason": "Färre än fyra giltiga källor; tre andra jämförelsekällor krävs."}
++        candidates = []
++        for quote, _ in valid:
++            references = [(other, probs) for other, probs in valid if other.book != quote.book]
++            for outcome in OUTCOMES:
++                probability = median(p[outcome] for _, p in references)
++                offered = getattr(quote.odds, outcome)
++                effective = offered * (10000 - rules["price_haircut_bp"]) // 10000
++                edge = int(((probability * effective / 10000 - 1) * 10000).to_integral_value(rounding=ROUND_FLOOR))
++                if rules["min_edge_bp"] <= edge <= rules["max_edge_bp"]:
++                    candidates.append({"book": quote.book, "outcome": outcome, "quoted_odds": offered,
++                                       "paper_odds": effective, "edge_bp": edge,
++                                       "reference_probability_ppm": int(probability * 1000000),
++                                       "reference_books": sorted(q.book for q, _ in references)})
++        if not candidates:
++            return decision
++        if data.available_capital_ore < rules["stake_ore"]:
++            return {**decision, "reason": "Låtsaskapitalet täcker inte en fast insats."}
++        chosen = sorted(candidates, key=lambda c: (-c["edge_bp"], c["book"], c["outcome"]))[0]
++        return {**decision, **chosen, "selected": True, "stake_ore": rules["stake_ore"],
++                "reason": "Regelbaserat syntetiskt förslag. Referensen är ingen verifierad vinstchans."}
++
++
++def explain(decision):
++    if not decision["selected"]:
++        return f"Avstå: {decision['reason']} Kostnaden för analysen kvarstår."
++    return (f"Förslag: {OUTCOMES[decision['outcome']]} hos {decision['book']}. "
++            f"Effektivt odds {Decimal(decision['paper_odds']) / 10000:.4f} efter det enda prisavdraget; "
++            f"beräknad referensavvikelse {Decimal(decision['edge_bp']) / 100:.2f} %. "
++            f"Referens utan målbolaget: {', '.join(decision['reference_books'])}. "
++            "Käll-ID:n bevisar inte oberoende källfamiljer eller verklig spelbarhet.")
++
++
++def analyze_scenario(data: ScenarioAnalysisInput):
++    frozen = data.model_dump(mode="json")
++    if frozen["engine_version"] != ENGINE_VERSION or frozen["explanation_version"] != EXPLANATION_VERSION:
++        raise ValueError("Den frysta analysversionen stöds inte. Sparad historik kan fortfarande läsas.")
++    cost = sum(c["amount_ore"] for c in frozen["cost_definitions"])
++    matches, proposals = [], []
++    for observation in frozen["observations"]:
++        data = AnalysisInput(observation=observation, simulated_analysis_at=observation["captured_at"],
++                             rules=frozen["rules"], available_capital_ore=frozen["initial_capital_ore"] - cost)
++        decision = analyze_match(data)
++        explanation = explain(decision)
++        matches.append({"event_id": data.observation.event_id, "decision": decision,
++                        "simulated_analysis_at": data.simulated_analysis_at.isoformat(),
++                        "explanation": explanation, "role_id": "analyst", "notice": AGENT_NOTICE})
++        if decision["selected"]:
++            proposals.append({"event_id": data.observation.event_id, "home": data.observation.home,
++                              "away": data.observation.away, "outcome": decision["outcome"],
++                              "book": decision["book"], "paper_odds": decision["paper_odds"],
++                              "stake_ore": decision["stake_ore"], "explanation": explanation})
++    # Framtida avräkningsdata påverkar inte ens analysens innehållshash.
++    analysis_input_hash = digest(frozen)
++    value = {"proposal_version": 1, "analysis_input_hash": analysis_input_hash, "matches": matches,
++             "proposals": proposals, "total_stake_ore": sum(p["stake_ore"] for p in proposals),
++             "simulated_cost_ore": cost,
++             "messages": [
++                 {"role_id": "finance", "notice": AGENT_NOTICE,
++                  "text": f"{len(proposals)} förslag. Analysen kostar {cost} simulerade öre även om du avstår. Kapitalet tillhör endast denna omgång."},
++                 {"role_id": "critic", "notice": AGENT_NOTICE,
++                  "text": "Påhittade odds och utfall prövar arbetsflödet. De ger inget tillstånd till riktiga insatser och inget belägg för lönsamhet."},
++             ]}
++    return {**value, "proposal_hash": digest(value)}
++
++
++def settle_bet(bet, result):
++    """Avräkna det redan godkända effektiva oddset; inget nytt prisavdrag."""
++    if result["status"] == "void":
++        return {"state": "void", "return_ore": bet["stake_ore"], "profit_ore": 0}
++    outcome = "home" if result["home_score"] > result["away_score"] else "away" if result["away_score"] > result["home_score"] else "draw"
++    payout = bet["stake_ore"] * bet["paper_odds"] // 10000 if outcome == bet["outcome"] else 0
++    return {"state": "won" if payout else "lost", "return_ore": payout, "profit_ore": payout - bet["stake_ore"]}
++
++
++def summary(initial, costs, bets):
++    cost = sum(c["amount_ore"] for c in costs)
++    closed = [b for b in bets if b["state"] != "open"]
++    profit = sum(b["profit_ore"] for b in closed)
++    open_stake = sum(b["stake_ore"] for b in bets if b["state"] == "open")
++    return {"initial_capital_ore": initial, "game_profit_ore": profit, "simulated_cost_ore": cost,
++            "net_ore": profit - cost, "capital_ore": initial + profit - cost,
++            "open_stake_ore": open_stake, "available_ore": initial + profit - cost - open_stake,
++            "total_stake_ore": sum(b["stake_ore"] for b in bets),
++            "payout_ore": sum(b["return_ore"] for b in closed), "bet_count": len(bets),
++            "settled_count": len(closed), "won_count": sum(b["state"] == "won" for b in closed),
++            "lost_count": sum(b["state"] == "lost" for b in closed)}
+--- /dev/null
++++ after/backend/jarvis/betting_demo_service.py
+@@ -0,0 +1,255 @@
++"""Beständiga, atomiska demoövergångar. Ingen worker eller extern transport."""
++import json
++from typing import Literal
++
++from pydantic import Field
++
++from . import config
++from .budget import RuleError
++from .db import connect, now, uid
++from .odds_lab import Action, canonical, digest
++from .roles import ROLES
++from .betting_demo import (SCENARIO_VERSION, SETTLEMENT_VERSION, build_scenario, validate_scenario,
++                           analysis_input, analyze_scenario, settle_bet, summary)
++
++
++class Decision(Action):
++    decision: Literal["approved", "declined"]
++    proposal_version: int = Field(strict=True, ge=1)
++    proposal_hash: str = Field(pattern=r"^[0-9a-f]{64}$")
++
++
++class ApprovedBatch(Action):
++    proposal_version: int = Field(strict=True, ge=1)
++    proposal_hash: str = Field(pattern=r"^[0-9a-f]{64}$")
++
++
++def require_demo():
++    if config.mode() != "DEMO":
++        raise RuleError("Bettingdemot är endast tillgängligt i DEMO. Inga riktiga spel stöds.")
++
++
++def _load(c, session_id):
++    row = c.execute("SELECT * FROM betting_demo_sessions WHERE id=?", (session_id,)).fetchone()
++    if not row:
++        raise RuleError("Demo-omgången saknas.")
++    value = dict(row)
++    try:
++        frozen = json.loads(value["frozen"])
++        if digest(frozen) != value["frozen_hash"]:
++            raise ValueError()
++        value["frozen"] = frozen
++        value["analysis"] = json.loads(value["analysis"]) if value["analysis"] else None
++        if value["analysis"]:
++            analysis = value["analysis"]
++            if digest({k: v for k, v in analysis.items() if k != "proposal_hash"}) != analysis["proposal_hash"]:
++                raise ValueError()
++        value["summary"] = json.loads(value["summary"])
++        value["settlement"] = json.loads(value["settlement"]) if value["settlement"] else None
++    except (ValueError, TypeError, KeyError):
++        raise RuleError("Demo-omgångens sparade underlag har ogiltig kontrollsumma eller format.") from None
++    return value
++
++
++def _state(row, expected):
++    if row["state"] != expected:
++        raise RuleError(f"Inaktuell övergång: omgången är {row['state']}, inte {expected}. Läs det sparade läget.")
++
++
++def _ledger(c, session_id):
++    costs = [dict(r) for r in c.execute("SELECT * FROM betting_demo_costs WHERE session_id=? ORDER BY event_id,cost_kind", (session_id,))]
++    bets = [dict(r) for r in c.execute("SELECT * FROM betting_demo_bets WHERE session_id=? ORDER BY event_id", (session_id,))]
++    return costs, bets
++
++
++def _economy(c, row):
++    return summary(row["frozen"]["initial_capital_ore"], *_ledger(c, row["id"]))
++
++
++def _perform(session_id, operation, body, execute):
++    require_demo()
++    request_hash = digest({"session_id": session_id, "operation": operation, "body": body.model_dump(mode="json")})
++    with connect(True) as c:
++        old = c.execute("SELECT * FROM betting_demo_actions WHERE action_id=?", (body.action_id,)).fetchone()
++        if old:
++            if old["request_hash"] != request_hash:
++                raise RuleError("Åtgärds-ID:t är bundet till annan omgång, operation eller annat innehåll.")
++            return json.loads(old["response"])
++        if c.execute("SELECT state FROM settings WHERE id=1").fetchone()[0] != "running":
++            raise RuleError("Demot är pausat eller nödstoppat. Återuppta uttryckligen innan en ny åtgärd.")
++        row = _load(c, session_id) if session_id else None
++        result = execute(c, row)
++        c.execute("INSERT INTO betting_demo_actions VALUES(?,?,?,?,?,?)",
++                  (body.action_id, result["id"], operation, request_hash, canonical(result), now()))
++        c.execute("INSERT INTO betting_demo_events(session_id,operation,from_state,to_state,recorded_at) VALUES(?,?,?,?,?)",
++                  (result["id"], operation, row["state"] if row else None, result["state"], now()))
++        return result
++
++
++def create(body: Action):
++    def execute(c, _):
++        try:
++            frozen = build_scenario()
++            validate_scenario(frozen)
++        except (ValueError, KeyError, TypeError) as exc:
++            raise RuleError("Demots fasta scenario är felkonfigurerat: " + str(exc)) from None
++        if not {"analyst", "finance", "critic"}.issubset(ROLES):
++            raise RuleError("Demots befintliga roller saknas.")
++        session_id, created = uid(), now()
++        c.execute("INSERT INTO betting_demo_sessions(id,state,frozen,frozen_hash,summary,created_at,updated_at) VALUES(?,'created',?,?,?,?,?)",
++                  (session_id, canonical(frozen), digest(frozen), canonical(summary(frozen["initial_capital_ore"], [], [])), created, created))
++        return {"id": session_id, "state": "created"}
++    return _perform(None, "create", body, execute)
++
++
++def analyze(session_id, body: Action):
++    def execute(c, row):
++        _state(row, "created")
++        try:
++            analysis = analyze_scenario(analysis_input(row["frozen"]))
++        except ValueError as exc:
++            raise RuleError(str(exc)) from None
++        recorded = now()
++        for cost in row["frozen"]["cost_definitions"]:
++            c.execute("INSERT INTO betting_demo_costs VALUES(?,?,?,?,?,?)",
++                      (session_id, cost["event_id"], cost["cost_kind"], cost["amount_ore"], cost["simulated_at"], recorded))
++        state = "analyzed" if analysis["proposals"] else "no_bets"
++        c.execute("UPDATE betting_demo_sessions SET state=?,analysis=?,summary=?,updated_at=? WHERE id=?",
++                  (state, canonical(analysis), canonical(_economy(c, row)), recorded, session_id))
++        return {"id": session_id, "state": state}
++    return _perform(session_id, "analyze", body, execute)
++
++
++def _bound(row, body):
++    if (body.proposal_version != row["analysis"]["proposal_version"]
++            or body.proposal_hash != row["analysis"]["proposal_hash"]):
++        raise RuleError("Förslagsversionen eller innehållshashen stämmer inte. Läs den sparade batchen.")
++
++
++def decide(session_id, body: Decision):
++    def execute(c, row):
++        _state(row, "analyzed")
++        _bound(row, body)
++        recorded = now()
++        c.execute("UPDATE betting_demo_sessions SET state=?,decision=?,decision_version=?,decision_hash=?,decision_at=?,updated_at=? WHERE id=?",
++                  (body.decision, body.decision, body.proposal_version, body.proposal_hash, recorded, recorded, session_id))
++        return {"id": session_id, "state": body.decision}
++    return _perform(session_id, "decision", body, execute)
++
++
++def simulate(session_id, body: ApprovedBatch):
++    def execute(c, row):
++        _state(row, "approved")
++        _bound(row, body)
++        if (row["decision"] != "approved" or row["decision_version"] != body.proposal_version
++                or row["decision_hash"] != body.proposal_hash):
++            raise RuleError("Batchen saknar ett matchande ägarbeslut.")
++        proposals = row["analysis"]["proposals"]
++        total = sum(p["stake_ore"] for p in proposals)
++        available = _economy(c, row)["available_ore"]
++        if total > available:
++            raise RuleError(f"Hela batchen kräver {total} öre men bara {available} öre är tillgängliga. Inga insatser registrerades.")
++        recorded = now()
++        for proposal in proposals:
++            c.execute("INSERT INTO betting_demo_bets(session_id,event_id,outcome,paper_odds,stake_ore,proposal_version,proposal_hash,state,placed_at) VALUES(?,?,?,?,?,?,?,'open',?)",
++                      (session_id, proposal["event_id"], proposal["outcome"], proposal["paper_odds"], proposal["stake_ore"],
++                       body.proposal_version, body.proposal_hash, recorded))
++        c.execute("UPDATE betting_demo_sessions SET state='simulated',summary=?,updated_at=? WHERE id=?",
++                  (canonical(_economy(c, row)), recorded, session_id))
++        return {"id": session_id, "state": "simulated"}
++    return _perform(session_id, "simulate", body, execute)
++
++
++def settle(session_id, body: Action):
++    def execute(c, row):
++        _state(row, "simulated")
++        if row["frozen"]["settlement_version"] != SETTLEMENT_VERSION:
++            raise RuleError("Omgångens frysta avräkningsversion stöds inte. Ingen avräkning gjordes.")
++        _, bets = _ledger(c, session_id)
++        if len(bets) != len(row["analysis"]["proposals"]) or any(b["state"] != "open" for b in bets):
++            raise RuleError("Den öppna batchen är ofullständig. Ingen avräkning gjordes.")
++        proposals = {p["event_id"]: p for p in row["analysis"]["proposals"]}
++        for bet in bets:
++            proposal = proposals.get(bet["event_id"])
++            if (not proposal or any(bet[k] != proposal[k] for k in ("outcome", "paper_odds", "stake_ore"))
++                    or bet["proposal_version"] != row["decision_version"] or bet["proposal_hash"] != row["decision_hash"]):
++                raise RuleError("Insatsbatchen matchar inte ägarbeslutet. Ingen avräkning gjordes.")
++        recorded = now()
++        for bet in bets:
++            result = row["frozen"]["settlement_data"][bet["event_id"]]
++            value = settle_bet(bet, result)
++            c.execute("UPDATE betting_demo_bets SET state=?,return_ore=?,profit_ore=?,result=?,settled_at=? WHERE session_id=? AND event_id=?",
++                      (value["state"], value["return_ore"], value["profit_ore"], canonical(result), recorded, session_id, bet["event_id"]))
++        economy = _economy(c, row)
++        settlement = {"results": [{"event_id": event_id, **result} for event_id, result in row["frozen"]["settlement_data"].items()],
++                      "summary": economy, "rules_version": row["frozen"]["rules_version"],
++                      "settlement_version": row["frozen"]["settlement_version"], "recorded_at": recorded}
++        c.execute("UPDATE betting_demo_sessions SET state='settled',summary=?,settlement=?,updated_at=? WHERE id=?",
++                  (canonical(economy), canonical(settlement), recorded, session_id))
++        return {"id": session_id, "state": "settled"}
++    return _perform(session_id, "settle", body, execute)
++
++
++def _pick(value, keys):
++    return {k: value[k] for k in keys if k in value}
++
++
++def _public_analysis(analysis):
++    if analysis is None:
++        return None
++    result = _pick(analysis, ("proposal_version", "proposal_hash", "total_stake_ore", "simulated_cost_ore"))
++    result["matches"] = []
++    for match in analysis["matches"]:
++        view = _pick(match, ("event_id", "simulated_analysis_at", "explanation", "role_id", "notice"))
++        view["decision"] = _pick(match["decision"], ("selected", "reason", "book", "outcome", "quoted_odds", "paper_odds", "edge_bp", "reference_probability_ppm", "reference_books", "stake_ore"))
++        view["decision"]["checks"] = [_pick(check, ("book", "accepted", "reason", "overround_bp")) for check in match["decision"]["checks"]]
++        result["matches"].append(view)
++    result["proposals"] = [_pick(p, ("event_id", "home", "away", "outcome", "book", "paper_odds", "stake_ore", "explanation")) for p in analysis["proposals"]]
++    result["messages"] = [_pick(m, ("role_id", "notice", "text")) for m in analysis["messages"]]
++    return result
++
++
++def _public_header(row):
++    return {**_pick(row, ("id", "state", "created_at", "updated_at")),
++            **_pick(row["frozen"], ("scenario_version", "rules_version", "explanation_version", "initial_capital_ore", "stake_ore")),
++            "summary": row["summary"]}
++
++
++def _public_observation(observation):
++    # Läs det sparade underlaget; tillämpa inte en senare Snapshot-validator på historiken.
++    result = _pick(observation, ("event_id", "sport", "market", "home", "away", "starts_at", "captured_at", "data_cost_ore"))
++    result["quotes"] = [{**_pick(q, ("book", "source_url", "updated_at")),
++                         "odds": _pick(q["odds"], ("home", "draw", "away"))} for q in observation["quotes"]]
++    return result
++
++
++def get_session(session_id):
++    require_demo()
++    with connect() as c:
++        row = _load(c, session_id)
++        costs, bets = _ledger(c, session_id)
++        result = {**_public_header(row),
++                  "observations": [_public_observation(o) for o in row["frozen"]["observations"]],
++                  "analysis": _public_analysis(row["analysis"]),
++                  "decision": ({"value": row["decision"], "proposal_version": row["decision_version"],
++                                "proposal_hash": row["decision_hash"], "recorded_at": row["decision_at"]} if row["decision"] else None),
++                  "costs": [_pick(cost, ("event_id", "cost_kind", "amount_ore", "simulated_at", "recorded_at")) for cost in costs],
++                  "bets": [],
++                  "history": [dict(r) for r in c.execute("SELECT operation,from_state,to_state,recorded_at FROM betting_demo_events WHERE session_id=? ORDER BY seq", (session_id,))]}
++        for bet in bets:
++            view = _pick(bet, ("event_id", "outcome", "paper_odds", "stake_ore", "proposal_version", "proposal_hash", "state", "placed_at"))
++            if row["state"] == "settled":
++                view.update(_pick(bet, ("return_ore", "profit_ore", "settled_at")))
++                view["result"] = _pick(json.loads(bet["result"]), ("status", "home_score", "away_score", "simulated_finished_at"))
++            result["bets"].append(view)
++        if row["state"] == "settled":
++            result["results"] = [_pick(r, ("event_id", "status", "home_score", "away_score", "simulated_finished_at")) for r in row["settlement"]["results"]]
++        return result
++
++
++def catalog():
++    require_demo()
++    with connect() as c:
++        ids = [r[0] for r in c.execute("SELECT id FROM betting_demo_sessions ORDER BY created_at DESC,id DESC")]
++        return {"scenario_version": SCENARIO_VERSION, "real_money_enabled": False,
++                "sessions": [_public_header(_load(c, session_id)) for session_id in ids]}
+--- /dev/null
++++ after/backend/migrations/007_betting_demo.sql
+@@ -0,0 +1,62 @@
++-- Eget syntetiskt kapital per omgång. Befintlig budget och Oddslabb lämnas orörda.
++CREATE TABLE betting_demo_sessions (
++    id TEXT PRIMARY KEY,
++    state TEXT NOT NULL CHECK(state IN ('created','analyzed','no_bets','approved','declined','simulated','settled')),
++    frozen TEXT NOT NULL,
++    frozen_hash TEXT NOT NULL,
++    analysis TEXT,
++    decision TEXT CHECK(decision IN ('approved','declined')),
++    decision_version INTEGER,
++    decision_hash TEXT,
++    decision_at TEXT,
++    summary TEXT NOT NULL,
++    settlement TEXT,
++    created_at TEXT NOT NULL,
++    updated_at TEXT NOT NULL
++);
++CREATE TABLE betting_demo_costs (
++    session_id TEXT NOT NULL REFERENCES betting_demo_sessions(id),
++    event_id TEXT NOT NULL,
++    cost_kind TEXT NOT NULL,
++    amount_ore INTEGER NOT NULL CHECK(amount_ore >= 0),
++    simulated_at TEXT NOT NULL,
++    recorded_at TEXT NOT NULL,
++    PRIMARY KEY(session_id,event_id,cost_kind)
++);
++CREATE TABLE betting_demo_bets (
++    session_id TEXT NOT NULL REFERENCES betting_demo_sessions(id),
++    event_id TEXT NOT NULL,
++    outcome TEXT NOT NULL CHECK(outcome IN ('home','draw','away')),
++    paper_odds INTEGER NOT NULL CHECK(paper_odds >= 10001),
++    stake_ore INTEGER NOT NULL CHECK(stake_ore > 0),
++    proposal_version INTEGER NOT NULL,
++    proposal_hash TEXT NOT NULL,
++    state TEXT NOT NULL CHECK(state IN ('open','won','lost','void')),
++    return_ore INTEGER,
++    profit_ore INTEGER,
++    result TEXT,
++    placed_at TEXT NOT NULL,
++    settled_at TEXT,
++    PRIMARY KEY(session_id,event_id),
++    CHECK((state='open' AND return_ore IS NULL AND profit_ore IS NULL AND result IS NULL AND settled_at IS NULL)
++       OR (state!='open' AND return_ore IS NOT NULL AND profit_ore IS NOT NULL AND result IS NOT NULL AND settled_at IS NOT NULL))
++);
++CREATE TABLE betting_demo_actions (
++    action_id TEXT PRIMARY KEY,
++    session_id TEXT NOT NULL REFERENCES betting_demo_sessions(id),
++    operation TEXT NOT NULL,
++    request_hash TEXT NOT NULL,
++    response TEXT NOT NULL,
++    recorded_at TEXT NOT NULL
++);
++CREATE TABLE betting_demo_events (
++    seq INTEGER PRIMARY KEY AUTOINCREMENT,
++    session_id TEXT NOT NULL REFERENCES betting_demo_sessions(id),
++    operation TEXT NOT NULL,
++    from_state TEXT,
++    to_state TEXT NOT NULL,
++    recorded_at TEXT NOT NULL,
++    UNIQUE(session_id,operation)
++);
++CREATE INDEX betting_demo_recent ON betting_demo_sessions(created_at DESC,id DESC);
++INSERT INTO schema_migrations(version) VALUES(7);
+--- /dev/null
++++ after/frontend/src/BettingDemo.tsx
+@@ -0,0 +1,123 @@
++import {useEffect, useRef, useState} from 'react';
++import {ArrowRight, CheckCheck, CircleHelp, Flag, History, LockKeyhole, RefreshCw} from 'lucide-react';
++import {money, date} from './format';
++import './betting-demo.css';
++
++type Status = 'created'|'analyzed'|'no_bets'|'approved'|'declined'|'simulated'|'settled';
++type Summary = {initial_capital_ore:number;game_profit_ore:number;simulated_cost_ore:number;net_ore:number;capital_ore:number;open_stake_ore:number;available_ore:number;total_stake_ore:number;payout_ore:number;bet_count:number;settled_count:number;won_count:number;lost_count:number};
++type Header = {id:string;state:Status;created_at:string;updated_at:string;scenario_version:string;rules_version:string;explanation_version:string;initial_capital_ore:number;stake_ore:number;summary:Summary};
++type Proposal = {event_id:string;home:string;away:string;outcome:string;book:string;paper_odds:number;stake_ore:number;explanation:string};
++type Analysis = {proposal_version:number;proposal_hash:string;total_stake_ore:number;simulated_cost_ore:number;proposals:Proposal[];matches:{event_id:string;simulated_analysis_at:string;explanation:string;notice:string;decision:{selected:boolean;reason:string;checks:{book:string;accepted:boolean;reason:string|null}[]}}[];messages:{role_id:string;notice:string;text:string}[]};
++type Observation = {event_id:string;home:string;away:string;starts_at:string;captured_at:string;quotes:{book:string;updated_at:string;odds:{home:number;draw:number;away:number}}[]};
++type Session = Header & {observations:Observation[];analysis:Analysis|null;decision:{value:string;recorded_at:string;proposal_version:number;proposal_hash:string}|null;costs:{event_id:string;cost_kind:string;amount_ore:number;recorded_at:string;simulated_at:string}[];bets:{event_id:string;state:string;stake_ore:number;paper_odds:number;outcome:string;return_ore?:number;profit_ore?:number}[];results?:{event_id:string;status:string;home_score:number;away_score:number;simulated_finished_at:string}[];history:{operation:string;to_state:Status;recorded_at:string}[]};
++type Catalog = {sessions:Header[]};
++type Pending = {path:string;body:Record<string,unknown>};
++type Props = {request:(path:string,body?:unknown)=>Promise<unknown>;systemState:string;mode:string;resume:()=>Promise<void>};
++const PENDING_KEY = 'jarvis-betting-demo-pending-v1';
++const SELECTED_KEY = 'jarvis-betting-demo-selected-v1';
++const labels:Record<Status,string> = {created:'Omgång skapad',analyzed:'Analys sparad',no_bets:'Inga spel uppfyllde reglerna',approved:'Batchen godkänd',declined:'Du avstod från låtsasinsatserna',simulated:'Låtsasinsatserna är öppna',settled:'Omgången är avräknad'};
++const outcomes:Record<string,string> = {home:'1 · Hemmaseger',draw:'X · Oavgjort',away:'2 · Bortaseger'};
++
++function storedPending():Pending|null {
++  try {
++    const value = JSON.parse(sessionStorage.getItem(PENDING_KEY) || 'null') as Pending|null;
++    if (value && /^\/betting-demo\/sessions(?:\/[a-f0-9]{32}\/(?:analyze|decision|simulate|settle))?$/.test(value.path)
++        && typeof value.body?.action_id === 'string') return value;
++  } catch { /* A disabled browser store must not trigger a write. */ }
++  return null;
++}
++
++export function BettingDemo({request,systemState,mode,resume}:Props) {
++  const [catalog,setCatalog] = useState<Catalog>({sessions:[]});
++  const [session,setSession] = useState<Session|null>(null);
++  const [pending,setPending] = useState<Pending|null>(storedPending);
++  const pendingRef = useRef(pending);
++  const selected = useRef<string|null>(null);
++  const working = useRef(false);
++  const [busy,setBusy] = useState(false), [loading,setLoading] = useState(true), [error,setError] = useState('');
++  const mounted = useRef(true);
++
++  const load = async (id?:string) => {
++    const list = await request('/betting-demo/sessions') as Catalog;
++    const preferred = id || selected.current;
++    const chosen = list.sessions.find(s=>s.id===preferred)?.id || list.sessions[0]?.id;
++    const data = chosen ? await request('/betting-demo/sessions/'+chosen) as Session : null;
++    if (!mounted.current) return;
++    selected.current = chosen || null;
++    try { if(chosen)sessionStorage.setItem(SELECTED_KEY,chosen); } catch { /* Backend history remains available. */ }
++    setCatalog(list); setSession(data);
++  };
++
++  useEffect(()=>{
++    mounted.current = true;
++    try { selected.current = sessionStorage.getItem(SELECTED_KEY); } catch { /* Use latest saved session. */ }
++    if(mode==='DEMO')void load().catch(e=>{if(mounted.current)setError((e as Error).message)}).finally(()=>{if(mounted.current)setLoading(false)});
++    else setLoading(false);
++    return ()=>{mounted.current=false};
++  },[request,mode]);
++
++  const forget = () => {
++    sessionStorage.removeItem(PENDING_KEY);
++    pendingRef.current=null; setPending(null);
++  };
++  const perform = async () => {
++    if(working.current || !pendingRef.current)return;
++    working.current=true; setBusy(true); setError('');
++    try {
++      const item=pendingRef.current;
++      const response=await request(item.path,item.body) as {id:string};
++      forget();
++      await load(response.id);
++    } catch(e) {
++      setError((e as Error).message);
++      // Refresh is a read. Keep the exact original request until its response is known.
++      await load().catch(()=>undefined);
++    } finally {working.current=false;setBusy(false)}
++  };
++  const send = (path:string,body:Record<string,unknown>={}) => {
++    if(working.current || pendingRef.current)return;
++    const item={path,body:{...body,action_id:crypto.randomUUID()}};
++    try { sessionStorage.setItem(PENDING_KEY,JSON.stringify(item)); }
++    catch {setError('Webbläsaren kan inte bevara återförsöket. Ingen begäran skickades. Tillåt sessionslagring för denna sida.');return}
++    pendingRef.current=item;setPending(item);void perform();
++  };
++  const read = async (id?:string,clear=false) => {
++    if(working.current)return;
++    working.current=true;setBusy(true);setError('');
++    try {await load(id);if(clear)forget()}catch(e){setError((e as Error).message)}finally{working.current=false;setBusy(false)}
++  };
++  const bound = session?.analysis ? {proposal_version:session.analysis.proposal_version,proposal_hash:session.analysis.proposal_hash} : {};
++  const write = (operation:string,body:Record<string,unknown>={}) => {if(session)send(`/betting-demo/sessions/${session.id}/${operation}`,body)};
++  const locked = busy || !!pending || systemState!=='running' || mode!=='DEMO';
++  const terminal = session && ['no_bets','declined','settled'].includes(session.state);
++
++  if(mode!=='DEMO')return <section className="panel">Bettingdemot kräver DEMO. Riktiga spel är avstängda.</section>;
++  if(loading)return <section className="panel">Läser sparade demo-omgångar…</section>;
++  return <div className="betting-demo">
++    <section className="panel betting-hero">
++      <div><span className="eyebrow">DEMO UNDER UTVECKLING</span><h2>Från odds till avräkning.</h2><p>Sju påhittade matcher. Ett beslut för hela batchen. Följ låtsaspengarna genom varje steg.</p><div className="betting-chips"><span className="badge amber">Påhittade matcher och odds</span><span className="badge"><LockKeyhole size={12}/> Inga riktiga spel</span></div></div>
++      <div><Flag size={30} aria-hidden="true"/><strong>Eget låtsaskapital för denna omgång.</strong><p>1 000 kr vid start · 10 kr per föreslaget spel.<br/>Ingen gemensam plånbok eller överföring.</p><button className="primary" disabled={locked} onClick={()=>send('/betting-demo/sessions')}>{session?'Skapa ny demo-omgång':'Skapa demo-omgång'} <ArrowRight size={15}/></button></div>
++    </section>
++    {error&&<div className="error-banner" role="alert">{error}</div>}
++    {pending&&<section className="panel betting-retry" aria-label="Osäker begäran"><h3>Begäran kan redan ha sparats.</h3><p>Samma åtgärds-ID och innehåll finns kvar även efter omladdning. Kontrollera sparat läge eller hämta det tidigare svaret.</p><div className="betting-actions"><button disabled={busy} onClick={()=>void perform()}>Försök samma begäran igen</button><button disabled={busy} onClick={()=>void read()}>Hämta sparat läge</button><button disabled={busy} onClick={()=>void read(undefined,true)}>Stäng begäran efter kontroll</button></div></section>}
++    {systemState!=='running'&&<section className="panel betting-paused"><p>{systemState==='stopped'?'Nödstopp är aktivt.':'Arbetet är pausat.'} Sparade omgångar går att läsa. Nya åtgärder kräver att du återupptar.</p><button disabled={busy} onClick={()=>{setError('');void resume().catch(e=>setError((e as Error).message))}}>Återuppta demot</button></section>}
++    <div className="betting-layout"><aside className="panel betting-history"><h3><History size={17}/> Sparade omgångar</h3><p>Varje rad har sitt eget kapital. Historiken summeras inte till en plånbok.</p>{catalog.sessions.length===0?<p>Ingen omgång skapad ännu.</p>:catalog.sessions.map((s,i)=><button key={s.id} disabled={busy||!!pending} className={s.id===session?.id?'selected':''} onClick={()=>void read(s.id)}><strong>Omgång {catalog.sessions.length-i}</strong><span>{labels[s.state]}</span><small>{date(s.created_at)}</small><small>{money(s.summary.available_ore)} tillgängligt i denna omgång</small></button>)}</aside>
++      <div className="betting-content">{!session?<section className="panel betting-empty"><Flag size={34}/><h3>Börja med en ny demo-omgång.</h3><p>Ingenting skapas bara av att öppna sidan. Demot körs direkt i backend och behöver ingen worker eller extern AI.</p></section>:<>
++        <section className="panel betting-progress"><div className="betting-section-title"><div><span className="eyebrow">OMGÅNG {session.id.slice(0,8)}</span><h3 aria-live="polite">{labels[session.state]}</h3></div><button disabled={busy} onClick={()=>void read()} aria-label="Uppdatera sparat demoläge"><RefreshCw size={16}/></button></div><ol>{['Skapa','Analysera','Besluta','Registrera insatser','Avräkna'].map((step,i)=><li key={step} className={i <= ({created:0,analyzed:1,no_bets:1,approved:2,declined:2,simulated:3,settled:4}[session.state])?'reached':''}><span>{i+1}</span>{step}</li>)}</ol><p>Simulerade matchtider hålls skilda från verkliga registreringstider. Ingen bakgrundsprocess eller extern språkmodell kör denna demo.</p></section>
++        <section className="panel betting-capital" aria-label="Omgångens låtsaskapital"><h3>Eget låtsaskapital för denna omgång.</h3><div className="betting-money">{([['available_ore','Tillgängligt kapital'],['open_stake_ore','Öppen insats'],['capital_ore','Kapital inklusive öppna insatser'],['game_profit_ore','Spelresultat'],['simulated_cost_ore','Simulerade kostnader'],['net_ore','Netto efter kostnader']] as const).map(([key,label])=><article key={key}><small>{label}</small><strong data-testid={'demo-'+key}>{money(session.summary[key])}</strong></article>)}</div><details><summary>Så stäms pengarna av</summary><p>Spelresultat = avgjorda utbetalningar − deras insatser. Netto = spelresultat − simulerade kostnader. Kapital inklusive öppna insatser = startkapital + netto. Tillgängligt kapital = detta kapital − öppna insatser.</p><p>Startkapital {money(session.initial_capital_ore)}. Registrerade insatser {money(session.summary.total_stake_ore)}. Avräknad utbetalning {money(session.summary.payout_ore)}. Alla belopp beräknas i heltalsören. Vinstutbetalning avrundas nedåt till ören; det effektiva oddset får inget andra prisavdrag.</p></details></section>
++        <section className="panel betting-next">
++          {session.state==='created'&&<><h3>Granska underlaget och analysera.</h3><p>Inga kostnader eller insatser är ännu bokförda. När analysen sparas bokförs 20 simulerade öre för var och en av de sju matcherna, totalt 1,40 kr.</p><button className="primary" disabled={locked} onClick={()=>write('analyze')}>Analysera de sju matcherna <ArrowRight size={15}/></button></>}
++          {session.state==='analyzed'&&<><h3>Ett beslut för hela förslagsbatchen.</h3><p>{session.analysis?.proposals.length} förslag à {money(session.stake_ore)}. Total insats <strong>{money(session.analysis?.total_stake_ore||0)}</strong>. Analyskostnaden {money(session.summary.simulated_cost_ore)} är redan bokförd och kvarstår om du avstår. Godkännande registrerar ännu inga insatser.</p><div className="betting-actions"><button className="primary" disabled={locked} onClick={()=>write('decision',{...bound,decision:'approved'})}><CheckCheck size={15}/> Godkänn hela låtsasbatchen</button><button disabled={locked} onClick={()=>write('decision',{...bound,decision:'declined'})}>Avstå från batchen</button></div></>}
++          {session.state==='approved'&&<><h3>Godkänd batch. Inga insatser registrerade ännu.</h3><p>Backend kontrollerar kapital för hela batchen i samma transaktion. Antingen registreras alla insatser eller ingen.</p><button className="primary" disabled={locked} onClick={()=>write('simulate',bound)}>Registrera låtsasinsatser</button></>}
++          {session.state==='simulated'&&<><h3>Insatserna är öppna.</h3><p>{money(session.summary.open_stake_ore)} är bundna. De syntetiska resultaten är ännu inte visade eller avräknade. Nästa steg avgör hela omgången samtidigt.</p><button className="primary" disabled={locked} onClick={()=>write('settle')}>Visa och avräkna simulerade resultat</button></>}
++          {terminal&&<><span className="eyebrow">SAMMANFATTNING</span><h3>{labels[session.state]}</h3><p>{session.state==='settled'?`${session.summary.won_count} vinster och ${session.summary.lost_count} förluster. Slutkapital ${money(session.summary.capital_ore)} efter ${money(session.summary.simulated_cost_ore)} i simulerade kostnader.`:session.state==='declined'?'Inga insatser registrerades. Den sparade analysens simulerade kostnader kvarstår.':'Inga förslag klarade de frysta reglerna. Inga insatser registrerades; analyskostnaderna kvarstår.'}</p><p>Att läsa sammanfattningen ändrar inget. En ny omgång får ett separat startkapital och behåller denna historik.</p></>}
++        </section>
++        {session.analysis&&<section className="panel betting-proposals"><h3>Den sparade förslagsbatchen</h3>{session.analysis.proposals.length===0?<p>Inga spelförslag.</p>:<div className="betting-table"><table><thead><tr><th>Match</th><th>Utfall</th><th>Effektivt odds</th><th>Fast insats</th></tr></thead><tbody>{session.analysis.proposals.map(p=><tr key={p.event_id}><td>{p.home} – {p.away}</td><td>{outcomes[p.outcome]}</td><td>{(p.paper_odds/10000).toFixed(4)}</td><td>{money(p.stake_ore)}</td></tr>)}</tbody></table></div>}<details><summary>Beslutsbindning och begränsningar</summary><p>Förslagsversion {session.analysis.proposal_version}. Hashen binder exakt det sparade underlaget och förklaringarna; den bevisar inte att odds eller resultat är verkliga.</p><code>{session.analysis.proposal_hash}</code>{session.decision&&<p>Ägarbeslut {session.decision.value==='approved'?'godkänt':'avstått'}, registrerat {date(session.decision.recorded_at)}.</p>}<p>Medianen av andra källors normaliserade priser är en marknadsreferens, ingen verifierad sannolikhet. Käll-ID:n är inte oberoende källfamiljer.</p></details></section>}
++        <section className="panel betting-matches"><h3>Sju påhittade matcher och odds</h3><div className="betting-match-list">{session.observations.map(o=>{const a=session.analysis?.matches.find(m=>m.event_id===o.event_id);const b=session.bets.find(v=>v.event_id===o.event_id);const result=session.results?.find(r=>r.event_id===o.event_id);return <article key={o.event_id} className="betting-match"><header><strong>{o.home} – {o.away}</strong><span className="badge">{b?.state==='won'?'Vinst':b?.state==='lost'?'Förlust':b?.state==='open'?'Öppen låtsasinsats':a?(a.decision.selected?'Spelförslag':'Avstå'):'Ej analyserad'}</span></header><small>Simulerad avspark {date(o.starts_at)} · 1X2 efter ordinarie tid</small>{a&&<><p className="betting-agent-label">{a.notice}</p><p>{a.explanation}</p></>}{result&&<p className="betting-result"><strong>Simulerat resultat {result.home_score}–{result.away_score}</strong>{b&&<> · utbetalning {money(b.return_ore||0)} · spelresultat {money(b.profit_ore||0)}</>}</p>}<details><summary>Visa odds och offertkontroller</summary><p>Simulerad fångsttid {date(o.captured_at)}. Effektiva odds i förslagen innehåller ett prisavdrag på 1 %.</p><div className="betting-table"><table><thead><tr><th>Källa</th><th>1</th><th>X</th><th>2</th><th>Offerttid</th></tr></thead><tbody>{o.quotes.map(q=><tr key={q.book}><td>{q.book}</td><td>{(q.odds.home/10000).toFixed(4)}</td><td>{(q.odds.draw/10000).toFixed(4)}</td><td>{(q.odds.away/10000).toFixed(4)}</td><td>{date(q.updated_at)}</td></tr>)}</tbody></table></div>{a&&<ul>{a.decision.checks.map(c=><li key={c.book}>{c.book}: {c.accepted?'Godtagen för prisberäkning':c.reason}</li>)}</ul>}</details></article>})}</div></section>
++        {session.analysis&&<section className="panel betting-agent-notes"><h3>Simulerade agentsvar</h3>{session.analysis.messages.map(m=><article key={m.role_id}><strong>{m.role_id==='finance'?'Ekonom / Risk':'Kritiker / Kvalitetskontroll'}</strong><small>{m.notice}</small><p>{m.text}</p></article>)}</section>}
++        <section className="panel betting-audit"><details><summary>Registreringshistorik och versioner</summary><p>{session.scenario_version} · {session.rules_version} · {session.explanation_version}</p><ol>{session.history.map(h=><li key={h.operation}>{date(h.recorded_at)} — {labels[h.to_state]}</li>)}</ol><p>Detta är verkliga registreringstider. Matchernas simulerade tider visas separat.</p></details></section>
++      </>}</div>
++    </div>
++    <div className="betting-disclaimer"><CircleHelp size={20}/><p>Alla matcher, odds, agentsvar och kostnader är simulerade. Demot körs lokalt utan worker och externa AI-anrop. Ett positivt utfall visar arbetsflödet, aldrig bevisad lönsamhet. Demokapitalet påverkar inte JARVIS AI-budget.</p></div>
++  </div>;
++}
+--- /dev/null
++++ after/frontend/src/betting-demo.css
+@@ -0,0 +1,56 @@
++.betting-demo{min-width:0;max-width:100%}
++.betting-demo .panel{margin-bottom:18px;min-width:0}
++.betting-hero{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:30px;padding:30px}
++.betting-hero h2{font-size:32px;line-height:1.3;margin:14px 0}
++.betting-hero p,.betting-demo p{font-size:12px;line-height:1.85;color:#aebfd1}
++.betting-hero>div:last-child{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:22px;border:1px solid #375368;border-radius:10px;background:#122837}
++.betting-hero>div:last-child>svg{color:#78dce0;margin-bottom:16px}
++.betting-chips,.betting-actions{display:flex;gap:10px;flex-wrap:wrap}
++.betting-chips .badge{display:inline-flex;gap:6px;align-items:center;white-space:normal}
++.betting-layout{display:grid;grid-template-columns:240px minmax(0,1fr);gap:20px;align-items:start}
++.betting-history h3{display:flex;align-items:center;gap:8px;font-size:14px;margin:0}
++.betting-history>button{display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:7px;width:100%;margin-top:10px;padding:14px;white-space:normal}
++.betting-history>button.selected{border-color:#74cbd5;background:#163442}
++.betting-history>button>span{font-size:11px;color:#b6ceda}
++.betting-history small{font-size:10px;color:#9db5c8;line-height:1.7}
++.betting-content{min-width:0}
++.betting-section-title{display:flex;justify-content:space-between;gap:12px;align-items:center}
++.betting-demo h3{font-size:16px;line-height:1.5;margin:0 0 12px}
++.betting-section-title h3{margin-top:8px}
++.betting-progress>ol{list-style:none;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:20px 0}
++.betting-progress>ol>li{display:flex;flex-direction:column;gap:8px;align-items:flex-start;font-size:10px;line-height:1.5;color:#a2b5c7;min-width:0}
++.betting-progress li>span{display:grid;place-items:center;width:27px;height:27px;border-radius:50%;border:1px solid #456076}
++.betting-progress li.reached>span{background:#1b4e56;border-color:#74d3d3;color:#ddffff}
++.betting-progress li.reached{color:#d6eeee}
++.betting-money{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0}
++.betting-money article{border:1px solid #2d4458;border-radius:8px;background:#102231;padding:16px;min-width:0}
++.betting-money small{display:block;font-size:10px;line-height:1.7;color:#aebfd1;min-height:34px}
++.betting-money strong{display:block;font-size:22px;line-height:1.6;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
++.betting-demo details{font-size:12px;line-height:1.8;color:#b8cad8}
++.betting-demo summary{cursor:pointer;color:#dce8f0;line-height:1.7}
++.betting-demo code{display:block;overflow-wrap:anywhere;white-space:normal;font-size:11px}
++.betting-table{max-width:100%;overflow:auto;margin:15px 0;border:1px solid #2c4056;border-radius:7px}
++.betting-table table{width:100%;font-size:11px;border-collapse:collapse;min-width:490px}
++.betting-table th,.betting-table td{text-align:left;padding:12px;border-bottom:1px solid #283d52;line-height:1.65}
++.betting-table th{font-size:10px;color:#a7c2d4;background:#142838}
++.betting-next{border-left:3px solid #69cdd0}
++.betting-match{padding:18px 0;border-bottom:1px solid #2b4056;min-width:0}
++.betting-match:last-child{border-bottom:0;padding-bottom:0}
++.betting-match header{display:flex;gap:12px;justify-content:space-between;align-items:flex-start}
++.betting-match header>strong{font-size:13px;line-height:1.8;overflow-wrap:anywhere}
++.betting-match>small{font-size:10px;color:#a9bfd1;line-height:1.8}
++.betting-demo .betting-agent-label{font-size:10px;color:#8bd2d7;margin-bottom:0}
++.betting-match .betting-result{background:#142d38;padding:12px;border-radius:6px;color:#d9eeee}
++.betting-agent-notes article{padding:12px 0;border-bottom:1px solid #2b4056}
++.betting-agent-notes article:last-child{border-bottom:0}
++.betting-agent-notes strong{display:block;font-size:12px;margin-bottom:8px}
++.betting-agent-notes small{display:block;font-size:10px;color:#8bd2d7}
++.betting-disclaimer{display:flex;gap:14px;padding:12px 0;color:#a6c4d1;align-items:flex-start}
++.betting-disclaimer svg{flex-shrink:0;margin-top:3px}
++.betting-disclaimer p{margin:0}
++.betting-paused,.betting-retry{border-color:#8b7144}
++.betting-empty{padding:40px;text-align:center}
++.betting-empty>svg{margin:0 auto 18px;color:#8bd2d7}
++.betting-audit li{font-size:11px;line-height:1.9}
++@media(max-width:1150px){.betting-layout{grid-template-columns:1fr}.betting-history{display:flex;flex-wrap:wrap;gap:10px}.betting-history>h3,.betting-history>p{width:100%}.betting-history>button{width:auto;max-width:240px;margin:0}.betting-hero{grid-template-columns:1fr}.betting-money strong{font-size:20px}}
++@media(max-width:650px){.betting-hero{padding:20px;gap:18px}.betting-hero h2{font-size:26px}.betting-hero>div:last-child{padding:16px}.betting-money{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.betting-money article{padding:12px}.betting-money strong{font-size:17px}.betting-money small{font-size:9px}.betting-match header{flex-direction:column;gap:8px}.betting-history>button{max-width:100%;width:100%}.betting-demo button{max-width:100%;white-space:normal;text-align:left;line-height:1.7}.betting-progress>ol{gap:7px}.betting-progress>ol>li{font-size:9px}.betting-empty{padding:24px}.betting-actions{flex-direction:column;align-items:stretch}}
+--- /dev/null
++++ after/tests/test_betting_demo.py
+@@ -0,0 +1,457 @@
++"""Genomgående verifiering med syntetiska pengar och enbart temporära databaser."""
++import json
++import sqlite3
++from concurrent.futures import ThreadPoolExecutor
++from copy import deepcopy
++from uuid import uuid4
++
++import pytest
++from fastapi.testclient import TestClient
++from pydantic import ValidationError
++
++from jarvis import betting_demo as core, betting_demo_service as service
++from jarvis.db import connect, initialize
++from jarvis.odds_lab import Action, Snapshot, analyze as legacy_analyze, digest
++from jarvis.roles import ROLES
++from jarvis.budget import RuleError
++
++BASE = "/api/betting-demo/sessions"
++
++
++def post(client, path="", **body):
++    return client.post(BASE + path, json={"action_id": str(uuid4()), **body})
++
++
++def create(client):
++    client.post("/api/control", json={"state": "running"})
++    response = post(client)
++    assert response.status_code == 200, response.text
++    return response.json()["id"]
++
++
++def view(client, sid):
++    response = client.get(BASE + "/" + sid)
++    assert response.status_code == 200, response.text
++    return response.json()
++
++
++def binding(client, sid):
++    a = view(client, sid)["analysis"]
++    return {"proposal_version": a["proposal_version"], "proposal_hash": a["proposal_hash"]}
++
++
++def advance(client, sid, state):
++    if state == "created":
++        return
++    assert post(client, f"/{sid}/analyze").status_code == 200
++    if state in {"analyzed", "no_bets"}:
++        return
++    decision = "declined" if state == "declined" else "approved"
++    assert post(client, f"/{sid}/decision", decision=decision, **binding(client, sid)).status_code == 200
++    if state in {"approved", "declined"}:
++        return
++    assert post(client, f"/{sid}/simulate", **binding(client, sid)).status_code == 200
++    if state == "settled":
++        assert post(client, f"/{sid}/settle").status_code == 200
++
++
++def db_counts(sid):
++    with connect() as c:
++        return {table: c.execute(f"SELECT COUNT(*) FROM betting_demo_{table} WHERE session_id=?", (sid,)).fetchone()[0]
++                for table in ("costs", "bets", "events", "actions")}
++
++
++def reference_scenario(initial=100000):
++    frozen = core.build_scenario()
++    frozen["initial_capital_ore"] = initial
++    frozen["stake_ore"] = frozen["rules"]["stake_ore"] = 10000
++    frozen["observations"] = frozen["observations"][:2]
++    frozen["cost_definitions"] = frozen["cost_definitions"][:2]
++    ids = {o["event_id"] for o in frozen["observations"]}
++    frozen["settlement_data"] = {k: v for k, v in frozen["settlement_data"].items() if k in ids}
++    for observation, cost in zip(frozen["observations"], frozen["cost_definitions"]):
++        observation["data_cost_ore"] = cost["amount_ore"] = 500
++        for i, quote in enumerate(observation["quotes"]):
++            quote["odds"] = {"home": 20203, "draw": 34000, "away": 36000} if i == 0 else {"home": 18000, "draw": 45000, "away": 45000}
++    return frozen
++
++
++def no_bets(monkeypatch):
++    frozen = core.build_scenario()
++    for observation in frozen["observations"]:
++        for quote in observation["quotes"]:
++            quote["odds"]["home"] = 20000
++    monkeypatch.setattr(service, "build_scenario", lambda: deepcopy(frozen))
++
++
++def test_standard_scenario_matches_original_rules_and_expected_full_economy(client):
++    original_budget = client.get("/api/state").json()["settings"]
++    sid = create(client)
++    assert view(client, sid)["summary"]["available_ore"] == 100000
++    assert post(client, f"/{sid}/analyze").status_code == 200
++    current = view(client, sid)
++    assert len(current["observations"]) == 7
++    assert len(current["analysis"]["proposals"]) == 4
++    assert len([m for m in current["analysis"]["matches"] if not m["decision"]["selected"]]) == 3
++    assert current["summary"]["simulated_cost_ore"] == 140
++    assert current["summary"]["available_ore"] == 99860
++    for observation, match in zip(current["observations"], current["analysis"]["matches"]):
++        snapshot = Snapshot.model_validate(observation)
++        old = legacy_analyze(snapshot, snapshot.captured_at, 99860)
++        for key in ("selected", "paper_odds", "edge_bp", "outcome", "book", "reference_probability_ppm"):
++            assert match["decision"].get(key) == old.get(key)
++    assert post(client, f"/{sid}/decision", decision="approved", **binding(client, sid)).status_code == 200
++    assert not view(client, sid)["bets"]
++    assert post(client, f"/{sid}/simulate", **binding(client, sid)).status_code == 200
++    assert view(client, sid)["summary"]["open_stake_ore"] == 4000
++    assert view(client, sid)["summary"]["available_ore"] == 95860
++    assert post(client, f"/{sid}/settle").status_code == 200
++    result = view(client, sid)
++    expected = {"initial_capital_ore": 100000, "game_profit_ore": 950, "simulated_cost_ore": 140,
++                "net_ore": 810, "capital_ore": 100810, "open_stake_ore": 0, "available_ore": 100810,
++                "total_stake_ore": 4000, "payout_ore": 4950, "bet_count": 4, "settled_count": 4,
++                "won_count": 2, "lost_count": 2}
++    assert result["summary"] == expected
++    assert len(result["results"]) == 7
++    initialize()
++    assert view(client, sid) == result
++    assert client.get("/api/state").json()["settings"]["spent"] == original_budget["spent"]
++    with connect() as c:
++        assert c.execute("SELECT COUNT(*) FROM odds_lab_runs").fetchone()[0] == 0
++    assert len(ROLES) == 10
++
++
++@pytest.mark.parametrize("decline", [False, True])
++def test_independent_reference_fixture_through_all_money_states(client, monkeypatch, decline):
++    monkeypatch.setattr(service, "build_scenario", reference_scenario)
++    sid = create(client)
++    advance(client, sid, "analyzed")
++    data = view(client, sid)
++    assert [p["paper_odds"] for p in data["analysis"]["proposals"]] == [20000, 20000]
++    assert data["summary"]["simulated_cost_ore"] == 1000
++    assert data["summary"]["available_ore"] == 99000
++    assert data["summary"]["open_stake_ore"] == 0
++    assert post(client, f"/{sid}/decision", decision="declined" if decline else "approved", **binding(client, sid)).status_code == 200
++    if not decline:
++        assert post(client, f"/{sid}/simulate", **binding(client, sid)).status_code == 200
++        middle = view(client, sid)["summary"]
++        assert (middle["available_ore"], middle["open_stake_ore"], middle["capital_ore"]) == (79000, 20000, 99000)
++        assert post(client, f"/{sid}/settle").status_code == 200
++    final = view(client, sid)
++    assert final["state"] == ("declined" if decline else "settled")
++    for key, value in {"payout_ore": 0 if decline else 20000, "game_profit_ore": 0,
++                       "simulated_cost_ore": 1000, "net_ore": -1000, "open_stake_ore": 0,
++                       "capital_ore": 99000, "available_ore": 99000}.items():
++        assert final["summary"][key] == value
++    assert len(final["bets"]) == (0 if decline else 2)
++
++
++@pytest.mark.parametrize("state", core.STATES)
++@pytest.mark.parametrize("operation", ["analyze", "decision", "simulate", "settle"])
++def test_state_machine_rejects_every_other_transition(client, monkeypatch, state, operation):
++    if state == "no_bets":
++        no_bets(monkeypatch)
++    sid = create(client)
++    advance(client, sid, state)
++    before = view(client, sid)
++    before_counts = db_counts(sid)
++    extra = {}
++    if operation in {"decision", "simulate"}:
++        extra = binding(client, sid) if before["analysis"] else {"proposal_version": 1, "proposal_hash": "0" * 64}
++    if operation == "decision":
++        extra["decision"] = "approved"
++    allowed = {"analyze": "created", "decision": "analyzed", "simulate": "approved", "settle": "simulated"}
++    response = post(client, f"/{sid}/{operation}", **extra)
++    assert response.status_code == (200 if allowed[operation] == state else 409)
++    if response.status_code == 409:
++        assert view(client, sid) == before
++        assert db_counts(sid) == before_counts
++
++
++def test_no_bets_charges_analysis_without_stakes_and_get_never_writes(client, monkeypatch):
++    no_bets(monkeypatch)
++    sid = create(client)
++    advance(client, sid, "no_bets")
++    data, counts = view(client, sid), db_counts(sid)
++    assert data["state"] == "no_bets" and not data["bets"]
++    assert data["summary"]["available_ore"] == 99860
++    assert not data["analysis"]["proposals"]
++    for _ in range(3):
++        assert view(client, sid) == data
++        assert client.get(BASE).status_code == 200
++    assert db_counts(sid) == counts
++
++
++@pytest.mark.parametrize("operation,state", [("analyze", "created"), ("simulate", "approved"), ("settle", "simulated"), ("decision", "analyzed")])
++def test_concurrent_different_ids_allow_exactly_one_transition(client, operation, state):
++    sid = create(client)
++    advance(client, sid, state)
++    bodies = [{"action_id": str(uuid4())} for _ in range(2)]
++    if operation in {"decision", "simulate"}:
++        for body in bodies:
++            body.update(binding(client, sid))
++    if operation == "decision":
++        bodies[0]["decision"], bodies[1]["decision"] = "approved", "declined"
++    headers, cookies = dict(client.headers), dict(client.cookies)
++
++    def submit(body):
++        other = TestClient(service_app, headers=headers, cookies=cookies)
++        try:
++            return other.post(BASE + f"/{sid}/{operation}", json=body)
++        finally:
++            other.close()
++
++    from jarvis.api import app as service_app
++    with ThreadPoolExecutor(max_workers=2) as pool:
++        responses = list(pool.map(submit, bodies))
++    assert sorted(r.status_code for r in responses) == [200, 409]
++    counts = db_counts(sid)
++    assert counts["costs"] == 7
++    assert counts["bets"] == (4 if operation in {"simulate", "settle"} else 0)
++    if operation == "settle":
++        assert view(client, sid)["summary"]["open_stake_ore"] == 0
++
++
++@pytest.mark.parametrize("state", ["paused", "stopped"])
++def test_saved_simulation_replay_after_stop_has_no_mutations(client, state):
++    sid = create(client)
++    advance(client, sid, "approved")
++    body = {"action_id": str(uuid4()), **binding(client, sid)}
++    first = client.post(BASE + f"/{sid}/simulate", json=body)
++    assert first.status_code == 200
++    client.post("/api/control", json={"state": state})
++    before, counts = view(client, sid), db_counts(sid)
++    assert client.post(BASE + f"/{sid}/simulate", json=body).json() == first.json()
++    assert post(client, f"/{sid}/settle").status_code == 409
++    assert post(client, f"/{sid}/simulate", **binding(client, sid)).status_code == 409
++    assert client.post(BASE + f"/{sid}/simulate", json={**body, "proposal_hash": "0" * 64}).status_code == 409
++    assert view(client, sid) == before and db_counts(sid) == counts
++
++
++def test_pause_after_approval_prevents_new_simulation(client):
++    sid = create(client)
++    advance(client, sid, "approved")
++    client.post("/api/control", json={"state": "paused"})
++    assert post(client, f"/{sid}/simulate", **binding(client, sid)).status_code == 409
++    assert view(client, sid)["state"] == "approved"
++    assert not view(client, sid)["bets"]
++
++
++def test_pause_and_write_share_the_database_serialization(client):
++    sid = create(client)
++    advance(client, sid, "approved")
++    headers, cookies = dict(client.headers), dict(client.cookies)
++    from jarvis.api import app
++
++    def submit(path, body):
++        c = TestClient(app, headers=headers, cookies=cookies)
++        try:
++            return c.post(path, json=body)
++        finally:
++            c.close()
++
++    body = {"action_id": str(uuid4()), **binding(client, sid)}
++    with ThreadPoolExecutor(max_workers=2) as pool:
++        write = pool.submit(submit, BASE + f"/{sid}/simulate", body)
++        pause = pool.submit(submit, "/api/control", {"state": "paused"})
++        result, stopped = write.result(), pause.result()
++    assert stopped.status_code == 200
++    assert result.status_code in {200, 409}
++    assert len(view(client, sid)["bets"]) == (4 if result.status_code == 200 else 0)
++    assert post(client).status_code == 409
++
++
++def test_action_is_bound_to_session_operation_and_content(client):
++    sid, other = create(client), create(client)
++    action_id = str(uuid4())
++    first = post(client, f"/{sid}/analyze", action_id=action_id)
++    assert first.status_code == 200
++    counts = db_counts(sid)
++    assert post(client, f"/{sid}/analyze", action_id=action_id).json() == first.json()
++    assert post(client, f"/{other}/analyze", action_id=action_id).status_code == 409
++    assert post(client, f"/{sid}/settle", action_id=action_id).status_code == 409
++    assert post(client, f"/{sid}/analyze").status_code == 409
++    assert db_counts(sid) == counts
++
++
++def test_insufficient_batch_capital_is_all_or_nothing(client, monkeypatch):
++    monkeypatch.setattr(service, "build_scenario", lambda: reference_scenario(initial=15000))
++    sid = create(client)
++    advance(client, sid, "approved")
++    before = view(client, sid)
++    response = post(client, f"/{sid}/simulate", **binding(client, sid))
++    assert response.status_code == 409 and "20000" in response.json()["detail"]
++    assert view(client, sid) == before and not before["bets"]
++
++
++def test_bad_scenario_cannot_spend_more_than_start_capital(client, monkeypatch):
++    client.post("/api/control", json={"state": "running"})
++    monkeypatch.setattr(service, "build_scenario", lambda: reference_scenario(initial=999))
++    assert post(client).status_code == 409
++    assert client.get(BASE).json()["sessions"] == []
++
++
++@pytest.mark.parametrize("operation,state,table", [("analyze", "created", "costs"), ("simulate", "approved", "bets")])
++def test_insert_failure_rolls_back_entire_batch(client, operation, state, table):
++    sid = create(client)
++    advance(client, sid, state)
++    before, counts = view(client, sid), db_counts(sid)
++    with connect(True) as c:
++        c.execute(f"CREATE TRIGGER fail_demo BEFORE INSERT ON betting_demo_{table} WHEN NEW.event_id='syntetisk-2' BEGIN SELECT RAISE(ABORT,'test interruption'); END")
++    extra = binding(client, sid) if operation == "simulate" else {}
++    with pytest.raises(sqlite3.IntegrityError):
++        post(client, f"/{sid}/{operation}", **extra)
++    assert view(client, sid) == before and db_counts(sid) == counts
++
++
++def test_partial_settlement_failure_rolls_back_every_result(client, monkeypatch):
++    sid = create(client)
++    advance(client, sid, "simulated")
++    before, counts = view(client, sid), db_counts(sid)
++    original, calls = service.settle_bet, []
++
++    def fail_second(bet, result):
++        calls.append(bet["event_id"])
++        if len(calls) == 2:
++            raise RuntimeError("test interruption")
++        return original(bet, result)
++
++    monkeypatch.setattr(service, "settle_bet", fail_second)
++    with pytest.raises(RuntimeError):
++        post(client, f"/{sid}/settle")
++    assert view(client, sid) == before and db_counts(sid) == counts
++
++
++def test_persisted_history_is_not_reinterpreted_by_new_code_or_scenario(client, monkeypatch):
++    sid = create(client)
++    advance(client, sid, "analyzed")
++    before = view(client, sid)
++    monkeypatch.setattr(service, "build_scenario", lambda: (_ for _ in ()).throw(AssertionError("no rebuild")))
++    monkeypatch.setattr(service, "analyze_scenario", lambda *a: (_ for _ in ()).throw(AssertionError("no reanalysis")))
++    assert post(client, f"/{sid}/decision", decision="approved", **binding(client, sid)).status_code == 200
++    assert view(client, sid)["analysis"] == before["analysis"]
++    assert post(client, f"/{sid}/simulate", **binding(client, sid)).status_code == 200
++    assert post(client, f"/{sid}/settle").status_code == 200
++    saved = view(client, sid)
++    monkeypatch.setattr(service, "settle_bet", lambda *a: (_ for _ in ()).throw(AssertionError("no resettlement")))
++    initialize()
++    assert view(client, sid) == saved
++
++
++def test_separate_capital_and_history_survive_new_round(client):
++    first = create(client)
++    advance(client, first, "settled")
++    old = view(client, first)
++    second = create(client)
++    assert view(client, second)["summary"]["available_ore"] == 100000
++    assert view(client, first) == old
++    sessions = client.get(BASE).json()["sessions"]
++    assert {s["id"] for s in sessions} == {first, second}
++    assert "wallet" not in client.get(BASE).json()
++
++
++def test_future_results_never_enter_analysis_and_are_hidden_in_every_public_stage(client, monkeypatch):
++    scenario = core.build_scenario()
++    original = core.analyze_scenario(core.analysis_input(scenario))
++    changed = deepcopy(scenario)
++    for result in changed["settlement_data"].values():
++        result.update(home_score=91, away_score=92)
++    another = core.analyze_scenario(core.analysis_input(changed))
++    assert original == another
++    with pytest.raises(ValidationError):
++        core.ScenarioAnalysisInput.model_validate(scenario)
++    captured = []
++    original_engine = core.analyze_match
++
++    def inspect(data):
++        payload = data.model_dump(mode="json")
++        assert set(payload) == {"observation", "simulated_analysis_at", "rules", "available_capital_ore"}
++        assert "home_score" not in json.dumps(payload) and "settlement_data" not in payload
++        captured.append(payload)
++        return original_engine(data)
++
++    monkeypatch.setattr(core, "analyze_match", inspect)
++    sid = create(client)
++    for target in ("created", "analyzed", "approved", "simulated"):
++        if target == "analyzed":
++            post(client, f"/{sid}/analyze")
++        elif target == "approved":
++            post(client, f"/{sid}/decision", decision="approved", **binding(client, sid))
++        elif target == "simulated":
++            post(client, f"/{sid}/simulate", **binding(client, sid))
++        for response in (view(client, sid), client.get(BASE).json(), client.get("/api/state").json()):
++            text = json.dumps(response)
++            assert all(key not in text for key in ("home_score", "away_score", "settlement_data", "simulated_finished_at"))
++    assert len(captured) == 7
++    with pytest.raises(ValidationError):
++        core.AnalysisInput(**captured[0], result={"home_score": 2})
++
++
++def test_auth_demo_csrf_and_proposal_binding(client, monkeypatch):
++    from jarvis.api import app
++    stranger = TestClient(app)
++    assert stranger.get(BASE).status_code == 401
++    assert stranger.post(BASE, json={"action_id": str(uuid4())}).status_code == 401
++    assert client.post(BASE, headers={"x-csrf-token": "bad"}, json={"action_id": str(uuid4())}).status_code == 403
++    assert post(client, scenario={}).status_code == 422
++    sid = create(client)
++    advance(client, sid, "analyzed")
++    assert post(client, f"/{sid}/decision", decision="approved", proposal_version=2, proposal_hash="0" * 64).status_code == 409
++    monkeypatch.setenv("JARVIS_MODE", "LIVE")
++    initialize()
++    assert client.get(BASE).status_code == 401  # Separated LIVE DB has no authenticated test session.
++    with pytest.raises(RuleError, match="DEMO"):
++        service.catalog()
++
++
++def test_demo_clock_never_changes_real_session_expiry(client):
++    import time
++    sid = create(client)
++    assert view(client, sid)["observations"][0]["captured_at"].startswith("2025-")
++    with connect() as c:
++        assert c.execute("SELECT MIN(expires) FROM sessions").fetchone()[0] > time.time()
++    with connect(True) as c:
++        c.execute("UPDATE sessions SET expires=1")
++    assert client.get(BASE).status_code == 401
++
++
++@pytest.mark.parametrize("operation,state", [("analyze", "created"), ("decision", "analyzed"), ("settle", "simulated")])
++def test_each_saved_transition_replays_exact_response_after_stop(client, operation, state):
++    sid = create(client)
++    advance(client, sid, state)
++    body = {"action_id": str(uuid4())}
++    if operation == "decision":
++        body.update(decision="approved", **binding(client, sid))
++    response = client.post(BASE + f"/{sid}/{operation}", json=body)
++    assert response.status_code == 200
++    client.post("/api/control", json={"state": "stopped"})
++    before, counts = view(client, sid), db_counts(sid)
++    assert client.post(BASE + f"/{sid}/{operation}", json=body).json() == response.json()
++    if operation == "decision":
++        assert client.post(BASE + f"/{sid}/{operation}", json={**body, "decision": "declined"}).status_code == 409
++    assert view(client, sid) == before and db_counts(sid) == counts
++
++
++def test_create_replay_after_pause_does_not_create_another_capital(client):
++    client.post("/api/control", json={"state": "running"})
++    body = {"action_id": str(uuid4())}
++    response = client.post(BASE, json=body)
++    client.post("/api/control", json={"state": "paused"})
++    assert client.post(BASE, json=body).json() == response.json()
++    assert len(client.get(BASE).json()["sessions"]) == 1
++
++
++def test_created_session_uses_frozen_rules_when_global_policy_changes(client, monkeypatch):
++    sid = create(client)
++    expected = core.analyze_scenario(core.analysis_input(core.build_scenario()))
++    monkeypatch.setitem(core.POLICY, "price_haircut_bp", 9000)
++    assert post(client, f"/{sid}/analyze").status_code == 200
++    saved = view(client, sid)["analysis"]
++    assert saved["proposal_hash"] == expected["proposal_hash"]
++    assert saved["proposals"] == expected["proposals"]
++
++
++def test_settlement_rounds_down_effective_odds_once():
++    value = core.settle_bet({"outcome": "home", "stake_ore": 1001, "paper_odds": 24751},
++                           {"status": "final", "home_score": 2, "away_score": 0})
++    assert value == {"state": "won", "return_ore": 2477, "profit_ore": 1476}
+--- /dev/null
++++ after/frontend/e2e/betting-demo.spec.ts
+@@ -0,0 +1,123 @@
++import {test,expect,type Page} from '@playwright/test';
++
++async function enter(page:Page) {
++  await page.goto('/');
++  await page.getByLabel('Ägarlösenord').fill('browser-test-only-password');
++  await page.getByRole('button',{name:'Öppna kontrollcentralen'}).click();
++  await page.getByRole('region',{name:'Så testar vi bettingagentens arbetsflöde'}).getByRole('button',{name:'Öppna matchdemot'}).click();
++  await expect(page.getByRole('heading',{name:'Från odds till avräkning.'})).toBeVisible();
++  const resume=page.getByRole('button',{name:'Återuppta demot',exact:true});
++  if(await resume.isVisible())await resume.click();
++  await expect(page.getByRole('button',{name:/^Skapa (ny )?demo-omgång/})).toBeEnabled();
++}
++
++async function create(page:Page) {
++  await page.getByRole('button',{name:/^Skapa (ny )?demo-omgång/}).click();
++  await expect(page.locator('.betting-progress h3')).toHaveText('Omgång skapad');
++  return page.evaluate(()=>sessionStorage.getItem('jarvis-betting-demo-selected-v1')!);
++}
++
++async function analyze(page:Page) {
++  await page.getByRole('button',{name:'Analysera de sju matcherna'}).click();
++  await expect(page.locator('.betting-progress h3')).toHaveText('Analys sparad');
++  await expect(page.getByTestId('demo-simulated_cost_ore')).toContainText('1,40');
++}
++
++async function approve(page:Page) {
++  await page.getByRole('button',{name:'Godkänn hela låtsasbatchen'}).click();
++  await expect(page.locator('.betting-progress h3')).toHaveText('Batchen godkänd');
++}
++
++async function state(page:Page,sid:string) {
++  return page.evaluate(async id=>await(await fetch('/api/betting-demo/sessions/'+id)).json(),sid);
++}
++
++test('persistent full batch workflow shows independent capital and desktop/mobile summaries',async({page})=>{
++  await page.setViewportSize({width:1440,height:1100});
++  await enter(page);
++  const sid=await create(page);
++  await expect(page.locator('.betting-match')).toHaveCount(7);
++  await expect(page.getByTestId('demo-available_ore')).toContainText(/1\s*000,00/);
++  await analyze(page);
++  await expect(page.locator('.betting-match .badge').filter({hasText:/^Spelförslag$/})).toHaveCount(4);
++  await expect(page.locator('.betting-match .badge').filter({hasText:/^Avstå$/})).toHaveCount(3);
++  const saved=await state(page,sid);
++  expect(saved.bets).toHaveLength(0);
++  expect(saved.results).toBeUndefined();
++  await page.screenshot({path:'../docs/betting-demo/2026-11-06/dator.png',fullPage:true});
++  await approve(page);
++  await page.reload();
++  await expect(page.locator('.betting-progress h3')).toHaveText('Batchen godkänd');
++  expect((await state(page,sid)).analysis).toEqual(saved.analysis);
++  await page.getByRole('button',{name:'Registrera låtsasinsatser',exact:true}).click();
++  await expect(page.getByTestId('demo-open_stake_ore')).toContainText('40,00');
++  await expect(page.getByTestId('demo-available_ore')).toContainText('958,60');
++  await page.getByRole('button',{name:'Visa och avräkna simulerade resultat'}).click();
++  await expect(page.locator('.betting-progress h3')).toHaveText('Omgången är avräknad');
++  await expect(page.getByTestId('demo-capital_ore')).toContainText(/1\s*008,10/);
++  await expect(page.getByTestId('demo-net_ore')).toContainText('8,10');
++  await expect(page.getByTestId('demo-open_stake_ore')).toContainText('0,00');
++  await expect(page.locator('.betting-match .badge').filter({hasText:/^Vinst$/})).toHaveCount(2);
++  await expect(page.locator('.betting-match .badge').filter({hasText:/^Förlust$/})).toHaveCount(2);
++  const before=await state(page,sid);
++  await page.reload();
++  await expect(page.locator('.betting-progress h3')).toHaveText('Omgången är avräknad');
++  expect(await state(page,sid)).toEqual(before);
++  await page.setViewportSize({width:390,height:844});
++  await expect(page.locator('.sidebar')).not.toBeInViewport();
++  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();
++  await page.screenshot({path:'../docs/betting-demo/2026-11-06/mobil.png',fullPage:true});
++  await create(page);
++  await expect(page.getByTestId('demo-available_ore')).toContainText(/1\s*000,00/);
++  expect(await state(page,sid)).toEqual(before);
++});
++
++test('declining retains analysis costs and never creates stakes',async({page})=>{
++  await enter(page);const sid=await create(page);await analyze(page);
++  await page.getByRole('button',{name:'Avstå från batchen',exact:true}).click();
++  await expect(page.locator('.betting-progress h3')).toHaveText('Du avstod från låtsasinsatserna');
++  await expect(page.getByTestId('demo-available_ore')).toContainText('998,60');
++  await expect(page.getByTestId('demo-simulated_cost_ore')).toContainText('1,40');
++  expect((await state(page,sid)).bets).toHaveLength(0);
++  await page.reload();
++  await expect(page.locator('.betting-progress h3')).toHaveText('Du avstod från låtsasinsatserna');
++});
++
++test('lost simulation response preserves identity across reload and replay after pause',async({page})=>{
++  await enter(page);const sid=await create(page);await analyze(page);await approve(page);
++  let first=true;const requests:unknown[]=[];
++  await page.route('**/api/betting-demo/sessions/*/simulate',async route=>{
++    requests.push(route.request().postDataJSON());
++    if(first){first=false;await route.fetch();await route.abort('failed')}else await route.continue();
++  });
++  await page.getByRole('button',{name:'Registrera låtsasinsatser',exact:true}).click();
++  await expect(page.getByRole('region',{name:'Osäker begäran'})).toBeVisible();
++  await page.evaluate(async()=>{
++    const auth=await(await fetch('/api/session')).json();
++    await fetch('/api/control',{method:'POST',headers:{'Content-Type':'application/json','X-CSRF-Token':auth.csrf},body:JSON.stringify({state:'paused'})});
++  });
++  await page.reload();
++  await expect(page.getByRole('region',{name:'Osäker begäran'})).toBeVisible();
++  await page.getByRole('button',{name:'Försök samma begäran igen'}).click();
++  await expect(page.getByRole('region',{name:'Osäker begäran'})).toHaveCount(0);
++  expect(requests).toHaveLength(2);expect(requests[0]).toEqual(requests[1]);
++  const saved=await state(page,sid);
++  expect(saved.state).toBe('simulated');expect(saved.bets).toHaveLength(4);
++  expect(saved.summary.open_stake_ore).toBe(4000);
++  expect(saved.history.filter((h:{operation:string})=>h.operation==='simulate')).toHaveLength(1);
++});
++
++test('two tabs with different action identities cannot simulate twice',async({page,context})=>{
++  await enter(page);const sid=await create(page);await analyze(page);await approve(page);
++  const second=await context.newPage();await second.goto('/#/bettingdemo');
++  await expect(second.locator('.betting-progress h3')).toHaveText('Batchen godkänd');
++  const attempt=(p:Page)=>p.evaluate(async id=>{
++    const auth=await(await fetch('/api/session')).json();
++    const saved=await(await fetch('/api/betting-demo/sessions/'+id)).json();
++    const response=await fetch('/api/betting-demo/sessions/'+id+'/simulate',{method:'POST',headers:{'Content-Type':'application/json','X-CSRF-Token':auth.csrf},body:JSON.stringify({action_id:crypto.randomUUID(),proposal_version:saved.analysis.proposal_version,proposal_hash:saved.analysis.proposal_hash})});
++    return response.status;
++  },sid);
++  expect((await Promise.all([attempt(page),attempt(second)])).sort()).toEqual([200,409]);
++  expect((await state(page,sid)).bets).toHaveLength(4);
++  await second.close();
++});
